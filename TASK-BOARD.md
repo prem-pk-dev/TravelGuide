@@ -84,6 +84,6 @@ Start only after the user explicitly requests Chat 2.
 ## 6. Current release / branch state
 
 - Research branch contains architecture documents only.
-- Latest Phase 2.6 documentation commit: `718b6f2e4992f8714c6d34aea7619a3a6d47d842`.
+- Phase 2.6 architecture decision document commit: `8775368fc0243507fcbf1fbc37603eeb9983faa9` (the final branch head is reported in the completion report).
 - `main` has not been merged or modified by the research work.
 - No production website implementation or Cloudflare configuration change is authorized by Phase 2.6.
