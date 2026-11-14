@@ -41,7 +41,7 @@
       "note": "Islands and open horizons",
       "href": "/destinations/continents/oceania/",
       "src": "/assets/images/oceania.webp",
-      "alt": "Turquoise ocean around a lush tropical island",
+      "alt": "Palm-lined white-sand tropical beach beside turquoise water.",
       "width": 900,
       "height": 1120
     }
@@ -120,7 +120,6 @@
       "title": "The many sides of Marrakech",
       "region": "Morocco · North Africa",
       "href": "/destinations/countries/morocco/cities/marrakech/",
-      "src": "/assets/images/marrakech-courtyard.webp",
       "alt": "Sunlit architectural courtyard in Marrakech with carved details",
       "width": 960,
       "height": 1200,
@@ -131,7 +130,6 @@
     {
       "title": "Take the slower road",
       "href": "/travel-styles/slow-travel/",
-      "src": "/assets/images/slow-train.webp",
       "alt": "Train travelling through a green mountain valley",
       "width": 900,
       "height": 680,
@@ -140,8 +138,8 @@
     {
       "title": "Find your wild place",
       "href": "/travel-styles/outdoors/",
-      "src": "/assets/images/alpine-hiking.webp",
-      "alt": "Hikers following a trail across an alpine landscape",
+      "src": "/assets/images/alpine-meadow.webp",
+      "alt": "Alpine wildflower meadow beneath snow-covered mountain peaks.",
       "width": 900,
       "height": 680,
       "description": "Trails, coastlines and open landscapes for time outside."
@@ -160,7 +158,6 @@
     {
       "title": "A week among Portugal's coastal towns",
       "href": "/itineraries/portugal-coast-week/",
-      "src": "/assets/images/portugal-coast.webp",
       "alt": "Whitewashed Portuguese coastal village overlooking the Atlantic",
       "width": 1000,
       "height": 740,
@@ -169,7 +166,6 @@
     {
       "title": "Japan by rail: city to countryside",
       "href": "/itineraries/japan-by-rail/",
-      "src": "/assets/images/japan-rail.webp",
       "alt": "Japanese train crossing a rural landscape with mountains beyond",
       "width": 1000,
       "height": 740,
@@ -180,7 +176,6 @@
     {
       "title": "Walk the old lanes",
       "href": "/things-to-do/morocco/marrakech/",
-      "src": "/assets/images/marrakech-medina.webp",
       "alt": "Narrow Marrakech medina lane with traditional shops",
       "width": 860,
       "height": 720,
@@ -189,7 +184,6 @@
     {
       "title": "Follow the mountain trail",
       "href": "/things-to-do/switzerland/interlaken/",
-      "src": "/assets/images/swiss-trail.webp",
       "alt": "Mountain footpath winding through a green Swiss alpine valley",
       "width": 860,
       "height": 720,
