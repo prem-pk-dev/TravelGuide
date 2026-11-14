@@ -4,61 +4,48 @@
 - **Production branch:** `main`
 - **Research branch:** `research/travel-guide-blueprint`
 - **Current development branch:** `development/homepage`
-- **Project stage:** Chat 2 — Homepage foundation
-- **Rule:** All implementation stays isolated until reviewed. No merge or production deployment without explicit approval.
+- **Project stage:** Chat 2 — Homepage foundation and asset integration
+- **Rule:** Development remains isolated; no merge or production deployment without explicit approval.
 
 ## 1. Completed research / architecture
 
 - [x] Phase 1 — competitor research.
 - [x] Phase 1.5 — Lonely Planet detailed audit.
-- [x] Phase 2.1 — Sitemap and URL architecture.
-- [x] Phase 2.2 — Static website architecture.
-- [x] Phase 2.3 — Destination hierarchy.
-- [x] Phase 2.4 — Article/content architecture.
-- [x] Phase 2.5 — Internal linking architecture.
-- [x] Phase 2.6 — Final architecture documentation and handoff.
+- [x] Phase 2.1–2.6 — architecture and final handoff.
 
-## 2. Chat 2 — Homepage foundation
+## 2. Chat 2 — Homepage
 
-- [x] Verify repository, branch list, main head and starting tree.
-- [x] Read all 11 required research/handoff documents.
-- [x] Create isolated `development/homepage` from verified `main`.
-- [x] Establish source/output separation and basic static build scripts.
-- [x] Create shared header/footer and brand treatment.
-- [x] Create responsive navigation and desktop mega-menu structure.
-- [x] Add homepage JSON content and destination search UI.
-- [x] Build homepage section architecture.
-- [x] Add preview SEO metadata and noindex defaults.
-- [ ] Add actual original/licensed photorealistic WebP image binaries (currently documented, not present).
-- [ ] Run Node build/check scripts and inspect generated output.
-- [ ] Browser QA desktop/tablet/mobile; test menu focus flow, all interactions and visual breakpoints.
-- [ ] Validate every internal anchor. Chat 3–7 target routes intentionally remain unimplemented.
-- [ ] Verify production canonical hostname and live Cloudflare Pages build/root/output configuration.
-- [ ] Complete accessibility audit and fix any issues found.
-- [ ] Create review PR after verification; do not merge without approval.
+- [x] Static multi-page foundation, shell, navigation, homepage sections and static JSON search.
+- [x] Asset specification and initial inventory mapping.
+- [x] Six candidate image binary/visual review.
+- [x] Reuse authorization recorded: existing MEDIA-ASSETS WebP files may be reused across multiple sections.
+- [x] Revised source-candidate previews inspected and proposed reuse register documented.
+- [ ] Verify public CDN URLs in a normal browser/network: HTTP 200, image/webp, RIFF/WEBP bytes and decoded dimensions.
+- [ ] Repair/verify Mountain Hiker CDN route; current path previously returned HTML fallback.
+- [ ] Complete exact subject matches for South Pacific island/lagoon and visible alpine trail.
+- [ ] Complete final assignment of all 22 slots with accurate alt text and documented repeated image use.
+- [ ] Integrate verified CDN paths into homepage references/build, preserving hero fetch priority, below-fold lazy loading, dimensions and responsive sizing.
+- [ ] Confirm responsive variants/srcset/sizes against actual source derivatives; none may be invented.
+- [ ] Run Node build/check scripts and inspect output.
+- [ ] Browser QA desktop/tablet/mobile, loading, accessibility and all interactions.
+- [ ] Create review PR after verification; do not merge/deploy without approval.
 
-## 3. Scope boundary
+## 3. Current image integration blocker
 
-Chat 2 does not build destination detail, itinerary detail, article detail, country/continent or attraction pages. Their canonical URL families remain as defined in `SITEMAP.md` and are assigned to later chats.
+All newly inspected Cloudflare URLs returned HTTP 403/text/plain through the current connector execution environment. This is not proof of a public global outage, but it prevents certifying the CDN delivery URLs. The known Mountain Hiker CDN URL previously returned HTTP 200 with HTML, not WebP. Therefore homepage asset references remain unchanged.
 
-## 4. Next development stages
+## 4. Later page-family scope
 
-| Chat | Responsibility | Status |
-|---|---|---|
-| Chat 2 | Homepage/shared shell/navigation/SEO foundation | In progress — code foundation created |
-| Chat 3 | Destination directory, continent and country templates | Pending |
-| Chat 4 | Region, city, neighbourhood, attraction and things-to-do | Pending |
-| Chat 5 | Itinerary index, collections and details | Pending |
-| Chat 6 | Article index/details, taxonomies, tips and resources | Pending |
-| Chat 7 | Authors, about/contact/legal and site-wide integration | Pending |
+Chat 2 does not implement destination detail, country/continent or itinerary/article/attraction pages. Those are assigned to Chats 3–7.
 
 ## 5. Release gates
 
-- [ ] Actual unique WebP assets exist and have verified formats/dimensions/credits.
-- [ ] Build succeeds and generates physical static files.
-- [ ] Automated link/SEO/asset checks pass.
+- [ ] All 22 homepage image slots point to valid, verified WebP files.
+- [ ] Alt text describes actual visual subject.
+- [ ] Repeated use is intentional and logged; no unrelated subject substitution.
+- [ ] Native dimensions and crops meet the image brief or have documented approved exception.
+- [ ] Build succeeds and automated asset/link/SEO checks pass.
 - [ ] Manual desktop/tablet/mobile and keyboard QA passes.
-- [ ] Unique production canonical is confirmed.
-- [ ] Cloudflare configuration is inspected (no changes without approval).
-- [ ] Review diff and PR are accepted.
-- [ ] Explicit approval before merging to `main` or deploying production.
+- [ ] Production canonical/Cloudflare settings inspected.
+- [ ] Review diff/PR accepted.
+- [ ] Explicit approval before merge to `main` or deployment.
