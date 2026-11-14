@@ -27,7 +27,7 @@ Aspect ratio is calculated as width divided by height. SHA-256 values below were
 
 | Candidate / homepage slot | Actual source file | CDN HTTP / content type | Actual format | Dimensions | Ratio | Bytes | SHA-256 | Status |
 |---|---|---|---|---:|---:|---:|---|---|
-| Ocean Cliffs / `hero-coast.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/nature/05_rugged_ocean_cliffs.webp) | 200 / image/webp | WebP | 1672×941 | 1.7768 | 376,526 | `537b5817f340750df596ac5bfdb31969017c00bbb8500c321765a76c559c86c6` | **Rejected** |
+| Ocean Cliffs / `hero-coast.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/nature/05_rugged_ocean_cliffs.webp) | 200 / image/webp | WebP | 1672×941 | 1.7779 | 376,526 | `537b5817f340750df596ac5bfdb31969017c00bbb8500c321765a76c559c86c6` | **Rejected** |
 | Ha Long Bay / `asia.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/20-ha-long-bay-vietnam-v01.webp) | 200 / image/webp | WebP | 900×512 | 1.7578 | 57,722 | `452711da14c97ed8ea902701b84407d09d9c7cfcb5ad20a88e2e86c8614965af` | **Needs Replacement** |
 | Serengeti / `africa.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/05-serengeti-tanzania-v01.webp) | 200 / image/webp | WebP | 900×512 | 1.7578 | 54,958 | `7751fcf29abf302ea3f60ff809101b1e41ad344b3b3c8c7db21e3ecb054581c5` | **Needs Replacement** |
 | Banff / `americas.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/02-banff-canada-v01.webp) | 200 / image/webp | WebP | 900×512 | 1.7578 | 70,682 | `5eb7a2094d22d3e20a34880c7cbd7054f94676461fede42b66c679b49ebc7515` | **Needs Replacement** |
@@ -53,7 +53,7 @@ The previews below refer to the original source images, not generated substitute
 
 **Visual finding:** Rugged dark rocky headland, rough ocean/surf, dramatic overcast sky and green/pink-flowered foreground. This does not depict the specified calm, sunlit Mediterranean limestone coast with translucent turquoise water and a low-detail left headline-safe zone.
 
-**Crop finding:** Source ratio 1.7768 versus hero target 1.600. Desktop cover would remove about 166 px of source width in total (about 83 px per side if centred). A 390×844 mobile portrait crop would retain only about 26% of the original width at full source height, losing much of the coastal panorama. Mobile crop suitability is poor for the specified scene.
+**Crop finding:** Source ratio 1.7779 versus hero target 1.600. Desktop cover would remove about 166 px of source width in total (about 83 px per side if centred). A 390×844 mobile portrait crop would retain only about 26% of the original width at full source height, losing much of the coastal panorama. Mobile crop suitability is poor for the specified scene.
 
 **Decision: Rejected.** Wrong visual subject/lighting for the approved hero brief. Source also falls short of the exact 1920×1200 target; do not upscale it to meet the specification.
 
@@ -125,7 +125,7 @@ The shared framing treatment is a repeated template, not an exact or near-identi
 
 | Candidate | Target dimension / ratio | Source dimension / ratio | Desktop target crop | Mobile crop | Outcome |
 |---|---|---|---|---|---|
-| Ocean Cliffs | 1920×1200 / 1.600 | 1672×941 / 1.7768 | Moderate ratio crop; scene does not satisfy hero art direction | Severe panoramic-to-portrait crop; only ~26% width visible | Reject |
+| Ocean Cliffs | 1920×1200 / 1.600 | 1672×941 / 1.7779 | Moderate ratio crop; scene does not satisfy hero art direction | Severe panoramic-to-portrait crop; only ~26% width visible | Reject |
 | Ha Long Bay | 900×1120 / 0.8036 | 900×512 / 1.7578 | Portrait tile would discard ~54% horizontal width and upscale height ~2.19× | Same portrait crop plus footer overlay | Replace |
 | Serengeti | 900×1120 / 0.8036 | 900×512 / 1.7578 | Same severe portrait crop/upscale | Risks cutting tree/elephants; footer remains | Replace |
 | Banff | 900×1120 / 0.8036 | 900×512 / 1.7578 | Central mountain/lake can remain but much of scene is discarded | Portrait crop narrows the range; footer remains | Replace |
