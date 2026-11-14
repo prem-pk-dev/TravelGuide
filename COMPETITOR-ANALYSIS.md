@@ -2138,3 +2138,1197 @@ Earth Trekkers is a family-run, photography-led adventure travel publisher whose
 For Travel Guide, the most transferable patterns are the region/country discovery directory, country-level planning hubs, itinerary-specific archives, map-supported attraction guides, photography-led editorial pages, visible author/update information and a concrete newsletter lead magnet. The clearest opportunities to improve on the inspected experience are structured search filters, consistent image-format delivery, measured performance budgets and tested mobile/accessibility interactions.
 
 **Phase 1 progress:** Nomadic Matt, The Points Guy, Dan Flying Solo and Earth Trekkers audits are documented in this file. Phase 1.4 is limited to Earth Trekkers; no production development or later phase work is included. The next competitor in the agreed sequence is Lonely Planet.
+
+
+# Competitor Audit: Lonely Planet
+
+- **Competitor:** Lonely Planet — https://www.lonelyplanet.com/
+- **Audit date:** 14 November 2026
+- **Scope:** Homepage, navigation and mega menus, destination directories, continent/country/city pages, attraction detail, article templates and taxonomy, travel styles, editorial itineraries, commercial Journeys packages, search, photography, monetization, shop, newsletter, app, responsive markup, SEO, accessibility, About, Contact and legal pages.
+- **Method:** Live official-site page inspection, HTML/metadata inspection, representative template inspection and official category/sitemap review.
+- **Evidence labels:** Observed = visible in inspected content or markup. Publisher statement = a claim made by Lonely Planet. Not Verified = behavior or metric not established by this audit.
+- **Product boundary:** Lonely Planet operates connected editorial website, guidebook shop, app and bookable Journeys products. These are analyzed separately rather than treating every feature as part of the editorial website.
+
+## 1. Pages inspected
+
+| Page type | URL | Inspection focus |
+|---|---|---|
+| Homepage | https://www.lonelyplanet.com/ | Hero, editorial modules, Best in Travel, partner content, featured destinations, newsletter, footer |
+| Destination directory | https://www.lonelyplanet.com/destinations | Global directory, region navigation, popular places, country/city discovery |
+| Continents directory | https://www.lonelyplanet.com/destinations/continents | Continent cards and regional navigation |
+| Countries directory | https://www.lonelyplanet.com/destinations/countries | Country discovery |
+| Cities directory | https://www.lonelyplanet.com/destinations/cities | City discovery |
+| Asia destination listing | https://www.lonelyplanet.com/destinations/in/asia | Regional results and nested geographic destinations |
+| India country hub | https://www.lonelyplanet.com/destinations/india | Travel information, attractions, books, Journeys and affiliate modules |
+| India destination listing | https://www.lonelyplanet.com/destinations/in/india | Country-to-region/city destination directory |
+| Italy country hub | https://www.lonelyplanet.com/destinations/italy | Country page template |
+| Tokyo city hub | https://www.lonelyplanet.com/destinations/japan/tokyo | City overview, attractions, stories, trip package and planning info |
+| Tokyo itinerary article | https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo | Editorial itinerary, author, affiliate notice and day-by-day content |
+| Ghibli Museum attraction | https://www.lonelyplanet.com/points-of-interest/ghibli-museum-mitaka/396249 | Attraction detail, editorial content, address/contact and booking widget |
+| Articles directory | https://www.lonelyplanet.com/articles | Editorial story discovery |
+| Article taxonomy index | https://www.lonelyplanet.com/sitemaps/articles | Top-level categories and subcategories |
+| Budget travel archive | https://www.lonelyplanet.com/sitemaps/articles/budget-travel | Category archive, tagged stories and pagination |
+| Family travel archive | https://www.lonelyplanet.com/sitemaps/articles/family-travel | Travel-style archive and multi-tag metadata |
+| Best itineraries archive | https://www.lonelyplanet.com/sitemaps/articles/best-itineraries | Editorial itinerary category |
+| Search | https://www.lonelyplanet.com/search | Search input, recent searches and suggested content types |
+| Journeys landing page | https://www.lonelyplanet.com/journeys | Local experts and tailor-made trips |
+| Journeys package directory | https://www.lonelyplanet.com/journeys/itineraries | Package count, duration, price and cards |
+| India package listing | https://www.lonelyplanet.com/journeys/itineraries/in/india | Destination-specific bookable trips |
+| Japan 14-day itinerary detail | https://www.lonelyplanet.com/journeys/itineraries/cdbaeb7a-f73c-455a-9096-845858b6eae2 | Day-by-day package, pricing, inclusions and customization |
+| Best in Travel | https://www.lonelyplanet.com/best-in-travel | Annual destination selection and book promotion |
+| App | https://www.lonelyplanet.com/app | App features, maps and trip planning |
+| Newsletter | https://www.lonelyplanet.com/newsletter | Weekly newsletter, form and offer |
+| About | https://www.lonelyplanet.com/about | Brand story, editorial network and products |
+| Contact / Support | https://www.lonelyplanet.com/contact | Support categories |
+| Trade and advertising | https://www.lonelyplanet.com/press-trade-advertising | Partnership and trade information |
+| Legal index | https://www.lonelyplanet.com/legal | Privacy, terms, AI, advertising and cookies |
+| Privacy policy | https://www.lonelyplanet.com/legal/privacy-policy | Privacy policy entry point |
+| Website terms | https://www.lonelyplanet.com/legal/website-terms | Website terms |
+| Editorial AI policy | https://www.lonelyplanet.com/legal/ai-policy | Editorial AI policy |
+| Shop homepage | https://shop.lonelyplanet.com/ | Books, maps, gifts and merchandise |
+| All Books collection | https://shop.lonelyplanet.com/collections/all?sort_by=title-ascending | Product collection, filters and sorting |
+| India guidebook product | https://shop.lonelyplanet.com/products/india | Product specifications and coverage |
+
+The sampled main-site, destination, article, Journeys and shop pages returned public page content during inspection. An exploratory guess for a Tokyo “best things to do” URL returned 404 and was not used as evidence; the working three-day Tokyo itinerary URL above was inspected instead.
+
+## 2. Homepage sections observed
+
+The homepage is a commercial-editorial discovery page with a seasonal gift campaign at the top. The visible section sequence is:
+
+1. **Global navigation:** Logo, destination/editorial menus, books, trips, search utility and app access.
+2. **Seasonal gift-guide hero — “The Gift That Takes You Places”:** Large photographic banner promoting travel gifts and guidebook titles such as Toilets of the World and 100 Weekends in Europe. CTA links to the shop.
+3. **Latest Travel Stories:** Editorial cards with image, publication date, reading time and Read Story link. Examples included Winter Solstice festivals, Asia destinations for 2027, Beijing attractions, European skiing, Caribbean islands, Italy and transport advice.
+4. **Sponsored story placements:** Some editorial cards are explicitly labelled SPONSORED.
+5. **Best in Travel 2027:** Annual destination editorial campaign and link to the annual selection/book.
+6. **Our Favorites Winter Trips:** Seasonal trip inspiration.
+7. **Prepare for Departure:** Practical preparation content; the inspected homepage included a US passport-readiness reminder linked to the US Department of State.
+8. **Explore More From Our Partners:** Partner-oriented content and commercial discovery.
+9. **Featured Destinations:** Image-led destination cards and links to destination hubs.
+10. **Social / Instagram content:** Instagram reels or linked social posts appear in the homepage stream.
+11. **Press / brand credibility strip:** Publication logos are displayed. Their presence is observed; the nature/date of every media mention was not independently audited.
+12. **Newsletter signup:** “Subscribe to The Lonely Planet Newsletter”, email field and a 20% first-shop-order incentive.
+13. **Global footer:** “Our Guides. Your Stories.” brand line, destination links, About, Journeys, shop, support, privacy/terms, cookie settings, language selection and copyright.
+
+### Homepage assessment
+
+- The seasonal hero is a commerce promotion rather than a pure destination hero or search-first homepage.
+- Editorial freshness, annual Best in Travel, partner content and featured destinations coexist.
+- The homepage routes visitors to editorial content, book products, app, trip packages and newsletter.
+- This is a broader commercial funnel than a standalone travel blog.
+
+**Sources:** https://www.lonelyplanet.com/ ; https://www.lonelyplanet.com/best-in-travel ; https://www.lonelyplanet.com/newsletter
+
+## 3. Header, navigation and mega menus
+
+### Primary navigation
+
+The inspected global navigation exposes six top-level entries:
+1. Destinations
+2. Books
+3. Trips
+4. Travel Advice
+5. Best in Travel
+6. App
+
+A separate utility link opens Search. The header includes a mobile menu control labelled “Open main menu”.
+
+### Destinations mega menu
+
+The Destinations menu is a large tabbed mega-menu, not a simple dropdown. Main region tabs:
+- Trending
+- Europe
+- Asia
+- The Americas
+- Australia & Oceania
+- Africa & The Middle East
+- The Caribbean
+
+Regional panels group links into Popular, Countries and Cities. They also show a featured regional/destination image and a View all destinations path. Trending includes “Our Favorite Places” and popular destination links.
+
+Examples include:
+- Europe: Italy, Spain, Portugal, France, London, Rome, Lisbon, Paris, Tuscany, Amalfi Coast and Cinque Terre.
+- Asia: Japan, India, China, Indonesia, Thailand, Vietnam, Tokyo, Bangkok and Kyoto.
+- The Americas: USA, Canada, Mexico, Costa Rica, Brazil, Peru and New York City.
+- Africa & Middle East: Morocco, Egypt, Jordan, South Africa, Tanzania, Cairo, Cape Town and Dubai.
+- Australia & Oceania: Australia, New Zealand, Fiji, Tahiti, Sydney and Melbourne.
+
+### Books mega menu
+
+Books navigation is organized by region and product family:
+- Trending and popular books.
+- Destination guidebooks.
+- Regional guidebooks.
+- Gift/inspiration books.
+- Phrasebooks.
+- Planning maps.
+- Best in Travel titles.
+- Country/city guidebook links.
+
+### Trips mega menu
+
+Trips navigation exposes regional and trending trip discovery. The Journeys service is connected to bookable itineraries and custom-trip request flows.
+
+### Mobile navigation evidence
+
+Observed in homepage HTML:
+- Dedicated Open main menu button.
+- Compact-navigation panel controls.
+- Destination menu section controls with aria-expanded and aria-controls.
+- Responsive classes around an approximately 1200px global-navigation breakpoint.
+- Wide and compact panel structures.
+
+**Not Verified:** Complete touch interaction, all mobile panel transitions, focus trapping, Escape behavior, screen-reader announcements and physical iOS/Android device behavior. Markup indicates a responsive navigation system but does not prove every interaction.
+
+### Mega-menu conclusion
+
+Lonely Planet has a substantial editorial-commerce mega-menu system connecting destinations, books, trips and inspiration. It is one of the most developed navigation patterns among the five audited competitors.
+
+**Sources:** https://www.lonelyplanet.com/ ; https://shop.lonelyplanet.com/
+
+## 4. Destination directory and continent pages
+
+### Global destination directory
+
+Main directory: https://www.lonelyplanet.com/destinations
+
+The inspected live page displayed **1,488 results**. This is a snapshot result count, not a verified count of unique countries or every geographic entity.
+
+Destination discovery includes:
+- Continent/region pages.
+- Country pages.
+- City pages.
+- Regions within countries.
+- Sub-regions, islands and neighborhoods.
+- Individual points of interest.
+
+### Continent directory
+
+https://www.lonelyplanet.com/destinations/continents
+
+Image-led links are provided for:
+- Europe
+- Africa
+- Australia & Pacific
+- Central America
+- Caribbean
+- Middle East
+- Asia
+- North America
+- South America
+- Antarctica
+
+Some entries are continents and others are major travel regions. This is a travel-oriented regional taxonomy, not a strict geographic classification.
+
+### Regional destination pages
+
+The regional listing uses a path pattern such as:
+- /destinations/in/asia
+- /destinations/in/africa
+- /destinations/in/india
+
+The inspected Asia page displayed **564 results**, Africa **183**, and India **86**. These are page snapshot counts, not stable totals.
+
+Regional pages combine:
+- Parent region/continent.
+- Sub-regions.
+- Countries.
+- States/provinces.
+- Cities.
+- Local regions and neighborhoods.
+- Image-led destination cards.
+- Links deeper into the geographic hierarchy.
+
+### Countries and cities directories
+
+- Countries: https://www.lonelyplanet.com/destinations/countries
+- Cities: https://www.lonelyplanet.com/destinations/cities
+
+The cities directory displayed **1,269 results** in the inspected snapshot. City cards include image, parent country/region and Discover action.
+
+### Destination taxonomy strength
+
+The architecture is deeper than a conventional blog category tree:
+
+**Continent / travel region → country → region / state / province → city → neighborhood / sub-region → point of interest.**
+
+A country/city page is not the same as an article archive. Destination pages represent places as structured entities; article taxonomies classify editorial stories by subject, activity, audience and travel style.
+
+**Sources:** https://www.lonelyplanet.com/destinations ; https://www.lonelyplanet.com/destinations/continents ; https://www.lonelyplanet.com/destinations/countries ; https://www.lonelyplanet.com/destinations/cities ; https://www.lonelyplanet.com/destinations/in/asia ; https://www.lonelyplanet.com/destinations/in/africa ; https://www.lonelyplanet.com/destinations/in/india
+
+## 5. Country destination pages
+
+### India country hub
+
+Representative page: https://www.lonelyplanet.com/destinations/india
+
+Observed modules:
+1. H1 and destination introduction.
+2. Large destination photograph and photographer credit.
+3. Latest Stories with author, date and article links.
+4. Book promotion.
+5. Featured India itinerary card with duration and View Itinerary.
+6. App promotion.
+7. Sponsored/partner content.
+8. Book your India trip with Lonely Planet Journeys.
+9. Custom-trip request and choose-an-itinerary CTAs.
+10. Top places to visit in India attraction cards, linked to point-of-interest pages.
+11. India Travel Information:
+    - When to Go
+    - Arriving
+    - Getting Around
+    - Money
+    - Health & Safe Travel
+    - Responsible Travel
+    - Family Travel
+12. Popular activity/experience booking module with GetYourGuide.
+13. Country and nearby destination links.
+
+This is a multi-purpose planning hub: editorial inspiration, destination facts, attractions, books, app promotion, affiliate offers and custom trip booking.
+
+The Italy country page follows the same broad template: introduction, latest stories, book promotion, itinerary, app promotion, Journeys request, attraction/destination cards and practical information including when to go, arriving, getting around, money, safety, responsible travel, family travel and accommodation.
+
+### Publisher claims
+
+The About page states that Lonely Planet covers 180+ countries and has 1,100+ travel experts/contributors. These are publisher statements, not independently audited counts.
+
+**Sources:** https://www.lonelyplanet.com/destinations/india ; https://www.lonelyplanet.com/destinations/italy ; https://www.lonelyplanet.com/about
+
+## 6. City guides and attraction pages
+
+### Tokyo city destination hub
+
+https://www.lonelyplanet.com/destinations/japan/tokyo
+
+Observed:
+- City title and descriptive introduction.
+- Hero photograph and photographer credit.
+- Latest Stories with author/date.
+- Gift-guide/book promotion.
+- Featured multi-day Japan itinerary.
+- App promotion.
+- Custom Japan Journeys section.
+- Top places to visit in Tokyo.
+- Attraction cards linked to points of interest.
+- Tokyo Travel Information.
+- Practical planning categories such as When to Go, Arriving, Getting Around, Health & Safe Travel, Responsible Travel and Family Travel.
+- Links to Tokyo neighborhoods and nearby areas.
+
+Examples of attractions include Ghibli Museum, Mitaka; Golden Gai; Hama-Rikyū Onshi-Teien; Imperial Palace; Meiji-Jingū; and Roppongi Hills.
+
+### Attraction detail page
+
+https://www.lonelyplanet.com/points-of-interest/ghibli-museum-mitaka/396249
+
+Observed layout:
+1. Location context.
+2. Editorial rating label (“Top Choice”).
+3. Attraction name.
+4. Large photograph and credit.
+5. Long-form attraction description.
+6. Multiple editorial sections.
+7. Related nearby attractions and links.
+8. Contact/address/get-in-touch headings.
+9. GetYourGuide availability widgets with third-party tour cards.
+10. Activity title, rating/review count where provided, price and date availability.
+11. Check availability action.
+
+This behaves as a structured local place record with editorial context and commercial activity booking.
+
+### Maps
+
+- The Lonely Planet app page promotes a map of nearby things to do, places to eat and experiences.
+- The sampled website attraction page exposed address/contact sections and nearby attraction links.
+- A fully interactive embedded map on the inspected desktop website attraction template was **Not Verified**.
+- Do not assume the app map and website share the same map implementation.
+
+**Sources:** https://www.lonelyplanet.com/destinations/japan/tokyo ; https://www.lonelyplanet.com/points-of-interest/ghibli-museum-mitaka/396249 ; https://www.lonelyplanet.com/app
+
+## 7. Travel article layouts and article categories
+
+### Representative article: 3 Days in Tokyo
+
+https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo
+
+Observed article layout:
+1. Advertisement label/ad area.
+2. H1 title.
+3. Publication date and estimated reading time.
+4. Author portrait, name and role.
+5. Highlights block labelled “Summarized by AI”.
+6. Hero photograph and photographer credit.
+7. Author profile/biography.
+8. Affiliate commission disclosure.
+9. First-person editorial introduction.
+10. Trip Planning Tips.
+11. Day-by-day itinerary.
+12. Inline photographs, captions and credits.
+13. Practical tips and contextual internal links.
+14. What to Pack.
+15. Related Tokyo stories.
+16. Additional advertisement placements/global footer.
+
+The sampled itinerary has:
+- Day 1: Shrines and Shinjuku.
+- Day 2: Art, Live Music and Karaoke.
+- Day 3: Shopping, Wandering and a Listening Bar.
+
+The author bio states the writer has lived in Japan for seven years; this is an author-provided first-person statement.
+
+### Affiliate disclosure
+
+The article states that Lonely Planet may earn commission from affiliate links and that recommendations/reviews reflect independent opinions. The notice appears near the beginning of the editorial content.
+
+### Article taxonomy architecture
+
+Official index: https://www.lonelyplanet.com/sitemaps/articles
+
+Top-level categories and representative subcategories:
+
+**A. Activities**
+- Beaches, Camping, Cycling, Hiking, Islands, National Parks, Road Trips, Scenic Trains, Skiing & Snowboarding, Theme Parks, Water Sports, Wildlife & Nature.
+
+**B. Art and culture**
+- Ancient History, Architecture, Art, Castles & Palaces, Festivals & Events, Historic Sites, Indigenous Sites, Live Music, Museums & Galleries, Religious Sites, Theaters, UNESCO Sites.
+
+**C. Experiences**
+- Best Bars, Best Beaches, Best City Parks, Best Day Trips, Best Hikes, Best Itineraries, Best Museums, Best National Parks, Best Neighborhoods, Best Outdoor Experiences, Best Road Trips, Best Walks, Free Things, Multi-destination, Things to do, What to Eat and Drink.
+
+**D. Food and drink**
+- Bakeries, Bars, Breweries, Cafes, Coffee, Craft Beer, Food Trucks, Nightclubs, Pubs, Restaurants, Street Food, Vegetarian & Vegan, Wine, Wineries.
+
+**E. Franchises / editorial series**
+- 5 Shops, Best in Travel, Best Of, Book Promo, Guide to, How to, Photo Essay, Spending Diaries, Where Locals Go, Where to Go When, X vs Y.
+
+**F. Lodging**
+- Budget Hotels, Hostels, Hotels, Luxury Hotels, Resorts, Unique Stays.
+
+**G. Planning**
+- Accessibility Guide, Best Places to Stay, Best Places to Visit, Best Time to Visit, Best Train Journeys, Budget, Etiquette, Get Connected, Getting Around, Health & Safety, LGBTIQ+ Travel, Public Transport, Things to Know, Visa Requirements, Weather & Climate, With Kids.
+
+**H. Travel inspiration**
+- Bucket List, Local Favorites, Our Picks, Trips of a Lifetime.
+
+**I. Travel styles**
+- Budget Travel, Family Travel, Luxury Travel, Solo Travel, Sustainable Travel, Wellness.
+
+### Taxonomy behavior
+
+Category archives show category title, dated story links, article titles, publication dates, multiple subject tags and pagination.
+
+A story can have many tags spanning destination, activity, audience, practical information and experiences. Family Travel stories can also carry Beaches, Hotels, Shopping, Architecture, Wildlife and Itineraries tags. Best Itineraries stories can also carry City, Country, Food, Sustainability and Transport tags.
+
+This is a multi-dimensional editorial taxonomy rather than one mutually exclusive category per article.
+
+### Core distinction
+
+Lonely Planet separates:
+- Destination entity: where to go.
+- Article taxonomy: what the story is about.
+- Travel style: what kind of traveler/trip the content serves.
+- Editorial franchise: recurring editorial format.
+- Point of interest: a specific real-world place.
+- Journeys itinerary: a bookable commercial product.
+
+This is the most sophisticated content classification system among the five competitors audited.
+
+**Sources:** https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo ; https://www.lonelyplanet.com/sitemaps/articles ; https://www.lonelyplanet.com/sitemaps/articles/budget-travel ; https://www.lonelyplanet.com/sitemaps/articles/family-travel ; https://www.lonelyplanet.com/sitemaps/articles/best-itineraries
+
+## 8. Travel styles and trip discovery
+
+### Travel styles
+
+Six official travel-style categories:
+- Budget Travel
+- Family Travel
+- Luxury Travel
+- Solo Travel
+- Sustainable Travel
+- Wellness
+
+These are editorial discovery paths, not necessarily a complete trip-personalization questionnaire.
+
+### Discovery routes
+
+Visitors can discover trips through:
+- Destination directory.
+- Trending destinations.
+- Best in Travel annual list.
+- Article taxonomy and travel styles.
+- Experiences/activity categories.
+- Editorial itineraries.
+- Journeys package catalog.
+- App recommendations and collections.
+- Guidebooks and maps in the shop.
+
+### Best in Travel
+
+The inspected page is titled “50 Best Places to Go in 2027” and presents 50 selected destinations with image, country/region and destination title. It also promotes the annual Best in Travel book.
+
+### Personalization boundary
+
+**Observed:** Travel-style editorial categories exist. Journeys says trips can be tailored to a traveler's interests and style.
+
+**Not Verified:** A universal website-wide recommendation engine dynamically personalizing every destination or itinerary according to saved travel style, budget, dates or preferences.
+
+**Sources:** https://www.lonelyplanet.com/sitemaps/articles ; https://www.lonelyplanet.com/sitemaps/articles/budget-travel ; https://www.lonelyplanet.com/sitemaps/articles/family-travel ; https://www.lonelyplanet.com/best-in-travel ; https://www.lonelyplanet.com/journeys
+
+## 9. Itinerary pages and travel planning features
+
+Lonely Planet uses two distinct itinerary models.
+
+### A. Editorial itinerary articles
+
+Example: https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo
+
+Free editorial content with a three-day route, planning tips, day-by-day recommendations, local tips, transport, food, activities and packing advice. Editorial itinerary stories are discoverable through the Best Itineraries taxonomy: https://www.lonelyplanet.com/sitemaps/articles/best-itineraries
+
+### B. Bookable Journeys packages
+
+Directory: https://www.lonelyplanet.com/journeys/itineraries
+
+The inspected directory displayed **134 trip packages**. Each card contains:
+- Trip duration (days/nights).
+- Route/package title.
+- Destination photograph.
+- View Itinerary action.
+- Starting per-person price.
+
+Examples included Bali, Belgium, Ecuador, Finland, France, Greece, Iceland, Italy, Japan, Morocco, Portugal, Peru, Thailand and Vietnam.
+
+India-specific listing displayed two packages in the inspected snapshot:
+- 13 Days in Kerala: Culinary India.
+- 15 Days in Rajasthan: Best of Northwest India.
+
+### C. Individual package detail
+
+https://www.lonelyplanet.com/journeys/itineraries/cdbaeb7a-f73c-455a-9096-845858b6eae2
+
+The inspected 14-day Japan Golden Route page contains:
+1. Itinerary crafted by local experts in Japan.
+2. Trip title and summary.
+3. Large package image.
+4. Country.
+5. Duration: 14 days / 13 nights.
+6. Starting price: $6,820 per person in the inspected snapshot.
+7. Customize this trip CTA.
+8. Your trip at a glance.
+9. Top Activities / highlights.
+10. Day-by-day links and Show me more controls.
+11. Show All 14 days control.
+12. Overview and highlights.
+13. Accommodation information.
+14. How it works process.
+15. Request form / meet your expert / book your trip / take-off steps.
+16. Included and excluded items.
+17. Price inclusion/exclusion breakdown.
+
+This is a commercial product detail, not simply an editorial itinerary article.
+
+### Journeys service
+
+The Journeys landing page describes a service pairing travelers with local experts who design and book personalized itineraries. It includes Start Planning and sign-in links, and promotes accommodation, activities and ground transportation as part of the package.
+
+The About page says Journeys serves 80+ destinations and cites 500+ five-star reviews. These are publisher statements, not independently verified review counts.
+
+### Filtering boundary
+
+- Destination-specific listing path exists, e.g. /journeys/itineraries/in/india.
+- Package cards and result count are visible.
+- Full interactive filters by price, duration, activity level, group size, dates or travel style were **Not Verified**.
+- Package detail does expose customization/request flow.
+
+**Sources:** https://www.lonelyplanet.com/journeys ; https://www.lonelyplanet.com/journeys/itineraries ; https://www.lonelyplanet.com/journeys/itineraries/in/india ; https://www.lonelyplanet.com/journeys/itineraries/cdbaeb7a-f73c-455a-9096-845858b6eae2 ; https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo ; https://www.lonelyplanet.com/app
+
+## 10. Search and filtering
+
+### Website search
+
+https://www.lonelyplanet.com/search
+
+The search page contains:
+- Search input with type=search.
+- Recent searches.
+- Clear All.
+- Suggested Destinations.
+- Suggested Books.
+- Suggested Trips.
+- Suggested Inspiration.
+- Suggested Things to Do.
+- View All links.
+
+Search suggestions connect multiple content types:
+- Destinations → geographic entities.
+- Books → shop products.
+- Trips → Journeys packages.
+- Inspiration → editorial stories.
+- Things to Do → points of interest.
+
+**Not Verified:** Full autocomplete behavior for arbitrary queries, ranking logic, typo correction, voice search, advanced facets and result personalization.
+
+### Article and destination discovery
+
+Article taxonomy index and category archives are structured editorial browsing paths. Destination directory, continent pages, country pages and city pages provide geographic browsing.
+
+### Shop filters
+
+The All Books collection contains a dedicated filter form with:
+- Continents.
+- Countries.
+- Cities.
+- Product categories/tags.
+
+It also includes filter search, collapsible filter groups and a sort control in mobile toolbar markup. This is a stronger explicit filter interface than the inspected editorial search page.
+
+### Verdict
+
+Lonely Planet has cross-content-type search suggestions, deep destination navigation, editorial taxonomy archives, shop product filters and destination-specific Journeys listings.
+
+**Not Verified:** A unified all-site filter engine combining destination, travel style, price, trip length, activities and editorial content in one results interface.
+
+**Sources:** https://www.lonelyplanet.com/search ; https://www.lonelyplanet.com/destinations ; https://www.lonelyplanet.com/sitemaps/articles ; https://shop.lonelyplanet.com/collections/all?sort_by=title-ascending
+
+## 11. Photographs, galleries and image loading
+
+### Photography style
+
+Lonely Planet uses large editorial destination hero images, landscape photography, attraction photographs, square destination/article cards, author portraits, photo credits, guidebook covers and campaign images.
+
+The Tokyo article includes inline photographs with captions and photographer credits. The attraction page uses a large lead photograph and additional editorial images.
+
+### Image delivery infrastructure
+
+Two image delivery patterns were visible:
+
+1. **CloudFront image transformations**
+   - Host: d2vbr83hnyiux1.cloudfront.net
+   - Example suffix: -FWEBP-Ro:5,w:912,h:550,n:default
+   - URL encodes output format and dimensions.
+   - Sampled homepage, destination and article assets use WebP transformations.
+
+2. **Imgix / external media**
+   - Hosts include lonelyplanetstatic.imgix.net and ew-media-production.imgix.net.
+   - Parameters include auto=format, compress, q=72, w=360, ar=1:1 and crop/fit options.
+   - Product and Journeys imagery can use separate media systems.
+
+### Loading behavior
+
+- Homepage hero uses eager loading and high fetch priority.
+- Many story/destination card images use loading=lazy.
+- Image transformation URLs include width/height variants.
+- Some sampled destination/article HTML includes srcset, but it is not consistent on every sampled page.
+- Descriptive alt text and photographer credits are visible on many sampled editorial assets.
+- Some decorative/logo/stamp assets have empty alt text.
+
+### Formats
+
+Many sampled main-site images are delivered as WebP through CloudFront transformations. Other modules use Imgix automatic format negotiation with JPEG/PNG source assets. The Shopify storefront has its own image delivery and mixed source filenames.
+
+**Conclusion:** Lonely Planet uses image transformation/CDN delivery with WebP, responsive dimensions and lazy loading. This is more systematic than a simple static JPG-only library.
+
+### Gallery presentation
+
+The inspected article uses inline image/caption presentation. A dedicated full-screen lightbox or swipe gallery was **Not Verified**. Photo Essay exists as an editorial franchise, but that does not prove a gallery viewer is present.
+
+### Travel Guide lessons
+
+1. Use one consistent image transformation pipeline.
+2. Keep original assets separate from delivery derivatives.
+3. Prioritize the actual hero; lazy-load below-the-fold imagery.
+4. Set width, height and aspect ratio to avoid layout shift.
+5. Use photographer credits and descriptive alt text where appropriate.
+6. Use image cards as navigation only when the image genuinely represents the destination.
+7. Verify actual browser delivery; a filename alone does not prove response format.
+
+**Sources:** https://www.lonelyplanet.com/ ; https://www.lonelyplanet.com/destinations/india ; https://www.lonelyplanet.com/destinations/japan/tokyo ; https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo ; https://www.lonelyplanet.com/points-of-interest/ghibli-museum-mitaka/396249 ; https://shop.lonelyplanet.com/
+
+## 12. Advertising, affiliates and partnerships
+
+### Display advertising
+
+The homepage and editorial pages contain explicit Advertisement labels and ad areas. The homepage also includes “Explore More From Our Partners” and sponsored story cards.
+
+### Sponsored editorial
+
+Some homepage cards are explicitly labelled SPONSORED. This is an observed commercial disclosure, not an inference based on the article topic.
+
+### Affiliate links
+
+The sampled Tokyo itinerary article discloses that Lonely Planet may earn commission from affiliate links and says recommendations/reviews reflect independent opinions.
+
+### Travel insurance affiliate
+
+The India destination page contains a World Nomads partner module:
+- Trusted Partner label.
+- Travel insurance promotion.
+- Learn More link to a tracked affiliate destination.
+- Explicit statement that Lonely Planet does not represent World Nomads and receives a fee from quotes using the link.
+- It says the link is not a recommendation to buy insurance.
+
+### Activities / GetYourGuide
+
+The Ghibli Museum attraction page contains GetYourGuide availability widgets:
+- Activity image/title.
+- Rating/review count where supplied by provider.
+- Starting price.
+- Availability dates.
+- Participant selection.
+- Check availability action.
+- Tracked partner link.
+
+The India destination page also has a Book popular activities in India module.
+
+### Trade and advertising
+
+The Trade & Advertising page invites retailers and brands to explore trade and partnership opportunities. It describes brand partnerships designed to reach travelers during inspiration and planning.
+
+### Monetization not verified
+
+- Ad RPM, CPM, revenue share or total revenue.
+- Exact ad provider configuration and refresh behavior.
+- Ad impressions per session.
+- Affiliate commission percentages.
+- Whether every sponsored module appears on every page/device.
+- Commercial contracts and partner terms.
+
+### Monetization model
+
+Lonely Planet combines:
+- Display advertising.
+- Sponsored stories and partner modules.
+- Affiliate links and booking widgets.
+- Guidebook/map sales.
+- Merchandise and gift products.
+- Custom Journeys packages.
+- Newsletter/shop discount.
+- App promotion and membership-related benefits.
+
+**Sources:** https://www.lonelyplanet.com/ ; https://www.lonelyplanet.com/destinations/india ; https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo ; https://www.lonelyplanet.com/points-of-interest/ghibli-museum-mitaka/396249 ; https://www.lonelyplanet.com/press-trade-advertising ; https://www.lonelyplanet.com/legal
+
+## 13. Books, products and shopping
+
+### Shop navigation
+
+Dedicated shop: https://shop.lonelyplanet.com/
+
+Its navigation groups products into:
+- Travel Guides.
+- Travel Essentials.
+- Interests.
+- Lonely Planet Kids.
+- Gift Ideas.
+- Merchandise.
+- Best Sellers.
+
+### Product families
+
+Observed:
+- Classic Guides.
+- Experience Guides.
+- Pocket Guides.
+- Language and Phrasebooks.
+- Maps.
+- Nature & Outdoors.
+- National Parks.
+- Road Trips & Train Travel.
+- Walking & Hiking.
+- Food & Drink.
+- Family Travel.
+- Sustainable Travel.
+- Journals & Activity Books.
+- Kids books.
+- Gifts and inspiration.
+- Apparel/accessories.
+- Postcards and stationery.
+
+### Product discovery
+
+The shop includes:
+- Browse by destination.
+- Browse by category.
+- Merchandise.
+- Region/country navigation.
+- Best Sellers and Latest Releases.
+- Product filters.
+- Filter search.
+- Sort controls.
+- Cart and sign-in links.
+
+### India guidebook product
+
+https://shop.lonelyplanet.com/products/india
+
+The product page exposes:
+- Book description and destination coverage.
+- Product specifications.
+- Publication date.
+- Language.
+- Edition.
+- Page count.
+- ISBN.
+- Authors.
+
+This is a real e-commerce product detail, not a generic editorial article.
+
+### Commercial details
+
+The shop homepage advertises free shipping in the inspected storefront snapshot. Product collection cards display prices in USD. These are storefront claims and can vary by region, currency, promotion and shipping destination.
+
+### Membership/app
+
+The shop and app pages promote a membership benefit such as 10% savings and a free book in the app context. Eligibility and current availability should be verified at checkout.
+
+### Not verified
+
+- Checkout completion.
+- International shipping fees/taxes for every country.
+- Inventory and fulfillment times.
+- Digital delivery behavior for all titles.
+- Returns/refund flow.
+
+**Sources:** https://shop.lonelyplanet.com/ ; https://shop.lonelyplanet.com/collections/all?sort_by=title-ascending ; https://shop.lonelyplanet.com/products/india ; https://www.lonelyplanet.com/app
+
+## 14. Newsletter and promotional elements
+
+### Newsletter landing page
+
+https://www.lonelyplanet.com/newsletter
+
+Observed:
+- “Your next trip starts here”.
+- Weekly newsletter proposition.
+- Travel advice, destination inspiration and contributor stories.
+- Newsletter examples: Picture Yourself In… and LP Weekly.
+- Email field and Subscribe Now.
+- 20% off the shop for signing up.
+- Newsletter mockup imagery.
+- Privacy policy link.
+
+### Homepage newsletter
+
+The homepage repeats signup near the bottom and promotes Lonely Planet content plus 20% off the first shop order.
+
+### Other promotions
+
+- Seasonal Gift Guide.
+- Best in Travel 2027 book.
+- Destination guidebooks and maps.
+- App download campaign.
+- Journeys trip packages.
+- Partner travel insurance.
+- GetYourGuide experiences.
+- Social/Instagram content.
+- Best Seller and new-release shop modules.
+
+### Popups
+
+**Not Verified:** Timed, scroll-triggered, exit-intent or first-visit newsletter popups. The landing page and inline signup forms are verified; popup trigger rules are not.
+
+### Newsletter technology
+
+The page exposes a form submitting to a Lonely Planet newsletter API endpoint. The actual delivery provider and automation setup were **Not Verified**.
+
+**Sources:** https://www.lonelyplanet.com/newsletter ; https://www.lonelyplanet.com/ ; https://www.lonelyplanet.com/legal/privacy-policy
+
+## 15. Mobile, tablet and desktop responsive design
+
+### Desktop
+
+- Wide horizontal global navigation.
+- Desktop mega menus with tabbed regional/category panels.
+- Responsive classes indicate a wide/compact navigation breakpoint around 1200px.
+- Desktop pages use large editorial images and card grids.
+
+### Mobile/compact navigation
+
+- Dedicated Open main menu control.
+- Compact navigation panels and accordion-like sections in markup.
+- Buttons expose aria-expanded and aria-controls.
+- Destination menu has region-level section controls.
+- Footer uses native details/summary accordions with mobile-specific classes.
+
+### Tablet evidence
+
+- A 768 × 1024 viewport screenshot capture was requested.
+- Global navigation markup includes compact-mode styles below the wide-navigation breakpoint.
+- Exact visual behavior and every interaction at tablet width were not fully verified.
+
+### Mobile evidence
+
+- A 390 × 844 viewport screenshot capture was requested.
+- Page exposes mobile-specific menu control and responsive markup.
+- Main site has viewport meta.
+- Homepage/editorial card images are delivered at requested dimensions for responsive layouts.
+
+### Not verified
+
+- Physical-device QA on iOS/Android.
+- All card stacking behavior at every breakpoint.
+- Horizontal overflow and touch-target measurements.
+- Mobile menu keyboard/focus behavior.
+- Reduced-motion behavior.
+- Screen-reader behavior of all nested mega-menu panels.
+- Mobile network performance and field Core Web Vitals.
+
+**Conclusion:** Responsive design is strongly indicated by compact navigation and breakpoint-specific markup. Full responsive QA is not claimed.
+
+**Sources:** https://www.lonelyplanet.com/ ; https://www.lonelyplanet.com/destinations/india ; https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo
+
+## 16. SEO, URL structure and internal linking
+
+### URL patterns
+
+- Destination root: /destinations
+- Continent: /destinations/continents
+- Regional listing: /destinations/in/asia
+- Country: /destinations/india
+- Country + city: /destinations/japan/tokyo
+- Nested city/neighborhood: /destinations/japan/tokyo/shinjuku-northwest-tokyo
+- Point of interest: /points-of-interest/ghibli-museum-mitaka/396249
+- Editorial article: /articles/ultimate-weekend-tokyo
+- Article taxonomy: /sitemaps/articles/best-itineraries
+- Journeys listing: /journeys/itineraries
+- Journeys detail: /journeys/itineraries/{uuid}
+- Shop collection/product: /collections/{slug}, /products/{slug}
+
+### SEO signals observed
+
+- Descriptive page titles and meta descriptions.
+- Open Graph and Twitter card metadata on sampled pages.
+- Publication dates and reading-time values on editorial stories.
+- Author names and author profile links.
+- Geographic context on destination and attraction pages.
+- Descriptive hierarchical URLs.
+- Destination and article sitemap-like directories.
+- Internal links between countries, cities, points of interest, stories, books and Journeys packages.
+- Image alt text and photo credits.
+- Skip-to-main-content links.
+- Structured H1/H2/H3 content hierarchy.
+
+### Internal linking
+
+- Homepage → region/country/city pages.
+- Continent page → country/region pages.
+- Country page → cities, regions, attractions, stories, books and packages.
+- City page → neighborhoods, attractions, stories and packages.
+- Attraction page → nearby attractions and activity bookings.
+- Article → destination entities, points of interest, planning advice and related articles.
+- Journeys listing → package detail → custom request.
+- Best in Travel → destination pages and annual guidebook.
+
+### AI transparency / editorial policy
+
+The AI policy states:
+- Original reporting, recommendations, reviews and destination expertise are produced by staff/editors/contributors.
+- AI may assist with data analysis, topic brainstorming, headlines, summaries and internal workflows.
+- AI is not used to fabricate original reporting, quotes, traveler experiences or local expertise.
+- AI is not used to generate images of real places or materially alter photography in a misleading way.
+- Some reader-facing summaries and at-a-glance tables use AI to reformat underlying human-written content and are labelled.
+
+The sampled Tokyo article has a “Highlights / Summarized by AI” block.
+
+### Not verified
+
+- Canonical tags across all pages.
+- Full schema.org validation.
+- Sitemap XML health and last-modified correctness.
+- robots.txt beyond page metadata.
+- Hreflang coverage.
+- Search Console rankings, backlinks and organic traffic.
+- Rich-result eligibility and actual indexing state.
+
+No ranking or organic traffic conclusion is inferred from metadata.
+
+**Sources:** https://www.lonelyplanet.com/destinations ; https://www.lonelyplanet.com/destinations/india ; https://www.lonelyplanet.com/destinations/japan/tokyo ; https://www.lonelyplanet.com/points-of-interest/ghibli-museum-mitaka/396249 ; https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo ; https://www.lonelyplanet.com/sitemaps/articles ; https://www.lonelyplanet.com/sitemaps/destinations ; https://www.lonelyplanet.com/legal/ai-policy
+
+## 17. Interactive features, maps and animations
+
+| Feature | Evidence / status |
+|---|---|
+| Destinations mega menu | Multi-region tabs, countries, cities and featured panels |
+| Books mega menu | Product categories, destinations and guidebook navigation |
+| Trips mega menu | Regional trip discovery |
+| Mobile navigation | Compact panel markup and labelled menu control |
+| Search | Recent searches and suggestions across content types |
+| Article taxonomy | Category archives with pagination and multi-tag metadata |
+| Destination hierarchy | Region, country, city, neighborhood and point of interest |
+| Points of interest | Individual attraction records |
+| GetYourGuide widget | Activity cards, prices, dates and availability controls in sampled page output |
+| Journeys detail | Day-by-day controls and customize trip CTA |
+| Newsletter | Email signup |
+| Shop filters | Region/country/city/category filters and sort |
+| Shop cart | Product forms and cart actions in storefront markup |
+| App collections | Save places, sights, eats and experiences |
+| App trip building | Turn saved items into trips/itineraries |
+| App nearby map | Nearby places to visit, eat and experience |
+| App AI Guide | Search Lonely Planet travel expertise, described on app page |
+| Photo Essay | Editorial franchise category |
+| Full-screen photo lightbox | Not verified |
+| Website interactive map | Not verified on inspected pages |
+| Scroll-triggered animation | Not verified |
+| Parallax/autoplay | Not verified |
+| Exact mega-menu animation timing | Not verified |
+
+### Maps
+
+The app page specifically describes a Lonely Planet map showing nearby places to visit, eat and experience. This is an app feature claim. The website attraction page has local context and nearby POI links; a map embed on the sampled web template was not verified.
+
+### Animations
+
+Navigation markup includes CSS animation-related classes for menu state transitions. Exact timing/easing and behavior were not tested in a live browser interaction. No claims are made about scroll animation, parallax or autoplay.
+
+**Sources:** https://www.lonelyplanet.com/ ; https://www.lonelyplanet.com/search ; https://www.lonelyplanet.com/app ; https://www.lonelyplanet.com/journeys/itineraries/cdbaeb7a-f73c-455a-9096-845858b6eae2 ; https://shop.lonelyplanet.com/collections/all?sort_by=title-ascending ; https://www.lonelyplanet.com/points-of-interest/ghibli-museum-mitaka/396249
+
+## 18. Performance and accessibility
+
+### Performance observations
+
+- Main-site image delivery uses CloudFront transformations and Imgix auto-format/resize URLs.
+- Homepage hero uses eager loading and high priority in sampled HTML.
+- Many below-the-fold story/destination images use loading=lazy.
+- Some sampled pages expose responsive image candidates.
+- Global navigation uses wide/compact responsive classes.
+- Pages load advertising, analytics/measurement and third-party commerce/booking modules.
+- Destination and attraction pages can contain many images and partner widgets.
+
+These are implementation observations, not measured performance scores.
+
+### Performance not verified
+
+- Lighthouse / PageSpeed scores.
+- Core Web Vitals (LCP, INP, CLS).
+- TTFB and server response consistency.
+- Total transfer size and JavaScript execution cost.
+- Ad script impact and third-party blocking.
+- CDN cache-hit ratio.
+- Real mobile network performance.
+- Performance comparison against the four previous competitors.
+
+### Accessibility observations
+
+- Skip-to-main-content links.
+- Navigation landmarks and accessible labels.
+- Menu controls with aria-expanded and aria-controls.
+- Search form with role=search and search input.
+- Descriptive image alt text on many sampled assets.
+- Author attribution and content hierarchy.
+- Newsletter form aria-labelledby attributes.
+- Footer accordions use native details/summary.
+- AI summary block is explicitly labelled.
+- Sponsored placements and affiliate disclosures are labelled.
+
+### Accessibility not verified
+
+- WCAG 2.2 AA conformance.
+- Full keyboard traversal across mega menus.
+- Focus trap and focus return for mobile navigation.
+- Contrast ratios and text zoom.
+- Screen-reader behavior for search suggestions and trip day controls.
+- Third-party widget accessibility.
+- Reduced-motion support.
+- Captions/transcripts for all embedded social/video content.
+
+**Conclusion:** Positive accessibility implementation signals exist, but no formal accessibility pass or performance grade is claimed.
+
+**Sources:** https://www.lonelyplanet.com/ ; https://www.lonelyplanet.com/search ; https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo ; https://www.lonelyplanet.com/legal/ai-policy
+
+## 19. About, contact and legal pages
+
+### About Lonely Planet
+
+https://www.lonelyplanet.com/about
+
+The page includes Meet Lonely Planet, About Us, Our Guides. Your Stories., Our Roots, Our People, Travel with Us, Work with Us, Write for Us and Destination Experts.
+
+The About page states:
+- Lonely Planet began with Tony and Maureen Wheeler's 1973 overland journey and first guidebook, Across Asia on the Cheap.
+- The brand covers destinations in 180+ countries.
+- Content is translated into 33 languages.
+- It has 1,100+ travel experts/contributors and 130 full-time staff.
+- The Lonely Planet app launched in March 2026 and is currently available in the US, UK and Australia.
+- Journeys works with local experts in 80+ destinations and the page cites 500+ five-star reviews.
+
+These are publisher claims and have not been independently audited.
+
+### Contact
+
+https://www.lonelyplanet.com/contact
+
+The Contact link routes to Lonely Planet Support. The support landing page groups help by:
+- Shop Help.
+- Lonely Planet App.
+- Website/Guidebook Feedback, Corrections or Business Suggestions.
+- Tailor-made Trips by Journeys.
+- Trade & Advertising/Partnerships.
+- Other Inquiries.
+
+This is a structured help-center system rather than a single generic contact form.
+
+### Legal index
+
+https://www.lonelyplanet.com/legal
+
+The legal index links to:
+- Privacy Policy.
+- Website Terms.
+- App Terms.
+- Model Card: Lonely Planet AI Guide.
+- Advertising Terms.
+- Cookies Policy.
+- Intellectual Property.
+- Modern Slavery Act.
+- Whistleblower Policy (Australia).
+- Editorial AI Policy.
+
+The global footer also includes Do Not Sell or Share My Personal Information, Consumer Health Data Privacy Policy and Cookie Settings.
+
+### Privacy and website terms
+
+The Privacy Policy and Website Terms pages were opened and returned public content. The legal index provides a broader policy set than the two main legal pages alone.
+
+### Editorial AI policy
+
+The AI policy explains the division between human reporting/editorial judgment and AI-supported workflow or reader-facing summary formatting. It also discusses third-party content, including advertising and sponsored placements, as controlled by the respective third parties.
+
+### Not verified
+
+- Actual support response times.
+- User account data export/deletion completion workflow.
+- Cookie consent behavior in all regions.
+- Jurisdiction-specific policy differences for every visitor.
+- Whether every listed third-party vendor is active on every page.
+
+**Sources:** https://www.lonelyplanet.com/about ; https://www.lonelyplanet.com/contact ; https://support.lonelyplanet.com/hc/en-us ; https://www.lonelyplanet.com/legal ; https://www.lonelyplanet.com/legal/privacy-policy ; https://www.lonelyplanet.com/legal/website-terms ; https://www.lonelyplanet.com/legal/ai-policy
+
+## 20. Comparison with the previous four competitors
+
+| Dimension | Nomadic Matt | The Points Guy | Dan Flying Solo | Earth Trekkers | Lonely Planet |
+|---|---|---|---|---|---|
+| Core positioning | Practical budget travel | Points, miles, cards and travel media | Personal travel stories and photography | Family adventure travel | Global destination intelligence, editorial travel, guidebooks and trip services |
+| Homepage role | Planning/resource funnel | Rewards, tools, offers and editorial | Personal inspiration and destination stories | Destination/itinerary/park/hiking gateway | Editorial stories, destination discovery, annual picks, books, trips and partner content |
+| Destination architecture | Country/city guide hierarchy | Travel and rewards hubs | Region/country archive taxonomy | Region → country → itinerary/city hubs | Continent → country → region → city → neighborhood → point of interest |
+| Article taxonomy | Practical travel topics and destination guides | Rewards, credit cards, travel and news | Destination, style and story categories | Destination and outdoor/adventure content | Activities, culture, experiences, food, franchises, lodging, planning, inspiration and travel styles |
+| Travel styles | Budget-focused practical advice | Points/rewards use cases | Personal/offbeat/sustainable stories | Adventure, hiking and family trip content | Budget, family, luxury, solo, sustainable and wellness |
+| City/attraction content | Practical guides and budget advice | Travel/news and destination reporting | Personal city and photo stories | Detailed attractions and map-supported guides | City hubs, structured attraction records and point-of-interest pages |
+| Itinerary discovery | Editorial travel-planning content | Points and destination planning | Destination itineraries | Country hubs and trip-length guides | Editorial itinerary articles plus bookable Journeys packages |
+| Search | Site/destination search | AskTPG and tools | WordPress keyword search | WordPress keyword search | Cross-type suggestions for destinations, books, trips, inspiration and attractions |
+| Interactive tools | Planning resources | AskTPG, CardMatch, points calculator | Video/storytelling modules | Google My Maps in selected articles | Search suggestions, mega menus, shop filters, app map/collections, trip customization |
+| Photography | Destination photography | Editorial and product imagery | Strong personal photography | Strong original travel photography | Global editorial image library with CloudFront/Imgix transformations and photo credits |
+| Monetization | Travel affiliates/resources | Card affiliates, sponsored content and ads | Travel affiliates and ads | Amazon, Booking.com, GetYourGuide and Mediavine | Ads, sponsored stories, affiliates, guidebooks, maps, merchandise, app and bookable Journeys |
+| Newsletter | Practical travel signup | Rewards/newsletter | Irregular updates | Monthly updates and free eBook | Weekly newsletters, editorial inspiration and 20% shop incentive |
+| Distinctive advantage | Practical travel advice | Financial/travel decision tools | Personal travel voice | Family itinerary depth | Scale, geographic taxonomy, editorial tagging, guidebooks and bookable trips |
+
+### What Lonely Planet does best
+
+1. Deep destination hierarchy: place entities have structured pages from continent through point of interest.
+2. Independent article taxonomy: stories can be found by activity, experience, food, culture, planning, audience and travel style.
+3. Multiple trip discovery models: editorial itineraries coexist with paid, bookable, customizable Journeys packages.
+4. Cross-product navigation: header and search connect destinations, stories, books, trips and attractions.
+5. Attraction-level records: individual points of interest contain editorial descriptions and activity booking widgets.
+6. Guidebook commerce: physical/digital travel guide products integrate with destination discovery.
+7. Editorial trust signals: author, contributor bio, photo credits, affiliate disclosure and AI summary labels.
+8. AI transparency: editorial AI policy explains what AI can/cannot do in publishing.
+
+### Opportunities for Travel Guide
+
+1. Adopt multi-layer taxonomy: separate destination, article topic, travel style, audience, experience, attraction and itinerary data.
+2. Make filters useful: country/city plus duration, budget, activity, travel style and season where fields are structured and maintained.
+3. Connect destination and attraction records: city pages should lead to neighborhood and attraction details, not just flat article lists.
+4. Separate editorial itinerary from bookable product: free route guide and commercial trip package need distinct schemas/CTAs.
+5. Create clear pathways: Destination → practical guide → itinerary → attraction → optional partner booking.
+6. Use image transformation consistently: standardize WebP delivery, sizes, dimensions and lazy loading in the Travel Guide media pipeline.
+7. Disclose monetization clearly: label affiliate links, sponsored stories and paid partnerships near content.
+8. Keep a static-first architecture: implement the content model without reproducing backend-heavy complexity.
+9. Use AI transparency: if AI-assisted summaries are introduced, label them and maintain human verification.
+10. Avoid content overload: keep first-level navigation concise and reveal deeper taxonomy progressively.
+
+### Five-competitor synthesis
+
+- **Nomadic Matt:** Practical budget planning, costs and trip preparation.
+- **The Points Guy:** Decision-support tools, rewards and commercial comparison.
+- **Dan Flying Solo:** Personal travel storytelling and strong photography.
+- **Earth Trekkers:** Family adventure planning, country hubs, itineraries and hiking.
+- **Lonely Planet:** Global place hierarchy, multi-dimensional article taxonomy, points of interest, guidebooks and bookable journeys.
+
+For Travel Guide, the strongest architecture combines Lonely Planet's place/entity and article taxonomy separation; Earth Trekkers' country hubs and itinerary pathways; Nomadic Matt's practical travel planning; The Points Guy's decision-support tools; and Dan Flying Solo's distinctive visual storytelling.
+
+This is a product/IA synthesis, not a recommendation to copy competitor text, images, brand assets or proprietary UI.
+
+## 21. Evidence sources and research limitations
+
+### Primary official URLs
+
+- Homepage: https://www.lonelyplanet.com/
+- Destinations: https://www.lonelyplanet.com/destinations
+- Continents: https://www.lonelyplanet.com/destinations/continents
+- Countries: https://www.lonelyplanet.com/destinations/countries
+- Cities: https://www.lonelyplanet.com/destinations/cities
+- Asia listing: https://www.lonelyplanet.com/destinations/in/asia
+- India listing: https://www.lonelyplanet.com/destinations/in/india
+- India country hub: https://www.lonelyplanet.com/destinations/india
+- Italy country hub: https://www.lonelyplanet.com/destinations/italy
+- Tokyo city hub: https://www.lonelyplanet.com/destinations/japan/tokyo
+- Tokyo itinerary article: https://www.lonelyplanet.com/articles/ultimate-weekend-tokyo
+- Article directory: https://www.lonelyplanet.com/articles
+- Article taxonomy: https://www.lonelyplanet.com/sitemaps/articles
+- Budget travel archive: https://www.lonelyplanet.com/sitemaps/articles/budget-travel
+- Family travel archive: https://www.lonelyplanet.com/sitemaps/articles/family-travel
+- Best itineraries archive: https://www.lonelyplanet.com/sitemaps/articles/best-itineraries
+- Attraction page: https://www.lonelyplanet.com/points-of-interest/ghibli-museum-mitaka/396249
+- Search: https://www.lonelyplanet.com/search
+- Journeys: https://www.lonelyplanet.com/journeys
+- Journeys package directory: https://www.lonelyplanet.com/journeys/itineraries
+- India package directory: https://www.lonelyplanet.com/journeys/itineraries/in/india
+- Japan 14-day package: https://www.lonelyplanet.com/journeys/itineraries/cdbaeb7a-f73c-455a-9096-845858b6eae2
+- Best in Travel: https://www.lonelyplanet.com/best-in-travel
+- App: https://www.lonelyplanet.com/app
+- Newsletter: https://www.lonelyplanet.com/newsletter
+- About: https://www.lonelyplanet.com/about
+- Contact: https://www.lonelyplanet.com/contact
+- Support: https://support.lonelyplanet.com/hc/en-us
+- Trade and advertising: https://www.lonelyplanet.com/press-trade-advertising
+- Legal index: https://www.lonelyplanet.com/legal
+- Privacy: https://www.lonelyplanet.com/legal/privacy-policy
+- Website terms: https://www.lonelyplanet.com/legal/website-terms
+- AI editorial policy: https://www.lonelyplanet.com/legal/ai-policy
+- Shop: https://shop.lonelyplanet.com/
+- All books: https://shop.lonelyplanet.com/collections/all?sort_by=title-ascending
+- India guidebook: https://shop.lonelyplanet.com/products/india
+
+### Limitations
+
+- Audit reflects the publicly visible site as inspected on 14 November 2026; campaigns, prices, package prices, result counts, stories and partner placements can change.
+- Result counts (1,488 destinations, 1,269 cities, 564 Asia destinations, 183 Africa destinations, 86 India listing results and 134 Journeys packages) are snapshot values shown by the inspected pages, not permanent catalog guarantees.
+- Publisher claims about contributor count, country coverage, app markets and Journeys review counts are not independently verified.
+- No private analytics, revenue, affiliate contract, Search Console, CMS or partner dashboard data was accessed.
+- No checkout or trip request was submitted.
+- Search was inspected in its initial state; arbitrary-query autocomplete was not exhaustively tested.
+- Shop filters were identified in markup; a complete filter/sort interaction matrix was not run.
+- Mobile/tablet responsive markup and viewport screenshot captures were inspected, but no full physical-device QA was performed.
+- No Lighthouse, PageSpeed, Core Web Vitals, network waterfall, formal WCAG or assistive-technology test was run.
+- Website interactive maps and full-screen image gallery behavior remain Not Verified.
+- The failed exploratory Tokyo URL was not used as evidence; the working itinerary article is documented above.
+
+## 22. Audit conclusion and Phase 1 completion
+
+Lonely Planet is the broadest and most structured competitor in this five-site research set. Its main differentiator is the separation and cross-linking of place data, editorial stories, article taxonomy, points of interest, guidebook products, app tools and bookable trip packages.
+
+The most valuable architecture lesson is to keep these entities distinct but connected:
+
+1. Destination hierarchy: continent → country → region → city → neighborhood.
+2. Point of interest: a specific attraction/place.
+3. Editorial story: report, guide, itinerary, photo essay or planning article.
+4. Article taxonomy: activities, culture, experiences, food, lodging, planning, inspiration and travel styles.
+5. Itinerary: editorial route or commercial bookable package.
+6. Product: guidebook, map, gift, merchandise or app membership.
+7. Partner offer: sponsored placement, affiliate booking or paid partnership.
+
+For Travel Guide, implement these as a coherent frontend information architecture with reusable static page templates, clear internal links, structured metadata and a consistent photorealistic WebP media pipeline. There is no need to reproduce Lonely Planet's multi-product backend or commercial complexity.
+
+**Phase 1 status:** All five agreed competitor audits are documented:
+- Nomadic Matt
+- The Points Guy
+- Dan Flying Solo
+- Earth Trekkers
+- Lonely Planet
+
+**Phase 1.5 is the final competitor audit. Phase 1 research is complete.** No production development, later phase work, branch merge or main-branch change is included in this commit.
