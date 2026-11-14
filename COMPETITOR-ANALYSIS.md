@@ -805,3 +805,552 @@ The Points Guy is a rewards-led travel media and product platform. Its strongest
 For Travel Guide, the most transferable ideas are destination/topic hubs, practical article navigation, author transparency, contextual internal linking, responsive image delivery and clear affiliate disclosure. The site should not be copied as a card-offer or points-rewards portal if the intended product is a destination-first static travel guide.
 
 **Phase 1 progress:** Nomadic Matt and The Points Guy audits are now documented in this file. No other competitor audit, sitemap/architecture phase, design-system phase, monetization-eligibility phase or production development was performed in this step.
+
+
+---
+
+# Competitor Audit: Dan Flying Solo
+
+- **Competitor:** Dan Flying Solo — https://www.danflyingsolo.com/
+- **Research date:** 14 November 2026
+- **Audit scope:** Live homepage, navigation and dropdown taxonomy, travel blog archive, destination category archives (Austria, Portugal, India and Oman), a country travel guide (Oman), a city guide (Graz), a city-day itinerary (Graz Schlossberg), video hub, About page, Media Kit / Work with Me page, privacy/cookie/disclaimer policy, and a WordPress search-results URL.
+- **Status:** Representative live-template audit. The homepage and representative page templates were scraped and desktop/mobile homepage captures requested. This is not a full site crawl, a real-device matrix or a formal technical audit.
+- **Evidence labels:** **Observed** means present in the inspected public page or returned markup. **Publisher-stated** means the site owner describes it in their own policy or media-kit page. **Not verified** means the feature needs browser interaction, network instrumentation, a physical device or a formal test that was not performed.
+- **Source URL rule:** Each subsection lists the primary URLs supporting the observations. URLs are the publisher's own pages unless explicitly identified as a third-party destination.
+
+## 1. Pages inspected and method
+
+### Primary pages inspected
+
+1. Homepage: https://www.danflyingsolo.com/
+2. Travel Blog archive: https://www.danflyingsolo.com/travel-blog/
+3. Destinations category: https://www.danflyingsolo.com/category/destinations/
+4. Austria country archive: https://www.danflyingsolo.com/category/destinations/europe/austria/
+5. Portugal country archive: https://www.danflyingsolo.com/category/destinations/europe/portugal/
+6. India country archive: https://www.danflyingsolo.com/category/destinations/asia/india/
+7. Oman country archive: https://www.danflyingsolo.com/category/destinations/middle-east/oman/
+8. Oman long-form travel guide: https://www.danflyingsolo.com/oman-travel-guide-experiences-planning-tips/
+9. Graz city guide: https://www.danflyingsolo.com/guide-graz-austria-things-to-do/
+10. Graz Schlossberg day itinerary: https://www.danflyingsolo.com/one-day-in-graz-schlossberg-guide-uhrturm/
+11. Travel video hub: https://www.danflyingsolo.com/travel-videos/
+12. About page: https://www.danflyingsolo.com/about/
+13. Media Kit / Work with Me: https://www.danflyingsolo.com/media-kit/
+14. Privacy, Cookie & Disclaimer Policy: https://www.danflyingsolo.com/privacy-cookie-policy/
+15. Search results example: https://www.danflyingsolo.com/?s=Oman
+16. Travel tips category: https://www.danflyingsolo.com/category/style/travel-tips/
+
+### Method and limitations
+
+- Live page content, page titles/descriptions exposed by the scraper, links, image URLs and selected HTML attributes were inspected.
+- The homepage was requested at desktop width (1440px) and narrow mobile width (390px). The extracted DOM and responsive screenshots were requested separately.
+- Destination archives from several continents were checked to distinguish country taxonomy from a dedicated editorial guide.
+- A current long-form country guide and a detailed city guide were read beyond their opening paragraphs to inspect section structure, local recommendations, affiliate links and internal references.
+- No newsletter was submitted, no comment was posted and no affiliate purchase was made.
+- Search was tested through a real WordPress query URL (`?s=Oman`), but ranking quality and edge cases were not systematically benchmarked.
+- The privacy/disclaimer page itself states a last-updated date of 2 June 2020. Treat its policy wording as publisher-published text that may be dated; it is not proof that every listed vendor or setting remains unchanged in November 2026.
+- No Lighthouse, PageSpeed Insights, WebPageTest, real-user Core Web Vitals, WCAG audit or physical iOS/Android/tablet test was run.
+
+## 2. Homepage: sections and layout
+
+The homepage is a personal, photography-led editorial landing page. Its observed sections, in page order, are:
+
+1. **Personal introduction:** “Hey, I’m Dan!” introduction explains the author's travel background, photography-led perspective, full-time travel period (2014–2018) and current Portugal chapter, with a link to About.
+2. **Spotlight on Graz:** A destination feature block promotes Graz as a current focus. It includes a short editorial introduction, a Graz Uncovered app image/link, and a “Plan your trip” collection of linked articles. The links cover the city guide, Austria experiences, sustainability, seasonal travel, local districts, Schlossberg, day trips and nearby places.
+3. **Offbeat inspiration:** A curated set of evergreen inspiration articles, including European hidden gems, underrated cities and unique islands.
+4. **Travel Blog / Latest:** A lead story with a larger image and summary, followed by smaller latest-story links and a “Read More Articles” link to the archive.
+5. **Travel Right / Sustainability:** A small curated collection about responsible travel in Spain, ecotourism and sustainable Graz.
+6. **Journal & Diary / Stories:** A larger personal-story feature (Dominica) with additional story links, including the Asitz mountain, Innsbruck, Whangamomona, Falkland Islands and Kōchi in Japan.
+7. **Destination shortcut tiles:** Prominent image tiles link to Spain, Europe, Italy and Austria archives.
+8. **Explore the World / Videos:** A video carousel/slider with video titles, play affordances and previous/next controls.
+9. **Go Deeper / Europe:** A selected European feature story (Algarve hidden gems) with more European article links, followed by category tiles for City Breaks, Offbeat Travel, Road & Rail, and Islands & Beaches.
+10. **Galleries & Essays / Photography:** A photography-focused group of photo essays, including the Falkland Islands, Kumbh Mela in India and the Faroe Islands.
+11. **About Dan feature:** A portrait/image and short author statement linking to the full About page.
+12. **Irregular email updates:** A signup form with required Email Address and optional First Name fields.
+13. **Recent Articles:** A text link list of current posts, including trip planning, responsible travel, seasonal Europe, Oman, Iceland car rental, beach destinations, London and hotel review content.
+14. **Privacy / copyright / footer:** Privacy and disclaimer link, copyright notice (“2013–2026”), social links and scroll-to-top control.
+
+### Layout assessment
+
+- The homepage is not a single chronological feed. It uses editorially curated destination spotlights, travel-style collections, stories, videos and photography.
+- The current Graz spotlight is unusually deep: it works as a mini destination hub with a cluster of supporting guides rather than a single promotional card.
+- The page makes the author and his photography central to the brand. It has a recognisable personal voice and first-person storytelling rather than a large editorial newsroom structure.
+- The homepage repeats recent content in different contexts (for example, a destination spotlight and the latest feed can surface related destination stories). This can be useful for discovery, but should be checked for visual repetition when building a similar homepage.
+
+**Sources:** https://www.danflyingsolo.com/ ; https://www.danflyingsolo.com/about/
+
+## 3. Header, navigation and menu hierarchy
+
+### Top-level navigation observed
+
+- Articles
+- Destinations +
+- Ideas +
+- Videos
+- About
+- Search control
+- Menu control (visible in the extracted navigation representation)
+- Social links, including Instagram
+
+### Destinations menu
+
+The destination hierarchy is grouped by broad region and country:
+
+- **Asia:** Cambodia, China, Hong Kong, India, Indonesia, Japan, Laos, Maldives, Myanmar, Singapore, Sri Lanka, Taiwan and Vietnam.
+- **Europe A–K:** Albania, Austria, Belgium, Bosnia and Herzegovina, Bulgaria, Czech Republic, Cyprus, Denmark (with Faroe Islands nested), France, Germany, Greece, Iceland and Italy; a European hidden-gems feature is also linked.
+- **Europe L–U:** Luxembourg, Monaco, Montenegro, Norway, Portugal, San Marino, Scotland, Slovenia, Spain, Sweden, the Netherlands, Turkey, United Kingdom and Ukraine.
+- **Other continents / regions:** Africa (including Mauritius and Morocco), Caribbean (including Aruba, Antigua, Dominica and Jamaica), Middle East (including Palestine/Israel, Oman and UAE), the Americas (including Peru, Falkland Islands and Mexico) and Oceania (including Australia, Fiji and New Zealand).
+
+### Ideas menu
+
+The Ideas hierarchy is divided into:
+
+- **Travel Style:** Adventure, Art and Culture, City Breaks, Festivals and Events, Food and Wine, Islands and Beaches, Off the beaten path, Road Trips, Wellness, Wildlife and Nature, Winter and Off Season.
+- **Tips & Reviews:** Accommodation, Reviews, Travel Tips, Technology and Gear, Responsible & Eco Tourism, Best travel apps, Best language apps and Web Stories.
+- **Stories & Personal:** Stories & Features and Photo Galleries.
+
+### About submenu and other links
+
+The extracted navigation also includes a short “Hey, I’m Dan…” introduction and links to About, freelance writing portfolio, Work with Me / Media Kit, the separate Portugal travel guide site and the privacy/cookie policy.
+
+### Menu behavior boundary
+
+- The navigation text and nested hierarchy are observed in the public page extraction.
+- The “+” affordances indicate expandable groups, and the mobile capture was requested, but every hover/tap/focus transition was not manually exercised.
+- Do not claim a fully tested mega-menu, keyboard interaction or tablet-specific menu behavior based only on the extracted link hierarchy.
+
+**Sources:** https://www.danflyingsolo.com/ ; https://www.danflyingsolo.com/travel-blog/
+
+## 4. Destination directory and country/city pages
+
+### Destination directory and URL hierarchy
+
+The site uses a WordPress-style hierarchical taxonomy, with country category paths such as:
+
+- Asia: `/category/destinations/asia/india/`
+- Europe: `/category/destinations/europe/austria/`
+- Europe: `/category/destinations/europe/portugal/`
+- Middle East: `/category/destinations/middle-east/oman/`
+- A city-level category is also linked for Graz: `/category/destinations/europe/austria/graz-austria/`
+
+The navigation contains many country links, while the broader Destinations category and region archives aggregate content across those locations.
+
+### Country archive behavior: Austria, Portugal and India
+
+The inspected Austria, Portugal and India pages are category archives, not all-purpose country landing pages with a fixed practical guide structure.
+
+Observed archive pattern:
+- H1/title such as “Austria Articles”.
+- A chronological or category-based list of linked articles.
+- Each card can include a large image, excerpt/description, date and article title.
+- Some content can be tagged to multiple destinations or broader regions. For example, the Austria archive includes Europe-wide seasonal and destination inspiration articles as well as Graz- and Austria-specific posts.
+- The India archive includes an Asia-wide inspiration article as well as India-specific Kumbh Mela and other destination coverage.
+- Country archives provide navigation into the content, but the actual trip-planning information is inside individual articles.
+
+### Country guide example: Oman
+
+The dedicated Oman guide is a long-form editorial page with practical sections including:
+- When to visit.
+- Where to stay, including wild camping and hotel/guesthouse context.
+- Getting around, public transport, car hire, taxis and 4WD advice.
+- Favourite experiences such as wadis, sinkholes, beaches, Nizwa Fort and desert travel.
+- Local observations and first-person road-trip experience.
+- Relevant links to the Oman category and other related guides.
+
+### City guide example: Graz
+
+The Graz guide is a dedicated city-planning article, not merely a category listing. It includes:
+- A destination introduction and city positioning.
+- Local context and insights from residents/business owners/guides.
+- “What is Graz famous for?”
+- “How many days do I need in Graz?”
+- Where to stay, with named accommodation options, price-level cues and direct booking links.
+- Food, markets, attractions, transport and nearby day trips in later sections.
+- Links to related Graz itinerary, seasonal, neighbourhood and regional guides.
+
+### City sub-guide example: Graz Schlossberg
+
+The Schlossberg article is a narrower attraction/area guide. It includes a short history, a day plan, breakfast/lunch/dinner and after-dark suggestions, transport/ways up and down, local attraction links and a route to the broader Graz city guide.
+
+### Assessment
+
+Dan Flying Solo's strongest destination model is a combination of:
+1. Region/country taxonomy for browsing.
+2. Dedicated country guides where available.
+3. City and neighbourhood articles.
+4. Attraction-level guides and day itineraries.
+5. Internal links connecting those levels.
+
+**Important limitation:** Do not assume every country in the navigation has a dedicated comprehensive guide or that each country category is manually curated as a complete destination page. The sampled archive pages show mixed article tagging and chronological aggregation.
+
+**Sources:** 
+- https://www.danflyingsolo.com/category/destinations/
+- https://www.danflyingsolo.com/category/destinations/europe/austria/
+- https://www.danflyingsolo.com/category/destinations/europe/portugal/
+- https://www.danflyingsolo.com/category/destinations/asia/india/
+- https://www.danflyingsolo.com/category/destinations/middle-east/oman/
+- https://www.danflyingsolo.com/oman-travel-guide-experiences-planning-tips/
+- https://www.danflyingsolo.com/guide-graz-austria-things-to-do/
+- https://www.danflyingsolo.com/one-day-in-graz-schlossberg-guide-uhrturm/
+
+## 5. Travel article layouts and content structure
+
+### Shared article pattern observed
+
+The sampled long-form articles share a recognisable content format:
+
+1. Featured image / hero photograph.
+2. Affiliate disclosure close to the beginning: “This website uses affiliate links…” and Amazon Associate notice.
+3. Updated date.
+4. Google Preferred Source badge/link in the inspected 2026 guides.
+5. First-person editorial introduction with destination context and personal experience.
+6. In-article contents control labelled “In this article…” with a “Toggle” link.
+7. H2 sections and nested H3 subsections.
+8. Inline destination photographs with descriptive captions.
+9. Contextual internal links to other Dan Flying Solo articles and external authoritative/local sources.
+10. Practical recommendations, accommodation links, tour/operator links or other relevant outbound links.
+11. Reader comments / response area and author profile link near the end.
+12. Related articles and sitewide author/newsletter/recent-article modules.
+
+### Country guide: Oman
+
+The Oman article is structured around trip-planning questions: seasonality, accommodation, transport and experiences. It uses detailed first-person examples from a two-week photography road trip, and gives context for 4WD requirements, public transport limitations, wild camping and local operators.
+
+### City guide: Graz
+
+The Graz article includes practical city sections and local voices. It quotes named local people with roles/business context, then moves into days required, accommodation, food, attractions and regional experiences. Hotel recommendations use short descriptive evaluations and Booking.com affiliate links.
+
+### Attraction guide: Schlossberg
+
+The narrower guide uses a day-itinerary pattern, breaking the day into breakfast, morning, lunch, afternoon, sunset, dinner and after-dark. This is a useful example of turning a single attraction into a practical time-based visit plan.
+
+### Editorial style
+
+- Strong first-person voice and personal travel experience.
+- Detailed location-specific observations rather than generic list copy.
+- Local voices/quotes appear in the Graz guide.
+- Practical information is embedded within narrative rather than always separated into a standard facts panel.
+- Article pages can be long and image-rich.
+
+**Sources:** 
+- https://www.danflyingsolo.com/oman-travel-guide-experiences-planning-tips/
+- https://www.danflyingsolo.com/guide-graz-austria-things-to-do/
+- https://www.danflyingsolo.com/one-day-in-graz-schlossberg-guide-uhrturm/
+
+## 6. Search and category navigation
+
+### Site search
+
+- The header exposes a search control described as opening a search input.
+- The extracted search link uses the standard WordPress query pattern, `/?s=`.
+- A live search query was inspected: https://www.danflyingsolo.com/?s=Oman
+- The returned results page reports “133 search results for: Oman” and includes a “New Search” input/heading.
+- The visible results include title/summary snippets and links to relevant content.
+
+### Search limitations observed
+
+- The search-results page is a standard keyword search, not a faceted destination filter.
+- No exposed controls for date range, country, article type, travel style or author were found in the inspected search result.
+- The example query's result snippets include a mix of destination and broader travel stories. The search ranking/relevance algorithm was not tested, so no claim is made about result quality or exact ranking behavior.
+- No autocomplete, live suggestions, spelling correction or search analytics behavior was verified.
+
+### Category navigation
+
+- Category archives exist for destinations and travel styles.
+- Travel Blog archive presents category labels on article cards (for example All, Destinations, Europe, Responsible & Eco Tourism, Spain, City Breaks, Accommodation, Reviews).
+- The navigation offers destination and idea categories as the main discovery mechanisms.
+- The archive pages link readers into individual posts and related categories.
+
+**Sources:** https://www.danflyingsolo.com/ ; https://www.danflyingsolo.com/travel-blog/ ; https://www.danflyingsolo.com/?s=Oman
+
+## 7. Photorealistic images and image loading
+
+### Image content observed
+
+- The site is strongly photography-led, with real travel photographs of destinations, landscapes, architecture, people, food, wildlife and cultural events.
+- The About page also uses personal photographs of the author and travel experiences.
+- The homepage includes a mix of larger feature images and small 80×80 thumbnails.
+- The sampled archive pages include 710×375 card images and full-size source images.
+- The video hub uses YouTube thumbnail images and a play overlay.
+- Image URLs predominantly use WordPress uploads paths such as `/wp-content/uploads/YYYY/MM/`, with descriptive filenames and JPEG/JPG extensions.
+
+### Image sizing/loading evidence
+
+- Homepage image URLs include generated thumbnail sizes such as 80×80 and 710×375, indicating multiple WordPress image sizes are used in the rendered content.
+- Some inspected HTML includes `srcset` attributes and `data-src` / `data-lazy-src` placeholders, indicating responsive image candidates and deferred/lazy image loading are used in at least some page templates.
+- The sampled article HTML includes image `alt` attributes for the extracted image elements.
+- The video hub includes a transparent SVG placeholder and YouTube thumbnails, with play affordances.
+- The sampled WordPress media URLs themselves are mostly .jpg/.jpeg and .png; the inspected page output did not establish that all photographs are delivered as WebP or AVIF.
+
+### Not verified
+
+- Actual browser-selected image candidate, CDN transformations, cache headers, compression quality and transfer sizes were not measured.
+- No image waterfall or Largest Contentful Paint measurement was performed.
+- The presence of a `data-src` placeholder does not by itself prove every image is lazy-loaded correctly.
+- Do not infer that the site uses a dedicated image CDN or WebP conversion pipeline from WordPress upload URLs alone.
+
+### Lesson for Travel Guide
+
+The useful pattern is a real-photography editorial identity with thumbnail sizes appropriate to card roles. Travel Guide can improve on the observed format delivery by generating verified WebP variants, preserving descriptive alt text, specifying dimensions and measuring the hero image's loading priority.
+
+**Sources:** 
+- https://www.danflyingsolo.com/
+- https://www.danflyingsolo.com/category/destinations/europe/austria/
+- https://www.danflyingsolo.com/oman-travel-guide-experiences-planning-tips/
+- https://www.danflyingsolo.com/guide-graz-austria-things-to-do/
+- https://www.danflyingsolo.com/travel-videos/
+
+## 8. Advertising, affiliate links and commercial placements
+
+### Affiliate disclosure on articles
+
+- The inspected Oman and Graz guides display a disclosure near the beginning that the website uses affiliate links which may earn a commission at no additional cost to the reader.
+- The same disclosure states that the publisher is an Amazon Associate and earns from qualifying purchases.
+- Affiliate links are embedded contextually within travel recommendations. Examples include accommodation links routed through `booking.tp.st`, a tent product link to vidaXL and a local Oman tour operator link.
+- The Graz guide uses Booking.com affiliate redirect URLs for accommodation recommendations and Bookaway for transport-related booking.
+
+### Media Kit / Work with Me page
+
+The publisher's Media Kit page explicitly states that:
+- Website advertising is managed by Mediavine.
+- Advertising can be purchased directly through a Mediavine sales link.
+- The publisher offers brand ambassador partnerships, long-term partnerships, social media takeovers, reviews, press trips and photography/video production.
+- The page displays previous work and editorial/brand credentials, including work with Lonely Planet and other publishers/brands.
+
+### Privacy and disclaimer policy
+
+The site's Privacy, Cookie & Disclaimer Policy describes:
+- Affiliate links and tracking information.
+- Third-party advertising companies and behavioural advertising.
+- Mediavine programmatic advertising.
+- Cookie and consent-related information, including an EU-specific advertising notice in the policy text.
+- The policy says that the publisher may receive compensation or discounted/provided services, while stating that published opinions remain the author's own.
+- It says third-party-provided content will be identified at the start of the relevant article.
+
+### Placement evidence boundary
+
+- Affiliate disclosure and contextual affiliate links were visible on the inspected article pages.
+- The Media Kit explicitly identifies Mediavine as the advertising manager.
+- The privacy policy describes programmatic advertising.
+- The exact number, location, format, frequency and fill of display ad slots were not independently measured from the captured pages.
+- No revenue, CPM, affiliate commission percentage or ad performance data is available from these public observations.
+
+**Policy freshness warning:** The inspected privacy policy displays “Last updated 2nd June 2020”. Treat the page as a published policy statement that may need revalidation; do not assume every technical or vendor detail remains current without a fresh legal/privacy review.
+
+**Sources:** 
+- https://www.danflyingsolo.com/oman-travel-guide-experiences-planning-tips/
+- https://www.danflyingsolo.com/guide-graz-austria-things-to-do/
+- https://www.danflyingsolo.com/media-kit/
+- https://www.danflyingsolo.com/privacy-cookie-policy/
+
+## 9. Newsletter and promotional elements
+
+### Newsletter
+
+- The homepage footer includes a signup block titled “Sign up for (irregular) updates”.
+- The visible fields include required Email Address and First Name.
+- The signup is presented as irregular updates rather than a daily/weekly editorial newsletter promise.
+- The same signup module appears in the extracted footer content of article pages and some category/archive pages.
+
+### Promotional and partnership content
+
+- The homepage features a Graz destination spotlight and a link to the official Graz Uncovered app.
+- The Media Kit promotes partnership opportunities and provides examples of previous commercial/editorial collaborations.
+- The video hub promotes travel videos and destination stories.
+- There is no evidence in the inspected homepage that a large card-offer or points-rewards promotional funnel is a core site feature.
+
+### Popups
+
+- No timed newsletter modal, exit-intent popup or promotional overlay was confirmed in the clean page captures.
+- The site does have inline newsletter signup, a header search control, destination navigation and video carousel controls.
+- Popup behavior can vary by browser storage, consent state, geography and campaign; the absence of a popup in the captures is not proof that none ever appears.
+
+### Newsletter endpoint limitation
+
+A standalone `/newsletter/` path returned a not-found page in the attempted check. The verified signup surface for this audit is the homepage/footer embedded form; no dedicated newsletter landing page was confirmed.
+
+**Sources:** https://www.danflyingsolo.com/ ; https://www.danflyingsolo.com/media-kit/ ; https://www.danflyingsolo.com/travel-videos/
+
+## 10. Mobile, tablet and desktop layouts
+
+### Desktop
+
+- A desktop-width homepage capture was requested at 1440px.
+- The page contains multiple wide editorial sections, destination image tiles, a video carousel, feature story blocks and a footer author/newsletter module.
+- The extracted navigation contains nested destination and idea groups with many links.
+
+### Mobile
+
+- A narrow mobile-width homepage capture was requested at 390px.
+- The mobile and desktop page captures were obtained separately; the extracted HTML also includes a Menu control and search control.
+- The responsive page output contains image variants and lazy/deferred image attributes in some templates.
+
+### Tablet and responsive behavior not verified
+
+- No dedicated tablet viewport/device test was completed.
+- Exact mobile menu open/close behavior, menu focus management, touch target dimensions, image crop behavior, card stacking and landscape layout were not measured.
+- No physical device/browser combination was tested.
+- The page's layout may be responsive, but this audit does not claim a full responsive QA pass.
+
+**Sources:** https://www.danflyingsolo.com/ ; https://www.danflyingsolo.com/travel-blog/
+
+## 11. SEO structure and internal linking
+
+### Observed SEO and information architecture signals
+
+- The scraper exposed a descriptive homepage title and description and descriptive titles/descriptions for inspected travel category and article pages.
+- URLs use readable slugs for individual guides and hierarchical category paths for destinations.
+- The homepage uses named section headings such as Graz, Inspiration, Latest, Sustainability, Stories, Videos, Europe and Photography.
+- The Travel Blog archive presents article titles, excerpts, dates and category labels.
+- Destination category paths create a region → country → (in some cases) city hierarchy.
+- Article pages link contextually to other guides, related destinations, local businesses, transport and accommodation.
+- The Graz guide links to other Graz neighbourhood, itinerary and regional articles; the Oman guide links to the Oman category and related guides.
+- The About page provides detailed author background and links to the author's other work and social profiles.
+- The Media Kit page links to published work on other editorial sites and demonstrates author credentials.
+
+### Not verified
+
+- Canonical tags, robots directives, XML sitemap completeness, hreflang, Open Graph metadata, schema markup validity and structured data coverage were not reliably verified in the extracted HTML.
+- No Google Search Console, index coverage, ranking, backlink, crawl-depth or duplicate-content data was inspected.
+- A parser-extracted SVG title was not treated as the authoritative HTML document title; page metadata/title fields were used where available.
+- No claim is made about actual organic search performance.
+
+### Internal linking assessment
+
+The site has strong topical linking across a destination cluster: a country archive points to country-relevant stories; city guides point to neighbourhood and itinerary guides; attraction pages link back to the city guide; article recommendations connect to booking/transport resources. This supports both discovery and deeper trip planning.
+
+**Sources:** 
+- https://www.danflyingsolo.com/
+- https://www.danflyingsolo.com/travel-blog/
+- https://www.danflyingsolo.com/category/destinations/europe/austria/
+- https://www.danflyingsolo.com/oman-travel-guide-experiences-planning-tips/
+- https://www.danflyingsolo.com/guide-graz-austria-things-to-do/
+- https://www.danflyingsolo.com/about/
+- https://www.danflyingsolo.com/media-kit/
+
+## 12. Performance and accessibility
+
+### Performance-related evidence
+
+- The site uses WordPress media paths with generated thumbnail sizes.
+- Some extracted templates expose `srcset` and `data-src` / `data-lazy-src` attributes.
+- The video hub uses YouTube thumbnail URLs and a lazy placeholder pattern.
+- The privacy policy and Media Kit identify Mediavine programmatic advertising; ad scripts and third-party embeds may add network and runtime work, but their measured impact was not tested.
+
+### Performance not verified
+
+- No Lighthouse or PageSpeed score, LCP, INP, CLS, TTFB, total page weight, JavaScript execution time, cache policy, server response or network waterfall was measured.
+- No performance comparison with Nomadic Matt or The Points Guy was run.
+- Therefore, no claim is made that Dan Flying Solo is fast or slow based on this audit.
+
+### Accessibility evidence
+
+- Sampled homepage and article image elements exposed alt attributes in the returned markup.
+- The returned markup includes semantic navigation and main content landmarks in the inspected samples.
+- Search and menu controls have text labels in the extracted navigation representation.
+- The article contents control is visibly labelled “In this article…” with a Toggle link.
+
+### Accessibility not verified
+
+- No WCAG 2.2 AA audit was conducted.
+- Keyboard-only navigation, screen-reader announcement, focus visibility, heading order, color contrast, form errors, video captions/transcripts, reduced-motion behavior and touch-target sizing were not tested.
+- An alt attribute being present does not prove that its text is meaningful or that every decorative image is correctly hidden from assistive technology.
+- A formal accessibility conclusion cannot be made from HTML extraction alone.
+
+**Sources:** https://www.danflyingsolo.com/ ; https://www.danflyingsolo.com/oman-travel-guide-experiences-planning-tips/ ; https://www.danflyingsolo.com/travel-videos/ ; https://www.danflyingsolo.com/privacy-cookie-policy/
+
+## 13. Animations and interactive features
+
+### Observed interactive elements
+
+- Expandable-style Destinations and Ideas navigation groups.
+- Header search control that opens a search input.
+- WordPress keyword search results using the `?s=` query parameter.
+- Category/archive navigation.
+- Article contents toggle.
+- Reader comments / response section.
+- Homepage and footer email signup form.
+- Homepage video carousel with previous/next controls and play affordances.
+- Dedicated Travel Videos hub with multiple video collections, carousel navigation and YouTube thumbnail/play controls.
+- Scroll-to-top links.
+- External links to destination apps, local attractions, accommodation and transport providers.
+
+### Animation evidence boundary
+
+- The video hub visibly exposes carousel navigation and play controls.
+- A placeholder/loading graphic appears in the video hub's extracted content.
+- No specific CSS animation, transition duration, autoplay behavior, parallax effect or animation easing was verified.
+- No continuous decorative animation was confirmed.
+
+### Not verified
+
+- The exact menu animation and keyboard interaction.
+- Whether carousel movement is swipe-enabled on all mobile browsers.
+- Whether YouTube embeds load on click or before interaction on every page.
+- Whether the contents toggle scrolls correctly for every article.
+- Newsletter validation, confirmation messages and subscriber storage behavior.
+- Comment moderation workflow and spam controls beyond the policy statement.
+
+**Sources:** https://www.danflyingsolo.com/ ; https://www.danflyingsolo.com/?s=Oman ; https://www.danflyingsolo.com/travel-videos/ ; https://www.danflyingsolo.com/guide-graz-austria-things-to-do/
+
+## 14. Comparison with Nomadic Matt and The Points Guy
+
+| Dimension | Nomadic Matt | The Points Guy | Dan Flying Solo |
+|---|---|---|---|
+| Core positioning | Destination-led travel planning and practical advice | Rewards, loyalty, credit cards and travel media | Personal travel photography, destination guides and first-hand stories |
+| Homepage | Trip-planning paths, destination guides and travel resources | AskTPG, points calculator, rewards, offers and editorial news | Current destination spotlight, offbeat inspiration, latest stories, sustainability, videos and photography |
+| Navigation | Travel guides and planning resources | Credit cards, Rewards, Travel and Offers | Articles, Destinations, Ideas, Videos and About |
+| Destination structure | Country and city guide templates | Curated destination/topic hubs and rewards-led travel articles | Region/country taxonomy with city and attraction articles; some dedicated long-form guides |
+| Article format | Practical evergreen guides and planning articles | News, reviews, rewards explainers, listicles and editorial reporting | Long first-person guides, destination stories, photo essays and local recommendations |
+| Search/discovery | Guide/destination navigation and site search | AskTPG, card matching, travel brand search and points calculator | WordPress keyword search, nested destination menu and travel-style category archives |
+| Photography | Travel photography and destination images | Editorial photography, product/card images, staff portraits and video | Strong author-led travel photography, destination galleries and video thumbnails |
+| Commercial model | Travel-resource affiliates and disclosed recommendations | Credit-card affiliates, travel/retail partners, sponsored content and display advertising | Contextual travel affiliates, Amazon affiliate links, Mediavine-managed display advertising and direct partnerships |
+| Newsletter | Travel-planning newsletter signup | Daily Newsletter with points, travel news and offers | Irregular updates email form in footer |
+| Engagement | Destination guide navigation and article links | AskTPG, calculator, CardMatch, comments, member offers and videos | Personal storytelling, comments, video carousel, photo essays and author-led destination clusters |
+
+### Useful lessons for Travel Guide
+
+1. **Build a destination hierarchy, not just an article archive.** Dan Flying Solo's region/country/city/attraction linking pattern is a useful reference for travel-guide information architecture.
+2. **Use destination spotlights as mini-hubs.** The Graz homepage spotlight links to the city guide, day itinerary, nearby places, seasonal advice, sustainability and neighbourhood content. This is a strong pattern for a destination-first site.
+3. **Create distinct page types.** Country archives, full country guides, city guides, neighbourhood guides, attraction guides and itineraries serve different user intents. Do not force all of them into one generic article template.
+4. **Use first-hand photography and captions.** The site's personal travel photographs and descriptive captions strengthen authenticity. Travel Guide should use licensed/generated assets with a clear asset record and avoid copying competitor photographs.
+5. **Add local voices where verifiable.** The Graz guide uses named local contributors/quotes. Travel Guide can include interviews or sourced local insights only when they are real and attributed.
+6. **Make travel-style discovery a second navigation axis.** Adventure, city breaks, food, road trips, islands and responsible travel are useful cross-destination filters.
+7. **Make affiliate disclosure visible near recommendations.** Dan Flying Solo discloses affiliate links at the beginning of sampled guides and links to accommodation/transport products contextually. Travel Guide should use clear, legally reviewed disclosure wording.
+8. **Do not copy the weak spots.** Country archive pages may mix destination-specific and broadly tagged articles; Travel Guide should maintain strict taxonomy and avoid unrelated content appearing in country archives.
+9. **Treat search as a utility, not a checkbox.** The inspected WordPress search is keyword-based and exposes no advanced filters. Travel Guide should provide useful destination/category filtering only if the data model can support it.
+10. **Do not assume image optimization from responsive markup alone.** Sampled pages use multiple image sizes and deferred loading, but WebP/AVIF delivery and performance scores were not verified. Travel Guide should test actual output and network payloads.
+11. **Measure ad and embed impact.** Mediavine and video embeds are part of the commercial/media setup. Travel Guide should measure Core Web Vitals before adding ad scripts and third-party embeds.
+12. **Keep the author identity and editorial standards clear.** About and Media Kit pages make the publisher's background and commercial work discoverable. Travel Guide should have transparent author/reviewer information and update dates.
+
+## 15. Evidence sources
+
+### Primary website pages
+- Homepage: https://www.danflyingsolo.com/
+- Travel Blog archive: https://www.danflyingsolo.com/travel-blog/
+- Destinations category: https://www.danflyingsolo.com/category/destinations/
+- Austria archive: https://www.danflyingsolo.com/category/destinations/europe/austria/
+- Portugal archive: https://www.danflyingsolo.com/category/destinations/europe/portugal/
+- India archive: https://www.danflyingsolo.com/category/destinations/asia/india/
+- Oman archive: https://www.danflyingsolo.com/category/destinations/middle-east/oman/
+- Oman guide: https://www.danflyingsolo.com/oman-travel-guide-experiences-planning-tips/
+- Graz guide: https://www.danflyingsolo.com/guide-graz-austria-things-to-do/
+- Graz Schlossberg itinerary: https://www.danflyingsolo.com/one-day-in-graz-schlossberg-guide-uhrturm/
+- Travel videos: https://www.danflyingsolo.com/travel-videos/
+- About: https://www.danflyingsolo.com/about/
+- Media Kit / Work with Me: https://www.danflyingsolo.com/media-kit/
+- Privacy, Cookie & Disclaimer Policy: https://www.danflyingsolo.com/privacy-cookie-policy/
+- Search example: https://www.danflyingsolo.com/?s=Oman
+- Travel tips category: https://www.danflyingsolo.com/category/style/travel-tips/
+
+### Research boundaries
+- Findings describe the public pages inspected on 14 November 2026.
+- Content, menu taxonomy, policy text, affiliate relationships and ad arrangements may change.
+- No proprietary analytics, ad-revenue figures, search ranking data, performance scores or accessibility certification is represented as fact.
+
+## 16. Audit conclusion
+
+Dan Flying Solo is a personal, photography-led travel publication with a strong destination taxonomy and first-person editorial voice. Its most useful differentiators are the deep region/country navigation, city and attraction guide clusters, destination spotlights, local voices, photo essays and contextual travel recommendations.
+
+For Travel Guide, the most transferable patterns are the layered destination content model, mini destination hubs, cross-destination travel-style categories, local evidence and image-led storytelling. Its WordPress search and mixed country archives also reveal opportunities: a new site can improve discovery with well-defined taxonomy, structured guide templates, verified image optimization and more consistent destination archive curation.
+
+**Phase 1 progress:** Nomadic Matt, The Points Guy and Dan Flying Solo audits are now documented in this file. The remaining competitors and all later phases remain untouched in this step.
