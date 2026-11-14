@@ -31,7 +31,7 @@ The currently inspected homepage exposes the following content sequence:
 2. **Primary navigation:** About; Blog; Start Here; Destinations; Booking Resources; Books; Courses; Cards. Several navigation items have nested links.
 3. **Hero and destination search:** Headline “Travel smarter, cheaper, longer”; prompt “Where do you want to go?”; destination search field; popular-search links including Southeast Asia, Europe, travel hacking, insurance, and Paris.
 4. **Email capture strip:** “Get my best tips sent straight to you!” with first-name and email fields and a “Send Me Tips” action.
-5. **Start Planning Your Trip:** Eight image-led planning routes: Getting Inspired; How to Save for a Trip; How to Plan Your Trip; Getting the Right Gear; Finding Cheap Airfare; Finding Accommodation; Life on the Road; Solo Female Travel; Family & Senior Travel.
+5. **Start Planning Your Trip:** Nine image-led planning routes: Getting Inspired; How to Save for a Trip; How to Plan Your Trip; Getting the Right Gear; Finding Cheap Airfare; Finding Accommodation; Life on the Road; Solo Female Travel; Family & Senior Travel.
 6. **Author introduction / trust section:** “Hello! I’m Nomadic Matt!”, portrait, mission statement and About link.
 7. **Top Articles:** A curated text-link list covering flights, accommodation, backpack selection, trip planning, packing, insurance, first-time travel, hostels, solo female travel, credit cards, scams and overseas work.
 8. **Press/social proof:** “My Advice Has Been Featured In” with a publication-logo graphic.
