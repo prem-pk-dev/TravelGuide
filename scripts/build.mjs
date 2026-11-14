@@ -45,6 +45,6 @@ await rm(dist,{recursive:true,force:true});await mkdir(path.join(dist,"assets/cs
 await writeFile(path.join(dist,"index.html"),html);await writeFile(path.join(dist,"assets/css/site.css"),css);await writeFile(path.join(dist,"assets/js/site.js"),js);await cp(path.join(src,"assets/images"),path.join(dist,"assets/images"),{recursive:true});
 await writeFile(path.join(dist,"robots.txt"),"User-agent: *\nAllow: /\n");
 // Let crawlers read preview pages and observe the noindex directive; production output is unchanged.
-if (!isProductionBuild) await writeFile(path.join(dist,"_headers"),"/*\\n  X-Robots-Tag: noindex, nofollow\\n");
+if (!isProductionBuild) await writeFile(path.join(dist,"_headers"),"/*\n  X-Robots-Tag: noindex, nofollow\n");
 await writeFile(path.join(dist,"404.html"),'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Page not found | TravelGuide</title><body><main><h1>This trail ends here.</h1><p>The page may have moved.</p><a href="/">Return to TravelGuide</a></main></body></html>');
 console.log("Built static homepage into dist/");
