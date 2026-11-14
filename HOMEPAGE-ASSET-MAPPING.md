@@ -59,16 +59,16 @@ No new images were generated. No existing homepage data, references, functionali
 | Classification | Count |
 |---|---:|
 | Verified matches (URL + dimensions + visual fit all confirmed) | **0** |
-| Candidate assets requiring live/image inspection | **8** |
+| Candidate assets requiring live/image inspection | **6** |
 | Slots with no suitable inventory candidate identified | **10** |
-| Slots deliberately not assigned a candidate because the available candidate is too broad or would duplicate another slot | **4** |
+| Slots with broad or unsuitable candidates that are not approved | **6** |
 | Total homepage image slots | **22** |
 
-The eight candidate rows are not approved for integration. All remain unverified until the actual image bytes or browser-visible image previews are available for inspection, and dimensions/aspect ratios can be read from the image itself.
+The six potentially relevant candidate rows are not approved for integration. All remain unverified until the actual image bytes or browser-visible image previews are available for inspection, and dimensions/aspect ratios can be read from the image itself.
 
 ## Next step (not performed)
 
-Obtain a usable inventory export with direct image previews or downloadable source bytes, then inspect the eight candidates for:
+Obtain a usable inventory export with direct image previews or downloadable source bytes, then inspect the six potentially relevant candidates for:
 1. successful HTTP response and decoded WebP format;
 2. exact pixel dimensions and aspect ratio;
 3. subject accuracy and photographic quality;
