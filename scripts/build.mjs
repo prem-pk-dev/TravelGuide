@@ -2,6 +2,9 @@ import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 const root=process.cwd(),src=path.join(root,"src"),dist=path.join(root,"dist");
 const site=JSON.parse(await readFile(path.join(src,"data/site.json"),"utf8"));
+// Cloudflare Pages sets CF_PAGES_BRANCH for both preview and production builds.
+const isProductionBuild = process.env.CF_PAGES_BRANCH === "main";
+const robotsMeta = isProductionBuild ? "index, follow" : "noindex, nofollow";
 const home=JSON.parse(await readFile(path.join(src,"data/homepage.json"),"utf8"));
 const shell=await readFile(path.join(src,"partials/shell.html"),"utf8");
 const css=await readFile(path.join(src,"assets/css/site.css"),"utf8");
@@ -36,7 +39,7 @@ const content=`<main id="main">
 <section class="trust-section"><div class="container trust-section__inner"><div><p class="eyebrow eyebrow--light">OUR EDITORIAL PROMISE</p><h2>Good advice.<br><em>No guesswork.</em></h2></div><div class="trust-points"><article><span>01</span><div><h3>Useful over noisy</h3><p>We favour clear guidance and practical detail over endless lists and inflated claims.</p></div></article><article><span>02</span><div><h3>Places have context</h3><p>Every destination deserves more than a checklist. We look for its character and connections.</p></div></article><article><span>03</span><div><h3>Recommendations with clarity</h3><p>Editorial choices should be understandable. Commercial relationships will be disclosed where they apply.</p></div></article></div></div></section></main>`;
 const records=[...home.destinations.map(d=>({title:d.title,type:d.type,region:d.region,href:d.href,description:d.description})),...home.countries.map(d=>({title:d.title,type:"Country",region:d.region,href:d.href,description:d.description}))];
 let html=shell.replace("<!-- SITE_HEADER -->",nav).replace("<!-- PAGE_CONTENT -->",content).replace("<!-- SITE_FOOTER -->",footer);
-const replacements={"{{DESCRIPTION}}":"Explore thoughtful destination guides, inspiring itineraries and practical travel advice to help you discover the world with curiosity.","{{CANONICAL}}":site.previewCanonical,"{{TITLE}}":"TravelGuide — Discover Places, Journeys & Travel Guides","{{SEARCH_DATA}}":JSON.stringify(records).replace(/</g,"\\u003c"),"{{CSS}}":css,"{{JS}}":js};
+const replacements={"{{DESCRIPTION}}":"Explore thoughtful destination guides, inspiring itineraries and practical travel advice to help you discover the world with curiosity.","{{CANONICAL}}":site.previewCanonical,"{{ROBOTS}}":robotsMeta,"{{TITLE}}":"TravelGuide — Discover Places, Journeys & Travel Guides","{{SEARCH_DATA}}":JSON.stringify(records).replace(/</g,"\\u003c"),"{{CSS}}":css,"{{JS}}":js};
 for(const [k,v] of Object.entries(replacements))html=html.replaceAll(k,v);
 await rm(dist,{recursive:true,force:true});await mkdir(path.join(dist,"assets/css"),{recursive:true});await mkdir(path.join(dist,"assets/js"),{recursive:true});await mkdir(path.join(dist,"assets/images"),{recursive:true});
 await writeFile(path.join(dist,"index.html"),html);await writeFile(path.join(dist,"assets/css/site.css"),css);await writeFile(path.join(dist,"assets/js/site.js"),js);await cp(path.join(src,"assets/images"),path.join(dist,"assets/images"),{recursive:true});
