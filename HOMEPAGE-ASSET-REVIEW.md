@@ -3,154 +3,161 @@
 **Repository:** https://github.com/prem-pk-dev/TravelGuide  
 **Branch:** `development/homepage`  
 **Review date:** 2026-11-14  
-**Source documents read:** `HOMEPAGE-ASSET-MAPPING.md`, `HOMEPAGE-ASSET-SPECIFICATION.md`, original MEDIA-ASSETS inventory (153 lines; 110 URLs).  
-**Original binary source:** private repository `prem-pk-dev/MEDIA-ASSETS`, branch `main`.  
-**Scope:** Six mapped candidates only. No homepage HTML/CSS/JS, data or image-reference changes; no generation, merge, deployment or build verification.
+**Source image repository:** https://github.com/prem-pk-dev/MEDIA-ASSETS (private, `main` branch)  
+**CDN:** https://media-assets-4sb.pages.dev  
+**Homepage specification:** `HOMEPAGE-ASSET-SPECIFICATION.md`  
+**Inventory:** User-provided `Pasted markdown.md` (153 lines, 110 listed URLs)
 
-## Verification method
+## Executive result
 
-All six original source entries were fetched from the private MEDIA-ASSETS GitHub repository as base64 binary content and decoded in memory. The five candidate CDN image URLs were also imported by CloudConvert for independent file metadata inspection. Actual WebP RIFF/WEBP signatures were checked from the source bytes; width/height were parsed from the WebP bitstream, and SHA-256 was calculated over the decoded original bytes. The original WebP image previews were rendered and visually inspected in this review conversation.
+All six original source files were retrieved from the private MEDIA-ASSETS repository as base64-encoded binary content, decoded for byte-level checks, and visually inspected from the original bytes.
 
-**Important:** The exact CDN URL for the Mountain Hiker entry does not serve the image: it returns an HTML Media Assets Library page. The corresponding GitHub source file exists and is a valid WebP file, so its binary metadata and SHA-256 below refer to that GitHub source—not to the HTML response at the CDN URL.
+- **Approved:** 0
+- **Rejected:** 1
+- **Needs Replacement:** 5
+- **Exact-byte duplicates:** 0 (all six SHA-256 values differ)
+- **Visual repeated-composition finding:** Four destination images share the same white left strip and dark bottom caption-band treatment. They are not the same photograph, but that repeated graphic framing violates the clean-photo production brief.
+- **Homepage changes:** none. This review does not authorize integration.
 
-## Six-candidate verification table
+The original bytes were obtained through GitHub's file-content endpoint and the corresponding source paths are linked below. Five CDN image URLs returned HTTP 200 with `image/webp`; the Mountain Hiker CDN URL returned an HTML page instead of an image. The original Mountain Hiker file itself does exist as a valid WebP in the private GitHub repository.
 
-| Candidate / homepage slot | Source bytes | Actual format | Dimensions | Ratio | SHA-256 | Status |
-|---|---:|---|---:|---:|---|---|
-| Ocean Cliffs / `hero-coast.webp` | 376,526 | WebP | 1672×941 | 1.778 | `537b5817f340750df596ac5bfdb31969017c00bbb8500c321765a76c559c86c6` | **Rejected** |
-| Ha Long Bay / `asia.webp` | 57,722 | WebP | 900×512 | 1.758 | `452711da14c97ed8ea902701b84407d09d9c7cfcb5ad20a88e2e86c8614965af` | **Needs Replacement** |
-| Serengeti / `africa.webp` | 54,958 | WebP | 900×512 | 1.758 | `7751fcf29abf302ea3f60ff809101b1e41ad344b3b3c8c7db21e3ecb054581c5` | **Needs Replacement** |
-| Banff / `americas.webp` | 70,682 | WebP | 900×512 | 1.758 | `5eb7a2094d22d3e20a34880c7cbd7054f94676461fede42b66c679b49ebc7515` | **Needs Replacement** |
-| Bora Bora / `oceania.webp` | 47,138 | WebP | 900×512 | 1.758 | `8ba6e3d6291310f3d369dbc1dbb772c4f7efc20e76dde3cd6f1368261279fc68` | **Needs Replacement** |
-| Mountain Hiker / `alpine-hiking.webp` | 28,034 | WebP | 640×360 | 1.778 | `3e169cb51e79ee73677ec417a07d077eb7d95023261749980d4661007743efca` | **Needs Replacement** |
+## 1. Individual verification table
 
-All six decoded GitHub source files begin with the `RIFF` container signature and `WEBP` format identifier. The five CDN destination/coast URLs returned HTTP 200 and `image/webp` in the live image fetch. The Mountain Hiker CDN URL returned HTTP 200 but `text/html; charset=utf-8`; CloudConvert independently identified the downloaded response as HTML (2,090 bytes), title “Media Assets Library”.
+Aspect ratio is calculated as width divided by height. SHA-256 values below were calculated from decoded source bytes, not from filenames or GitHub blob object IDs.
 
-## Original files and previews
+| Candidate / homepage slot | Actual source file | CDN HTTP / content type | Actual format | Dimensions | Ratio | Bytes | SHA-256 | Status |
+|---|---|---|---|---:|---:|---:|---|---|
+| Ocean Cliffs / `hero-coast.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/nature/05_rugged_ocean_cliffs.webp) | 200 / image/webp | WebP | 1672×941 | 1.7768 | 376,526 | `537b5817f340750df596ac5bfdb31969017c00bbb8500c321765a76c559c86c6` | **Rejected** |
+| Ha Long Bay / `asia.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/20-ha-long-bay-vietnam-v01.webp) | 200 / image/webp | WebP | 900×512 | 1.7578 | 57,722 | `452711da14c97ed8ea902701b84407d09d9c7cfcb5ad20a88e2e86c8614965af` | **Needs Replacement** |
+| Serengeti / `africa.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/05-serengeti-tanzania-v01.webp) | 200 / image/webp | WebP | 900×512 | 1.7578 | 54,958 | `7751fcf29abf302ea3f60ff809101b1e41ad344b3b3c8c7db21e3ecb054581c5` | **Needs Replacement** |
+| Banff / `americas.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/02-banff-canada-v01.webp) | 200 / image/webp | WebP | 900×512 | 1.7578 | 70,682 | `5eb7a2094d22d3e20a34880c7cbd7054f94676461fede42b66c679b49ebc7515` | **Needs Replacement** |
+| Bora Bora / `oceania.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/19-bora-bora-french-polynesia-v01.webp) | 200 / image/webp | WebP | 900×512 | 1.7578 | 47,138 | `8ba6e3d6291310f3d369dbc1dbb772c4f7efc20e76dde3cd6f1368261279fc68` | **Needs Replacement** |
+| Mountain Hiker / `alpine-hiking.webp` | [Source file](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/thumbnails/travel-mountain-hiker.webp) | 200 / text/html (CDN path returns HTML) | WebP in GitHub source; CDN response is HTML | 640×360 (source file) | 1.7778 | 28,034 | `3e169cb51e79ee73677ec417a07d077eb7d95023261749980d4661007743efca` | **Needs Replacement** |
 
-These links refer to the original binary assets in MEDIA-ASSETS. For the first five entries the Cloudflare URLs are also usable as direct image references. The Mountain Hiker Cloudflare URL is currently incorrect and the GitHub original is linked instead.
+### Exact public CDN URLs
 
-### 1. Ocean Cliffs — hero candidate
+1. Ocean Cliffs: https://media-assets-4sb.pages.dev/images/nature/05_rugged_ocean_cliffs.webp
+2. Ha Long Bay: https://media-assets-4sb.pages.dev/images/travel/destinations/20-ha-long-bay-vietnam-v01.webp
+3. Serengeti: https://media-assets-4sb.pages.dev/images/travel/destinations/05-serengeti-tanzania-v01.webp
+4. Banff: https://media-assets-4sb.pages.dev/images/travel/destinations/02-banff-canada-v01.webp
+5. Bora Bora: https://media-assets-4sb.pages.dev/images/travel/destinations/19-bora-bora-french-polynesia-v01.webp
+6. Mountain Hiker (broken image route): https://media-assets-4sb.pages.dev/thumbnails/travel-mountain-hiker.webp
+
+## 2. Original visual previews
+
+The previews below refer to the original source images, not generated substitutes. The same six original images were rendered in the review conversation from the retrieved original bytes.
+
+### 2.1 Ocean Cliffs — hero candidate
 
 ![Ocean Cliffs original preview](https://media-assets-4sb.pages.dev/images/nature/05_rugged_ocean_cliffs.webp)
 
-- CDN: https://media-assets-4sb.pages.dev/images/nature/05_rugged_ocean_cliffs.webp
-- GitHub original: https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/nature/05_rugged_ocean_cliffs.webp
-- Actual scene: rugged green-topped dark cliffs, turbulent surf, overcast/dramatic sky and foreground grass/flowers.
-- Target comparison: the brief requires pale Mediterranean limestone, clear warm morning light, calm translucent turquoise water and a quiet left-third headline-safe zone. The actual scene is materially different.
-- Crop: at desktop hero ratio 1.6, a modest horizontal crop is possible, but it does not fix the geographic/light/colour mismatch. The narrow mobile crop cannot retain the full coastline context and text-safe composition.
-- **Decision: Rejected for `hero-coast.webp`.** The image may be useful in another generic-coast context, but not for this hero brief.
+**Visual finding:** Rugged dark rocky headland, rough ocean/surf, dramatic overcast sky and green/pink-flowered foreground. This does not depict the specified calm, sunlit Mediterranean limestone coast with translucent turquoise water and a low-detail left headline-safe zone.
 
-### 2. Ha Long Bay — Asia tile
+**Crop finding:** Source ratio 1.7768 versus hero target 1.600. Desktop cover would remove about 166 px of source width in total (about 83 px per side if centred). A 390×844 mobile portrait crop would retain only about 26% of the original width at full source height, losing much of the coastal panorama. Mobile crop suitability is poor for the specified scene.
+
+**Decision: Rejected.** Wrong visual subject/lighting for the approved hero brief. Source also falls short of the exact 1920×1200 target; do not upscale it to meet the specification.
+
+### 2.2 Ha Long Bay — Asia candidate
 
 ![Ha Long Bay original preview](https://media-assets-4sb.pages.dev/images/travel/destinations/20-ha-long-bay-vietnam-v01.webp)
 
-- CDN: https://media-assets-4sb.pages.dev/images/travel/destinations/20-ha-long-bay-vietnam-v01.webp
-- GitHub original: https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/20-ha-long-bay-vietnam-v01.webp
-- Actual scene: red-sailed tourist boat on turquoise water, surrounded by karst-like limestone islands.
-- Target comparison: subject/location is relevant to Asia and Ha Long Bay.
-- Crop: source is landscape 1.758:1 while the required tile is portrait 0.804:1. A cover crop would retain only about 46% of source width; the boat and surrounding karsts would be difficult to preserve together. The source also visibly contains a white side margin and an embedded dark caption/title strip at the bottom.
-- **Decision: Needs Replacement.** Find a clean, native portrait composition without baked-in title treatment.
+**Visual finding:** Turquoise bay, limestone karsts and a red-sailed traditional boat. Location/theme is a good conceptual match. However, the source visibly includes a white vertical strip at the left and a dark caption/footer band at the bottom, with lettering in the band. These are baked into the image.
 
-### 3. Serengeti — Africa tile
+**Crop finding:** Source is 900×512 landscape; target is 900×1120 portrait (0.8036 ratio). A portrait cover crop retains only about 412 px of source width (about 45.8%), and the 512 px source height would have to be enlarged to 1120 px (about 2.19×). The bottom caption band remains in a centre crop; removing it would further reduce usable pixels. Desktop and mobile portrait card crops are therefore not acceptable.
+
+**Decision: Needs Replacement.** The destination subject is relevant, but the supplied file is not a clean production photograph and does not meet target dimensions/ratio.
+
+### 2.3 Serengeti — Africa candidate
 
 ![Serengeti original preview](https://media-assets-4sb.pages.dev/images/travel/destinations/05-serengeti-tanzania-v01.webp)
 
-- CDN: https://media-assets-4sb.pages.dev/images/travel/destinations/05-serengeti-tanzania-v01.webp
-- GitHub original: https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/05-serengeti-tanzania-v01.webp
-- Actual scene: acacia tree in the foreground, elephant group on grassland and warm sunset.
-- Target comparison: broadly matches African savannah and evening light; elephants make the composition more safari-led than the requested wide savannah landscape.
-- Crop: landscape source vs portrait 0.804 target means roughly 46% width retained. A portrait crop risks losing either the acacia canopy or the elephant group. The preview also shows a white side margin and embedded caption/title strip at the bottom.
-- **Decision: Needs Replacement.** Use a clean portrait savannah composition with no embedded text or framing.
+**Visual finding:** Acacia tree, elephants on open grassland and warm sunset. The subject is relevant to the African savannah brief. The same white left strip and dark bottom caption band/lettering appear in the image.
 
-### 4. Banff — Americas tile
+**Crop finding:** Source is 900×512 landscape; target is 900×1120 portrait. Portrait cover would retain about 45.8% of source width and require about 2.19× vertical upscaling. A centred crop risks losing the acacia tree and/or elephant group, while the caption band remains. Poor desktop/mobile portrait-card suitability.
+
+**Decision: Needs Replacement.** Relevant destination theme, but the baked-in graphics, landscape ratio and low source height make it unsuitable as the specified portrait tile.
+
+### 2.4 Banff — Americas candidate
 
 ![Banff original preview](https://media-assets-4sb.pages.dev/images/travel/destinations/02-banff-canada-v01.webp)
 
-- CDN: https://media-assets-4sb.pages.dev/images/travel/destinations/02-banff-canada-v01.webp
-- GitHub original: https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/02-banff-canada-v01.webp
-- Actual scene: turquoise alpine lake reflecting snow-covered mountain peaks, with forested slopes.
-- Target comparison: strong subject match for the mountain-lake brief.
-- Crop: source ratio 1.758 vs target 0.804 would require discarding about 54% of the source width. The centred lake and peaks may remain identifiable, but edge forests and peak context are lost. The original also has a white side margin and a visible embedded dark caption/title strip along the bottom.
-- **Decision: Needs Replacement.** Subject is right, production asset treatment and portrait crop are not.
+**Visual finding:** Snow-capped mountain range, evergreen forest and reflective turquoise alpine lake. It broadly matches the mountain-lake concept for the Americas tile. The same white left strip and dark caption/footer band are baked into the image.
 
-### 5. Bora Bora — Oceania tile
+**Crop finding:** Source is 900×512 landscape; target is 900×1120 portrait. A portrait crop retains about 45.8% of source width and requires about 2.19× upscaling in height. The central peak/reflection may remain, but side mountains and lake context are lost; the footer band remains visible. Not suitable for the specified portrait production slot.
+
+**Decision: Needs Replacement.** Correct broad subject, but repeated overlay treatment and incompatible dimensions/crop disqualify the current file.
+
+### 2.5 Bora Bora — Oceania candidate
 
 ![Bora Bora original preview](https://media-assets-4sb.pages.dev/images/travel/destinations/19-bora-bora-french-polynesia-v01.webp)
 
-- CDN: https://media-assets-4sb.pages.dev/images/travel/destinations/19-bora-bora-french-polynesia-v01.webp
-- GitHub original: https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/images/travel/destinations/19-bora-bora-french-polynesia-v01.webp
-- Actual scene: lush volcanic island rising above bright turquoise lagoon, with overwater bungalows.
-- Target comparison: strong subject/location match for the tropical-island tile.
-- Crop: source is landscape 1.758 vs target portrait 0.804; a cover crop keeps about 46% of the width and may clip the lagoon/bungalow context. The source preview shows a white side margin and embedded caption/title strip at the bottom.
-- **Decision: Needs Replacement.** Keep this as a subject reference only; source a clean, portrait-native photo.
+**Visual finding:** Lush volcanic island ridge, bright turquoise lagoon and overwater bungalows. The subject matches the tropical-island direction for Oceania. The same white vertical strip and dark caption/footer band are present.
 
-### 6. Mountain Hiker — alpine hiking card
+**Crop finding:** Source is 900×512 landscape; target is 900×1120 portrait. A centred portrait crop retains only about 45.8% of source width; it may remove the overwater bungalows on the right or reduce the island/lagoon context. The source height must be enlarged about 2.19× and the caption band remains. Not acceptable for the portrait card.
+
+**Decision: Needs Replacement.** Good theme, but graphic overlays and portrait-resolution/crop mismatch prevent approval.
+
+### 2.6 Mountain Hiker — alpine hiking candidate
 
 ![Mountain Hiker original preview](https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/thumbnails/travel-mountain-hiker.webp?raw=1)
 
-- CDN URL (currently wrong): https://media-assets-4sb.pages.dev/thumbnails/travel-mountain-hiker.webp
-- GitHub original: https://github.com/prem-pk-dev/MEDIA-ASSETS/blob/main/thumbnails/travel-mountain-hiker.webp
-- Actual GitHub source: a lone hiker standing on a rocky overlook above a green mountain valley; this is a thumbnail image, not a trail-following scene.
-- Format/dimensions: valid WebP, 640×360, only 28,034 bytes.
-- CDN response: HTTP 200, but `text/html; charset=utf-8` (2,090 bytes), not an image.
-- Crop: target is 900×680 (1.324). The 640×360 source would require horizontal cropping and upscaling by about 1.9× to reach target height. The image does not clearly show hikers following a trail, and it lacks enough native resolution for the specified card.
-- **Decision: Needs Replacement.** Correct the CDN publishing path only if this original is still required elsewhere; source a higher-resolution image showing an alpine trail for this homepage slot.
+**Visual finding:** A single hiker in a red jacket with a backpack faces a broad alpine mountain landscape. The main subject is suitable for the alpine hiking activity concept. The composition appears to have a light left-edge strip; it is a thumbnail-sized image rather than the commissioned editorial landscape.
 
-## Duplicate detection
+**Crop finding:** Source is 640×360; target is 900×680 (1.3235 ratio). A cover crop would retain roughly 477 px of source width (about 74.5%) before resizing, and matching the target size would require about 1.89× enlargement in both dimensions after crop. The hiker remains in a centred crop, but native detail is insufficient for the required slot size. Do not upscale it to pretend it meets the brief.
 
-| Check | Result |
+**CDN issue:** Exact URL https://media-assets-4sb.pages.dev/thumbnails/travel-mountain-hiker.webp returned HTTP 200 but `text/html; charset=utf-8` (the “Media Assets Library” page), not an image. The valid WebP original exists in the private GitHub source path linked above.
+
+**Decision: Needs Replacement.** Subject is relevant, but the image is undersized for the target and its public CDN URL is not serving the image.
+
+## 3. Duplicate and repeated-composition review
+
+| Test | Result |
 |---|---|
-| Exact duplicate (SHA-256) | **No duplicates.** All six SHA-256 values are different. |
-| Visual/perceptual comparison | No pair shows the same scene or near-identical framing in the six original previews. |
-| Shared design artifact | Ha Long Bay, Serengeti, Banff and Bora Bora share a similar white side margin and bottom caption/title-strip treatment. This is a repeated graphic treatment, not an exact or near-duplicate photograph. |
-| Algorithmic pHash | Not computed; the visual comparison was performed on the original rendered previews. |
+| SHA-256 exact duplicate check | **No exact duplicates.** Six distinct SHA-256 values were computed from source bytes. |
+| Visual near-duplicate review | No pair appears to depict the same scene or be a simple alternate crop of another. |
+| Repeated graphic composition | **Yes.** Ha Long Bay, Serengeti, Banff and Bora Bora share the same white left strip and dark caption/footer band treatment. |
+| Ocean Cliffs / Mountain Hiker | Distinct scenes and framing from the four destination images. |
+| Perceptual-hash algorithm | Not run. Visual near-duplicate review is recorded separately; no pHash/dHash score is claimed. |
 
-## Desktop/mobile crop assessment
+The shared framing treatment is a repeated template, not an exact or near-identical photograph. All six originals remain distinct by SHA-256.
 
-The homepage spec calls for portrait 900×1120 continent tiles and a wide 1920×1200 hero. Four continent candidates (Ha Long Bay, Serengeti, Banff and Bora Bora) are 900×512 landscape files. Cropping those to the required portrait 0.804 ratio retains only approximately 46% of source width. Their subject/context cannot be preserved reliably, and embedded caption strips would remain part of the image. They are not approved for either desktop or mobile tile crops.
+## 4. Desktop and mobile crop suitability summary
 
-The hero source is 1672×941, ratio 1.778 vs target 1.600. Desktop crop loss is moderate, but the photograph itself does not match the Mediterranean brief. A portrait mobile crop would remove most of the wide coastline context.
+| Candidate | Target dimension / ratio | Source dimension / ratio | Desktop target crop | Mobile crop | Outcome |
+|---|---|---|---|---|---|
+| Ocean Cliffs | 1920×1200 / 1.600 | 1672×941 / 1.7768 | Moderate ratio crop; scene does not satisfy hero art direction | Severe panoramic-to-portrait crop; only ~26% width visible | Reject |
+| Ha Long Bay | 900×1120 / 0.8036 | 900×512 / 1.7578 | Portrait tile would discard ~54% horizontal width and upscale height ~2.19× | Same portrait crop plus footer overlay | Replace |
+| Serengeti | 900×1120 / 0.8036 | 900×512 / 1.7578 | Same severe portrait crop/upscale | Risks cutting tree/elephants; footer remains | Replace |
+| Banff | 900×1120 / 0.8036 | 900×512 / 1.7578 | Central mountain/lake can remain but much of scene is discarded | Portrait crop narrows the range; footer remains | Replace |
+| Bora Bora | 900×1120 / 0.8036 | 900×512 / 1.7578 | Portrait crop may remove bungalows or island context | Same crop and footer issue | Replace |
+| Mountain Hiker | 900×680 / 1.3235 | 640×360 / 1.7778 | About 25.5% source width removed; ~1.89× enlargement needed | Target is a landscape card; no independent mobile crop is provided | Replace |
 
-The hiking thumbnail is 640×360 vs target 900×680, ratio 1.778 vs 1.324. It needs substantial upscaling after crop and does not show the specified trail activity. It is not approved.
+## 5. What is missing now?
 
-## Status summary and remaining homepage image count
+For the six candidates reviewed here:
 
-| Result for these six candidates | Count |
-|---|---:|
-| Approved | **0** |
-| Rejected for intended slot | **1** |
-| Needs Replacement | **5** |
-| Total candidates checked | **6** |
+- **0 of 6 are approved for use as-is.**
+- **1 is rejected outright** (Ocean Cliffs for hero).
+- **5 need replacement** (four destination images and Mountain Hiker).
 
-Across all 22 required homepage images:
-- **0 of 22 are currently approved for integration.**
-- **6 candidate slots now have a conclusive rejection/replacement decision.**
-- **10 other slots still have no suitable named candidate in the original inventory.**
-- **6 broad or unaccepted candidate slots from the previous mapping remain unverified** (London/Europe, Kyoto, Lisbon, Portugal coast, Zermatt/Swiss trail and seasonal coast).
-- Therefore **16 slots definitely require a new/replacement source on current evidence** (the six reviewed here plus the ten unmapped slots), while six additional slots remain pending their own inspection. If none of those six later passes, all 22 will need new/replacement assets.
+For the full 22-image homepage specification, the current verified-approved count remains **0 of 22**. The other 16 slots have not been byte-level/visual verified in this phase, so this is a count of *not yet approved assets*, not a claim that those 16 have all been inspected and rejected. No new image generation is included in this phase.
 
-## Ten-slot separate generation/sourcing plan
+## 6. Exact source files and access note
 
-No generation was performed. These are the ten slots with no suitable named candidate in the original 110-URL inventory:
+The original files are present in the private `prem-pk-dev/MEDIA-ASSETS` repository on `main` at the six source paths listed above. They were fetched as base64 content through the connected GitHub repository integration, decoded for SHA-256 and displayed as previews. The private source links require repository access.
 
-| Filename | Target | Unique production brief |
-|---|---:|---|
-| `marrakech-courtyard.webp` | 960×1200 | Photorealistic Marrakech riad courtyard, carved plaster, zellij tilework, central fountain, daylight; portrait composition |
-| `slow-train.webp` | 900×680 | Scenic passenger train through a green mountain valley; train and rail infrastructure clearly visible |
-| `ceramic-workshop.webp` | 900×680 | Artisan hands shaping a clay vessel on a pottery wheel in a traditional workshop |
-| `japan-rail.webp` | 1000×740 | Japanese regional train crossing a rural valley with layered mountains; no legible signage |
-| `marrakech-medina.webp` | 860×720 | Narrow Marrakech medina lane with traditional shopfronts and textured architecture |
-| `market-morning.webp` | 920×680 | Early morning produce market with authentic stalls, fresh vegetables and soft ambient light |
-| `neighbourhood-cafe.webp` | 920×680 | Independent European neighbourhood café opening onto a quiet street; no visible branding |
-| `calendar-planning.webp` | 800×620 | Travel notebook, paper map and pen on a wooden table; no readable/generated text |
-| `train-platform.webp` | 800×620 | Intercity passenger train at a modern station platform; no legible signage |
-| `travel-bag.webp` | 800×620 | Open travel bag neatly packed with practical essentials; realistic fabric, natural light, no visible logos |
+The only currently identified incorrect public delivery URL is:
 
-All deliverables must satisfy the approved production specification: photorealistic editorial scene, exact target dimensions, WebP quality 85, no baked-in text/borders/watermarks, source/license provenance, and no duplicated scene or composition. Generation is out of scope until separately requested.
+`https://media-assets-4sb.pages.dev/thumbnails/travel-mountain-hiker.webp`
 
-## Final decision
+It returns HTML instead of the original WebP. The source file itself does not need to be supplied again; the public Pages deployment/path needs to be corrected or a new valid public asset URL provided.
 
-**None of the six candidates is approved for homepage integration.** Do not change any homepage image references until the six replacement decisions and the remaining six unverified mapping candidates are reviewed and the user approves the final asset map.
+## 7. Task boundary
 
-Only this review document is updated on `development/homepage`. No new images were generated, no image binaries were added to TravelGuide, and no source code, data, image references, `main`, or `research/travel-guide-blueprint` branches were changed.
+- No homepage HTML, CSS, JS, JSON, manifest or image reference modified.
+- No new images generated.
+- No files added to the homepage image directory.
+- No changes made to `main` or `research/travel-guide-blueprint`.
+- No merge, deployment or build verification performed.
+
+**Final decision:** Do not integrate any of these six candidates. Replace/re-source them according to the decisions above, then obtain approval for the revised asset mapping before homepage integration.
