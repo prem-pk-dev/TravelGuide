@@ -5,7 +5,7 @@
       "note": "Tradition meets tomorrow",
       "href": "/destinations/continents/asia/",
       "src": "/assets/images/asia.webp",
-      "alt": "Dramatic limestone karsts rising above a quiet bay in Southeast Asia",
+      "alt": "A stone path winds through a Kyoto bamboo garden beside a traditional wooden gate.",
       "width": 900,
       "height": 1120
     },
@@ -14,7 +14,7 @@
       "note": "Layers of culture",
       "href": "/destinations/continents/europe/",
       "src": "/assets/images/europe.webp",
-      "alt": "Historic European riverside town with old stone architecture",
+      "alt": "Whitewashed Santorini buildings and blue domes overlook the sea at sunset.",
       "width": 900,
       "height": 1120
     },
@@ -23,7 +23,7 @@
       "note": "Wild by nature",
       "href": "/destinations/continents/africa/",
       "src": "/assets/images/africa.webp",
-      "alt": "Wide African savannah beneath a warm evening sky",
+      "alt": "A herd of elephants walks through golden Serengeti grass beneath acacia trees at sunrise.",
       "width": 900,
       "height": 1120
     },
@@ -32,7 +32,7 @@
       "note": "Room to roam",
       "href": "/destinations/continents/americas/",
       "src": "/assets/images/americas.webp",
-      "alt": "Mountain lake framed by dramatic peaks in the Americas",
+      "alt": "The Inca citadel of Machu Picchu sits among steep green mountains in Peru.",
       "width": 900,
       "height": 1120
     },
@@ -101,17 +101,17 @@
       "region": "Japan · East Asia",
       "href": "/destinations/countries/japan/cities/kyoto/",
       "src": "/assets/images/kyoto-street.webp",
-      "alt": "Quiet traditional street in Kyoto with wooden machiya houses",
+      "alt": "A stone path winds through a Kyoto bamboo garden beside a traditional wooden gate.",
       "width": 960,
       "height": 1200,
-      "description": "Find the quieter lanes, crafted details and garden moments that reward an unhurried visit."
+      "description": "Find the quieter garden paths, crafted details and seasonal greenery that reward an unhurried visit."
     },
     {
       "title": "Lisbon in its own time",
       "region": "Portugal · Southern Europe",
       "href": "/destinations/countries/portugal/cities/lisbon/",
       "src": "/assets/images/lisbon-tram.webp",
-      "alt": "Classic yellow tram passing through a sunlit Lisbon street",
+      "alt": "A classic yellow tram travels along a colourful, tiled Lisbon street.",
       "width": 960,
       "height": 1200,
       "description": "Move between neighbourhood viewpoints, local cafés and the city's distinctive tiled streets."
@@ -201,10 +201,10 @@
       "title": "How to choose the right season for your trip",
       "href": "/articles/choosing-the-right-season/",
       "src": "/assets/images/seasonal-coast.webp",
-      "alt": "Coastal landscape in soft light during a shoulder season",
+      "alt": "Pastel buildings cascade down an Italian coastal cliff above turquoise Mediterranean water.",
       "width": 920,
       "height": 680,
-      "description": "Think beyond peak months and match timing to the experience you want."
+      "description": "Use the Amalfi Coast as a reminder to match your travel dates to the experience and atmosphere you want."
     },
     {
       "title": "A more thoughtful approach to travel days",
@@ -219,10 +219,10 @@
       "title": "What makes a destination feel local?",
       "href": "/articles/feeling-the-place/",
       "src": "/assets/images/neighbourhood-cafe.webp",
-      "alt": "Neighbourhood café opening onto a quiet European street",
+      "alt": "A freshly prepared cup of coffee in a warmly lit café.",
       "width": 920,
       "height": 680,
-      "description": "Look for the everyday spaces and shared rituals beyond the checklist."
+      "description": "Notice the everyday rituals and welcoming café moments that help a place feel familiar."
     }
   ],
   "planning": [
