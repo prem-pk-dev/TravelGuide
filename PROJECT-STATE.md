@@ -69,4 +69,4 @@ Phase 2.6 outputs:
 
 All Phase 2.1–2.6 work remains on `research/travel-guide-blueprint`. Do not merge it to `main` without explicit approval. Production development must use a dedicated implementation branch and keep working commits reviewable. Update this file and `TASK-BOARD.md` at every meaningful handoff.
 
-**Latest verified commit SHA:** `ee132ceccf944e91ac04ce796ae8bdc7dceb70c2`
+**Phase 2.6 architecture decision document commit:** `8775368fc0243507fcbf1fbc37603eeb9983faa9` (the final branch head is reported in the completion report).
