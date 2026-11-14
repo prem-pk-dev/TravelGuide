@@ -1354,3 +1354,787 @@ Dan Flying Solo is a personal, photography-led travel publication with a strong 
 For Travel Guide, the most transferable patterns are the layered destination content model, mini destination hubs, cross-destination travel-style categories, local evidence and image-led storytelling. Its WordPress search and mixed country archives also reveal opportunities: a new site can improve discovery with well-defined taxonomy, structured guide templates, verified image optimization and more consistent destination archive curation.
 
 **Phase 1 progress:** Nomadic Matt, The Points Guy and Dan Flying Solo audits are now documented in this file. The remaining competitors and all later phases remain untouched in this step.
+
+
+# Competitor Audit: Earth Trekkers
+
+- **Competitor:** Earth Trekkers — https://www.earthtrekkers.com/
+- **Audit date:** 14 November 2026
+- **Scope:** Homepage, primary and utility navigation, destination directory, Italy country hub, Rome city/attraction guide, city itinerary, itinerary archive, site search results, photo-led gallery page, newsletter landing page, disclosure, privacy policy and terms.
+- **Method:** Live public-page inspection, HTML/metadata inspection, and representative page-template comparison. Search query `?s=Rome` was opened directly. Mobile/tablet markup and screenshot capture were inspected; a full device-level interaction audit was not completed.
+- **Evidence labels:** “Observed” is directly visible in the inspected page or returned HTML. “Publisher statement” is a claim made by Earth Trekkers itself. “Not verified” means this audit did not establish the behavior or metric.
+- **Important boundary:** This is a representative template audit, not a complete crawl of every destination, article, archive, pagination state, ad placement, or browser/device combination.
+
+## 1. Pages inspected
+
+| Page type | URL | Inspection focus |
+|---|---|---|
+| Homepage | https://www.earthtrekkers.com/ | Hero, sections, navigation, discovery pathways, newsletter, footer |
+| Destination directory | https://www.earthtrekkers.com/destinations/ | Region groups, country listing, map prompt |
+| Country guide / hub | https://www.earthtrekkers.com/italy-travel-guide/ | Country planning hub, region/city links, itinerary clusters, internal links |
+| City / attraction guide | https://www.earthtrekkers.com/best-things-to-do-in-rome/ | Article layout, first-hand content, images, TOC, maps, affiliate disclosure |
+| City itinerary | https://www.earthtrekkers.com/rome-italy-2-day-itinerary/ | Itinerary search result and linked page structure |
+| Cross-country itinerary hub | https://www.earthtrekkers.com/travel-itineraries/ | Region-based itinerary discovery |
+| Category archive | https://www.earthtrekkers.com/category/itinerary/ | Post cards, metadata, taxonomy |
+| Site search | https://www.earthtrekkers.com/?s=Rome | Actual search results, result cards, pagination |
+| Photography article / gallery-style page | https://www.earthtrekkers.com/rome-pictures/ | Photo sequence, captions, related guides |
+| Hiking hub | https://www.earthtrekkers.com/hiking/ | Adventure category discovery |
+| Travel advice hub | https://www.earthtrekkers.com/travel-advice/ | Advice and photography topics |
+| Newsletter / eBook landing page | https://www.earthtrekkers.com/subscribe-to-get-our-ebook/ | Email capture and free eBook offer |
+| About / author profile | https://www.earthtrekkers.com/JULIE/ | Author and photography identity |
+| Disclosure | https://www.earthtrekkers.com/disclosure/ | Affiliate and partnership disclosure |
+| Privacy policy | https://www.earthtrekkers.com/privacy-policy/ | Data, cookies, analytics, newsletter, ad/affiliate disclosures |
+| Terms | https://www.earthtrekkers.com/terms-of-use/ | Usage, content rights and liability |
+
+The homepage and article templates returned HTTP 200 in the live scrape. URLs and page titles above are recorded as inspected, not as a claim that every page remains unchanged after the audit date.
+
+## 2. Homepage: sections observed in page order
+
+The homepage is a destination-and-itinerary discovery page rather than a chronological blog homepage. The inspected content order is:
+
+1. **Large photographic hero:** Full-width mountain/travel photograph with the H1 “Earth Trekkers” and tagline “Live to Travel. Travel to Live.” The sampled hero asset is served as WebP.
+2. **Utility header:** About Us and Contact links, plus Facebook, Instagram, YouTube and Pinterest links.
+3. **Brand and primary navigation:** Logo followed by Home, Destinations, Itineraries, US National Parks, Hiking and Search. Itineraries has a nested regional submenu.
+4. **Family / publisher introduction:** Julie, Tim, Tyler and Kara are introduced; the text describes their 13-month around-the-world trip and continued travel. “Our Story” links to the About page.
+5. **Current family / trust image:** A family photograph captioned “Earth Trekkers at Rocky Mountain National Park in 2026”.
+6. **“As seen in” logo strip:** Publication/brand logos are presented as an authority signal. The specific publication relationships are not independently verified in this audit.
+7. **“We Can Help You Plan The Perfect Trip”:** Four large planning routes:
+   - Destinations — country discovery and destination articles.
+   - Itineraries — longer sample trips across countries.
+   - National Parks — guides for the US National Parks.
+   - Hiking — hikes ranging from short walks to multi-day routes.
+8. **“Get Inspired” / Travel Inspiration:** Editorial introduction and a “Find More Travel Ideas” link, followed by a curated image-led list. Examples include Bavaria Christmas markets, Costa Rica, Central Europe, Utah’s Mighty 5, around-the-world travel, Spain by train, US National Parks, Europe, Italy, USA road trips, world hikes, Southeast Asia and the Dolomites.
+9. **Regional itinerary discovery:** Image-led links for Europe, North America, Oceania, Asia, Middle East, Africa and South America, each routing to regional itinerary content.
+10. **Trending destination spotlight:** Florida Keys is shown as the featured/trending destination in the captured homepage. It includes a short description and links to the destination hub, road-trip itinerary, Key West guide and an activity.
+11. **“What Have We Been Up To?” / Recent Posts:** A recent-post feed with thumbnail, title and “Read” links. The inspected examples include Aachen Christmas Market, Redwood National and State Parks and an Arizona road-trip itinerary.
+12. **US National Parks feature:** A dedicated section with a “Have a Goal to Reach All 64 Parks?” headline and links to the national parks directory, favorite parks, park itineraries and seasonal guides. The number in the homepage snapshot is 64; other older site text may use a different number, so treat the count as snapshot-specific.
+13. **“Find Your Next Adventure” / Adventure Travel:** Image-led discovery routes for Hiking, Adventure Travel, Travel Inspiration and Around the World.
+14. **“What People Say About Us” testimonials:** Multiple reader comments praising detailed guides, photography and itinerary usefulness.
+15. **Newsletter signup:** Footer-level “Subscribe for Updates” form with required Name and Email Address fields.
+16. **Footer navigation and legal links:** Explore links, About Us links, eBooks, social channels, copyright, Mediavine membership, Amazon affiliate statement, Privacy Policy, Terms of Use and Disclosure.
+
+**Interpretation:** Earth Trekkers prioritizes high-intent planning paths (country, itinerary, park, hike) and curated editorial inspiration. Its homepage makes multiple content verticals visible without relying on a single generic “latest articles” feed.
+
+**Source:** https://www.earthtrekkers.com/
+
+## 3. Header, navigation and mega-menu assessment
+
+### Utility and primary navigation
+
+Observed in the returned page markup:
+
+- Utility links: About Us and Contact.
+- Social links: Facebook, Instagram, YouTube and Pinterest.
+- Primary links: Home, Destinations, Itineraries, US National Parks, Hiking and Search.
+- Itineraries is the only primary item in the sampled navigation with a submenu.
+- Its submenu contains Europe, North & South America, Asia & Oceania, Africa & Middle East and All Itineraries.
+- The submenu is represented as a nested list and a button labelled “Submenu Dropdown”.
+- Search is a link to the WordPress search endpoint, `/?s=`.
+
+### Is it a mega menu?
+
+**Observed:** One hierarchical dropdown submenu under Itineraries.
+
+**Not verified:** A multi-column, image-rich, full-width mega menu. The inspected markup does not establish a complex mega-menu pattern. Do not label this navigation a mega menu without further evidence.
+
+### Mobile navigation evidence
+
+- A button with class `mobile-navigation-icon` and accessible label “Toggle Mobile Navigation” is present.
+- The button exposes `aria-expanded="false"` in the initial markup.
+- The nested submenu also has a dedicated dropdown button.
+- A viewport meta tag is present.
+- Responsive WordPress block classes such as `is-stacked-on-mobile` appear in the markup.
+
+**Not verified:** Whether the drawer opens/closes correctly on every device, focus trapping, Escape handling, submenu expansion on touch, keyboard-only operation, exact animation, and whether all menu items remain reachable at every breakpoint. An attempted live interaction did not complete within the browser session timeout; this is not evidence that the menu is broken.
+
+**Sources:**
+- https://www.earthtrekkers.com/
+- https://www.earthtrekkers.com/travel-itineraries/
+
+## 4. Destination discovery and country pages
+
+### Destination directory
+
+The `/destinations/` page starts with “Where Do You Want To Go?” and tells visitors to click on the map or scroll to the country list. Countries are grouped under these visible region headings:
+
+- Europe
+- North & South America
+- Oceania
+- Africa
+- Middle East
+- Asia
+
+Examples in the inspected directory include Austria, Belgium, Croatia, France, Germany, Italy, Spain, Switzerland, Argentina, Canada, Costa Rica, Peru, Australia, New Zealand, Egypt, Morocco, South Africa, Jordan, UAE, India, Japan, Thailand and Vietnam.
+
+The directory is strongly visual: many country entries have a destination photograph and a country-name heading/link. The list is long and region-based.
+
+**Map evidence boundary:** The page explicitly invites users to click the map. The exact map provider, country hit-area behavior, keyboard support and whether every country polygon is interactive were **Not Verified** in this audit. The map should not be described as a fully tested interactive map.
+
+### Country page: Italy Travel Guide
+
+The Italy page is a substantial destination hub. It introduces the country through first-hand travel experience and states that the publisher has visited Italy six times and published more than 100 detailed Italy guides. Those figures are **publisher statements**, not independently audited trip or article counts.
+
+Observed content architecture:
+
+1. Country hero / lead photograph and country label.
+2. H1 “Italy Travel Guide”.
+3. Introductory country narrative and experience context.
+4. “Explore Italy’s Top Destinations” with a featured “25 Best Places to Visit in Italy” guide.
+5. “How to Plan a Trip to Italy” with sequential planning advice:
+   - Decide how many days.
+   - Choose where to go.
+   - Pick the best time to visit.
+   - Build the itinerary.
+6. In-page destination anchors for Rome, Florence, Tuscany, Cinque Terre, Venice, Northern Italy, the Dolomites, Emilia-Romagna, Umbria, Amalfi Coast/Sorrento, Sicily, Puglia and Basilicata.
+7. “Italy Itineraries” with cards/links for different trip lengths and regions, including 10-day, 14-day, northern Italy, southern Italy and Sicily itineraries.
+8. Destination-specific guide clusters, with links to individual city, town, region and attraction content.
+9. “Italy Inspiration” and photography-led destination articles.
+10. “Top Experiences in Italy” with short recommendations and contextual links.
+11. Related article and planning pathways, plus global newsletter/footer modules.
+
+### Information architecture assessment
+
+Earth Trekkers combines a country-level planning hub with deeper individual guides. A country page is not merely a list of articles: it introduces trip-planning decisions, links to regional/city anchors and groups itinerary routes.
+
+**Important implementation lesson:** Separate the editorial roles of country hub, city guide, attraction guide, region guide and itinerary. A country hub can summarize and route readers; it should not duplicate every detailed city/attraction article.
+
+**Sources:**
+- https://www.earthtrekkers.com/destinations/
+- https://www.earthtrekkers.com/italy-travel-guide/
+
+## 5. City guides, attraction pages and itinerary pages
+
+### Rome city / attraction guide
+
+The representative Rome article inspected is “30 Things to Do in Rome: Our Favorites & What to Skip”.
+
+Observed elements:
+
+- H1 article title and author byline (Julie).
+- Last-updated date (14 October 2026 in the inspected version).
+- Italy category link and comment link/count.
+- Featured landscape photograph.
+- Affiliate disclosure directly near the beginning of the article.
+- Introductory first-person account of visits to Rome.
+- “Best of Rome: The Essentials” quick-decision summary for first-time visitors, neighborhoods, food, ancient history, art, underground sites, families and short stays.
+- Table of Contents with nested jump links.
+- “Top 10 Things to Do in Rome” followed by a “Go Deeper” section for additional experiences.
+- Individual attraction sections with photographs, explanations, practical ticket/visit information and links to more detailed guides.
+- A map embed / Google My Maps references with instructions explaining that map icons can be clicked for more information.
+- Contextual internal links to other Rome, Italy and nearby-destination pages.
+- Related Rome/Italy guides near the end, newsletter and global footer.
+- Reader comments and author replies.
+
+This is a long-form editorial guide with an actionable summary layer and deep attraction-level detail.
+
+### City itinerary
+
+The Rome search results include “2 Days in Rome: Our Itinerary for First-Time Visitors” and “How to Spend 3 Days in Rome: A Realistic Itinerary”. The two-day result description states that Day 1 focuses on Ancient Rome and that the guide is intended to help first-time visitors prioritize major sites without crisscrossing the city.
+
+The travel-itinerary directory also groups itineraries by region and features examples such as:
+- 10 Days in Italy: multiple itinerary options.
+- 14 Day Italy itinerary.
+- 10 Day Norway itinerary.
+- 10 Days in Europe: multiple routes.
+- Costa Rica and Southeast Asia itineraries.
+
+### Itinerary page pattern
+
+Observed at the directory/search level:
+- Trip duration in the title.
+- Destination/route names in the title and excerpt.
+- A representative thumbnail.
+- Author and last-updated date on archive/search result cards.
+- Country/category taxonomy links.
+- “Read More” link to the complete guide.
+
+**Not verified:** Every itinerary uses the same exact day-by-day layout, maps, transport table or downloadable planner. Those must be checked per individual article before being treated as a universal template.
+
+**Sources:**
+- https://www.earthtrekkers.com/best-things-to-do-in-rome/
+- https://www.earthtrekkers.com/rome-italy-2-day-itinerary/
+- https://www.earthtrekkers.com/3-days-in-rome-itinerary/
+- https://www.earthtrekkers.com/travel-itineraries/
+
+## 6. Travel article layout
+
+The Rome guide is a representative single-post template. Its layout includes:
+
+1. Global header, logo and primary navigation.
+2. Featured/hero image.
+3. H1, author byline, updated date, category and comment link.
+4. Social-sharing controls.
+5. Affiliate disclosure near the beginning.
+6. Introductory first-person travel experience.
+7. Quick-answer / “Best of Rome” summary.
+8. Expandable-style Table of Contents with nested anchor links.
+9. Long-form H2/H3 content sections.
+10. Inline destination photography with descriptive alt text in sampled markup.
+11. Practical tips and ticket/booking links.
+12. Maps and walking-route references where relevant.
+13. Internal links to related attraction, city and itinerary guides.
+14. Related article cards.
+15. Reader comments and replies.
+16. Newsletter form and footer.
+
+The article also exposes an estimated reading-time value in social metadata for the sampled post (151 minutes). This is a page-specific metadata value, not a claim about average reading time across the site.
+
+### Content strengths
+
+- The first-person narrative gives context for recommendations.
+- Quick summary helps visitors make decisions without reading the entire guide.
+- TOC links make long content navigable.
+- Attraction-level links allow deeper planning without making the main article carry every detail.
+- Updated dates and author attribution are visible.
+- Comments show reader questions and author replies.
+
+### Potential risks / opportunities
+
+- Long articles with many images, maps, affiliate links and comments can become heavy; measure actual payload and Core Web Vitals before adopting the same density.
+- Maintain a clear distinction between an editorial summary, affiliate recommendation and paid partnership.
+- Use a consistent itinerary schema so trip duration, route, transport, daily stops and practical caveats are easy to scan.
+
+**Source:** https://www.earthtrekkers.com/best-things-to-do-in-rome/
+
+## 7. Search and category filtering
+
+### Search
+
+The primary navigation Search link points to the standard WordPress query route `/?s=`.
+
+A live search results page was inspected at:
+
+- https://www.earthtrekkers.com/?s=Rome
+
+Observed behavior/content:
+- H1 “Search Results”.
+- Search query shown in the introductory text (“Rome”).
+- A “Search the site” input/form is present.
+- Results are displayed as image-led cards with article title, author, updated date, destination category, comment link, short excerpt and Read More link.
+- Results include relevant Rome pages such as Biking the Appian Way, Rome in Photos, a three-day Rome itinerary, Rome-to-Amalfi transport, Pompeii and a two-day Rome itinerary.
+- Pagination is present; the inspected Rome result output exposed links to page 1, page 2, page 3 and a later page 78. This is the search engine's reported pagination for that query snapshot, not a count of unique Rome-specific guides.
+- Search result thumbnails were served with `.jpg.webp` paths in the sampled output, demonstrating WebP delivery for those result images.
+
+### Category archive
+
+The itinerary archive at `/category/itinerary/` displays:
+- Category heading.
+- Image-led article cards.
+- Article title, author, last-updated date.
+- Destination and itinerary category links.
+- Comment links and excerpts.
+- Read More links.
+- Newsletter and global footer.
+
+### Filtering verdict
+
+**Observed:** Keyword search and taxonomy/category navigation.
+
+**Not verified / not found in inspected interface:** Faceted filters by country, duration, budget, travel style, month, transport mode, difficulty or family suitability; instant autocomplete; client-side filtering; sort-by controls. The inspected search results do not expose those advanced controls.
+
+**Lesson:** A search box and category archive are useful basics, but they are not equivalent to a structured travel-planning filter. Travel Guide should add filters only when each field has reliable structured data.
+
+**Sources:**
+- https://www.earthtrekkers.com/?s=Rome
+- https://www.earthtrekkers.com/category/itinerary/
+- https://www.earthtrekkers.com/travel-itineraries/
+
+## 8. Photorealistic imagery and image-loading strategy
+
+### Image style
+
+The inspected pages use real travel photographs rather than illustration-led destination cards:
+- Mountain and landscape hero photography.
+- Country/city lead photographs.
+- Attraction photographs embedded throughout articles.
+- Vertical destination images in homepage inspiration cards.
+- Horizontal 1129 × 631-style archive thumbnails.
+- Photography-led editorial pages such as “A Journey through Rome in Photos”.
+
+The imagery is central to the site's identity and discovery experience.
+
+### Formats observed
+
+The HTML inspection shows a mixed image-format strategy, not a single-format site:
+
+- Homepage hero image: WebP (`Haute-Route-Guide-optimized.webp`).
+- Many homepage/editorial card images: `.jpg.optimal.jpg`.
+- Country and article images: many `.jpg.optimal.jpg` URLs, with some WebP assets.
+- Search result thumbnails: multiple `.jpg.webp` URLs.
+- PNG assets are used for the logo and “as seen in” strip.
+- SVG assets are used for small navigation/category icons and footer branding.
+
+Sampled image path formats included:
+- `.../Haute-Route-Guide-optimized.webp`
+- `.../Rome-Sunset-Photo.jpg.optimal.jpg`
+- `.../Appian-Way-with-Kids-1129x631.jpg.webp`
+- `.../earth-trekkers-logo-transparent.png`
+
+The sampled homepage and Italy guide had predominantly JPG-style URLs with selected WebP assets; the sampled Rome search page returned many WebP thumbnail paths. The exact negotiation mechanism and whether every browser receives a different format were **Not Verified**.
+
+### Loading and responsive markup
+
+Observed in sampled HTML:
+- The homepage hero uses `fetchpriority="high"` and explicit width/height attributes.
+- The Rome article lead image uses `fetchpriority="high"`.
+- Some article and archive images use `loading="lazy"`.
+- The Italy guide sample included a lazy-loaded small thumbnail and a high-priority featured content image.
+- Some sampled article images expose `srcset`, but responsive `srcset` was not present on every sampled image/page.
+- Image elements generally include descriptive alt text in the inspected samples; no missing-alt image was found in the sampled Rome article HTML, but this is not a full-site accessibility audit.
+- WordPress media URLs include generated size variants such as 150 × 150, 768 × 404, 1024 × 539 and 1129 × 631, alongside larger source assets.
+- The page metadata identifies WP Rocket 3.24 as the WordPress optimization plugin generator. This confirms the plugin marker in page metadata, not a measured speed result.
+
+### What was not measured
+
+- Actual downloaded byte size and compression quality.
+- CDN cache headers, cache hit ratio and image CDN configuration.
+- LCP/CLS impact of individual images.
+- Browser-specific AVIF/WebP negotiation.
+- Lazy-load threshold and image request waterfall.
+- Whether all image sizes are generated consistently for all posts.
+
+### Lessons for Travel Guide
+
+1. Use photorealistic, destination-specific assets with useful alt text.
+2. Set explicit image dimensions/aspect ratios to reduce layout shift.
+3. Prioritize the true hero/LCP image; lazy-load below-the-fold imagery.
+4. Generate multiple image widths and use `srcset`/`sizes` consistently.
+5. Prefer WebP for the project's own media pipeline, but verify the actual delivered response rather than trusting a filename.
+6. Do not copy competitor photographs, logos, captions or other protected creative assets.
+
+**Sources:**
+- https://www.earthtrekkers.com/
+- https://www.earthtrekkers.com/italy-travel-guide/
+- https://www.earthtrekkers.com/best-things-to-do-in-rome/
+- https://www.earthtrekkers.com/?s=Rome
+- https://www.earthtrekkers.com/rome-pictures/
+
+## 9. Photography presentation and gallery behavior
+
+The dedicated Rome photo page is titled “A Journey through Rome in Photos”. It is an editorial photography page rather than a simple directory card. The page presents a sequence of Rome photographs and then routes readers to related planning content.
+
+Observed:
+- Large editorial photo sequence.
+- Individual photo assets with descriptive filenames and alt text.
+- Related Rome planning guides, including things to do, rooftop bars, restaurants, one-day itinerary, accommodation, Appian Way and photo/viewpoint guides.
+- Related Italy destinations and city guides such as Florence, Venice, Tuscany and the Dolomites.
+- Reader comments and the standard newsletter/footer modules.
+- The HTML body includes the `wp-featherlight-captions` class and the site uses a Featherlight-related presentation marker.
+
+**Not verified:** A full-screen gallery viewer, swipe-through slideshow, keyboard gallery navigation, image download control, EXIF display or a standalone gallery application. The Featherlight class suggests a lightbox-related feature is part of the page/theme stack, but the actual user interaction was not successfully tested; do not treat the class alone as proof that every photo opens in a working lightbox.
+
+**Lesson:** A photo story can also function as a destination cluster, but the page should retain clear captions/alt text and links to practical planning guides.
+
+**Source:** https://www.earthtrekkers.com/rome-pictures/
+
+## 10. Advertising, affiliate monetization and partnerships
+
+### Affiliate disclosures
+
+The dedicated Disclosure page states that:
+- The publisher sometimes partners with private companies and may receive compensation, often in the form of discounts.
+- Partnerships are disclosed on the relevant blog post.
+- Affiliate links may earn the publisher a small commission at no additional cost to the visitor.
+- Earth Trekkers participates in the Amazon Services LLC Associates Program.
+- Earth Trekkers participates in the Booking.com Associates Program.
+- Earth Trekkers participates in the GetYourGuide Associates Program.
+- The publisher states that it does not promote products/activities it does not believe in.
+
+The sampled Rome article also displays an affiliate notice near the beginning of the post, before the main editorial recommendations.
+
+### Display advertising
+
+The homepage footer identifies Earth Trekkers as an “Exclusive Member of Mediavine Travel”. The privacy policy contains a Mediavine programmatic advertising section and discusses cookies/advertising technologies. This supports the conclusion that the publisher has a Mediavine advertising relationship.
+
+### Other monetization / promotion
+
+- Affiliate links to travel booking/activity providers in relevant destination articles.
+- Amazon affiliate links.
+- Booking.com and GetYourGuide affiliate programs, explicitly listed in the Disclosure.
+- Etsy storefront link for eBooks / print-friendly digital downloads.
+- Promotional free eBook used as a newsletter acquisition incentive.
+- Partnership disclosure language for compensated private-company collaborations.
+
+### Placement evidence boundary
+
+- The exact number and position of display-ad units, ad refresh behavior, sticky ad behavior, in-image ads, video ads, ad density, and revenue were **Not Verified** by this audit.
+- The presence of Mediavine membership is not a performance metric and does not prove an ad appears in every viewport/page state.
+- The disclosure page's statements are publisher-provided policy statements; actual commission amounts and contracts are not public evidence in this audit.
+
+**Sources:**
+- https://www.earthtrekkers.com/disclosure/
+- https://www.earthtrekkers.com/best-things-to-do-in-rome/
+- https://www.earthtrekkers.com/privacy-policy/
+- https://www.earthtrekkers.com/
+
+## 11. Newsletter and promotional elements
+
+### Newsletter
+
+The global footer contains a “Newsletter / Subscribe for Updates” module with:
+- Required Name field.
+- Required Email Address field.
+- Subscribe action.
+
+### eBook lead magnet
+
+The dedicated page `/subscribe-to-get-our-ebook/` offers a free eBook titled “Travel Inspiration: 24 Amazing Destinations Month by Month”.
+
+The landing page explains that the eBook includes destination inspiration and photography, and that a monthly newsletter will also deliver travel advice, inspiration and photography. The signup form requests first name and email address.
+
+### Other promotions
+
+- “Find More Travel Ideas” on the homepage.
+- Trending destination feature.
+- National Parks and hiking discovery routes.
+- Etsy eBook storefront link in the footer.
+- Partnership/brand credentials on the homepage “As seen in” strip.
+
+### Popups
+
+**Not verified:** A timed popup, exit-intent overlay, scroll-triggered modal, or exact popup trigger rules. A dedicated eBook landing page exists, but that alone does not prove it is shown as a popup. No modal behavior is claimed.
+
+### Newsletter vendor
+
+The privacy policy names Mailchimp as the newsletter delivery provider. This is a publisher-stated vendor disclosure, not a live verification of the current account configuration or form delivery success.
+
+**Sources:**
+- https://www.earthtrekkers.com/subscribe-to-get-our-ebook/
+- https://www.earthtrekkers.com/privacy-policy/
+- https://www.earthtrekkers.com/
+
+## 12. Desktop, tablet and mobile responsiveness
+
+### Desktop evidence
+
+- The public homepage and content pages use a wide hero, centered content structures, multi-column discovery cards and editorial image grids.
+- Desktop primary navigation exposes a horizontal navigation list and nested Itineraries submenu.
+- Sampled homepage hero and editorial card assets include landscape and portrait aspect ratios.
+
+### Mobile markup / screenshot evidence
+
+- The site includes a viewport meta tag.
+- The header has a dedicated mobile navigation toggle button with an accessible label and `aria-expanded` state.
+- WordPress block classes include `is-stacked-on-mobile`, which indicates a mobile stacking layout for at least the corresponding content block.
+- Mobile screenshot capture was requested at 390 × 844; the responsive page was returned with the mobile-navigation control in its markup.
+- Article markup contains mobile-oriented social-share controls (including a mobile display class).
+
+### Tablet evidence
+
+- A tablet-width screenshot capture was requested at 768 × 1024.
+- The returned markup retains the mobile-navigation toggle and responsive block classes.
+
+### Not verified
+
+- A full visual comparison at 390px, 768px and desktop widths for every page template.
+- Actual menu open/close behavior, keyboard focus, submenu tap behavior and drawer scrolling.
+- Exact breakpoint values and card-column transitions.
+- Touch target measurements, text scaling, horizontal overflow and landscape tablet behavior.
+- Real iOS/Android device testing.
+
+**Conclusion:** Responsive intent and mobile navigation markup are directly observed. Full responsive QA is **Not Verified**; do not call the site fully responsive-tested from the evidence available.
+
+**Sources:**
+- https://www.earthtrekkers.com/
+- https://www.earthtrekkers.com/best-things-to-do-in-rome/
+- https://www.earthtrekkers.com/italy-travel-guide/
+
+## 13. SEO and internal linking
+
+### Observed SEO signals
+
+- Descriptive page titles and meta descriptions are exposed in the sampled page metadata.
+- Homepage title: “Earth Trekkers | Family Adventure Travel & Photography”.
+- Sampled pages expose Open Graph and Twitter card metadata.
+- Homepage robots metadata includes `index, follow`.
+- Sampled content pages expose published/modified timestamps in metadata.
+- Country and article URLs use descriptive slugs, for example:
+  - `/destinations/`
+  - `/italy-travel-guide/`
+  - `/best-things-to-do-in-rome/`
+  - `/rome-italy-2-day-itinerary/`
+  - `/travel-itineraries/`
+  - `/category/itinerary/`
+- Article pages use H1/H2/H3 hierarchy and TOC anchors.
+- Country hubs link to city/region/attraction pages and itinerary clusters.
+- Search/category cards expose author, updated date, destination taxonomy and comment links.
+- Related articles provide cross-links within the same destination cluster.
+- Skip-to-content link is present in sampled HTML.
+- Image alt text is present on sampled hero and article images.
+- The site includes a dedicated author profile page and About page.
+
+### Internal linking pattern
+
+The Italy hub links to Rome, Florence, Tuscany, Cinque Terre, Venice, the Dolomites, Sicily, Puglia and other regions. The Rome guide links to attraction-specific guides, itineraries, maps, accommodation, food and related destinations. The photo page links back into Rome and wider Italy planning content.
+
+This creates a strong country → region/city → attraction/article → itinerary pathway. The same post can also be discovered through search and category archives.
+
+### Not verified
+
+- Canonical tag values for every page.
+- Full XML sitemap coverage and last-modified correctness.
+- robots.txt directives beyond the page-level robots metadata.
+- Complete schema.org / JSON-LD graph and rich-result validity.
+- Hreflang or multilingual SEO.
+- Search Console indexing, ranking, backlinks, organic traffic and crawl budget.
+- Duplicate-content/canonicalization behavior across alternate URL casing or trailing slash variants.
+
+No ranking or traffic conclusion is inferred from page titles, metadata or URL structure.
+
+**Sources:**
+- https://www.earthtrekkers.com/
+- https://www.earthtrekkers.com/destinations/
+- https://www.earthtrekkers.com/italy-travel-guide/
+- https://www.earthtrekkers.com/best-things-to-do-in-rome/
+- https://www.earthtrekkers.com/?s=Rome
+- https://www.earthtrekkers.com/category/itinerary/
+- https://www.earthtrekkers.com/JULIE/
+
+## 14. Performance and accessibility
+
+### Performance-related observations
+
+- The HTML metadata identifies WP Rocket 3.24.
+- The homepage hero image uses `fetchpriority="high"`.
+- The sampled Rome article lead image uses `fetchpriority="high"`.
+- Some below-the-fold article/archive images use `loading="lazy"`.
+- Some images include width and height attributes.
+- Some article images expose `srcset`; this was not consistent across all sampled pages.
+- The site loads third-party/monetization-related components, including Google Tag Manager and Mediavine-related settings markup.
+- Article pages may include Google My Maps embeds and many photographs.
+
+These are implementation signals, not measured performance results.
+
+### Performance not verified
+
+- Lighthouse / PageSpeed scores.
+- LCP, INP, CLS, TTFB and FCP.
+- Total page transfer size and JavaScript execution time.
+- Number of network requests, cache headers and CDN hit rates.
+- Third-party ad impact and actual ad loading sequence.
+- Mobile network performance or field Core Web Vitals.
+- Performance comparison with the other audited competitors.
+
+### Accessibility observations
+
+- A skip-to-content link appears in sampled HTML.
+- Navigation landmarks are represented by `nav` elements.
+- Mobile navigation toggle has an accessible label and `aria-expanded` state.
+- Submenu control has an accessible label.
+- Sampled editorial images expose alt attributes.
+- Article content uses heading hierarchy and anchor-based Table of Contents.
+- Forms expose required-field labels in extracted content.
+- Social links include accessible labels in sampled markup.
+
+### Accessibility not verified
+
+- WCAG 2.2 AA conformance.
+- Keyboard-only menu operation and focus management.
+- Screen-reader announcements for dropdowns, gallery/lightbox, search and form validation.
+- Color contrast, visible focus, text resize and reduced-motion support.
+- Captions/transcripts for all video content.
+- Actual touch-target dimensions.
+- Whether every alt description is contextually useful across the whole site.
+
+**Conclusion:** Some positive accessibility implementation signals are present, but no formal accessibility pass is claimed.
+
+**Sources:**
+- https://www.earthtrekkers.com/
+- https://www.earthtrekkers.com/best-things-to-do-in-rome/
+- https://www.earthtrekkers.com/privacy-policy/
+
+## 15. Interactive features, maps and animations
+
+### Observed or supported by markup/content
+
+| Feature | Evidence / status |
+|---|---|
+| Primary navigation | Home, Destinations, Itineraries, US National Parks, Hiking, Search |
+| Itineraries submenu | Nested regional list and submenu button in HTML |
+| Mobile menu | Toggle button with accessible label and initial `aria-expanded` state; open/close behavior not confirmed |
+| Site search | WordPress GET query using `?s=`; Rome results page successfully inspected |
+| Search pagination | Multiple result pages linked in search output |
+| TOC | Nested in-page anchor navigation in Rome article |
+| Country discovery | Region-grouped country directory and map prompt |
+| Google My Maps | Map references/embed in Rome guide; article explains clicking map icons |
+| Photo presentation | Photo-led Rome article; Featherlight-related class present |
+| Social sharing | Pinterest/Facebook/Flipboard sharing controls in article markup |
+| Comments | Article comments and author replies |
+| Newsletter | Footer form and dedicated eBook signup page |
+| Related articles | Internal content cards/links |
+| Scroll-to-top | Not verified in inspected pages |
+| Booking widget | Not verified; booking/activity links route to external providers |
+| Animated transitions | Not verified |
+| Parallax/autoplay | Not verified |
+| Popup modal | Not verified |
+
+### Maps
+
+The Rome guide includes Google My Maps references and explanatory text for using map icons. This is useful for route/attraction context. It is an embedded third-party map experience, not evidence that Earth Trekkers operates its own mapping engine.
+
+### Animations
+
+No specific CSS transition duration, easing, scroll animation, parallax effect or autoplay behavior was established from the available page evidence. Do not invent an animation inventory.
+
+**Sources:**
+- https://www.earthtrekkers.com/best-things-to-do-in-rome/
+- https://www.earthtrekkers.com/destinations/
+- https://www.earthtrekkers.com/?s=Rome
+- https://www.earthtrekkers.com/rome-pictures/
+
+## 16. Footer and legal pages
+
+### Footer
+
+The inspected global footer contains:
+
+**Newsletter**
+- Subscribe for Updates.
+- Required Name and Email Address fields.
+- Subscribe action.
+
+**Explore**
+- Destinations.
+- Itineraries.
+- US National Parks.
+- Hiking.
+- Travel Advice & Photography.
+
+**About Us**
+- Our Story.
+- Contact.
+- Buy Our E-Books (Etsy).
+
+**Brand / business information**
+- Light version of the Earth Trekkers logo.
+- Copyright © 2014–2026.
+- “Exclusive Member of Mediavine Travel”.
+- Amazon Services LLC Associates Program statement.
+
+**Social and legal**
+- Facebook, Instagram, YouTube and Pinterest.
+- Privacy Policy.
+- Terms of Use.
+- Disclosure.
+
+### Disclosure page
+
+The disclosure page explains compensated partnerships, affiliate links, commission at no extra cost to the visitor, and names Amazon, Booking.com and GetYourGuide affiliate programs. It says partnerships are disclosed on the relevant blog post.
+
+### Privacy policy
+
+The inspected policy:
+- Describes voluntarily submitted data (newsletter, comments, contact forms).
+- Describes automatically collected device/usage information.
+- Discusses cookies and third-party tags.
+- Names Google Analytics, Mediavine, Mailchimp and Etsy as service providers.
+- Discusses newsletter tracking pixels and unsubscribe rights.
+- Explains affiliate tracking cookies.
+- Shows a last-updated date of January 1, 2026 in the page text.
+
+The named vendor list is a publisher-stated policy snapshot. It is not independent verification that each integration is currently active in every page state.
+
+### Terms of Use
+
+The terms page covers permitted personal use, restrictions on downloading/reproducing website materials, acceptable use, warranties, liability, indemnity, governing law and revisions. It also displays a January 1, 2026 update date in the inspected page text.
+
+### Contact policy
+
+The Contact page says the team may take up to seven days to respond to email and asks readers to use relevant article comments for simple questions. It also states that the site does not accept guest articles and is not a tour operator.
+
+**Sources:**
+- https://www.earthtrekkers.com/
+- https://www.earthtrekkers.com/disclosure/
+- https://www.earthtrekkers.com/privacy-policy/
+- https://www.earthtrekkers.com/terms-of-use/
+- https://www.earthtrekkers.com/contact/
+
+## 17. Comparison with Nomadic Matt, The Points Guy and Dan Flying Solo
+
+| Dimension | Nomadic Matt | The Points Guy | Dan Flying Solo | Earth Trekkers |
+|---|---|---|---|---|
+| Core positioning | Practical budget travel and trip-planning advice | Points, miles, cards, rewards and travel media | Personal travel photography and destination stories | Family adventure travel, detailed destination guides, itineraries, hiking and national parks |
+| Homepage role | Trip-planning funnel and resource directory | Rewards/media homepage with AskTPG, calculator and offers | Destination spotlights, inspiration, sustainability, stories and video | Planning gateway for destinations, itineraries, parks and hiking |
+| Primary navigation | About, Blog, Start Here, Destinations, Booking Resources, Books, Courses, Cards | Credit Cards, Rewards, Travel, Offers | Articles, Destinations, Ideas, Videos, About | Destinations, Itineraries, US National Parks, Hiking, Search |
+| Destination directory | Country/city guide hierarchy | Curated travel/rewards hubs | Region/country category taxonomy | Visual region → country directory |
+| Country pages | Reusable practical country/city guide structure | Country/topic travel hubs, often rewards-led | Country archives and long-form country guides | Rich country planning hubs linking regions, cities, hikes and itineraries |
+| City/itinerary depth | Attractions, lodging, cost, transport and budget advice | City/destination news, points and booking context | City guides, neighborhood stories, attraction guides and itineraries | Attraction lists, practical maps, day-by-day itineraries and deep regional clusters |
+| Article voice | First-person practical advice | Editorial reporting, reviews, news and explainers | Personal narrative and photography | First-hand family travel experience and detailed trip planning |
+| Search | Site/destination search | AskTPG and specialist tools | WordPress keyword search | WordPress keyword search with pagination; advanced filters not verified |
+| Imagery | Destination photos and guide images | Editorial and product imagery | Strong author-led travel photography | Strong travel photography and image-led itinerary cards |
+| Monetization | Travel affiliate recommendations and resources | Card/financial affiliates, partners, sponsored content and ads | Travel affiliates, Amazon and Mediavine advertising | Amazon, Booking.com, GetYourGuide affiliates, disclosed partnerships, Mediavine advertising, eBooks |
+| Newsletter | Planning tips signup | News/points newsletter | Irregular updates signup | Monthly newsletter plus free 24-destination eBook lead magnet |
+| Distinctive tools | Planning resources and destination hierarchy | AskTPG, CardMatch, points calculator | Video and personal destination storytelling | Google My Maps in guides, itinerary clusters, parks and hiking hubs |
+
+### What Earth Trekkers does especially well
+
+1. **Planning-first information architecture:** Four clear homepage pathways—destinations, itineraries, national parks and hiking—help users choose the right content type.
+2. **Country hub depth:** Italy is a strong example of a country page that explains trip-planning decisions and routes readers to regions, cities and itinerary options.
+3. **Itinerary as a first-class content type:** Trip duration and route are visible in titles and archive cards, rather than being buried as generic blog tags.
+4. **Practical map integration:** Google My Maps supports attraction and walking-route context inside destination guides.
+5. **First-hand credibility:** Author attribution, update dates, family travel history, original photographs and reader comments support the editorial identity.
+6. **Photography as navigation:** Destination images are not merely decorative; they lead into country, city, hiking and itinerary clusters.
+7. **Clear commercial disclosure:** Affiliate disclosure is available as a dedicated legal page and appears near the beginning of sampled articles.
+8. **Newsletter lead magnet:** A specific free eBook gives visitors a concrete reason to subscribe.
+
+### Opportunities for Travel Guide
+
+1. **More structured discovery:** Earth Trekkers' inspected search is keyword-oriented. Travel Guide can differentiate with verified filters for trip length, travel style, season, budget and transport—provided the content data supports them.
+2. **Better destination map accessibility:** A map should have a fully usable country list fallback, keyboard support and descriptive labels; do not rely on map interaction alone.
+3. **Consistent image delivery:** Earth Trekkers uses a mixed set of WebP, JPG-style optimized URLs, PNG and SVG. Travel Guide can standardize its own photorealistic WebP workflow and verify actual network responses.
+4. **Distinct page schemas:** Country hub, city guide, attraction, photo story, hiking trail and itinerary should each have their own content structure.
+5. **Performance budget:** Large photo-heavy pages, embeds and programmatic ads should be measured before production release.
+6. **Transparent monetization:** Place affiliate disclosures near recommendations and maintain a dedicated disclosure/legal page.
+7. **Mobile menu QA:** Implement and test menu focus, keyboard, Escape, touch and submenu behavior rather than treating the presence of a mobile toggle as proof of usability.
+
+### Combined competitor learning
+
+- Nomadic Matt contributes practical travel-planning and budget guidance.
+- The Points Guy contributes tool-led decision support and commercial product discovery.
+- Dan Flying Solo contributes personal photography and destination storytelling.
+- Earth Trekkers contributes structured country hubs, detailed itineraries, outdoor/national-park verticals and map-supported guides.
+
+For Travel Guide, the strongest strategy is to combine a clean destination hierarchy with structured itinerary data, original photorealistic WebP imagery, reliable maps, practical planning content and clear monetization disclosure—without copying any competitor's text, images, branding or page assets.
+
+## 18. Evidence sources and research limitations
+
+### Primary source URLs
+
+- Homepage: https://www.earthtrekkers.com/
+- Destinations: https://www.earthtrekkers.com/destinations/
+- Italy country guide: https://www.earthtrekkers.com/italy-travel-guide/
+- Travel itineraries: https://www.earthtrekkers.com/travel-itineraries/
+- Rome things to do: https://www.earthtrekkers.com/best-things-to-do-in-rome/
+- Rome two-day itinerary: https://www.earthtrekkers.com/rome-italy-2-day-itinerary/
+- Rome three-day itinerary: https://www.earthtrekkers.com/3-days-in-rome-itinerary/
+- Itinerary category: https://www.earthtrekkers.com/category/itinerary/
+- Search for Rome: https://www.earthtrekkers.com/?s=Rome
+- Rome in photos: https://www.earthtrekkers.com/rome-pictures/
+- Hiking: https://www.earthtrekkers.com/hiking/
+- Travel advice and photography: https://www.earthtrekkers.com/travel-advice/
+- Newsletter eBook: https://www.earthtrekkers.com/subscribe-to-get-our-ebook/
+- Julie profile: https://www.earthtrekkers.com/JULIE/
+- About: https://www.earthtrekkers.com/about/
+- Contact: https://www.earthtrekkers.com/contact/
+- Disclosure: https://www.earthtrekkers.com/disclosure/
+- Privacy policy: https://www.earthtrekkers.com/privacy-policy/
+- Terms of Use: https://www.earthtrekkers.com/terms-of-use/
+
+### Limitations
+
+- Research reflects the pages inspected on 14 November 2026; content, ad partners, policies, menu links and image delivery can change.
+- The audit is representative, not exhaustive.
+- No proprietary analytics, revenue, affiliate commission rates, ad RPM, Search Console data or keyword rankings were accessed.
+- No Lighthouse, PageSpeed, Core Web Vitals, full network waterfall, formal WCAG or physical-device testing was performed.
+- The live mobile menu interaction attempt timed out; its actual drawer behavior remains Not Verified.
+- The exact behavior of the destination map and photo lightbox remains Not Verified.
+- Search pagination observed on the Rome query does not represent a count of Rome-only articles.
+- Publisher claims (such as number of trips, guides, parks or partners) are identified as such rather than independently verified.
+
+## 19. Audit conclusion
+
+Earth Trekkers is a family-run, photography-led adventure travel publisher whose strongest product pattern is the connection between country hubs, detailed city/attraction guides, day-by-day itineraries, hiking content and national-park planning. Its homepage functions as a set of clear trip-planning entry points, while country hubs such as Italy connect broad trip decisions to deeper destination content.
+
+For Travel Guide, the most transferable patterns are the region/country discovery directory, country-level planning hubs, itinerary-specific archives, map-supported attraction guides, photography-led editorial pages, visible author/update information and a concrete newsletter lead magnet. The clearest opportunities to improve on the inspected experience are structured search filters, consistent image-format delivery, measured performance budgets and tested mobile/accessibility interactions.
+
+**Phase 1 progress:** Nomadic Matt, The Points Guy, Dan Flying Solo and Earth Trekkers audits are documented in this file. Phase 1.4 is limited to Earth Trekkers; no production development or later phase work is included. The next competitor in the agreed sequence is Lonely Planet.
