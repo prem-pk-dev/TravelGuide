@@ -3,10 +3,10 @@ function closeMega(){triggers.forEach(b=>b.setAttribute("aria-expanded","false")
 function openMega(name,trigger){const wasOpen=trigger.getAttribute("aria-expanded")==="true";closeMega();if(wasOpen)return;trigger.setAttribute("aria-expanded","true");const panel=document.querySelector('[data-mega="'+name+'"]');if(panel&&megaLayer){panel.hidden=false;megaLayer.hidden=false;}}
 triggers.forEach(b=>b.addEventListener("click",()=>openMega(b.dataset.menuTrigger,b)));
 document.addEventListener("click",e=>{if(!e.target.closest(".site-header"))closeMega();});
-function closeMobile(){if(!mobileNav||!mobileToggle)return;mobileNav.hidden=true;mobileToggle.setAttribute("aria-expanded","false");mobileToggle.setAttribute("aria-label","Open navigation");document.body.classList.remove("nav-open");mobileToggle.focus();}
+function closeMobile(returnFocus=true){if(!mobileNav||!mobileToggle)return;mobileNav.hidden=true;mobileToggle.setAttribute("aria-expanded","false");mobileToggle.setAttribute("aria-label","Open navigation");document.body.classList.remove("nav-open");if(returnFocus)mobileToggle.focus();}
 function openMobile(){if(!mobileNav||!mobileToggle)return;mobileNav.hidden=false;mobileToggle.setAttribute("aria-expanded","true");mobileToggle.setAttribute("aria-label","Close navigation");document.body.classList.add("nav-open");mobileClose?.focus();}
 mobileToggle?.addEventListener("click",()=>mobileNav.hidden?openMobile():closeMobile());mobileClose?.addEventListener("click",closeMobile);
-mobileNav?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileNav.hidden=true;mobileToggle?.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}));
+mobileNav?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>closeMobile(false)));
 searchToggle?.addEventListener("click",()=>{const open=headerSearch.hidden;headerSearch.hidden=!open;searchToggle.setAttribute("aria-expanded",String(open));if(open)headerSearch.querySelector("input")?.focus();});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeMega();if(mobileNav&&!mobileNav.hidden)closeMobile();if(headerSearch&&!headerSearch.hidden){headerSearch.hidden=true;searchToggle?.setAttribute("aria-expanded","false");searchToggle?.focus();}}});
 let searchData=[];try{searchData=JSON.parse(document.querySelector("#travel-search-data")?.textContent||"[]");}catch{}
