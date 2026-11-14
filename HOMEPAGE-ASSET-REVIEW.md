@@ -161,3 +161,8 @@ It returns HTML instead of the original WebP. The source file itself does not ne
 - No merge, deployment or build verification performed.
 
 **Final decision:** Do not integrate any of these six candidates. Replace/re-source them according to the decisions above, then obtain approval for the revised asset mapping before homepage integration.
+
+
+## Crop review scope note
+
+Desktop/mobile crop suitability above is assessed from decoded source dimensions, target aspect ratios and visible subject placement. The running homepage was not launched in a browser for viewport-specific CSS screenshot testing in this phase; no homepage source or layout was changed.
