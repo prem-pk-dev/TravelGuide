@@ -1,0 +1,257 @@
+{
+  "continents": [
+    {
+      "title": "Asia",
+      "note": "Tradition meets tomorrow",
+      "href": "/destinations/continents/asia/",
+      "src": "/assets/images/asia.webp",
+      "alt": "Dramatic limestone karsts rising above a quiet bay in Southeast Asia",
+      "width": 900,
+      "height": 1120
+    },
+    {
+      "title": "Europe",
+      "note": "Layers of culture",
+      "href": "/destinations/continents/europe/",
+      "src": "/assets/images/europe.webp",
+      "alt": "Historic European riverside town with old stone architecture",
+      "width": 900,
+      "height": 1120
+    },
+    {
+      "title": "Africa",
+      "note": "Wild by nature",
+      "href": "/destinations/continents/africa/",
+      "src": "/assets/images/africa.webp",
+      "alt": "Wide African savannah beneath a warm evening sky",
+      "width": 900,
+      "height": 1120
+    },
+    {
+      "title": "Americas",
+      "note": "Room to roam",
+      "href": "/destinations/continents/americas/",
+      "src": "/assets/images/americas.webp",
+      "alt": "Mountain lake framed by dramatic peaks in the Americas",
+      "width": 900,
+      "height": 1120
+    },
+    {
+      "title": "Oceania",
+      "note": "Islands and open horizons",
+      "href": "/destinations/continents/oceania/",
+      "src": "/assets/images/oceania.webp",
+      "alt": "Turquoise ocean around a lush tropical island",
+      "width": 900,
+      "height": 1120
+    }
+  ],
+  "countries": [
+    {
+      "title": "Japan",
+      "region": "Asia",
+      "href": "/destinations/countries/japan/",
+      "description": "Island cities, mountain paths and deep seasonal traditions."
+    },
+    {
+      "title": "Portugal",
+      "region": "Europe",
+      "href": "/destinations/countries/portugal/",
+      "description": "Atlantic coastlines, layered cities and a slower rhythm."
+    },
+    {
+      "title": "Morocco",
+      "region": "Africa",
+      "href": "/destinations/countries/morocco/",
+      "description": "Medinas, mountain villages and desert horizons."
+    },
+    {
+      "title": "India",
+      "region": "Asia",
+      "href": "/destinations/countries/india/",
+      "description": "A remarkable range of landscapes, languages and living heritage."
+    }
+  ],
+  "destinations": [
+    {
+      "title": "Kyoto, Japan",
+      "type": "City",
+      "region": "East Asia",
+      "href": "/destinations/countries/japan/cities/kyoto/",
+      "description": "Temple lanes, gardens and neighbourhood rituals."
+    },
+    {
+      "title": "Lisbon, Portugal",
+      "type": "City",
+      "region": "Southern Europe",
+      "href": "/destinations/countries/portugal/cities/lisbon/",
+      "description": "Hilltop views, tiled streets and the Atlantic light."
+    },
+    {
+      "title": "Marrakech, Morocco",
+      "type": "City",
+      "region": "North Africa",
+      "href": "/destinations/countries/morocco/cities/marrakech/",
+      "description": "Courtyards, souks and stories behind the city walls."
+    }
+  ],
+  "featuredDestinations": [
+    {
+      "title": "Kyoto: beyond the famous gates",
+      "region": "Japan · East Asia",
+      "href": "/destinations/countries/japan/cities/kyoto/",
+      "src": "/assets/images/kyoto-street.webp",
+      "alt": "Quiet traditional street in Kyoto with wooden machiya houses",
+      "width": 960,
+      "height": 1200,
+      "description": "Find the quieter lanes, crafted details and garden moments that reward an unhurried visit."
+    },
+    {
+      "title": "Lisbon in its own time",
+      "region": "Portugal · Southern Europe",
+      "href": "/destinations/countries/portugal/cities/lisbon/",
+      "src": "/assets/images/lisbon-tram.webp",
+      "alt": "Classic yellow tram passing through a sunlit Lisbon street",
+      "width": 960,
+      "height": 1200,
+      "description": "Move between neighbourhood viewpoints, local cafés and the city's distinctive tiled streets."
+    },
+    {
+      "title": "The many sides of Marrakech",
+      "region": "Morocco · North Africa",
+      "href": "/destinations/countries/morocco/cities/marrakech/",
+      "src": "/assets/images/marrakech-courtyard.webp",
+      "alt": "Sunlit architectural courtyard in Marrakech with carved details",
+      "width": 960,
+      "height": 1200,
+      "description": "Look beyond the main square to gardens, workshops and the rhythms of everyday life."
+    }
+  ],
+  "inspiration": [
+    {
+      "title": "Take the slower road",
+      "href": "/travel-styles/slow-travel/",
+      "src": "/assets/images/slow-train.webp",
+      "alt": "Train travelling through a green mountain valley",
+      "width": 900,
+      "height": 680,
+      "description": "Stay longer, notice more and let the journey shape the destination."
+    },
+    {
+      "title": "Find your wild place",
+      "href": "/travel-styles/outdoors/",
+      "src": "/assets/images/alpine-hiking.webp",
+      "alt": "Hikers following a trail across an alpine landscape",
+      "width": 900,
+      "height": 680,
+      "description": "Trails, coastlines and open landscapes for time outside."
+    },
+    {
+      "title": "Travel through culture",
+      "href": "/travel-styles/culture/",
+      "src": "/assets/images/ceramic-workshop.webp",
+      "alt": "Artisan shaping a ceramic vessel in a traditional workshop",
+      "width": 900,
+      "height": 680,
+      "description": "Meet the craft, architecture and traditions that give places their character."
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "A week among Portugal's coastal towns",
+      "href": "/itineraries/portugal-coast-week/",
+      "src": "/assets/images/portugal-coast.webp",
+      "alt": "Whitewashed Portuguese coastal village overlooking the Atlantic",
+      "width": 1000,
+      "height": 740,
+      "description": "A gentle route connecting historic streets, fishing towns and Atlantic viewpoints."
+    },
+    {
+      "title": "Japan by rail: city to countryside",
+      "href": "/itineraries/japan-by-rail/",
+      "src": "/assets/images/japan-rail.webp",
+      "alt": "Japanese train crossing a rural landscape with mountains beyond",
+      "width": 1000,
+      "height": 740,
+      "description": "Balance Kyoto and Tokyo with smaller stops and slower days between."
+    }
+  ],
+  "activities": [
+    {
+      "title": "Walk the old lanes",
+      "href": "/things-to-do/morocco/marrakech/",
+      "src": "/assets/images/marrakech-medina.webp",
+      "alt": "Narrow Marrakech medina lane with traditional shops",
+      "width": 860,
+      "height": 720,
+      "description": "Read the medina through its architecture, craft and everyday life."
+    },
+    {
+      "title": "Follow the mountain trail",
+      "href": "/things-to-do/switzerland/interlaken/",
+      "src": "/assets/images/swiss-trail.webp",
+      "alt": "Mountain footpath winding through a green Swiss alpine valley",
+      "width": 860,
+      "height": 720,
+      "description": "Choose a route that brings the scale of the Alps into focus."
+    }
+  ],
+  "articles": [
+    {
+      "title": "How to choose the right season for your trip",
+      "href": "/articles/choosing-the-right-season/",
+      "src": "/assets/images/seasonal-coast.webp",
+      "alt": "Coastal landscape in soft light during a shoulder season",
+      "width": 920,
+      "height": 680,
+      "description": "Think beyond peak months and match timing to the experience you want."
+    },
+    {
+      "title": "A more thoughtful approach to travel days",
+      "href": "/articles/thoughtful-travel-days/",
+      "src": "/assets/images/market-morning.webp",
+      "alt": "Early morning market scene with fresh produce and stalls",
+      "width": 920,
+      "height": 680,
+      "description": "Small choices that make transit days calmer, richer and more human."
+    },
+    {
+      "title": "What makes a destination feel local?",
+      "href": "/articles/feeling-the-place/",
+      "src": "/assets/images/neighbourhood-cafe.webp",
+      "alt": "Neighbourhood café opening onto a quiet European street",
+      "width": 920,
+      "height": 680,
+      "description": "Look for the everyday spaces and shared rituals beyond the checklist."
+    }
+  ],
+  "planning": [
+    {
+      "title": "When to go",
+      "href": "/travel-tips/when-to-go/",
+      "src": "/assets/images/calendar-planning.webp",
+      "alt": "Travel notebook and map laid out on a wooden table",
+      "width": 800,
+      "height": 620,
+      "description": "Understand seasons, local calendars and the trade-offs of different months."
+    },
+    {
+      "title": "Getting around",
+      "href": "/travel-tips/getting-around/",
+      "src": "/assets/images/train-platform.webp",
+      "alt": "Intercity train waiting at a modern station platform",
+      "width": 800,
+      "height": 620,
+      "description": "Compare rail, road and local transport with the shape of your route."
+    },
+    {
+      "title": "Travel lighter",
+      "href": "/travel-tips/travel-light/",
+      "src": "/assets/images/travel-bag.webp",
+      "alt": "Open travel bag packed neatly with practical essentials",
+      "width": 800,
+      "height": 620,
+      "description": "Pack around the trip you are taking, not every possibility."
+    }
+  ]
+}

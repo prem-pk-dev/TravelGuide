@@ -1,0 +1,6 @@
+import {readFile,stat} from "node:fs/promises";import path from "node:path";
+const root=process.cwd(),dist=path.join(root,"dist"),html=await readFile(path.join(dist,"index.html"),"utf8");
+const checks=[["HTML5 doctype",/^<!doctype html>/i.test(html)],["One H1",(html.match(/<h1\b/gi)||[]).length===1],["Main landmark",/<main\b[^>]*id="main"/i.test(html)],["Title",/<title>[^<]+<\/title>/.test(html)],["Description",/<meta name="description"/.test(html)],["Preview canonical",/<link rel="canonical" href="https:\/\/travelguide-9op\.pages\.dev\//.test(html)],["Search forms",(html.match(/data-search-form/g)||[]).length>=2],["Eight or more content sections",(html.match(/<section\b/g)||[]).length>=8],["Skip link",/class="skip-link"/.test(html)],["Mobile navigation",/id="mobile-navigation"/.test(html)]];
+let failed=0;for(const [label,ok] of checks){console.log((ok?"PASS ":"FAIL ")+label);if(!ok)failed++}
+const refs=[...html.matchAll(/src="(\/assets\/images\/[^"]+\.webp)"/g)].map(m=>m[1]);for(const ref of [...new Set(refs)]){try{const s=await stat(path.join(dist,ref.slice(1)));console.log("PASS "+ref+" "+s.size+" bytes")}catch{console.log("FAIL missing "+ref);failed++}}
+console.log("Section count:",(html.match(/<section\b/g)||[]).length,"unique WebP refs:",new Set(refs).size);if(failed)process.exitCode=1;
