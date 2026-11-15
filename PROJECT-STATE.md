@@ -345,3 +345,43 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Phase 2.8 image integration, Phase 2.9 final responsive/accessibility QA, Phase 2.10 final homepage review and Chat 3 handoff have not started.
 - No image binaries/references changed. No merge, Production deployment or main/research branch update was performed.
 - Latest committed SHA for this record will be the documentation/validation follow-up commit created after this entry.
+
+## 15. Phase 2.8 — homepage image integration audit (2026-11-15)
+
+### Scope and source inventory
+- Audited src/data/homepage.json, HOMEPAGE-ASSET-SPECIFICATION.md, mapping/review documents, TravelGuide local image binaries and private prem-pk-dev/MEDIA-ASSETS main inventory.
+- MEDIA-ASSETS metadata has 91 records and its main tree has 111 WebP files. Its Pages project media-assets is on production branch main; the latest source deployment inspected was successful at SHA 2742502ae5f887f6d20da53a09732c3315c3dce9.
+- Nine unique current TravelGuide image binaries were compared by Git blob SHA with original MEDIA-ASSETS source files; the corresponding hashes match exactly. No image was recompressed, resized or otherwise modified during this pass.
+- MEDIA-ASSETS metadata identifies selected assets as AI-generated illustrative artwork, not documentary photography. Destination depictions must not be described as verified on-location documentary photographs.
+- Public CDN probes for all nine current unique sources returned HTTP 200, Content-Type image/webp, RIFF/WEBP signatures and positive decoded dimensions.
+
+### Verified source asset inventory
+1. amalfi-coast-village-v01.webp — 1672×941, 446,770 bytes — Amalfi cliffside village, road, headland and turquoise Mediterranean sea. Used by hero and seasonal coast (approved duplicate).
+2. kyoto-bamboo-garden-v01.webp — 1672×941, 482,514 bytes — bamboo garden path and wooden gate. Used by Asia and Kyoto feature/mega menu (approved duplicate; alt text now says bamboo garden, not machiya street).
+3. santorini-caldera-sunset-v01.webp — 1672×941, 306,350 bytes — Santorini white buildings, blue domes and caldera at sunset.
+4. serengeti-elephant-safari-sunrise-v01.webp — 1672×941, 324,842 bytes — elephant herd and acacia savannah at sunrise.
+5. 06-machu-picchu-peru-v01.webp — 900×512, 65,752 bytes — Inca citadel and Andean peaks; this is the actual source for americas.webp. An earlier provisional mapping that described the Americas binary as an alpine glacial lake was incorrect.
+6. tropical_white_sand_beach.webp — 1200×800, 71,238 bytes — generic palm-lined tropical beach; no evidence establishes a South Pacific island. It is a fallback visual, not approved as a geographically specific Oceania image.
+7. 23-lisbon-portugal-v01.webp — 900×510, 70,556 bytes — yellow Lisbon tram in a tiled street.
+8. alpine_wildflower_meadow.webp — 1200×800, 112,872 bytes — alpine wildflower meadow below snowy peaks; no hiking trail or hiker is visible. It is an outdoor-landscape fallback, not an approved alpine-hiking/Swiss-trail replacement.
+9. general-coffee-lifestyle.webp — 519×442, 22,716 bytes — latte on a café table; suitable for the café editorial card when described literally.
+
+### 22-slot audit result
+- Existing image placements that are currently visually relevant and approved/conditional for integration: 9 (hero coast, Asia, Europe, Africa, Americas, Kyoto garden, Lisbon tram, seasonal coast and neighbourhood café).
+- Distinct source binaries behind those placements: 7. Reuse assignments: Amalfi source used by hero + seasonal coast; Kyoto bamboo source used by Asia + Kyoto feature. These repeats are explicitly authorised.
+- Existing but unapproved fallback images: 2 (generic tropical beach for Oceania, alpine meadow for hiking).
+- Missing exact source files: 11 (Marrakech courtyard, slow train, ceramic workshop, Portugal coast, Japan rail, Marrakech medina, Swiss trail, market morning, calendar planning, train platform, travel bag). No irrelevant substitute was promoted to an approved image.
+- No new image was generated in this pass.
+
+### Browser and loading verification
+- Current Preview homepage's 11 rendered image elements all returned HTTP 200, image/webp, RIFF/WEBP and loaded with positive natural dimensions.
+- Nine unique CDN source files returned HTTP 200 with correct WebP MIME and decoded dimensions.
+- Known thumbnails/travel-mountain-hiker.webp still returns HTTP 200 with text/html, not WebP; rejected.
+- Hero uses fetchpriority=high, eager loading and async decoding. Below-the-fold homepage images use lazy loading.
+- Manifest and build markup now use actual native source dimensions for existing images rather than fictional target dimensions. Africa tile can use a data-driven object-position to keep the herd within its crop.
+- Responsive crop acceptance across all 22 slots has not passed; missing slots remain unresolved.
+
+### Status
+- Phase 2.8: IN PROGRESS — PARTIALLY VERIFIED. Do not declare the full image phase complete.
+- No new binaries added; existing originals retained unchanged. Phase 2.9, Phase 2.10 and Chat 3 have not started.
+- No main/research change, merge or Production deployment.

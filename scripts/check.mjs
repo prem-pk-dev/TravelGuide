@@ -72,7 +72,24 @@ const checks=[
 let failed=0;
 for(const [label,ok] of checks){console.log((ok?"PASS ":"FAIL ")+label);if(!ok)failed++}
 const refs=[...html.matchAll(/src="(\/assets\/images\/[^"]+\.webp)"/g)].map(m=>m[1]);
-for(const ref of [...new Set(refs)]){try{const f=await stat(path.join(dist,ref.slice(1)));console.log("PASS "+ref+" "+f.size+" bytes")}catch{console.log("FAIL missing "+ref);failed++}}
+for(const ref of [...new Set(refs)]){
+ try{
+  const target=path.join(dist,ref.slice(1));
+  const f=await stat(target);
+  const bytes=await readFile(target);
+  const webp=bytes.length>12&&bytes.toString("ascii",0,4)==="RIFF"&&bytes.toString("ascii",8,12)==="WEBP";
+  console.log((webp?"PASS ":"FAIL ")+ref+" "+f.size+" bytes, "+(webp?"RIFF/WEBP":"invalid WebP signature"));
+  if(!webp)failed++;
+ }catch{console.log("FAIL missing "+ref);failed++}
+}
+const heroTag=imageTags.find(tag=>/src=["']\/assets\/images\/hero-coast\.webp["']/.test(tag))||"";
+const heroPriority=/fetchpriority=["']high["']/.test(heroTag)&&/loading=["']eager["']/.test(heroTag);
+console.log((heroPriority?"PASS ":"FAIL ")+"hero uses eager high-priority loading");
+if(!heroPriority)failed++;
+const nonHeroImages=imageTags.filter(tag=>!/hero-coast\.webp/.test(tag));
+const nonHeroLazy=nonHeroImages.every(tag=>/loading=["']lazy["']/.test(tag));
+console.log((nonHeroLazy?"PASS ":"FAIL ")+"all other homepage images use lazy loading");
+if(!nonHeroLazy)failed++;
 const cssUrls=[...css.matchAll(/url\(\s*(?:(["'])(.*?)\1|([^){}]*?))\s*\)/gi)]
  .map(match=>(match[2]??match[3]??"").trim())
  .filter(value=>value&&!/^(?:data:|https?:|#)/i.test(value));

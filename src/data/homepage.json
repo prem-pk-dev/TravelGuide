@@ -5,45 +5,46 @@
       "note": "Tradition meets tomorrow",
       "href": "/destinations/continents/asia/",
       "src": "/assets/images/asia.webp",
-      "alt": "A stone path winds through a Kyoto bamboo garden beside a traditional wooden gate.",
-      "width": 900,
-      "height": 1120
+      "alt": "A sunlit stone path leads through a bamboo garden toward a traditional wooden gate in Kyoto, Japan.",
+      "width": 1672,
+      "height": 941
     },
     {
       "title": "Europe",
       "note": "Layers of culture",
       "href": "/destinations/continents/europe/",
       "src": "/assets/images/europe.webp",
-      "alt": "Whitewashed Santorini buildings and blue domes overlook the sea at sunset.",
-      "width": 900,
-      "height": 1120
+      "alt": "Whitewashed Santorini buildings and blue-domed churches overlook the caldera at sunset in Greece.",
+      "width": 1672,
+      "height": 941
     },
     {
       "title": "Africa",
       "note": "Wild by nature",
       "href": "/destinations/continents/africa/",
       "src": "/assets/images/africa.webp",
-      "alt": "A herd of elephants walks through golden Serengeti grass beneath acacia trees at sunrise.",
-      "width": 900,
-      "height": 1120
+      "alt": "Elephants cross golden Serengeti grassland beneath broad acacia trees at sunrise.",
+      "width": 1672,
+      "height": 941,
+      "objectPosition": "70% center"
     },
     {
       "title": "Americas",
       "note": "Room to roam",
       "href": "/destinations/continents/americas/",
       "src": "/assets/images/americas.webp",
-      "alt": "The Inca citadel of Machu Picchu sits among steep green mountains in Peru.",
+      "alt": "Machu Picchu's Inca terraces sit among steep green Andean peaks in Peru.",
       "width": 900,
-      "height": 1120
+      "height": 512
     },
     {
       "title": "Oceania",
       "note": "Islands and open horizons",
       "href": "/destinations/continents/oceania/",
       "src": "/assets/images/oceania.webp",
-      "alt": "Palm-lined white-sand tropical beach beside turquoise water.",
-      "width": 900,
-      "height": 1120
+      "alt": "A palm-lined white-sand tropical beach beside clear turquoise water; the exact island location is not verified.",
+      "width": 1200,
+      "height": 800
     }
   ],
   "countries": [
@@ -101,9 +102,9 @@
       "region": "Japan · East Asia",
       "href": "/destinations/countries/japan/cities/kyoto/",
       "src": "/assets/images/kyoto-street.webp",
-      "alt": "A stone path winds through a Kyoto bamboo garden beside a traditional wooden gate.",
-      "width": 960,
-      "height": 1200,
+      "alt": "A sunlit path runs through tall bamboo toward a traditional wooden garden gate in Kyoto.",
+      "width": 1672,
+      "height": 941,
       "description": "Find the quieter garden paths, crafted details and seasonal greenery that reward an unhurried visit."
     },
     {
@@ -111,9 +112,9 @@
       "region": "Portugal · Southern Europe",
       "href": "/destinations/countries/portugal/cities/lisbon/",
       "src": "/assets/images/lisbon-tram.webp",
-      "alt": "A classic yellow tram travels along a colourful, tiled Lisbon street.",
-      "width": 960,
-      "height": 1200,
+      "alt": "A classic yellow Lisbon tram travels through a narrow street lined with Portuguese tiled buildings.",
+      "width": 900,
+      "height": 510,
       "description": "Move between neighbourhood viewpoints, local cafés and the city's distinctive tiled streets."
     },
     {
@@ -139,9 +140,9 @@
       "title": "Find your wild place",
       "href": "/travel-styles/outdoors/",
       "src": "/assets/images/alpine-meadow.webp",
-      "alt": "Alpine wildflower meadow beneath snow-covered mountain peaks.",
-      "width": 900,
-      "height": 680,
+      "alt": "An alpine wildflower meadow spreads beneath snow-capped mountain peaks.",
+      "width": 1200,
+      "height": 800,
       "description": "Trails, coastlines and open landscapes for time outside."
     },
     {
@@ -194,9 +195,9 @@
       "title": "How to choose the right season for your trip",
       "href": "/articles/choosing-the-right-season/",
       "src": "/assets/images/seasonal-coast.webp",
-      "alt": "Pastel buildings cascade down an Italian coastal cliff above turquoise Mediterranean water.",
-      "width": 920,
-      "height": 680,
+      "alt": "Pastel buildings cascade down an Amalfi Coast cliff above turquoise Mediterranean water.",
+      "width": 1672,
+      "height": 941,
       "description": "Use the Amalfi Coast as a reminder to match your travel dates to the experience and atmosphere you want."
     },
     {
@@ -211,9 +212,9 @@
       "title": "What makes a destination feel local?",
       "href": "/articles/feeling-the-place/",
       "src": "/assets/images/neighbourhood-cafe.webp",
-      "alt": "A freshly prepared cup of coffee in a warmly lit café.",
-      "width": 920,
-      "height": 680,
+      "alt": "A latte rests on a café table beside a leafy plant.",
+      "width": 519,
+      "height": 442,
       "description": "Notice the everyday rituals and welcoming café moments that help a place feel familiar."
     }
   ],

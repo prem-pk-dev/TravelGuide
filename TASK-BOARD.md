@@ -232,3 +232,50 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - main remains bab89d7eb14a356dbc194557492fc8de6e980c67.
 - research/travel-guide-blueprint remains 4e047f49cfac870d17a0347d60c2d1025f62dfd8.
 - No Production deployment, branch merge, image integration or Chat 3 handoff occurred.
+
+## 11. Phase 2.8 — homepage image sourcing and integration (2026-11-15)
+
+### Verified
+- [x] Re-inspected homepage manifest, image specification, asset mapping and review docs.
+- [x] Inspected MEDIA-ASSETS private main inventory: 91 metadata records, 111 WebP files; Pages production deployment is successful and CDN is reachable.
+- [x] Nine unique current assets have matching Git blob SHAs against MEDIA-ASSETS originals; no re-encoding/resizing.
+- [x] Current homepage: 11 rendered image elements, all HTTP 200, image/webp, RIFF/WEBP, decoded positive natural dimensions.
+- [x] Nine unique CDN source files verified HTTP 200 / image/webp / RIFF-WEBP / decoded dimensions.
+- [x] Subject verification: Amalfi source reused in hero and seasonal coast; Kyoto bamboo source reused in Asia and Kyoto feature/mega menu. Both repeated source groups are authorised and disclosed.
+- [x] Corrected mapping: Americas image is Machu Picchu, not the alpine glacial lake described by earlier provisional mapping.
+- [x] Hero remains eager/high-priority; remaining homepage images lazy-load.
+
+### 22 image slots
+- [x] Hero coastline — Amalfi coast asset, source is village-led, alt text updated accurately.
+- [x] Asia — Kyoto bamboo garden (shared with Kyoto feature).
+- [x] Europe — Santorini caldera.
+- [x] Africa — Serengeti elephant herd at sunrise; source is landscape format, tile crop still needs visual approval.
+- [x] Americas — Machu Picchu.
+- [ ] Oceania — current generic tropical beach; exact South Pacific geography not established.
+- [x] Kyoto feature — bamboo garden (shared with Asia).
+- [x] Lisbon feature — yellow Lisbon tram.
+- [ ] Marrakech courtyard — no suitable existing MEDIA-ASSETS source.
+- [ ] Slow train — no suitable existing source.
+- [ ] Alpine hiking — meadow image has no visible trail/hiker; exact target not fulfilled.
+- [ ] Ceramic workshop — no suitable existing source.
+- [ ] Portugal coast — Amalfi is Italy, not Portugal; no accurate Portugal-coast source found.
+- [ ] Japan rail — no train source.
+- [ ] Marrakech medina — no accurate source.
+- [ ] Swiss trail — no visible Swiss hiking trail source.
+- [x] Seasonal coast — Amalfi reused from hero; accurately described as Amalfi Coast, not a separate seasonal scene.
+- [ ] Market morning — no market source.
+- [x] Neighbourhood café — coffee image; alt text describes only visible cup/table.
+- [ ] Calendar planning — no suitable source.
+- [ ] Train platform — no suitable existing source.
+- [ ] Travel bag — no suitable existing source.
+
+### Counts and release gate
+- Existing approved/current image slots: 9/22.
+- Distinct existing source binaries: 9 verified in current homepage (7 approved/conditional plus 2 fallback-only); 7 distinct approved/relevant source binaries support 9 placements because two source pairs repeat.
+- Reuse groups: 2 (Amalfi hero/seasonal coast; Kyoto bamboo Asia/Kyoto feature).
+- Fallback-only images: 2 (Oceania tropical beach; alpine meadow for hiking).
+- Exact source missing: 11.
+- Existing rendered homepage image elements tested: 11/11.
+- Overall image integration: PARTIALLY COMPLETE — NOT COMPLETE.
+- Full desktop/mobile crop acceptance for all 22 cannot be declared while 13 slots remain unresolved or conditional.
+- Phase 2.9 must not start until the user authorises it after Phase 2.8 completion.
