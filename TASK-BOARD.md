@@ -322,3 +322,32 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 ### Phase 2.8 release gate
 - **PARTIALLY VERIFIED — NOT COMPLETE.** Nine Round 1 placements remain based on AI-generated artwork, and several don't match the original photographic scene specification. All 22 placements are populated, but these legacy visuals still require explicit editorial approval or replacement by genuine photographs.
 - Phase 2.9 is not started. No main/research branch updates, merge or Production deployment.
+
+
+## 14. Phase 2.8 — Round 3 independent repository and binary audit (2026-11-15)
+
+### Completed audit checks
+- [x] Confirmed `development/homepage` tip `aec0cada4741b4941a928672db6bea3dba73e0d2` and tree `d49868c89e78e0f78112961b9bba889bd55fd1ce`.
+- [x] Compared development with `main`: development is 36 commits ahead and 1 behind; branches diverged from merge base `8223a82f3d0a4b21c9edbb8c64a8a55ed7569d41`.
+- [x] Reconfirmed `research/travel-guide-blueprint` at `4e047f49cfac870d17a0347d60c2d1025f62dfd8`.
+- [x] Inventoried the current 22 slot assignments: 21 path names, 19 unique binary identities and 3 reuse groups.
+- [x] Confirmed the 12 Round 2 derivative files are in the TravelGuide development tree and their GitHub tree byte sizes match the mapping table.
+- [x] Inspected MEDIA-ASSETS main at `4531d94979224daa5a3f0a6b25244e02655708e0`; its image tree contains 111 WebP files, no JPEG masters and none of the 12 Round 2 derivative basenames.
+- [x] Reviewed the listed public source-page/creator/licence records. This is page-level provenance review, not verification of the stored binary bodies.
+
+### Blocked / pending verification
+- [ ] Retrieve and preserve all 12 original JPEG master binaries in a durable project asset location.
+- [ ] Independently verify source status, MIME, JPEG signature, dimensions, byte size and recomputed SHA-256 for all 12 originals.
+- [ ] Retrieve the 12 stored WebP derivatives and independently verify MIME, RIFF/WEBP signature, decoded dimensions, byte length and recomputed SHA-256.
+- [ ] Reproduce or verify WebP quality 85 from the actual derivative bytes.
+- [ ] Render the actual stored derivatives at desktop/mobile target ratios and accept/reject the crops.
+- [ ] Register the approved new derivatives in an approved MEDIA-ASSETS asset path and establish the permitted non-production delivery route; then verify the exact CDN URLs. Do not infer or invent CDN paths and do not deploy to production as part of this task.
+- [ ] Complete editorial/spec review or photographic replacement of the nine legacy AI-artwork placements.
+
+### Current gate
+- Repository audit: COMPLETE.
+- Source/creator/licence page review: PARTIALLY VERIFIED.
+- Round 2 asset files and recorded byte lengths in TravelGuide: VERIFIED by repository metadata.
+- Original master binary acquisition, independent source/output byte verification, actual derivative crop review and MEDIA-ASSETS CDN delivery: BLOCKED / NOT VERIFIED.
+- **Phase 2.8: PARTIALLY VERIFIED — NOT COMPLETE.** Do not start Phase 2.9, Phase 2.10 or Chat 3.
+- No homepage binary/code edit, no MEDIA-ASSETS mutation, no main/research update, no merge and no production deployment.
