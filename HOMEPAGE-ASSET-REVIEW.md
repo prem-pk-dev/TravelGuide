@@ -131,3 +131,63 @@ Candidates are leads only. The binary originals were not downloaded into the rep
 - Fresh CDN fetch/MIME/hash check: blocked in this session.
 - No file or homepage reference changed.
 - Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE; Phase 2.9, 2.10 and Chat 3 remain pending.
+
+---
+
+## 15 November 2026 — Phase 2.8 Round 5: actual derivative-byte verification and visual approval gate
+
+### What was independently verified
+- Retrieved the actual 12 committed WebP files from the TravelGuide development branch as base64 binary content, decoded the bytes, checked RIFF/WEBP signatures, parsed image dimensions and independently computed SHA-256.
+- All 12 byte lengths, dimensions and SHA-256 values exactly match the prior Round 2 records. See HOMEPAGE-ASSET-MAPPING.md for the full per-file ledger.
+- Rendered each retrieved derivative at native resolution and checked its visible subject. The photographs correspond to their declared editorial scenes. Visible people/hands are present in the market, Marrakech medina, ceramic, and travel-bag images; train/operator branding is visible in the Japan rail and LNER/AZUMA platform images.
+- Inspected current homepage CSS. Story-card image frames use 4:3 by default and 16:10 at narrow widths; continent tiles use cover, with a special very-wide 2.4:1 mobile Oceania tile. The Round 2 derivative crops can therefore be screened analytically, but no browser screenshot of each live desktop/mobile crop was captured in Round 5. Crop status is not yet formally approved.
+
+### Original masters and encoder provenance
+- Original JPEG master binaries recovered: 0/12. Current repository trees and relevant image path histories do not contain them.
+- The source page, creator, license, prior master dimensions/byte counts and prior master hashes remain documented. Because the exact original bytes could not be retrieved, source SHA-256 and JPEG signature/dimensions were not recomputed in this round.
+- The 12 derivative SHA-256 values match Round 2, but the exact WebP encoder quality=85 setting cannot be inferred conclusively from the output file alone. The original export log/master-to-output reproducibility evidence remains outstanding.
+- Pexels/Wikimedia license terms and attribution obligations were checked at the source-page/terms level. This is not a substitute for a file-specific model/property release or a separate check for visible people, property and logos.
+
+### Native image inspection and crop watchlist
+- Oceania: volcanic ridge and lagoon are visible. Mobile 2.4:1 cover treatment is severe for a 900×1120 portrait source; crop/reponsive source decision pending.
+- Marrakech courtyard: architectural framing, trees and fountain are visible. Portrait image inside 4:3 and 16:10 cards requires substantial top/bottom crop; browser crop pending.
+- Slow train: train, track and valley read clearly in source. Desktop frame ratio close to 4:3; mobile crop needs browser check.
+- Alpine/Swiss trail: Matterhorn, footpath and hikers visible; hikers appear small in the wide frame. Reuse remains user-authorized only between these related slots.
+- Ceramic workshop: hands/vessel are legible. Card ratios are close; release/context review remains pending.
+- Portugal coast: Azenhas do Mar village and cliffline remain identifiable. Browser crop check pending.
+- Japan rail: train and rural platform are legible, with visible operator/vehicle marks. Trademark/editorial context check remains pending.
+- Marrakech medina: lane and donkey are legible; several identifiable people appear. Privacy/personality context review and mobile crop check remain pending.
+- Market: produce and vendors are visible; several people are identifiable. Privacy/release check remains pending. Time of day must not be described as morning unless confirmed.
+- Calendar planning: notebook/map scene remains legible; map lettering is visible. Mobile crop check pending.
+- Train platform: LNER/AZUMA branding is visible. Trademark/editorial context check and mobile crop remain pending.
+- Travel bag: packed suitcase remains legible; hands appear. Release/context and mobile crop checks remain pending.
+
+### Nine legacy placements — candidates are pending, not approvals
+The nine Round4 Pexels source leads are retained in HOMEPAGE-ASSET-MAPPING.md. Their source pages/terms were checked for stated subject and Pexels free-use/commercial-use/modification terms. No candidate original binary was downloaded or decoded in Round 5, and no candidate was hashed, cropped, checked for releases or visually approved. All nine decisions remain **Pending**. None of the legacy artwork files was changed.
+
+| Slot | Candidate source | Page-level fit | Round 5 decision |
+|---|---|---|---|
+| Hero coast | Rafael Minguet Delgado — Benitachell rocky Mediterranean coast | Subject match at page level; 3:2 master requires both desktop-wide and mobile-tall crop review | Pending |
+| Asia | Anh Nguyen — Halong Bay misty limestone islands | Strong page-level karst/bay match; 4:5 source near target ratio | Pending |
+| Europe | Alexandra H. Maria — historic riverside buildings/reflection | Page-level match; portrait source near target ratio | Pending |
+| Africa | Wussol — savannah sunset/acacia landscape | Subject described, but source dimensions not exposed; binary needed | Pending |
+| Americas | Nazarena Pozza — Fitz Roy Glacier and Lake | Patagonia/lake page-level match; near portrait | Pending |
+| Kyoto | Ignacio Estevo — traditional Kyoto street | Kyoto street/wooden houses described; exact machiya/noren brief needs visual confirmation | Pending |
+| Lisbon | Oleksandra Zelena — Lisbon street/historic tram | Page title identifies historic tram; original framing and incidental people/signs need review | Pending |
+| Seasonal coast | Nils Rotura — Sagres Atlantic cliffs | Distinct Atlantic scene; shoulder-season relevance not established by the page alone | Pending |
+| Neighbourhood café | Anastasia Shuraeva — street-side café tables | Page/preview matches street-side café; people/signs and card crop need review | Pending |
+
+Pexels permits commercial/non-commercial use and modifications without mandatory attribution under its published license. It also restricts uses that misrepresent identifiable people or imply a brand/product endorsement. Individual people/property releases were not verified in Round 5. For Wikimedia CC BY-SA sources, attribution and share-alike obligations remain required; CC0 does not automatically resolve other third-party rights.
+
+### Delivery test
+- MEDIA-ASSETS has no registered paths for the 12 Round 2 derivatives; no destination CDN URL was invented.
+- Exact TravelGuide branch-preview paths are derived from the actual build copy rule: /assets/images/<filename> on the Round4 Preview hostname. Fresh HTTP status/MIME/body checks could not be completed because the available fetch route returned 403 text/plain even for an unrelated example.com request.
+- Therefore the execution route is not suitable to diagnose Cloudflare public delivery, and the 12 CDN URLs are still not certified. A normal browser/network test must confirm HTTP 200, correct image MIME and actual image bytes.
+
+### Round 5 editorial decision
+- Existing Round 2 derivative binary integrity: verified 12/12.
+- Existing photo editorial/crop approvals: still pending for slots with visible people/branding or substantial CSS crop.
+- Candidate replacements downloaded/approved: 0/9.
+- Legacy AI artwork keep approvals: 0/9.
+- No asset replacement, page reference, manifest, CSS/JS/HTML, branding, or deployment change.
+- Phase 2.8 remains **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.9, Phase 2.10 and Chat 3 remain pending.

@@ -384,3 +384,40 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 ### Safety boundary
 - Documentation only on `development/homepage`; no source images, CDN objects, image references, homepage design, branding, data, HTML/CSS/JS or manifests were changed.
 - No edits to `main`, `research/travel-guide-blueprint`, `development/responsive-fixes` or MEDIA-ASSETS; no merge, Cloudflare configuration change or production deployment.
+
+## 16. Phase 2.8 — Round 5 original recovery, derivative verification and visual approval (2026-11-15)
+
+### Completed checks
+- [x] Reconfirmed Round4 starting point on development/homepage and rechecked main, research and responsive-fixes branch refs.
+- [x] Retrieved all 12 committed Round2 WebP derivatives as actual binary/base64 file content.
+- [x] Independently checked RIFF/WEBP signatures, byte lengths, parsed pixel dimensions and SHA-256 for all 12 derivative binaries; all values match the Round2 ledger.
+- [x] Rendered and visually reviewed all 12 actual derivative files at native dimensions.
+- [x] Inspected the current homepage CSS/HTML build rules and identified desktop/mobile aspect-ratio crop risks and visible people/branding issues.
+- [x] Rechecked source-page and license information for the nine photographic replacement candidate leads.
+
+### Blocked / pending checks
+- [ ] Recover the 12 original Round2 JPEG masters; none was present in the inspected current repository trees or relevant image-path histories and the source-host binary fetch route is blocked.
+- [ ] Independently recompute original JPEG hashes, signatures, MIME, native dimensions and byte lengths from the exact master files.
+- [ ] Reproduce the WebP quality 85 encoder setting from a real conversion record or master-to-output conversion, not by inference from an encoded WebP file.
+- [ ] Download the nine replacement candidate original image files; 0/9 candidate binaries were acquired.
+- [ ] Independently compute the nine candidate master SHA-256 values and decode their formats/dimensions.
+- [ ] Complete candidate-specific model/property/privacy/trademark checks and preserve the exact license/attribution evidence.
+- [ ] Capture actual desktop and mobile browser crops for all active images/candidates; visual file renders alone do not certify live CSS cropping.
+- [ ] Approve or reject each of the nine replacement candidates editorially. Current candidate decisions: pending 9/9.
+- [ ] Recheck HTTP 200, image MIME, byte signature and rendered preview for all exact image delivery paths from a normal browser/network environment. The available execution network returned 403 text/plain for unrelated domains, so no CDN path is certified.
+- [ ] Register and publish any approved candidate assets only after source, rights, byte and crop gates pass. No files have been integrated or replaced.
+
+### Current 22-slot status
+- 22 slots remain populated.
+- 12 current Round2 derivative binaries: independently verified 12/12.
+- Original JPEG source masters recovered: 0/12.
+- Nine legacy AI artwork placements: unchanged; keep approval 0/9.
+- Nine replacement candidate pages found; candidate binary originals acquired 0/9; approvals 0/9.
+- Matterhorn hikers reuse between Alpine Hiking and Swiss Trail remains user-authorized; it is subject to final release/crop checks.
+- Phase 2.8: **PARTIALLY VERIFIED — NOT COMPLETE**.
+- Phase 2.9, Phase 2.10 and Chat 3 remain pending.
+
+### Safety boundary
+- Documentation-only changes on development/homepage.
+- No image binaries, source references, manifests, HTML/CSS/JS, homepage design or branding changed.
+- No MEDIA-ASSETS modification, main/research branch change, merge or production deployment.

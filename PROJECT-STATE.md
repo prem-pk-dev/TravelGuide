@@ -479,3 +479,44 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - MEDIA-ASSETS current 111-file inventory has no exact derivative basename and no identical derivative Git object.
 - The current Phase 2.8 gate remains **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.9, Phase 2.10 and Chat 3 remain pending.
 - No image bytes, homepage references, HTML/CSS/JS, data manifests, Cloudflare configuration, MEDIA-ASSETS content, `main`, or research branch changed. No merge or production deployment occurred.
+
+## 20. Phase 2.8 — Round 5 derivative binary verification and approval blockers (2026-11-15)
+
+### Repository identity and safe boundary
+- Round 5 started from development/homepage adb5dcbca937c7bbbf2ab368fdfddfc911ca0394 (tree ba0a1ed7041b15f276443dbc07a27ec4fecc14fe).
+- main remained bab89d7eb14a356dbc194557492fc8de6e980c67; research/travel-guide-blueprint remained 4e047f49cfac870d17a0347d60c2d1025f62dfd8; development/responsive-fixes remained 9e4997bfb018a34da3892f63a2939e63633462d2.
+- MEDIA-ASSETS main remained 4531d94979224daa5a3f0a6b25244e02655708e0. No MEDIA-ASSETS files, Cloudflare configuration or production deployment were changed.
+
+### Round 2 derivative binary result
+- Retrieved the actual 12 WebP derivative binaries from TravelGuide GitHub and independently checked base64-decoded byte streams.
+- All 12 files have RIFF/WEBP signatures; each independently computed SHA-256, exact byte length and parsed pixel dimensions match the Round 2 ledger in HOMEPAGE-ASSET-MAPPING.md.
+- Result: **12/12 derivative binaries verified**.
+- This validates the committed derivatives, not the original JPEG source masters. The original sources were not present in the inspected current repository trees/relevant image-path history and could not be downloaded into this environment. Original masters recovered: **0/12**.
+- Round2 source JPEG creator/page/license/dimensions/byte/hash fields remain recorded. Round5 did not recompute the source hashes or read the original JPEG bytes.
+- The WebP quality 85 encoder parameter remains a historical conversion record; it was not independently reproduced from an encoder invocation/log in Round5.
+
+### Visual and editorial review
+- Rendered all 12 actual derivatives at native dimensions and examined their subjects. The content matches the declared image subjects in the source ledger.
+- Checked actual homepage CSS crop rules analytically: desktop story cards use 4:3 and narrow cards 16:10; continent tiles use cover, with Oceania becoming a 2.4:1 row at narrow widths.
+- Browser-level desktop/mobile crop screenshots and final editorial acceptance were not obtained. Specific concerns include Oceania mobile crop, vertical Marrakech courtyard crop, visible people in market/medina/ceramic/travel bag images, and visible operator/brand marks on Japan rail and LNER/AZUMA train platform images.
+- No new source photo was selected or inserted. No existing image was replaced.
+
+### Nine candidate replacement files
+- The nine Pexels candidate source pages and page-level creator/subject/dimensions/license information are listed in HOMEPAGE-ASSET-MAPPING.md.
+- Candidate master binaries downloaded in Round5: **0/9**. No candidate original hash, decoded file properties, crop or release review was completed. Candidate/editorial approvals: **0/9**.
+- Pexels license/Terms permit commercial use and modification/adaptation without mandatory attribution, subject to restrictions including use of identifiable people and implying endorsement; page-level terms do not prove specific model/property releases. Those checks remain open.
+- Nine legacy AI artwork placements remain unchanged and without formal editorial keep approval.
+
+### CDN delivery
+- The MEDIA-ASSETS tree has no registered destination paths or identical binary copies for the 12 Round2 derivative filenames.
+- TravelGuide's build copies the source images into dist/assets/images. Exact build-derived Preview paths were identified, but Round5 could not verify HTTP status/MIME/response bytes: the available network fetch path returned 403 text/plain for unrelated public domains as well. This does not establish a global Pages outage.
+- Exact CDN and browser delivery sign-off remains pending.
+
+### Round 5 status
+- Derivative binary integrity: **COMPLETE (12/12)**.
+- Original JPEG master recovery: **BLOCKED (0/12)**.
+- Candidate binary acquisition and approval: **BLOCKED/PENDING (0/9)**.
+- Responsive browser crop/release review: **PENDING**.
+- CDN response verification: **BLOCKED BY EXECUTION NETWORK LIMITATION**.
+- The 22-slot homepage inventory remains populated, with 12 Round2 photographic derivatives, 9 legacy AI-artwork placements and the related Matterhorn reuse between Alpine Hiking/Swiss Trail.
+- **Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.** Phase 2.9, Phase 2.10 and Chat 3 remain pending. No images, home page references, code, branding, design or manifests were changed in this round. No merge or production deployment occurred.
