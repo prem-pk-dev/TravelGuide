@@ -156,3 +156,82 @@ This addendum supersedes provisional CDN/subject statements above where they con
 - Manifest width/height values and emitted image attributes now match actual decoded source dimensions; no source binary was resized or altered.
 
 **Phase 2.8 status: PARTIALLY VERIFIED — NOT COMPLETE.** Continue resolving unsupported subjects. Do not start Phase 2.9 until all 22 slots are genuinely approved and integrated.
+
+---
+
+# Phase 2.8 — Round 2 image verification (15 November 2026)
+
+## Updated 22-slot register
+
+| # | Slot | Active file | Actual subject / provenance | Pixels | Result |
+|---:|---|---|---|---:|---|
+| 1 | Hero coast | hero-coast.webp | Amalfi cliff village; legacy AI artwork | 1672×941 | Legacy subject/provenance review open |
+| 2 | Asia | asia.webp | Kyoto bamboo garden; legacy AI artwork, not limestone karsts | 1672×941 | Legacy subject/provenance review open |
+| 3 | Europe | europe.webp | Santorini; legacy AI artwork, not riverside town | 1672×941 | Legacy subject/provenance review open |
+| 4 | Africa | africa.webp | Serengeti elephants at sunrise; legacy AI artwork | 1672×941 | Legacy subject/provenance review open |
+| 5 | Americas | americas.webp | Machu Picchu; legacy AI artwork, not Patagonian lake | 900×512 | Legacy subject/provenance review open |
+| 6 | Oceania | oceania.webp | Bora Bora volcanic island and turquoise lagoon; François Balédent, Pexels | 900×1120 | Round 2 integrated |
+| 7 | Kyoto feature | kyoto-street.webp | Kyoto bamboo garden; legacy AI artwork, not machiya lane | 1672×941 | Legacy subject/provenance review open |
+| 8 | Lisbon tram | lisbon-tram.webp | Yellow Lisbon tram; legacy AI artwork | 900×510 | Legacy provenance review open |
+| 9 | Marrakech courtyard | marrakech-courtyard.webp | Dar al Basha fountain courtyard; R Prazeres, CC BY-SA 4.0 | 960×1200 | Round 2 integrated |
+| 10 | Slow train | slow-train.webp | Passenger train in green Gurtnellen valley; Kabelleger / David Gubler, CC BY-SA 4.0 | 900×680 | Round 2 integrated |
+| 11 | Alpine hiking | alpine-hiking.webp | Hikers on Matterhorn footpath; Jean-Paul Wettstein, Pexels | 900×680 | Round 2 integrated |
+| 12 | Ceramic workshop | ceramic-workshop.webp | Artisan hands shaping clay on a wheel; Letícia Alvares, Pexels | 900×680 | Round 2 integrated |
+| 13 | Portugal coast | portugal-coast.webp | Azenhas do Mar above Atlantic; Jose Maria Lanca, CC BY-SA 4.0 | 1000×740 | Round 2 integrated |
+| 14 | Japan rail | japan-rail.webp | Regional passenger train at rural Japanese station; 貴彦 佐藤, Pexels | 1000×740 | Round 2 integrated |
+| 15 | Marrakech medina | marrakech-medina.webp | Historic Marrakech lane; Iainmccurdy, CC0 1.0 | 860×720 | Round 2 integrated |
+| 16 | Swiss trail | alpine-hiking.webp | Same Matterhorn trail photograph as slot 11, user-authorised reuse | 900×680 | Round 2 integrated — reused |
+| 17 | Seasonal coast | seasonal-coast.webp | Amalfi coast, legacy AI artwork, not quiet Atlantic seasonal shore | 1672×941 | Legacy subject/provenance review open |
+| 18 | Market morning | market-morning.webp | Outdoor fresh-produce stall and vendors; Mehmet Turgut Kirkgoz, Pexels | 920×680 | Round 2 integrated; time-of-day not asserted |
+| 19 | Neighbourhood café | neighbourhood-cafe.webp | Coffee cup on table; legacy AI artwork, not a neighbourhood scene | 519×442 | Legacy subject/resolution review open |
+| 20 | Calendar planning | calendar-planning.webp | Notebook on world map; Lara Jameson, Pexels | 800×620 | Round 2 integrated |
+| 21 | Train platform | train-platform.webp | Azuma/LNER passenger train at a platform; Dan Wright, Pexels | 800×620 | Round 2 integrated |
+| 22 | Travel bag | travel-bag.webp | Open suitcase with folded clothing and essentials; SHVETS production, Pexels | 800×620 | Round 2 integrated |
+
+## Round 2 binary verification
+
+All 12 originals returned HTTP 200 with image/jpeg and were decoded at source dimensions. Output derivatives were generated as WebP quality 85, with exact target dimensions and RIFF/WEBP signature. Source and output SHA-256 are computed over the actual source/output bytes.
+
+| File | Creator | Licence | Source pixels / bytes | Source SHA-256 | WebP pixels / bytes | WebP SHA-256 | Source link |
+|---|---|---|---|---|---|---|---|
+| oceania.webp | François Balédent | Pexels Free | 4032×2268 / 1,463,065 B | 70dd60164be01a9ee2557558644f4af455ea64cfdf2b19d66aadf7ec541f33e8 | 900×1120 / 229,298 B | ed8cfac3186cf1b96d7b2e702c2e80862fe9c84adb639d3a21a9ff1d4a3792b5 | [Source](https://www.pexels.com/photo/scenic-aerial-view-of-bora-bora-lagoon-30422271/) |
+| alpine-hiking.webp | Jean-Paul Wettstein | Pexels Free | 6064×4040 / 3,063,549 B | 8f44c07a0bb00aa2d98370f000a382e99b2a0db651756e895aa5fdcdf6e8aa2d | 900×680 / 136,900 B | 0fff6a60c8138f6842f7cdc23b86e1e581e6dc592e07b0e24e0d83158855c51b | [Source](https://www.pexels.com/photo/hikers-on-a-mountain-trail-in-swiss-alps-19244950/) |
+| marrakech-courtyard.webp | R Prazeres | CC BY-SA 4.0 | 4000×3000 / 3,052,596 B | eb459487b1c54612ee3d34626841f3a7c3719aa81d4cdf50546c235236059201 | 960×1200 / 392,010 B | 0ffe7fcfa63951277c3e7e001e1f3d0bd1bcc8f7c0eecc04fe0c19cc028307f6 | [Source](https://commons.wikimedia.org/wiki/File:Dar_al_Bacha_Marrakesh_DSCF8822.jpg) |
+| slow-train.webp | Kabelleger / David Gubler | CC BY-SA 4.0 | 5400×3600 / 8,178,536 B | 8d8deb1f7a230f2da37726ac1da81d3a0d7696193a5a45f7c91d0c97840a8f5b | 900×680 / 227,822 B | 4bc6280b06cbc6d840bb171370f631f200921ceb0521f85201d50ebc1a16cc41 | [Source](https://commons.wikimedia.org/wiki/File:SBB_RBe_540_Gurtnellen.jpg) |
+| ceramic-workshop.webp | Letícia Alvares | Pexels Free | 5760×3840 / 805,627 B | 1f63805ef22df7b070eb2b866b94ddef4a9363b4f7646dfb58c0557022812ecc | 900×680 / 44,818 B | 97e56bd232b7afd741b1c744e813ad9ad8bc2af7f4ca1482b4b09c1af98f90d1 | [Source](https://www.pexels.com/photo/hands-shaping-clay-on-pottery-wheel-in-studio-36717713/) |
+| portugal-coast.webp | Jose Maria Lanca | CC BY-SA 4.0 | 4000×3000 / 2,595,794 B | 6017ccdad2cdcac08e6bd01d872beaeee94f61b9c33550a57b362ad21c2ad78a | 1000×740 / 208,908 B | ec8f020564c84ae167024351c5aa9271acce81471d8e4a4d73e3cc508271a222 | [Source](https://commons.wikimedia.org/wiki/File:Azenhas_do_Mar_(Sintra).jpg) |
+| japan-rail.webp | 貴彦 佐藤 | Pexels Free | 5760×3240 / 1,306,872 B | cc5745aae59ff27330759c157fa14bb8cc7bc0599146b61da43e7e47c27fa732 | 1000×740 / 151,250 B | 7d6adf06b1ecefc49399e696e0318a1e4b09d21e82a106af05b40e2aca89638e | [Source](https://www.pexels.com/photo/japanese-train-arriving-at-rural-station-platform-35497307/) |
+| marrakech-medina.webp | Iainmccurdy | CC0 1.0 | 5278×3518 / 14,859,583 B | b8d2b8c09729535e460f4913ee88db2e81ea1940468ec3171fc046503f79a150 | 860×720 / 125,770 B | 91356ceeeb01fed490697258f5e89654a0ee9d9b409fa24ff28cc7b13c7b7091 | [Source](https://commons.wikimedia.org/wiki/File:Marrakech_Medina.jpg) |
+| market-morning.webp | Mehmet Turgut Kirkgoz | Pexels Free | 4897×3264 / 1,390,284 B | af6265be982c6161b4027ddaeb9c07f7d34ee03280f48285321eea7b93542472 | 920×680 / 176,696 B | aacac6873849f7dca13463719f036ca89cdd205205af24dd5f9d491edee55437 | [Source](https://www.pexels.com/photo/people-selling-fresh-fruit-and-vegetables-on-a-market-stall-11522046/) |
+| calendar-planning.webp | Lara Jameson | Pexels Free | 5040×3360 / 2,427,340 B | c91e489d3688cdf98c237c483a85506f24c35941400d6b2488546083b7070009 | 800×620 / 119,502 B | 39f6fbd17c1d151eb5e82e0fc6121fed410afba3bb5cbaaaf45234e0f0ed4513 | [Source](https://www.pexels.com/photo/person-writing-on-a-notebook-place-on-a-world-map-8828672/) |
+| train-platform.webp | Dan Wright | Pexels Free | 5952×3968 / 4,123,386 B | bd1f48c74925c34fadc66622f321279b7e808e947d7ffa862f346b44c8356550 | 800×620 / 139,634 B | 654e009fcac0d853558412ff2b201e9ca1f74046743a3d03621e12e7dd3d64f3 | [Source](https://www.pexels.com/photo/modern-train-at-platform-in-urban-station-40247858/) |
+| travel-bag.webp | SHVETS production | Pexels Free | 6000×4000 / 4,590,970 B | b0ff513a789e07fea13b775932b4e79a607b0e3e5de68103180555058c9169c7 | 800×620 / 164,300 B | 76911a0f674600610314a19f970de32cbafdcdb0c4f228649c38deb94ce70a50 | [Source](https://www.pexels.com/photo/clothes-and-sunglasses-in-an-open-suitcase-on-a-rug-8933565/) |
+
+## Visual/crop decisions
+
+- Oceania: accepted Bora Bora aerial with lush volcanic ridge, island and turquoise lagoon; no overwater bungalows. Portrait crop preserves ridge and lagoon.
+- Alpine Hiking / Swiss Trail: Matterhorn trail photo includes hikers and a clearly visible trail; source repeated only across the two related hiking slots.
+- Marrakech courtyard: Dar al Basha fountain, mosaic floor, green courtyard and carved arches remain visible.
+- Slow train: train remains readable; green valley and mountains remain the dominant context.
+- Ceramic workshop: hands and vessel remain in focus.
+- Portugal coast: Azenhas do Mar white village and Atlantic cliffline remain; watermarked monochrome candidate rejected.
+- Japan rail: regional train, track and rural station are visible.
+- Marrakech medina: alley, donkey, people and traditional façades remain.
+- Market: vendors and fresh produce remain visible; do not claim the photograph was taken in the morning.
+- Planning, platform and suitcase crops retain their named central subjects.
+
+## Reuse/rejection register
+
+- Three repeated-source groups: Amalfi hero/seasonal coast; Kyoto bamboo Asia/Kyoto feature; Matterhorn hikers Alpine Hiking/Swiss Trail.
+- Rejected: generic tropical beach, alpine meadow without trail/hiker, first Bora candidate with overwater villas, black-and-white watermarked Azenhas image, HTML fallback thumbnails/travel-mountain-hiker.webp.
+- The old alpine-meadow.webp source file was removed from the active asset directory.
+
+## Counts and release gate
+
+- Round 2 placements resolved: 13/13.
+- New unique camera-photo WebP derivatives: 12.
+- Seven legacy unique binaries remain across nine earlier placements; MEDIA-ASSETS metadata identifies these as AI-generated artwork, not camera photography.
+- Total unique active WebP source binaries after deployment: 19.
+- Reuse groups: 3.
+- Round 2 missing exact subjects: 0.
+- Phase 2.8 remains **PARTIALLY VERIFIED — NOT COMPLETE** because the nine legacy placements still need photographic/spec approval. Do not start Phase 2.9 yet.

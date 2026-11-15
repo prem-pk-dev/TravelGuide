@@ -299,3 +299,26 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 ### Phase 2.8 gate
 - **PARTIALLY VERIFIED — NOT COMPLETE.** Do not start Phase 2.9 until all 22 subjects are correctly sourced, integrated and accepted.
 - Phase 2.9 final QA, Phase 2.10 final homepage review and Chat 3 handoff remain not started. No production deployment/merge or updates to main/research branches.
+
+## 13. Phase 2.8 — Round 2 missing-image resolution (2026-11-15)
+
+### Round 2 delivered
+- [x] Replaced the Oceania generic-beach fallback with an aerial Bora Bora ridge/lagoon camera photograph; no overwater bungalow resort image.
+- [x] Replaced the alpine meadow fallback with hikers on a visible Matterhorn trail.
+- [x] Found and integrated camera photographs for Marrakech courtyard, slow train, ceramic workshop, Portugal coast, Japan rail, Marrakech medina, Swiss trail, market, planning, train platform and travel bag.
+- [x] Created 12 unique WebP camera-photo derivatives for 13 slot placements; Matterhorn hikers photo is reused only between Alpine Hiking and Swiss Trail.
+- [x] Source JPEG downloads returned HTTP 200 and image/jpeg; originals were decoded, SHA-256 hashed, and converted to WebP quality 85 at exact target dimensions. Derivatives have RIFF/WEBP signatures and recorded hashes.
+- [x] Added HOMEPAGE-PHOTO-CREDITS.md and complete 22-slot source/crop/hash mapping.
+
+### Round 2 counts
+- Fallback/missing placements resolved: 13/13.
+- New unique camera-photo WebP files: 12.
+- Seven unique old AI-generated artwork binaries remain in nine prior placements.
+- Total unique active source binaries after integration: 19.
+- Reuse groups: 3 (Amalfi, Kyoto bamboo, Matterhorn hikers).
+- Round 2 exact source missing: 0.
+- Rejections: generic tropical beach, alpine meadow, Bora overwater-bungalow candidate, watermarked Azenhas candidate and HTML hiker thumbnail.
+
+### Phase 2.8 release gate
+- **PARTIALLY VERIFIED — NOT COMPLETE.** Nine Round 1 placements remain based on AI-generated artwork, and several don't match the original photographic scene specification. All 22 placements are populated, but these legacy visuals still require explicit editorial approval or replacement by genuine photographs.
+- Phase 2.9 is not started. No main/research branch updates, merge or Production deployment.

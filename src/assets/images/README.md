@@ -25,3 +25,8 @@ The homepage needs distinct, original or licensed photorealistic WebP files for 
 - `travel-bag.webp`
 
 Alt text, intended subject and intrinsic dimensions are specified in `src/data/homepage.json` or the shared shell. Do not reuse one visual for unrelated subjects. These files must be added before visual sign-off.
+
+ 
+## Round 2 provenance
+
+Twelve new camera-photo WebP derivatives are licensed from Pexels or Wikimedia Commons. Creator, source page, licence, original-byte SHA-256 and derivative SHA-256 are listed in HOMEPAGE-PHOTO-CREDITS.md and HOMEPAGE-ASSET-MAPPING.md. The Matterhorn hikers photo is reused in the related Swiss Trail card under the user's permission. The former alpine-meadow.webp fallback was removed because it contains no visible hiking trail or hiker.

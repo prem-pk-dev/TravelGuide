@@ -598,3 +598,12 @@ This document establishes the production specification only.
 - Merge to `main` or deployment.
 
 **Next task:** Generate/commission the 22 independent images, convert to verified WebP at quality 85, add provenance records, commit the actual binaries and run asset-integrity validation. Build verification and responsive QA follow after the asset integration task.
+
+ 
+## Round 2 — licensed camera photographs and related reuse exception
+
+Round 2 added twelve camera-photo WebP derivatives sourced from Pexels Free pages and Wikimedia Commons (CC BY-SA 4.0 / CC0 1.0), with sources, creator names, licence and original/derivative byte hashes recorded in HOMEPAGE-PHOTO-CREDITS.md and HOMEPAGE-ASSET-MAPPING.md.
+
+The user explicitly allows one suitable photograph to serve multiple related slots. The Matterhorn hikers image is used for both Alpine Hiking and Swiss Trail because it visibly depicts the same mountain-trail context. This documented exception does not allow generic or unrelated images to fill other slots.
+
+Nine earlier homepage placements remain on legacy AI-generated MEDIA-ASSETS images and several differ from the original subject brief. They are not represented as documentary photographs and remain subject to review.

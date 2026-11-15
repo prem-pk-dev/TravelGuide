@@ -68,3 +68,12 @@ No homepage references have been changed because public CDN delivery has not bee
 - Amalfi image is a cliffside village with road and sea, not an empty natural coastline. Kyoto image is a bamboo garden path/gate, not a machiya lane. Alt text has been corrected to describe what is visible.
 - All current browser-rendered image uses loaded at 360/390/768/1024/1440 widths. Crop geometry and focal positions were measured; exact-subject gaps and native-resolution shortfalls remain.
 - Phase 2.8 remains PARTIALLY VERIFIED. No new image generation or binary addition occurred. The missing/unsupported slots remain open as detailed in HOMEPAGE-ASSET-MAPPING.md.
+
+ 
+## 15 November 2026 — Round 2 missing-image result
+
+- Resolved the two fallback slots and all eleven previously missing subjects with 12 new camera-photo WebP files for 13 slot placements; Matterhorn hikers image is shared by Alpine Hiking and Swiss Trail.
+- All source image downloads returned HTTP 200 and image/jpeg; outputs were checked as WebP quality 85, exact target dimensions, RIFF/WEBP and SHA-256.
+- Photo credits, creator names, licence and source links are in HOMEPAGE-PHOTO-CREDITS.md.
+- Rejected overwater-bungalow Bora photo, watermarked monochrome Portugal candidate, generic tropical beach and alpine meadow fallbacks, and HTML-only hiker thumbnail.
+- Nine earlier slots remain legacy AI-generated visuals and differ from parts of the original photography specification. Phase 2.8 is not complete until they are approved/replaced.

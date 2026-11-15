@@ -399,3 +399,15 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Phase 2.8 remains **PARTIALLY VERIFIED — NOT COMPLETE**. Image-source discovery/integration remains open for Oceania, Marrakech courtyard, slow train, alpine hiking, ceramic workshop, Portugal coast, Japan rail, Marrakech medina, Swiss trail, market morning, calendar planning, train platform and travel bag.
 - Phase 2.9, Phase 2.10 and Chat 3 have not started. No image-generation operation, binary replacement, main/research change, merge or Production deployment occurred.
 - Branch protection snapshot: main remains bab89d7eb14a356dbc194557492fc8de6e980c67; research/travel-guide-blueprint remains 4e047f49cfac870d17a0347d60c2d1025f62dfd8.
+
+## 17. Phase 2.8 — Round 2 missing-image resolution (2026-11-15)
+
+- Completed source search for both fallback slots and all 11 missing image slots.
+- Replaced Oceania generic beach with Bora Bora ridge/lagoon photo; replaced alpine meadow with Matterhorn hikers photo.
+- Twelve unique new camera-photo WebP derivatives were produced for thirteen placements; Matterhorn image is shared between Alpine Hiking and Swiss Trail under the user's reuse permission.
+- All 12 original JPEG downloads returned HTTP 200 / image/jpeg and were decoded at native dimensions. Outputs were encoded as WebP quality 85 at target dimensions, checked for RIFF/WEBP signature, and source/output SHA-256 values recorded.
+- Source creators, licence terms and links are in HOMEPAGE-PHOTO-CREDITS.md; file-level hashes/dimensions are in HOMEPAGE-ASSET-MAPPING.md.
+- The old alpine-meadow.webp fallback was removed; the generic tropical beach is no longer used.
+- Round 2 placement resolution: 13/13. New unique photographic WebP binaries: 12. The revised homepage uses 19 unique WebP binaries: 12 new camera-photo derivatives and seven older legacy AI-artwork binaries. Reuse groups: 3.
+- **Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.** Nine earlier placements still use seven AI-generated MEDIA-ASSETS images and several differ from the original image subject brief. They are not represented as documentary photographs. Phase 2.9 remains unstarted.
+- No main/research mutation, merge or Production deployment.

@@ -42,9 +42,9 @@
       "note": "Islands and open horizons",
       "href": "/destinations/continents/oceania/",
       "src": "/assets/images/oceania.webp",
-      "alt": "A palm-lined white-sand tropical beach beside clear turquoise water; the exact island location is not verified.",
-      "width": 1200,
-      "height": 800
+      "alt": "Aerial view of Bora Bora's lush volcanic ridge rising above a deep blue and turquoise lagoon.",
+      "width": 900,
+      "height": 1120
     }
   ],
   "countries": [
@@ -121,73 +121,80 @@
       "title": "The many sides of Marrakech",
       "region": "Morocco · North Africa",
       "href": "/destinations/countries/morocco/cities/marrakech/",
-      "alt": "Sunlit architectural courtyard in Marrakech with carved details",
+      "alt": "Dar al-Basha courtyard in Marrakech, framed by carved arches and trees around a central fountain.",
       "width": 960,
       "height": 1200,
-      "description": "Look beyond the main square to gardens, workshops and the rhythms of everyday life."
+      "description": "Look beyond the main square to gardens, workshops and the rhythms of everyday life.",
+      "src": "/assets/images/marrakech-courtyard.webp"
     }
   ],
   "inspiration": [
     {
       "title": "Take the slower road",
       "href": "/travel-styles/slow-travel/",
-      "alt": "Train travelling through a green mountain valley",
+      "alt": "A regional passenger train travels through the green alpine valley near Gurtnellen, Switzerland.",
       "width": 900,
       "height": 680,
-      "description": "Stay longer, notice more and let the journey shape the destination."
+      "description": "Stay longer, notice more and let the journey shape the destination.",
+      "src": "/assets/images/slow-train.webp"
     },
     {
       "title": "Find your wild place",
       "href": "/travel-styles/outdoors/",
-      "src": "/assets/images/alpine-meadow.webp",
-      "alt": "An alpine wildflower meadow spreads beneath snow-capped mountain peaks.",
-      "width": 1200,
-      "height": 800,
+      "src": "/assets/images/alpine-hiking.webp",
+      "alt": "Hikers follow a mountain path beneath the Matterhorn above Zermatt in the Swiss Alps.",
+      "width": 900,
+      "height": 680,
       "description": "Trails, coastlines and open landscapes for time outside."
     },
     {
       "title": "Travel through culture",
       "href": "/travel-styles/culture/",
-      "alt": "Artisan shaping a ceramic vessel in a traditional workshop",
+      "alt": "An artisan shapes a clay vessel on a pottery wheel in a ceramics studio.",
       "width": 900,
       "height": 680,
-      "description": "Meet the craft, architecture and traditions that give places their character."
+      "description": "Meet the craft, architecture and traditions that give places their character.",
+      "src": "/assets/images/ceramic-workshop.webp"
     }
   ],
   "itineraries": [
     {
       "title": "A week among Portugal's coastal towns",
       "href": "/itineraries/portugal-coast-week/",
-      "alt": "Whitewashed Portuguese coastal village overlooking the Atlantic",
+      "alt": "White coastal houses at Azenhas do Mar sit above the Atlantic shoreline in Portugal.",
       "width": 1000,
       "height": 740,
-      "description": "A gentle route connecting historic streets, fishing towns and Atlantic viewpoints."
+      "description": "A gentle route connecting historic streets, fishing towns and Atlantic viewpoints.",
+      "src": "/assets/images/portugal-coast.webp"
     },
     {
       "title": "Japan by rail: city to countryside",
       "href": "/itineraries/japan-by-rail/",
-      "alt": "Japanese train crossing a rural landscape with mountains beyond",
+      "alt": "A blue regional passenger train arrives at a small rural station in Japan.",
       "width": 1000,
       "height": 740,
-      "description": "Balance Kyoto and Tokyo with smaller stops and slower days between."
+      "description": "Balance Kyoto and Tokyo with smaller stops and slower days between.",
+      "src": "/assets/images/japan-rail.webp"
     }
   ],
   "activities": [
     {
       "title": "Walk the old lanes",
       "href": "/things-to-do/morocco/marrakech/",
-      "alt": "Narrow Marrakech medina lane with traditional shops",
+      "alt": "A donkey and pedestrians pass through a narrow historic lane in Marrakech's medina.",
       "width": 860,
       "height": 720,
-      "description": "Read the medina through its architecture, craft and everyday life."
+      "description": "Read the medina through its architecture, craft and everyday life.",
+      "src": "/assets/images/marrakech-medina.webp"
     },
     {
       "title": "Follow the mountain trail",
       "href": "/things-to-do/switzerland/interlaken/",
-      "alt": "Mountain footpath winding through a green Swiss alpine valley",
-      "width": 860,
-      "height": 720,
-      "description": "Choose a route that brings the scale of the Alps into focus."
+      "alt": "A clear footpath crosses high alpine terrain toward the Matterhorn above Zermatt, Switzerland.",
+      "width": 900,
+      "height": 680,
+      "description": "Choose a route that brings the scale of the Alps into focus.",
+      "src": "/assets/images/alpine-hiking.webp"
     }
   ],
   "articles": [
@@ -203,10 +210,11 @@
     {
       "title": "A more thoughtful approach to travel days",
       "href": "/articles/thoughtful-travel-days/",
-      "alt": "Early morning market scene with fresh produce and stalls",
+      "alt": "Local vendors sell fresh fruit and vegetables from outdoor market stalls.",
       "width": 920,
       "height": 680,
-      "description": "Small choices that make transit days calmer, richer and more human."
+      "description": "Small choices that make transit days calmer, richer and more human.",
+      "src": "/assets/images/market-morning.webp"
     },
     {
       "title": "What makes a destination feel local?",
@@ -222,26 +230,29 @@
     {
       "title": "When to go",
       "href": "/travel-tips/when-to-go/",
-      "alt": "Travel notebook and map laid out on a wooden table",
+      "alt": "A traveller writes in a notebook over a world map marked with route pins and travel letters.",
       "width": 800,
       "height": 620,
-      "description": "Understand seasons, local calendars and the trade-offs of different months."
+      "description": "Understand seasons, local calendars and the trade-offs of different months.",
+      "src": "/assets/images/calendar-planning.webp"
     },
     {
       "title": "Getting around",
       "href": "/travel-tips/getting-around/",
-      "alt": "Intercity train waiting at a modern station platform",
+      "alt": "A red-and-white intercity passenger train stands beside a modern railway platform.",
       "width": 800,
       "height": 620,
-      "description": "Compare rail, road and local transport with the shape of your route."
+      "description": "Compare rail, road and local transport with the shape of your route.",
+      "src": "/assets/images/train-platform.webp"
     },
     {
       "title": "Travel lighter",
       "href": "/travel-tips/travel-light/",
-      "alt": "Open travel bag packed neatly with practical essentials",
+      "alt": "An open suitcase contains neatly folded clothes and travel essentials ready for a trip.",
       "width": 800,
       "height": 620,
-      "description": "Pack around the trip you are taking, not every possibility."
+      "description": "Pack around the trip you are taking, not every possibility.",
+      "src": "/assets/images/travel-bag.webp"
     }
   ]
 }
