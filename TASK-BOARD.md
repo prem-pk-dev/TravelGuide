@@ -49,3 +49,22 @@ Chat 2 does not implement destination detail, country/continent or itinerary/art
 - [ ] Production canonical/Cloudflare settings inspected.
 - [ ] Review diff/PR accepted.
 - [ ] Explicit approval before merge to `main` or deployment.
+
+
+## 6. Preview SEO isolation — live verification (2026-11-15)
+
+- [x] Confirm Cloudflare Pages project production branch is `main` and preview deployment policy includes all branches.
+- [x] Confirm successful preview deployment ID `e09510f2-66a3-46cd-a04f-46a44f685fc3`, branch `development/homepage`, commit `421028ebb0cf6fad6e24981148a006d6fb97c463`, and branch alias `https://development-homepage.travelguide-9op.pages.dev`.
+- [x] Review preview build-time robots meta branch logic and generated preview `X-Robots-Tag` header rule.
+- [x] Inspect production source on `main`: robots meta remains hard-coded `noindex, nofollow`; canonical remains `https://travelguide-9op.pages.dev/`; build emits `robots.txt` with `Allow: /`.
+- [ ] Independently verify actual public HTTP response for preview `robots.txt`, homepage HTML robots meta/canonical, and `X-Robots-Tag` header.
+- [ ] Independently verify preview sitemap endpoint. No sitemap source file or build generation was found; decide whether sitemap should be added or intentionally omitted.
+- [ ] Independently verify production public robots.txt, homepage robots meta/canonical and sitemap endpoint.
+- [ ] Decide production indexing policy before launch: current main source is `noindex, nofollow`, which is safe from indexing but not SEO-ready for a public searchable launch.
+
+### Verification blocker / evidence
+- Direct container HTTP requests failed hostname resolution for the Pages domains.
+- Web fetch returned inaccessible/cache-miss errors.
+- Cloudflare Browser Rendering was rate limited (HTTP 429); one production-host request returned network/DNS failure.
+- Those failures do not establish public HTTP response statuses. This phase remains **not complete** until ordinary public HTTP evidence is obtained.
+
