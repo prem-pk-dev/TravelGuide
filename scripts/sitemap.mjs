@@ -2,12 +2,13 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { Buffer } from "node:buffer";
 
+const LF = String.fromCharCode(10);
 const NS = "http://www.sitemaps.org/schemas/sitemap/0.9";
-const XML_HEADER = '<?xml version="1.0" encoding="UTF-8"?>\n';
-const URLSET_START = '<urlset xmlns="' + NS + '">\n';
-const URLSET_END = "</urlset>\n";
-const INDEX_START = '<sitemapindex xmlns="' + NS + '">\n';
-const INDEX_END = "</sitemapindex>\n";
+const XML_HEADER = '<?xml version="1.0" encoding="UTF-8"?>' + LF;
+const URLSET_START = '<urlset xmlns="' + NS + '">' + LF;
+const URLSET_END = "</urlset>" + LF;
+const INDEX_START = '<sitemapindex xmlns="' + NS + '">' + LF;
+const INDEX_END = "</sitemapindex>" + LF;
 
 function xmlEscape(value) {
   return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
@@ -48,9 +49,8 @@ async function walkHtml(directory, root = directory) {
 }
 
 /**
- * Discover only physical HTML output that explicitly declares indexability and
- * has a self-canonical URL on the configured production origin.
- * Navigation-only routes and proposed routes without generated HTML never enter the sitemap.
+ * Include only generated physical HTML that explicitly declares indexability
+ * and has a self-canonical URL on the configured production origin.
  */
 export async function discoverIndexableHtmlUrls(outputDirectory, originValue) {
   const origin = normalizeOrigin(originValue);
@@ -76,8 +76,7 @@ export async function discoverIndexableHtmlUrls(outputDirectory, originValue) {
     catch { continue; }
 
     if (canonical.origin !== origin || canonical.search || canonical.hash || canonical.username || canonical.password) continue;
-    const expectedPath = expectedPathForHtml(relativePath);
-    if (canonical.pathname !== expectedPath) continue;
+    if (canonical.pathname !== expectedPathForHtml(relativePath)) continue;
 
     const canonicalUrl = canonical.origin + canonical.pathname;
     const previousOwner = owners.get(canonicalUrl);
@@ -91,19 +90,16 @@ export async function discoverIndexableHtmlUrls(outputDirectory, originValue) {
 }
 
 function makeUrlset(urls) {
-  const entries = urls.map(url => "  <url>\n    <loc>" + xmlEscape(url) + "</loc>\n  </url>\n").join("");
+  const entries = urls.map(url => "  <url>" + LF + "    <loc>" + xmlEscape(url) + "</loc>" + LF + "  </url>" + LF).join("");
   return XML_HEADER + URLSET_START + entries + URLSET_END;
 }
 
 function makeIndex(urls) {
-  const entries = urls.map(url => "  <sitemap>\n    <loc>" + xmlEscape(url) + "</loc>\n  </sitemap>\n").join("");
+  const entries = urls.map(url => "  <sitemap>" + LF + "    <loc>" + xmlEscape(url) + "</loc>" + LF + "  </sitemap>" + LF).join("");
   return XML_HEADER + INDEX_START + entries + INDEX_END;
 }
 
-/**
- * Split at 45,000 URLs or 45 MiB (below protocol ceilings). A single sitemap
- * stays a urlset; multiple child files are surfaced through sitemap.xml index.
- */
+/** Split at 45,000 URLs or 45 MiB, below protocol ceilings. */
 export function createSitemapDocuments(urls, originValue, options = {}) {
   const origin = normalizeOrigin(originValue);
   const maxUrls = options.maxUrls ?? 45000;
@@ -125,7 +121,7 @@ export function createSitemapDocuments(urls, originValue, options = {}) {
   let byteCount = Buffer.byteLength(XML_HEADER + URLSET_START + URLSET_END, "utf8");
 
   for (const url of normalizedUrls) {
-    const entry = "  <url>\n    <loc>" + xmlEscape(url) + "</loc>\n  </url>\n";
+    const entry = "  <url>" + LF + "    <loc>" + xmlEscape(url) + "</loc>" + LF + "  </url>" + LF;
     const entryBytes = Buffer.byteLength(entry, "utf8");
     if (current.length > 0 && (current.length >= maxUrls || byteCount + entryBytes > maxBytes)) {
       chunks.push(current);
@@ -157,16 +153,16 @@ export function createSitemapDocuments(urls, originValue, options = {}) {
   };
 }
 
-/** Validate the exact XML document shapes emitted by this generator. */
+/** Validate XML syntax/layout for the exact urlset and sitemapindex forms we emit. */
 export function validateSitemapXml(xmlValue) {
-  const xml = String(xmlValue).replace(/\r\n/g, "\n");
+  const xml = String(xmlValue).replace(/\r\n/g, LF);
   if (!xml.startsWith(XML_HEADER)) throw new Error("Sitemap XML declaration is missing or malformed.");
 
   const urlsetMatch = xml.match(/^<\?xml version="1\.0" encoding="UTF-8"\?>\n<urlset xmlns="([^"]+)">\n([\s\S]*)<\/urlset>\n$/);
   if (urlsetMatch) {
     if (urlsetMatch[1] !== NS) throw new Error("Unexpected sitemap XML namespace.");
     let rest = urlsetMatch[2];
-    const urls = [];
+    const locations = [];
     const entryPattern = /^  <url>\n    <loc>([^<]+)<\/loc>\n  <\/url>\n/;
     while (rest.length) {
       const entry = rest.match(entryPattern);
@@ -174,10 +170,10 @@ export function validateSitemapXml(xmlValue) {
       const location = xmlUnescape(entry[1]);
       const parsed = new URL(location);
       if (parsed.protocol !== "https:") throw new Error("Sitemap loc must use HTTPS.");
-      urls.push(location);
+      locations.push(location);
       rest = rest.slice(entry[0].length);
     }
-    return { type: "urlset", locations: urls };
+    return { type: "urlset", locations };
   }
 
   const indexMatch = xml.match(/^<\?xml version="1\.0" encoding="UTF-8"\?>\n<sitemapindex xmlns="([^"]+)">\n([\s\S]*)<\/sitemapindex>\n$/);
