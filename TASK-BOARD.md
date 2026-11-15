@@ -182,3 +182,53 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - The documentation commit `ea6e20aa20250bb6f2ef8934bce9498fa1c12e15` was accidentally created without the existing base tree. Cloudflare Preview build consequently failed with `npm error code ENOENT` at `/opt/buildhome/repo/package.json`.
 - This was a Git tree construction error, not an application/package build regression. The corrective commit reapplies these verification documents on top of the complete source tree from code commit `b9296bb389373323a22fcc1af6b3d31fbfe14be9`; all existing source, package and asset files are retained.
 - Preview build for the corrective commit must be verified before it is considered the latest deployed revision. Production and research branches remain untouched.
+## 10. Phase 2.7 — 37 route implementation, contrast and live responsive verification (2026-11-15)
+
+### Completed / PASS
+- [x] Add src/data/pages.json: 37 distinct content records with route, type, unique title/description, parent, original sections, related cards and official-source references.
+- [x] Add src/partials/content-page.html shared page template; each route outputs its own physical index.html.
+- [x] Update static build generator to validate record completeness, path uniqueness, parent existence, breadcrumb cycles, HTTPS sources and internal related-page targets.
+- [x] Update sitemap walker for nested files and physical route checker.
+- [x] Build logs: 37 generated route HTML documents, page SEO and breadcrumb checks PASS, all root-relative internal href targets resolve, sitemap protection passes, production-mode simulation remains noindex.
+- [x] Live Preview GET: 37/37 route responses HTTP 200, each with unique title, description, production self-canonical, Preview noindex, one H1, breadcrumb and page content.
+- [x] Source content duplicate audit: no duplicate titles, descriptions, section headings or paragraphs.
+- [x] axe-core 4.10.3 at 390px: 39 rules passed, 0 violations, 1 incomplete. Previous 36 serious contrast nodes resolved.
+- [x] Responsive: homepage + Kyoto page at 360/390/768/1024/1440; zero horizontal overflow; grid/card/footer bounds fit.
+- [x] Navigation/search: mobile open/close, focus movement and Escape restoration; desktop mega-menu; header search and Kyoto hero suggestions all pass.
+- [x] Browser error instrumentation at all five widths: no page errors, console errors or unhandled rejections observed.
+- [x] GitHub protection: changes restricted to development/homepage; main and research/travel-guide-blueprint unchanged; no merge/Production deploy.
+
+### Family counts
+- Geographic directory + destination records: 13 (1 directory, 5 continents, 4 countries, 3 cities).
+- Itinerary: 3 (1 index + 2 details).
+- Article: 4 (1 index + 3 articles).
+- Other: 17 (5 styles, 4 travel tips, 3 activity collections, 1 resources index, About, 2 policies, Contact).
+- Total: 37 unique routes. No region/attraction routes were added because none appeared in the verified 37-link homepage inventory.
+
+### Changed files (Phase 2.7 follow-up)
+- src/data/pages.json — 37 records.
+- src/partials/content-page.html — shared static document template.
+- src/assets/css/page.css — content-page layouts.
+- src/assets/css/site.css — deeper rust, muted tokens, dark footer tokens and visible focus ring.
+- src/partials/shell.html — dynamic Open Graph type token.
+- scripts/build.mjs — JSON-driven generation of 37 physical HTML pages and page search records.
+- scripts/sitemap.mjs — nested HTML walk correction.
+- scripts/check.mjs — generated route, metadata, sitemap and physical internal-link checks; latest follow-up adds duplicate title and parent-cycle checks.
+
+### Pending
+- [ ] Fresh W3C CSS Validator run against latest deployed stylesheet after the token/focus update.
+- [ ] Full manual keyboard sequence and screen-reader audit; full cross-browser matrix beyond Chromium.
+- [ ] Independent local npm run build once a repository checkout is available without DNS failure.
+- [ ] Review source recency and destination-specific fact checking before any Production launch approval.
+- [ ] Phase 2.8 image integration not started.
+- [ ] Phase 2.9 final responsive/accessibility QA not started.
+- [ ] Phase 2.10 final homepage review not started.
+- [ ] Chat 3 handoff not started.
+
+### Safety and identity
+- Before this documentation update the latest successful code Preview was bb7a74687069141e58ad8baf193805915aff6e76, Deployment 1043fd4e-4f46-466d-aace-493ff82829b8.
+- Preview alias: https://development-homepage.travelguide-9op.pages.dev/.
+- Production indexing flag remains false; Production robots continues to disallow crawling and keep noindex.
+- main remains bab89d7eb14a356dbc194557492fc8de6e980c67.
+- research/travel-guide-blueprint remains 4e047f49cfac870d17a0347d60c2d1025f62dfd8.
+- No Production deployment, branch merge, image integration or Chat 3 handoff occurred.

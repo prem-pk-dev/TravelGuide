@@ -123,12 +123,32 @@ function htmlAttribute(tag,name){const m=tag.match(new RegExp("\\b"+name+"=[\\\"
 const routeRecords=pageData.pages??[];
 const routePaths=routeRecords.map(page=>page.path);
 const expectedUnique=routePaths.length===new Set(routePaths).size;
+const routeByPath=new Map(routeRecords.map(page=>[page.path,page]));
+const dataTitles=routeRecords.map(page=>page.title.trim());
+const dataDescriptions=routeRecords.map(page=>page.description.trim());
+const duplicateDataTitles=dataTitles.length!==new Set(dataTitles).size;
+const duplicateDataDescriptions=dataDescriptions.length!==new Set(dataDescriptions).size;
+let invalidParent=false,parentCycle=false;
+for(const page of routeRecords){
+ if(page.parent!=="/"&&!routeByPath.has(page.parent)){invalidParent=true;continue;}
+ const visited=new Set();let cursor=page;
+ while(cursor&&cursor.parent!=="/"){
+  if(visited.has(cursor.path)){parentCycle=true;break;}
+  visited.add(cursor.path);cursor=routeByPath.get(cursor.parent);
+  if(!cursor){invalidParent=true;break;}
+ }
+}
+console.log((!duplicateDataTitles&&!duplicateDataDescriptions?"PASS ":"FAIL ")+"unique source page titles and descriptions");
+if(duplicateDataTitles||duplicateDataDescriptions)failed++;
+console.log((!invalidParent&&!parentCycle?"PASS ":"FAIL ")+"page parent references and acyclic breadcrumbs");
+if(invalidParent||parentCycle)failed++;
 console.log((routeRecords.length===37&&expectedUnique?"PASS ":"FAIL ")+"37 unique page route records");
 if(routeRecords.length!==37||!expectedUnique)failed++;
 const htmlFiles=await listHtmlFiles(dist);
 const linkFailures=[];
 const pageFailures=[];
 const canonicalValues=[];
+const renderedTitles=[];
 for(const page of routeRecords){
  const target=path.join(dist,page.path.slice(1),"index.html");
  try{
@@ -142,11 +162,15 @@ for(const page of routeRecords){
   const valid=title.toLowerCase().includes("travelguide")&&description&&canonHref===origin+page.path&&(/noindex, nofollow/i.test(robotsValue)===noindex)&&((output.match(/<h1\b/gi)||[]).length===1)&&/aria-label="Breadcrumb"/.test(output);
   if(!valid)pageFailures.push({path:page.path,title,canonical:canonHref,robots:robotsValue});
   if(canonHref)canonicalValues.push(canonHref);
+  if(title)renderedTitles.push(title);
  }catch{pageFailures.push({path:page.path,missing:true});}
 }
 console.log((pageFailures.length===0?"PASS ":"FAIL ")+routeRecords.length+" generated HTML page files, unique self-canonicals, robots, H1 and breadcrumbs");
 if(pageFailures.length){console.log("Page failures:",JSON.stringify(pageFailures));failed++;}
 if(canonicalValues.length!==new Set(canonicalValues).size){console.log("FAIL duplicate page canonical URLs");failed++;}
+else console.log("PASS unique canonical URLs");
+if(renderedTitles.length!==new Set(renderedTitles).size){console.log("FAIL duplicate rendered page titles");failed++;}
+else console.log("PASS unique rendered page titles");
 for(const file of htmlFiles){
  const output=await readFile(file,"utf8");
  for(const match of output.matchAll(/\bhref="([^"]+)"/gi)){

@@ -295,3 +295,53 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - The documentation commit `ea6e20aa20250bb6f2ef8934bce9498fa1c12e15` was accidentally created without the existing base tree. Cloudflare Preview build consequently failed with `npm error code ENOENT` at `/opt/buildhome/repo/package.json`.
 - This was a Git tree construction error, not an application/package build regression. The corrective commit reapplies these verification documents on top of the complete source tree from code commit `b9296bb389373323a22fcc1af6b3d31fbfe14be9`; all existing source, package and asset files are retained.
 - Preview build for the corrective commit must be verified before it is considered the latest deployed revision. Production and research branches remain untouched.
+## 14. Phase 2.7 follow-up — 37 static page route recovery and accessibility repair (2026-11-15)
+
+### Page-family inventory and original 404 cause
+- Previous failing homepage links resolved to named destinations/content URLs, but the static build generator emitted only the homepage, assets and a 404 document. No JSON page records, page-family HTML template or physical nested index.html documents existed for those routes; this was a source-generation gap, not a browser SPA-routing issue.
+- Added a JSON-driven page record system: src/data/pages.json contains 37 unique records. One shared semantic template renders separate static HTML documents at each canonical route; no client-side route interception or placeholder HTML is used.
+- Content records have unique titles, descriptions, headings and paragraphs. Duplicate-content audit found zero duplicate page titles, zero duplicate descriptions, zero duplicate section headings and zero repeated section paragraphs.
+- Every record has a valid parent path or root parent. Build validates parent existence and detects parent cycles while rendering breadcrumbs. Internal card links are checked against generated routes; sitemap crawler walks nested HTML documents.
+- Page output count is 39 HTML documents: homepage + 37 page routes + static 404 page. Preview sitemap is valid empty urlset because preview pages remain noindex; Production indexing is still disabled.
+
+### 37-route classification
+- Geographic: 1 destination directory, 5 continent guides, 4 country guides, 3 city guides (13 routes total). No region or individual attraction route was linked from the homepage inventory; none was fabricated.
+- Itinerary: 1 index + 2 detail routes (3).
+- Editorial: 1 article index + 3 article routes (4).
+- Other linked pages: 1 travel-style index + 4 styles (5); 1 tips index + 3 tips (4); 1 things-to-do index + 2 place collections (3); 1 resource directory; About (1); editorial policy + privacy (2); Contact (1). Total 17.
+- Each generated page includes a page-specific title, description, self-canonical on the configured production origin, noindex on preview, a single H1, breadcrumb, shared header/footer, original sections and related internal links. Official source links are preserved in records for destination-specific assertions.
+- Route-to-file pattern: /example/path/ → dist/example/path/index.html.
+
+### Build and actual route verification
+- Cloudflare Pages Preview build succeeded at code commit bb7a74687069141e58ad8baf193805915aff6e76; deployment id 1043fd4e-4f46-466d-aace-493ff82829b8; alias https://development-homepage.travelguide-9op.pages.dev/.
+- Cloudflare build logs confirmed 37 page files generated, 37 route records, page self-canonical/robots/H1/breadcrumb checks, all root-relative internal HTML hrefs resolving to physical files, sitemap membership/protected-empty checks and production-mode indexing-protection simulation.
+- Actual Chromium Preview GET check on all 37 distinct page paths: 37/37 HTTP 200. Every result had a unique title, expected production canonical, noindex, nofollow meta, description, breadcrumb, exactly one H1 and non-empty page sections.
+- Source-data audit: 37 unique titles and descriptions; no repeated section headings or paragraphs.
+- JavaScript startup instrumentation (injected before source page scripts) and interactive browser tests at 360, 390, 768, 1024 and 1440px found no page errors, console errors surfaced by the instrumentation, or unhandled rejections.
+- Mobile (360/390/768): menu opens, focus moves to close control, Escape closes and restores focus; header search opens, receives focus, and Escape closes/restores focus; hero search returns Kyoto suggestion.
+- Desktop (1024/1440): mega-menu opens/closes; header search and Escape behavior pass; hero search suggestion works; logo, nav and header actions do not overlap.
+
+### Responsive verification
+- Homepage and Kyoto city content template rendered in isolated browser iframes at 360, 390, 768, 1024 and 1440 CSS pixels.
+- At all 10 page/viewport combinations, document and body scroll widths equalled viewport width; no horizontal overflow. Continent grid and page-card grid scroll widths equalled their client widths. Footer remained within the content container.
+- Homepage continent layout: 2 columns at 360/390; 3 columns at 768/1024; 5 columns at 1440.
+- Content-card layout: 1 column at 360/390; 2 columns at 768/1024/1440.
+- Navigation: mobile toggle at 360/390/768; desktop nav at 1024/1440.
+- Hero image element decoded with natural width 1672px and was constrained to viewport width.
+
+### Contrast remediation and audit
+- Light-background muted text token changed to #58645e; warm terracotta brand token changed to deeper #8f4b32 while preserving the warm-rust identity.
+- Dark footer uses separate lighter terracotta #e5b18f and muted #d9e0d7 tokens so the wordmark and eyebrow text remain legible on dark green.
+- Logo tagline now uses the correct light-surface muted token; dark logo tagline has a dedicated muted-on-dark override.
+- Focus-visible indicator is now a two-tone forest outline and paper outer ring so it remains visible on light and dark surfaces.
+- Contrast calculation across previous failing surface pairs: terracotta foreground now measures 5.25:1–6.52:1; muted foreground 4.97:1–5.57:1; dark-footer rust 7.89:1. Primary button white on forest 12.47:1 and white on forest hover 8.87:1.
+- axe-core 4.10.3 against the live Preview homepage at 390px, WCAG 2.0 A/AA, WCAG 2.1 A/AA, WCAG 2.2 AA and best-practice tags: 39 rules passed, 0 violations, 1 incomplete. Previous 36 serious contrast nodes are no longer reported. Full manual assistive-technology audit remains a separate release gate.
+
+### Remaining caveats / release gates
+- The local workstation full npm build still has not been independently run because the local repository checkout was unavailable due DNS resolution failure. Cloudflare actual full build is successful.
+- This pass does not include a complete manual screen-reader audit, user testing, or full cross-browser matrix (only the Chromium Browser Rendering engine was exercised).
+- CSS structure check passes in the build. Do not claim the latest branch stylesheet was re-run through W3C CSS Validator in this pass; the previous Phase 2.7 CSS validation had zero errors and warnings, but this updated token/focus stylesheet needs a fresh standards-validator check if required for release.
+- The 37 static pages are now physically available, but review factual editorial scope and time-sensitive information before any future Production indexing approval.
+- Phase 2.8 image integration, Phase 2.9 final responsive/accessibility QA, Phase 2.10 final homepage review and Chat 3 handoff have not started.
+- No image binaries/references changed. No merge, Production deployment or main/research branch update was performed.
+- Latest committed SHA for this record will be the documentation/validation follow-up commit created after this entry.
