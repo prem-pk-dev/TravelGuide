@@ -12,6 +12,9 @@ const home=JSON.parse(await readFile(path.join(src,"data/homepage.json"),"utf8")
 const shell=await readFile(path.join(src,"partials/shell.html"),"utf8");
 const css=await readFile(path.join(src,"assets/css/site.css"),"utf8");
 const js=await readFile(path.join(src,"assets/js/site.js"),"utf8");
+const pageCss=await readFile(path.join(src,"assets/css/page.css"),"utf8");
+const pageTemplate=await readFile(path.join(src,"partials/content-page.html"),"utf8");
+const pageData=JSON.parse(await readFile(path.join(src,"data/pages.json"),"utf8"));
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function img(x,cls=""){return '<img class="'+cls+'" src="'+esc(x.src)+'" alt="'+esc(x.alt)+'" width="'+x.width+'" height="'+x.height+'" '+(x.priority?'fetchpriority="high"':'loading="lazy"')+' decoding="async">';}
 function card(x,k=""){const media=x.src?'<a class="story-card__image" href="'+esc(x.href)+'" aria-label="'+esc(x.title)+'">'+img(x)+'</a>':"";return '<article class="story-card'+(x.src?"":" story-card--text-only")+'">'+media+'<div class="story-card__body">'+(k?'<p class="eyebrow">'+esc(k)+'</p>':'')+'<h3><a href="'+esc(x.href)+'">'+esc(x.title)+'</a></h3><p>'+esc(x.description)+'</p><a class="text-link" href="'+esc(x.href)+'">Explore guide <span aria-hidden="true">↗</span></a></div></article>';}
@@ -40,12 +43,71 @@ const content=`<main id="main">
 <section class="section section--journal"><div class="container">${heading("NOTES FROM THE ROAD","Stories for a more curious traveller","Context, ideas and practical insight from the places and questions that shape a journey.","/articles/","Read the travel journal")}<div class="journal-grid">${home.articles.map(x=>card(x,"From the journal")).join("")}</div></div></section>
 <section class="section section--planning"><div class="container">${heading("THE DETAILS MAKE THE DIFFERENCE","Feel ready before you go","Clear, grounded resources for timing, transport and the little decisions that make travel smoother.","/travel-tips/","All travel tips")}<div class="planning-grid">${home.planning.map(x=>card(x,"Plan with confidence")).join("")}</div></div></section>
 <section class="trust-section"><div class="container trust-section__inner"><div><p class="eyebrow eyebrow--light">OUR EDITORIAL PROMISE</p><h2>Good advice.<br><em>No guesswork.</em></h2></div><div class="trust-points"><article><span>01</span><div><h3>Useful over noisy</h3><p>We favour clear guidance and practical detail over endless lists and inflated claims.</p></div></article><article><span>02</span><div><h3>Places have context</h3><p>Every destination deserves more than a checklist. We look for its character and connections.</p></div></article><article><span>03</span><div><h3>Recommendations with clarity</h3><p>Editorial choices should be understandable. Commercial relationships will be disclosed where they apply.</p></div></article></div></div></section></main>`;
-const records=[...home.destinations.map(d=>({title:d.title,type:d.type,region:d.region,href:d.href,description:d.description})),...home.countries.map(d=>({title:d.title,type:"Country",region:d.region,href:d.href,description:d.description}))];
+const records=[...home.destinations.map(d=>({title:d.title,type:d.type,region:d.region,href:d.href,description:d.description})),...home.countries.map(d=>({title:d.title,type:"Country",region:d.region,href:d.href,description:d.description})),...pageData.pages.map(p=>({title:p.title,type:p.type,region:"TravelGuide",href:p.path,description:p.description}))];
+const searchRecords=[...new Map(records.map(item=>[item.href,item])).values()];
 let html=shell.replace("<!-- SITE_HEADER -->",nav).replace("<!-- PAGE_CONTENT -->",content).replace("<!-- SITE_FOOTER -->",footer);
-const replacements={"{{DESCRIPTION}}":"Explore thoughtful destination guides, inspiring itineraries and practical travel advice to help you discover the world with curiosity.","{{CANONICAL}}":canonicalOrigin + "/","{{ROBOTS}}":robotsMeta,"{{TITLE}}":"TravelGuide — Discover Places, Journeys & Travel Guides","{{SEARCH_DATA}}":JSON.stringify(records).replace(/</g,"\\u003c"),"{{CSS}}":css,"{{JS}}":js};
+const replacements={"{{DESCRIPTION}}":"Explore thoughtful destination guides, inspiring itineraries and practical travel advice to help you discover the world with curiosity.","{{CANONICAL}}":canonicalOrigin + "/","{{ROBOTS}}":robotsMeta,"{{TITLE}}":"TravelGuide — Discover Places, Journeys & Travel Guides","{{OG_TYPE}}":"website","{{SEARCH_DATA}}":JSON.stringify(searchRecords).replace(/</g,"\\u003c"),"{{CSS}}":css + "\\n" + pageCss,"{{JS}}":js};
 for(const [k,v] of Object.entries(replacements))html=html.replaceAll(k,v);
 await rm(dist,{recursive:true,force:true});await mkdir(path.join(dist,"assets/css"),{recursive:true});await mkdir(path.join(dist,"assets/js"),{recursive:true});await mkdir(path.join(dist,"assets/images"),{recursive:true});
 await writeFile(path.join(dist,"index.html"),html);await writeFile(path.join(dist,"assets/css/site.css"),css);await writeFile(path.join(dist,"assets/js/site.js"),js);await cp(path.join(src,"assets/images"),path.join(dist,"assets/images"),{recursive:true});
+await writeFile(path.join(dist,"assets/css/page.css"),pageCss);
+
+function pageCrumbs(page){
+ const chain=[];let cursor=page;const seen=new Set();
+ while(cursor){if(seen.has(cursor.path))throw new Error("Page parent cycle: "+cursor.path);seen.add(cursor.path);chain.unshift(cursor);cursor=cursor.parent==="/" ? null : pageMap.get(cursor.parent);}
+ return [{label:"Home",href:"/"},...chain.map((item,index)=>({label:item.title,href:index===chain.length-1?null:item.path}))];
+}
+const pageMap=new Map(pageData.pages.map(page=>[page.path,page]));
+if(pageMap.size!==37)throw new Error("Expected 37 unique page records, found "+pageMap.size);
+for(const page of pageData.pages){
+ if(!page.path.startsWith("/")||!page.path.endsWith("/")||page.path.includes("..")||page.path.includes("//"))throw new Error("Invalid canonical route "+page.path);
+ if(page.parent!=="/"&&!pageMap.has(page.parent))throw new Error("Missing canonical parent "+page.parent+" for "+page.path);
+ if(!page.title||!page.description||!page.intro||!page.sections?.length)throw new Error("Incomplete page content "+page.path);
+ for(const section of page.sections)for(const card of section.cards??[]){
+  const destination=new URL(card.href,canonicalOrigin);
+  if(destination.origin===canonicalOrigin&&destination.pathname!=="/"&&!pageMap.has(destination.pathname))throw new Error("Unpublished internal target "+card.href+" linked from "+page.path);
+  if(destination.protocol!=="https:")throw new Error("Non-HTTPS route "+card.href);
+ }
+ for(const source of page.sources??[])if(new URL(source.url).protocol!=="https:")throw new Error("Non-HTTPS source on "+page.path);
+}
+function renderPageContent(page){
+ const crumbs=pageCrumbs(page).map((crumb,index)=>{
+  const label=esc(crumb.label);
+  if(!crumb.href)return '<span aria-current="page">'+label+'</span>';
+  const link='<a href="'+esc(crumb.href)+'">'+label+'</a>';
+  return index===pageCrumbs(page).length-1?link:link+'<span class="breadcrumbs__separator" aria-hidden="true">/</span>';
+ }).join("");
+ const cards=items=>!items?.length?"":'<div class="page-section__cards">'+items.map(item=>{
+  const href=esc(item.href),external=new URL(item.href,canonicalOrigin).origin!==canonicalOrigin;
+  return '<a class="page-card" href="'+href+'"'+(external?' target="_blank" rel="noopener noreferrer"':'')+'><span class="page-card__title">'+esc(item.title)+'</span><span class="page-card__description">'+esc(item.description)+'</span><span class="page-card__arrow">'+(external?'OPEN OFFICIAL SOURCE ↗':'EXPLORE GUIDE ↗')+'</span></a>';
+ }).join("")+'</div>';
+ const sections=page.sections.map(section=>{
+  const paragraphs=(section.paragraphs??[]).map(text=>'<p>'+esc(text)+'</p>').join("");
+  const bullets=section.bullets?.length?'<ul>'+section.bullets.map(item=>'<li>'+esc(item)+'</li>').join("")+'</ul>':"";
+  return '<section class="page-section"><h2>'+esc(section.heading)+'</h2>'+paragraphs+bullets+cards(section.cards)+'</section>';
+ }).join("");
+ const sources=page.sources?.length?'<aside class="page-sources" aria-labelledby="page-sources-heading"><h2 id="page-sources-heading">Official sources and further reading</h2><ul>'+page.sources.map(item=>'<li><a href="'+esc(item.url)+'" target="_blank" rel="noopener noreferrer">'+esc(item.title)+' ↗</a></li>').join("")+'</ul></aside>':"";
+ const kicker=page.kicker??({continent:"DESTINATION REGION",country:"COUNTRY GUIDE",city:"CITY GUIDE",article:"FROM THE TRAVEL JOURNAL",itinerary:"SUGGESTED ROUTE",style:"TRAVEL STYLE",tip:"PRACTICAL TRAVEL TIP","things-collection":"THINGS TO DO",policy:"SITE INFORMATION",static:"TRAVELGUIDE"}[page.type]??"TRAVELGUIDE");
+ const values={"{{PAGE_TYPE}}":esc(page.type),"{{BREADCRUMBS}}":crumbs,"{{PAGE_KICKER}}":esc(kicker),"{{PAGE_TITLE}}":esc(page.title),"{{PAGE_INTRO}}":esc(page.intro),"{{PAGE_SECTIONS}}":sections,"{{PAGE_SOURCES}}":sources};
+ let result=pageTemplate;for(const [key,value] of Object.entries(values))result=result.replaceAll(key,value);
+ return result;
+}
+async function renderStaticPage(page){
+ const content=renderPageContent(page);
+ let output=shell.replace("<!-- SITE_HEADER -->",nav).replace("<!-- PAGE_CONTENT -->",content).replace("<!-- SITE_FOOTER -->",footer);
+ const canonical=canonicalOrigin+page.path;
+ const values={"{{DESCRIPTION}}":esc(page.description),"{{CANONICAL}}":esc(canonical),"{{ROBOTS}}":robotsMeta,"{{TITLE}}":esc(page.title+" | TravelGuide"),"{{OG_TYPE}}":page.type==="article"?"article":"website","{{SEARCH_DATA}}":JSON.stringify(searchRecords).replace(/</g,"\\\\u003c"),"{{CSS}}":css+"\\\\n"+pageCss,"{{JS}}":js};
+ for(const [key,value] of Object.entries(values))output=output.replaceAll(key,value);
+ return output;
+}
+
+for(const page of pageData.pages){
+ const outputDirectory=path.join(dist,page.path.slice(1));
+ await mkdir(outputDirectory,{recursive:true});
+ await writeFile(path.join(outputDirectory,"index.html"),await renderStaticPage(page));
+}
+console.log("Generated "+pageData.pages.length+" separate page documents.");
+
 const robotsLines = ["User-agent: *"];
 if (productionIndexingEnabled) {
   robotsLines.push("Allow: /", "Sitemap: " + canonicalOrigin + "/sitemap.xml");

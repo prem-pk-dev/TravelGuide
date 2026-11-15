@@ -1,0 +1,2014 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "path": "/destinations/",
+      "type": "directory",
+      "title": "Explore destinations",
+      "description": "Browse TravelGuide destination guides by continent, country and city, with context for choosing where to begin.",
+      "intro": "The destination directory is an editorial starting point, not a complete gazetteer. Begin with a broad region, then follow the countries and cities for which TravelGuide currently has dedicated guides.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "Choose a continent",
+          "paragraphs": [
+            "Regional pages explain broad geographic character and point to the country guides currently published on TravelGuide. The selection is deliberately limited; an absent country does not imply it is less worth visiting."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Asia",
+              "description": "Japan and India guides, with Kyoto as a city focus",
+              "href": "/destinations/continents/asia/"
+            },
+            {
+              "title": "Europe",
+              "description": "Portugal and the Lisbon area",
+              "href": "/destinations/continents/europe/"
+            },
+            {
+              "title": "Africa",
+              "description": "Morocco and Marrakech",
+              "href": "/destinations/continents/africa/"
+            },
+            {
+              "title": "Americas",
+              "description": "A regional overview and ideas for further research",
+              "href": "/destinations/continents/americas/"
+            },
+            {
+              "title": "Oceania",
+              "description": "Island and mainland perspectives across the Pacific",
+              "href": "/destinations/continents/oceania/"
+            }
+          ]
+        },
+        {
+          "heading": "Start with a country",
+          "paragraphs": [
+            "Country guides bring together regional context, travel themes and the city pages available within our current editorial coverage."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Japan",
+              "description": "Seasonal variety, rail connections and cultural landscapes",
+              "href": "/destinations/countries/japan/"
+            },
+            {
+              "title": "Portugal",
+              "description": "Atlantic settings, historic cities and coastal routes",
+              "href": "/destinations/countries/portugal/"
+            },
+            {
+              "title": "Morocco",
+              "description": "Historic medinas, architecture and varied landscapes",
+              "href": "/destinations/countries/morocco/"
+            },
+            {
+              "title": "India",
+              "description": "A broad introduction to a country of distinct regions",
+              "href": "/destinations/countries/india/"
+            }
+          ]
+        },
+        {
+          "heading": "Explore a city",
+          "paragraphs": [
+            "A city guide is more specific than a country overview. It focuses on local districts, orientation and experiences that help a visitor understand how a place fits together."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Kyoto, Japan",
+              "description": "Historic districts, gardens and a layered cultural landscape",
+              "href": "/destinations/countries/japan/cities/kyoto/"
+            },
+            {
+              "title": "Lisbon, Portugal",
+              "description": "Hillside neighbourhoods, the Tagus and historic tram routes",
+              "href": "/destinations/countries/portugal/cities/lisbon/"
+            },
+            {
+              "title": "Marrakech, Morocco",
+              "description": "The medina, monumental architecture and living public spaces",
+              "href": "/destinations/countries/morocco/cities/marrakech/"
+            }
+          ]
+        },
+        {
+          "heading": "How to use these guides",
+          "paragraphs": [
+            "Each published route has its own static HTML page with a unique title, description, canonical URL and breadcrumb trail. Geographic pages follow a parent-child structure; articles, itineraries and activity collections are separate editorial entities linked to places where relevant.",
+            "TravelGuide does not show live hotel inventory, transport departures, opening status or booking availability. Check official local sources before making time-sensitive decisions."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/destinations/continents/asia/",
+      "type": "continent",
+      "title": "Asia travel guides",
+      "description": "Explore TravelGuide's Asia coverage, beginning with Japan and India and the city guide to Kyoto.",
+      "intro": "Asia covers an immense range of landscapes, climates, languages and travel traditions. This regional guide is an orientation to the places TravelGuide currently covers, rather than a single itinerary or a claim that the continent can be described in one way.",
+      "parent": "/destinations/",
+      "sections": [
+        {
+          "heading": "A region of contrasts",
+          "paragraphs": [
+            "From the northern mountain systems to tropical coasts and densely connected urban corridors, Asia's geography shapes very different travel experiences. Distances can be substantial, and climate, transport and cultural context vary sharply between countries and even within them.",
+            "Plan by region and season rather than assuming that advice for one destination applies across the continent. For practical decisions, use the country and city guides alongside current official travel information."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Country guides",
+          "paragraphs": [
+            "Our current country coverage begins with Japan and India. These are separate destinations with distinct geographies and travel contexts."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Japan",
+              "description": "Four-season travel, island geography and a national rail network",
+              "href": "/destinations/countries/japan/"
+            },
+            {
+              "title": "India",
+              "description": "Regional variety across mountains, plains, coasts and cities",
+              "href": "/destinations/countries/india/"
+            }
+          ]
+        },
+        {
+          "heading": "A closer look at Kyoto",
+          "paragraphs": [
+            "Kyoto offers a particularly rich lens on Japan's historic built environment, religious architecture and garden traditions. Its UNESCO World Heritage property, Historic Monuments of Ancient Kyoto, includes seventeen component parts across Kyoto, Uji and Otsu.",
+            "A useful first approach is to group visits geographically: eastern Kyoto's historic districts, the western Sagano and Arashiyama area, and central areas around the station and downtown. This reduces unnecessary cross-city journeys."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Kyoto city guide",
+              "description": "Gion, Higashiyama, Arashiyama and seasonal context",
+              "href": "/destinations/countries/japan/cities/kyoto/"
+            }
+          ]
+        },
+        {
+          "heading": "Planning across the region",
+          "paragraphs": [
+            "The monsoon, altitude, winter snowfall and tropical heat affect different parts of Asia in different ways. Build a route around the actual countries and regions you plan to visit, and check local conditions close to departure.",
+            "For Japan, the official tourism organisation describes four distinct seasons and notes that travel peaks around major holiday periods such as Golden Week, Obon and New Year. Treat dates and transport guidance as something to reconfirm for your own trip."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Japan National Tourism Organization — Kyoto",
+          "url": "https://www.japan.travel/en/destinations/kansai/kyoto/"
+        },
+        {
+          "title": "UNESCO — Historic Monuments of Ancient Kyoto",
+          "url": "https://whc.unesco.org/en/list/688"
+        }
+      ]
+    },
+    {
+      "path": "/destinations/continents/europe/",
+      "type": "continent",
+      "title": "Europe travel guides",
+      "description": "Explore TravelGuide's Europe coverage, with Portugal and Lisbon as the current focus.",
+      "intro": "Europe's compact map can make multi-country travel look simple, but terrain, language, transport networks and seasonal rhythms still change from one region to another. This page introduces the European destination coverage currently available on TravelGuide.",
+      "parent": "/destinations/",
+      "sections": [
+        {
+          "heading": "A varied travel landscape",
+          "paragraphs": [
+            "Historic capitals, smaller towns, Atlantic coastlines, mountain regions and island territories sit within relatively short distances on parts of the continent. The character of a journey often changes as quickly as the landscape.",
+            "Use national and local information for transport, climate and visitor arrangements. A route that works well in one part of Europe may not translate directly to another."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Country guide: Portugal",
+          "paragraphs": [
+            "Portugal lies in the south-west of Europe and includes mainland territory on the Atlantic as well as the Azores and Madeira archipelagos. Its geography gives the country a strong relationship with the ocean, while historic urban centres and inland landscapes offer different ways to travel.",
+            "Our Portugal coverage connects the national overview with Lisbon and a suggested coastal route. The route is a planning framework, not a live timetable or a promise about transport connections."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Portugal country guide",
+              "description": "Atlantic geography, regional variety and trip-planning context",
+              "href": "/destinations/countries/portugal/"
+            },
+            {
+              "title": "Lisbon city guide",
+              "description": "Explore Baixa, Alfama, Belém and the city's hillside setting",
+              "href": "/destinations/countries/portugal/cities/lisbon/"
+            },
+            {
+              "title": "Portugal coastal itinerary",
+              "description": "A flexible week linking city and coastal experiences",
+              "href": "/itineraries/portugal-coast-week/"
+            }
+          ]
+        },
+        {
+          "heading": "Ideas for deeper exploration",
+          "paragraphs": [
+            "Lisbon is a gateway to a wider region, not a substitute for the rest of Portugal. Coastal towns, the Douro region, the Alentejo and the Atlantic islands each require their own time and context.",
+            "TravelGuide will add further European guides when there is enough distinct, checked material to support a useful page."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Visit Portugal — About Portugal",
+          "url": "https://www.visitportugal.com/en/content/about-portugal"
+        },
+        {
+          "title": "Visit Portugal — Lisbon by Tram",
+          "url": "https://www.visitportugal.com/en/destinos/lisboa-regiao/320317"
+        }
+      ]
+    },
+    {
+      "path": "/destinations/continents/africa/",
+      "type": "continent",
+      "title": "Africa travel guides",
+      "description": "Explore TravelGuide's Africa coverage through Morocco and the historic city of Marrakech.",
+      "intro": "Africa is a continent of many countries, climates, cultures and travel landscapes. A single page cannot represent that diversity. TravelGuide's current African destination coverage begins with Morocco and focuses on Marrakech as a city guide.",
+      "parent": "/destinations/",
+      "sections": [
+        {
+          "heading": "A continent of distinct regions",
+          "paragraphs": [
+            "North African Mediterranean and Atlantic settings, the Sahara and Sahel, the highlands and the forests and coasts farther south are not interchangeable travel environments. Distances, infrastructure, languages and visitor considerations differ widely.",
+            "Approach each trip at country and regional level. Use locally authoritative guidance for entry rules, transport, weather and any current safety advice."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Country guide: Morocco",
+          "paragraphs": [
+            "Morocco's architecture and settlement patterns reflect long layers of history and exchange. Its medinas, mountain areas, Atlantic and Mediterranean coasts and desert-edge landscapes reward a route that is planned around geography rather than an overly ambitious checklist."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Morocco country guide",
+              "description": "Understand the country's regional variety and historic places",
+              "href": "/destinations/countries/morocco/"
+            },
+            {
+              "title": "Marrakech city guide",
+              "description": "A closer look at the medina, gardens and public spaces",
+              "href": "/destinations/countries/morocco/cities/marrakech/"
+            },
+            {
+              "title": "Marrakech medina experiences",
+              "description": "A focused editorial collection of the old city's cultural places",
+              "href": "/things-to-do/morocco/marrakech/"
+            }
+          ]
+        },
+        {
+          "heading": "Heritage with living context",
+          "paragraphs": [
+            "The Medina of Marrakesh was inscribed on the UNESCO World Heritage List in 1985. Its value is not limited to isolated monuments: the historic urban fabric, houses, souks, fondouks, crafts and public spaces form part of a living city.",
+            "Visitors can support respectful travel by treating working neighbourhoods as lived places, asking before photographing people and following local rules at religious and cultural sites."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Visit Morocco — Medina in Marrakech",
+          "url": "https://www.visitmorocco.com/en/travel/marrakech/medina"
+        },
+        {
+          "title": "UNESCO — Medina of Marrakesh",
+          "url": "https://whc.unesco.org/en/list/331"
+        }
+      ]
+    },
+    {
+      "path": "/destinations/continents/americas/",
+      "type": "continent",
+      "title": "Americas travel guides",
+      "description": "An editorial starting point for the Americas, with guidance for exploring its varied landscapes thoughtfully.",
+      "intro": "The Americas stretch from Arctic environments to sub-Antarctic regions and include continental interiors, mountain chains, tropical forests, island groups and long coastlines. This page is a regional orientation only; TravelGuide does not yet publish country or city detail pages for this region.",
+      "parent": "/destinations/",
+      "sections": [
+        {
+          "heading": "Think in regions, not one route",
+          "paragraphs": [
+            "North America, Central America, the Caribbean and South America each contain very different climates, languages, histories and transport realities. Even within one country, altitude, distance and season can reshape a journey.",
+            "A practical itinerary should allow for the size of the region, domestic travel time, border requirements and environmental conditions. Check official national and local sources before committing to a route."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Build a responsible plan",
+          "paragraphs": [
+            "In mountain and high-altitude areas, plan acclimatisation and local guidance around the actual route. In forest, desert and coastal environments, understand seasonal conditions and access restrictions before travelling.",
+            "TravelGuide will add dedicated destination pages when original, location-specific material is ready. Until then, use this page as a prompt for research rather than as a substitute for a destination guide."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/destinations/continents/oceania/",
+      "type": "continent",
+      "title": "Oceania travel guides",
+      "description": "A regional introduction to Oceania's island geographies and mainland landscapes.",
+      "intro": "Oceania encompasses Australia, Aotearoa New Zealand and many Pacific island states and territories. Its travel experiences range from large, arid interiors to alpine environments, reefs and low-lying islands. TravelGuide does not yet publish individual country or city routes for this region.",
+      "parent": "/destinations/",
+      "sections": [
+        {
+          "heading": "Island geography matters",
+          "paragraphs": [
+            "Distances between islands can be substantial, and air or sea connections may be limited or season-dependent. Do not assume that neighbouring islands share the same transport, language, customs or entry arrangements.",
+            "Coastal and marine environments can be sensitive. Follow local guidance around reefs, wildlife, protected areas and cultural sites, and choose operators who explain how they minimise impact."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Plan with local knowledge",
+          "paragraphs": [
+            "For Australia and New Zealand, country-scale distances can affect the shape of a trip. In the Pacific, community protocols and local access arrangements deserve particular attention. Check current national tourism and government sources before travelling.",
+            "Country and city guides will be added to TravelGuide only when each can offer distinct, useful context rather than a generic island summary."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/destinations/countries/japan/",
+      "type": "country",
+      "title": "Japan travel guide",
+      "description": "Plan a more considered trip to Japan with regional context, seasonal awareness and a closer guide to Kyoto.",
+      "intro": "Japan is an archipelago whose travel experiences change with latitude, elevation and season. Large metropolitan areas connect with historic towns, rural landscapes, islands and mountain regions; a rewarding itinerary chooses a manageable combination rather than trying to cover everything at once.",
+      "parent": "/destinations/continents/asia/",
+      "sections": [
+        {
+          "heading": "Understand the geography",
+          "paragraphs": [
+            "Japan's main islands extend across a long north–south span. Hokkaido's winter conditions differ from subtropical Okinawa, while the Sea of Japan side and Pacific-facing cities can experience different weather patterns.",
+            "Choose the regions that fit the time available. Tokyo, Kyoto and Osaka form one familiar first-time route, but northern landscapes, the Seto Inland Sea, the Japan Alps and southern islands offer very different experiences."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Seasons and busy travel periods",
+          "paragraphs": [
+            "Spring and autumn are popular for mild conditions and seasonal scenery; summer brings festivals and humid weather in many places, while winter creates opportunities for snow landscapes and hot-spring travel in some regions. Conditions vary by region, so a national seasonal summary is only a starting point.",
+            "Japan's official tourism organisation identifies Golden Week, Obon and the New Year period as busy domestic travel windows. If your dates overlap, check transport and accommodation arrangements early and confirm current schedules with operators."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Getting around",
+          "paragraphs": [
+            "The Shinkansen links several major urban corridors, while regional railways, buses, ferries and local transit serve other journeys. A rail pass is not automatically the best value: compare the actual route and ticket prices for your dates before buying.",
+            "Within cities, station choice and walking distance matter. Group neighbourhoods by area and avoid planning too many cross-city trips in one day."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Kyoto city guide",
+              "description": "Historic districts, gardens, rail access and seasonal visits",
+              "href": "/destinations/countries/japan/cities/kyoto/"
+            },
+            {
+              "title": "Japan by rail itinerary",
+              "description": "A flexible route linking an urban arrival with Kyoto and a slower side trip",
+              "href": "/itineraries/japan-by-rail/"
+            },
+            {
+              "title": "Choosing the right season",
+              "description": "A practical framework for comparing weather, demand and local calendars",
+              "href": "/articles/choosing-the-right-season/"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Japan National Tourism Organization — Travel planning tips",
+          "url": "https://www.japan.travel/en/gc/tips/"
+        },
+        {
+          "title": "Japan National Tourism Organization — FAQ and seasonal travel",
+          "url": "https://www.japan.travel/en/faq/"
+        }
+      ]
+    },
+    {
+      "path": "/destinations/countries/portugal/",
+      "type": "country",
+      "title": "Portugal travel guide",
+      "description": "Explore Portugal's Atlantic geography, historic cities and a slower route through its coastal towns.",
+      "intro": "Portugal sits at Europe's south-western edge, with mainland territory facing the Atlantic and island groups farther out in the ocean. The country is compact compared with many long-haul destinations, but its coast, river valleys, inland plains and islands create distinct journeys.",
+      "parent": "/destinations/continents/europe/",
+      "sections": [
+        {
+          "heading": "Mainland and Atlantic islands",
+          "paragraphs": [
+            "The mainland's Atlantic coastline shapes much of Portugal's identity, from northern surf-facing shores to the cliffs and coves of the south. Madeira and the Azores add island landscapes with their own climate, terrain and travel logistics.",
+            "Lisbon sits beside the Tagus estuary and works as a city base for exploring nearby coastal and historic places. Porto and the Douro valley offer a different northern focus; the Alentejo and Algarve change the pace and landscape again."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "City, coast and countryside",
+          "paragraphs": [
+            "A useful first journey can combine a few days in Lisbon with time outside the capital. Nearby places such as Cascais, Sintra, Óbidos and the Arrábida area offer different coastal, cultural and landscape contexts; choose based on interests rather than attempting to fit every stop into one trip.",
+            "The Portugal itinerary on TravelGuide is a flexible outline. Check current rail, bus, road and attraction information before setting dates or making reservations."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Lisbon city guide",
+              "description": "Historic quarters, tram corridors and the Tagus waterfront",
+              "href": "/destinations/countries/portugal/cities/lisbon/"
+            },
+            {
+              "title": "A week among Portugal's coastal towns",
+              "description": "A flexible seven-day planning outline",
+              "href": "/itineraries/portugal-coast-week/"
+            },
+            {
+              "title": "Travel days with more care",
+              "description": "Small choices that make transfers and long journeys calmer",
+              "href": "/articles/thoughtful-travel-days/"
+            }
+          ]
+        },
+        {
+          "heading": "Food, culture and everyday rhythm",
+          "paragraphs": [
+            "Portuguese food traditions vary by coast and region. Seafood, baked dishes, market produce and regional specialities can be a way into local history, but menus and customs differ from town to town.",
+            "In historic neighbourhoods, respect residential quiet, keep doorways clear and remember that popular viewpoints and tram routes are also part of everyday city life."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Visit Portugal — About Portugal",
+          "url": "https://www.visitportugal.com/en/content/about-portugal"
+        },
+        {
+          "title": "Visit Portugal — Lisbon by Tram",
+          "url": "https://www.visitportugal.com/en/destinos/lisboa-regiao/320317"
+        },
+        {
+          "title": "Visit Portugal — What to do near Lisbon",
+          "url": "https://www.visitportugal.com/en/destinos/lisboa-regiao/318533"
+        }
+      ]
+    },
+    {
+      "path": "/destinations/countries/morocco/",
+      "type": "country",
+      "title": "Morocco travel guide",
+      "description": "Explore Morocco through its historic medinas, mountain settings and varied Atlantic, Mediterranean and desert-edge landscapes.",
+      "intro": "Morocco connects the Atlantic and Mediterranean with the Atlas mountain system and the Sahara's northern margins. Its cities and regions differ in architecture, climate, language and pace; a route benefits from time between places rather than treating the country as one backdrop.",
+      "parent": "/destinations/continents/africa/",
+      "sections": [
+        {
+          "heading": "A country shaped by geography",
+          "paragraphs": [
+            "The northern coast, inland imperial cities, mountain valleys and southern desert-edge areas create different travel conditions. Temperatures and access can change with altitude and season; check the specific region you plan to visit.",
+            "Marrakech is an important starting point for understanding Morocco's urban heritage, but it is not a stand-in for Fes, Rabat, the Atlantic coast, the Rif or the Atlas communities."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Medina and modern city",
+          "paragraphs": [
+            "The Medina of Marrakesh contains ramparts, monumental gates, religious and civic landmarks, gardens, souks and traditional trades. UNESCO describes the historic urban fabric as a living historic town, not simply a collection of monuments.",
+            "A visit is richer when you leave time for orientation and approach the medina as a working neighbourhood. Use recognised local guidance where needed, ask permission before taking portraits and be considerate around worship and private spaces."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Marrakech city guide",
+              "description": "The medina, Jemaa el-Fna and architectural landmarks",
+              "href": "/destinations/countries/morocco/cities/marrakech/"
+            },
+            {
+              "title": "Marrakech medina experiences",
+              "description": "A focused collection of heritage and everyday places",
+              "href": "/things-to-do/morocco/marrakech/"
+            },
+            {
+              "title": "Travel through culture",
+              "description": "Ways to read architecture, craft and local context respectfully",
+              "href": "/travel-styles/culture/"
+            }
+          ]
+        },
+        {
+          "heading": "Before you go",
+          "paragraphs": [
+            "Entry requirements, border arrangements, transport schedules and local advisories can change. Use official government and transport sources for current information and do not rely on a general editorial guide for personal eligibility or safety decisions.",
+            "Plan internal travel around the distances and terrain involved. A mountain journey, coastal stay and city visit require different packing, transfer time and expectations."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Visit Morocco — Medina in Marrakech",
+          "url": "https://www.visitmorocco.com/en/travel/marrakech/medina"
+        },
+        {
+          "title": "UNESCO — Medina of Marrakesh",
+          "url": "https://whc.unesco.org/en/list/331"
+        }
+      ]
+    },
+    {
+      "path": "/destinations/countries/india/",
+      "type": "country",
+      "title": "India travel guide",
+      "description": "An introduction to India's regions, cultural landscapes and the importance of planning travel at state and local level.",
+      "intro": "India is a large and highly varied country. The Himalaya, Indo-Gangetic plains, central plateaus, western deserts, long coastlines and tropical south create distinct journeys. Language, food, climate, transport and cultural practices differ across states and communities.",
+      "parent": "/destinations/continents/asia/",
+      "sections": [
+        {
+          "heading": "Think regionally",
+          "paragraphs": [
+            "A country-wide overview cannot tell you what conditions will be like in Ladakh, Rajasthan, Kerala or the Northeast at the same time of year. Select a region first, then research the local climate, distances, transport and cultural context.",
+            "India's official tourism portal groups destinations across eastern, western, central, north-eastern, northern and southern regions. These groupings are a useful browse aid, not a substitute for state-level planning."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Heritage and living culture",
+          "paragraphs": [
+            "Historic cities, pilgrimage places, craft traditions, wildlife landscapes and contemporary urban centres sit alongside one another. Treat each place as a distinct community rather than reducing the country to a single set of images or expectations.",
+            "When visiting religious places, follow posted dress and photography rules, remove footwear where required and ask before photographing worshippers or ceremonies. Local customs should guide behaviour."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Practical planning",
+          "paragraphs": [
+            "Allow realistic time for long intercity transfers and check the current operator information for rail, air and road travel. Seasonal heat, monsoon rainfall, snow and altitude can affect different parts of the country at different times.",
+            "Entry requirements and advisories are personal and time-sensitive. Consult the relevant official government sources for your nationality and route; this editorial page is not immigration or safety advice."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Incredible India — States and Union Territories",
+          "url": "https://www.prod.incredibleindia.gov.in/content/incredible-india-v2/en/destinations/states.html"
+        },
+        {
+          "title": "Incredible India — All destinations",
+          "url": "https://www.prod.incredibleindia.gov.in/content/incredible-india-v2/en/popular-in-india/the-land-of-gandhi/all-destinations.html"
+        }
+      ]
+    },
+    {
+      "path": "/destinations/countries/japan/cities/kyoto/",
+      "type": "city",
+      "title": "Kyoto city guide",
+      "description": "Explore Kyoto's historic districts, garden traditions and a practical way to group the city by area.",
+      "intro": "Kyoto was founded as Japan's capital in 794 and remained the imperial capital until the middle of the nineteenth century. Its historic fabric includes religious architecture, gardens and neighbourhoods shaped over many centuries. The city's UNESCO property comprises seventeen component parts across Kyoto, Uji and Otsu.",
+      "parent": "/destinations/countries/japan/",
+      "sections": [
+        {
+          "heading": "Read Kyoto by neighbourhood",
+          "paragraphs": [
+            "Gion and Higashiyama bring together traditional townhouses, shrines, temples, craft shops and historic streets. Kiyomizu-dera and the Philosopher's Path are distinct experiences within this wider eastern area; allow time for walking and for uphill sections.",
+            "In the west, Sagano and Arashiyama combine the bamboo grove with Tenryu-ji, Togetsukyo Bridge and the riverside landscape. The area is reachable on several rail lines, so check which station best suits the part you plan to visit.",
+            "Central Kyoto and the area around Kyoto Station are practical for transport and everyday city services. Group visits by district rather than crossing the city repeatedly."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Kyoto beyond the famous gates",
+              "description": "An editorial route through quieter garden paths and crafted details",
+              "href": "/articles/feeling-the-place/"
+            },
+            {
+              "title": "Japan by rail",
+              "description": "A city-to-region itinerary with Kyoto as a main stop",
+              "href": "/itineraries/japan-by-rail/"
+            }
+          ]
+        },
+        {
+          "heading": "Architecture, gardens and heritage",
+          "paragraphs": [
+            "The UNESCO-listed Historic Monuments of Ancient Kyoto illustrates the development of Japanese wooden architecture, religious buildings and garden design. The property includes temples, shrines and Nijo-jo Castle; it is not a single walled site that can be covered in one visit.",
+            "Give historic places time and follow local rules on photography, entry, footwear and quiet areas. Some buildings and gardens are active religious or cultural spaces, not just visitor attractions."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Seasonal planning and getting around",
+          "paragraphs": [
+            "Cherry blossom and autumn foliage seasons can bring heavy visitor demand. The Japan National Tourism Organization recommends planning around seasonal highlights and national holiday periods; conditions vary from year to year, so check current local information.",
+            "Rail, subway and bus services connect the main districts, but journey times and walking distances depend on the exact site. Verify current timetables and service changes with operators, and leave room for walking between nearby places."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Japan National Tourism Organization — Kyoto",
+          "url": "https://www.japan.travel/en/destinations/kansai/kyoto/"
+        },
+        {
+          "title": "JNTO — Gion and Higashiyama",
+          "url": "https://www.japan.travel/en/destinations/kansai/kyoto/gion-and-higashiyama/"
+        },
+        {
+          "title": "JNTO — Sagano and Arashiyama",
+          "url": "https://www.japan.travel/en/destinations/kansai/kyoto/sagano-and-arashi-yama-area/"
+        },
+        {
+          "title": "UNESCO — Historic Monuments of Ancient Kyoto",
+          "url": "https://whc.unesco.org/en/list/688"
+        }
+      ]
+    },
+    {
+      "path": "/destinations/countries/portugal/cities/lisbon/",
+      "type": "city",
+      "title": "Lisbon city guide",
+      "description": "A practical introduction to Lisbon's hillside neighbourhoods, historic tram corridors and Tagus waterfront.",
+      "intro": "Lisbon is built across hills beside the Tagus estuary. Its districts feel different at street level: Baixa is a central grid of squares and shopping streets, Alfama climbs through older lanes, and Belém places major monuments within a wider riverside setting.",
+      "parent": "/destinations/countries/portugal/",
+      "sections": [
+        {
+          "heading": "Explore by area",
+          "paragraphs": [
+            "Baixa and the waterfront around Praça do Comércio are useful orientation points for a first walk. From the centre, streets rise towards viewpoints and the castle area, so comfortable shoes and time for gradients make a difference.",
+            "Alfama is a district of narrow lanes, local homes, small squares and fado associations. Visit with care: it is also a residential neighbourhood. Keep noise low, do not block doorways and ask before photographing people.",
+            "Belém extends the city experience westward along the river, with major monuments and open waterfront space. Treat it as a separate half-day or day grouping rather than squeezing it between several hill districts."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Portugal country guide",
+              "description": "Context for the coast, islands and regions beyond the capital",
+              "href": "/destinations/countries/portugal/"
+            },
+            {
+              "title": "Portugal coastal towns itinerary",
+              "description": "A route that uses Lisbon as one part of a wider Atlantic journey",
+              "href": "/itineraries/portugal-coast-week/"
+            }
+          ]
+        },
+        {
+          "heading": "Trams and city movement",
+          "paragraphs": [
+            "Lisbon's historic tram routes pass through some of its older quarters. Visit Portugal describes Tram 28 as connecting Martim Moniz with Campo de Ourique via areas including Graça and Alfama. It is both transport and a popular visitor experience, so expect shared space and possible crowding.",
+            "For a smoother day, combine walking with metro, bus, tram or rail where appropriate. Check current operator routes, service changes, ticket rules and accessibility information before travelling; steep streets and historic vehicles may not suit every mobility need."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Food, viewpoints and everyday life",
+          "paragraphs": [
+            "Local cafés, markets and neighbourhood restaurants are part of Lisbon's texture. Try regional specialities where they are made and sold, but avoid assuming that one famous dish or street represents the city's whole food culture.",
+            "Viewpoints can be busy, especially around sunset. Keep access paths open, respect private terraces and homes, and allow time to discover quieter streets away from the busiest photo stops."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Visit Portugal — Lisbon by Tram",
+          "url": "https://www.visitportugal.com/en/destinos/lisboa-regiao/320317"
+        },
+        {
+          "title": "Visit Portugal — What to do near Lisbon",
+          "url": "https://www.visitportugal.com/en/destinos/lisboa-regiao/318533"
+        },
+        {
+          "title": "Visit Portugal — About Portugal",
+          "url": "https://www.visitportugal.com/en/content/about-portugal"
+        }
+      ]
+    },
+    {
+      "path": "/destinations/countries/morocco/cities/marrakech/",
+      "type": "city",
+      "title": "Marrakech city guide",
+      "description": "Explore Marrakech through its medina, monumental architecture, gardens and changing public life.",
+      "intro": "Marrakech grew into a major political and cultural centre under the Almoravids in the eleventh century. Its medina, inscribed on the UNESCO World Heritage List in 1985, brings together ramparts, gates, religious landmarks, palaces, gardens, souks and long-standing craft traditions.",
+      "parent": "/destinations/countries/morocco/",
+      "sections": [
+        {
+          "heading": "Start with the medina",
+          "paragraphs": [
+            "The medina is a network of lanes and quarters rather than a single attraction. Jemaa el-Fna is a major public gathering place; its atmosphere changes through the day and into the evening. The Koutoubia Mosque and minaret are prominent landmarks in the surrounding cityscape.",
+            "The souks are working commercial spaces. Move with awareness, keep entrances clear and treat shopkeepers and craftspeople as people at work. If you want to photograph a person or workshop, ask first and respect a refusal."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Marrakech medina experiences",
+              "description": "A curated overview of architecture, markets and public places",
+              "href": "/things-to-do/morocco/marrakech/"
+            },
+            {
+              "title": "Morocco country guide",
+              "description": "Understand the country's geography beyond its best-known city",
+              "href": "/destinations/countries/morocco/"
+            }
+          ]
+        },
+        {
+          "heading": "Architecture and gardens",
+          "paragraphs": [
+            "The UNESCO description identifies major places including the Koutoubia Mosque, the Kasbah, ramparts, monumental gates, Badiâ Palace, Bahia Palace, the Saadian Tombs and the Menara water feature and pavilion. Each gives a different perspective on the city's changing history.",
+            "Gardens offer a different rhythm from the dense medina. When visiting religious or cultural sites, check access rules, opening information and photography restrictions from the official venue or local authority before you go."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Move thoughtfully through the city",
+          "paragraphs": [
+            "Heat, sun and the density of the old city can make a slower pace more comfortable. Plan breaks, carry water and confirm local conditions for the dates you travel.",
+            "Use current, trusted local transport information for journeys beyond the medina. This guide does not state live opening hours, ticket prices or availability; confirm those details directly with venues."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "UNESCO — Medina of Marrakesh",
+          "url": "https://whc.unesco.org/en/list/331"
+        },
+        {
+          "title": "Visit Morocco — Medina in Marrakech",
+          "url": "https://www.visitmorocco.com/en/travel/marrakech/medina"
+        }
+      ]
+    },
+    {
+      "path": "/itineraries/",
+      "type": "itinerary-index",
+      "title": "Thoughtful travel itineraries",
+      "description": "Browse flexible route ideas that leave room for local discovery and realistic travel days.",
+      "intro": "An itinerary should help you understand the shape of a trip, not force every hour into a timetable. These routes are editorial starting points; confirm current transport, opening information and seasonal conditions before booking.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "Choose a route",
+          "paragraphs": [
+            "Each itinerary connects places with a clear geographic or thematic logic. The suggested sequence is intended to help with planning, not to guarantee current services, journey times or availability."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "A week among Portugal's coastal towns",
+              "description": "A flexible route linking Lisbon with nearby Atlantic settings",
+              "href": "/itineraries/portugal-coast-week/"
+            },
+            {
+              "title": "Japan by rail: city to countryside",
+              "description": "A route focused on urban arrival, Kyoto and a slower regional excursion",
+              "href": "/itineraries/japan-by-rail/"
+            }
+          ]
+        },
+        {
+          "heading": "Make the route your own",
+          "paragraphs": [
+            "Check transfer points and service schedules with the relevant operators. Allow margin around long journeys, consider luggage and mobility needs, and avoid stacking multiple distant attractions into one day.",
+            "Use destination guides to understand the places along the way. A route is stronger when it gives each stop enough time to feel distinct."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/itineraries/portugal-coast-week/",
+      "type": "itinerary",
+      "title": "A week among Portugal's coastal towns",
+      "description": "A flexible seven-day route connecting Lisbon with Atlantic viewpoints, historic towns and coastal time.",
+      "intro": "This seven-day outline starts in Lisbon and uses the capital as a base for understanding Portugal's relationship with the Atlantic. It is intentionally flexible: choose fewer stops if you prefer longer stays, and verify current rail, bus and road connections before setting dates.",
+      "parent": "/itineraries/",
+      "sections": [
+        {
+          "heading": "Days 1–2 · Lisbon and the Tagus",
+          "paragraphs": [
+            "Use the first days to orient yourself in Baixa, Alfama and the riverside districts. Lisbon's hills and historic tram corridors reward walking in small geographic groups rather than attempting to see every quarter in one circuit.",
+            "Keep one open period for a museum, viewpoint or neighbourhood meal that catches your interest. The point is to begin the journey with context, not to treat the city as a checklist."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Days 3–4 · Coast and nearby heritage",
+          "paragraphs": [
+            "Choose a coastal excursion such as Cascais or a visit to Sintra according to your interests and the current transport options. These places offer different experiences: one more closely tied to the shore, the other to historic estates and a distinctive landscape.",
+            "Do not try to combine every nearby town in one day. Check visitor information and transport operators for service patterns, timed entry and seasonal demand."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Days 5–6 · Choose a slower coastal base",
+          "paragraphs": [
+            "For a quieter continuation, select one coastal town or region and stay long enough to explore its waterfront, local food and surrounding landscape. Ericeira, Peniche or another Atlantic stop can suit different interests; the best choice depends on the season and the transport you are prepared to use.",
+            "If you prefer not to move accommodation, remain in Lisbon and choose day trips. A slower route is measured by the time you spend understanding a place, not by the number of pins on a map."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Day 7 · Return and reflect",
+          "paragraphs": [
+            "Keep the final day light enough for your departure arrangements. Confirm the route to your airport or onward station, allow a generous buffer and avoid a distant excursion before a fixed departure.",
+            "Use the Portugal country and Lisbon city guides to refine the places you want to include. This outline does not provide live fares, timetables or ticket availability."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Portugal country guide",
+              "description": "Regional context and coastal geography",
+              "href": "/destinations/countries/portugal/"
+            },
+            {
+              "title": "Lisbon city guide",
+              "description": "Neighbourhoods and local movement",
+              "href": "/destinations/countries/portugal/cities/lisbon/"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Visit Portugal — About Portugal",
+          "url": "https://www.visitportugal.com/en/content/about-portugal"
+        },
+        {
+          "title": "Visit Portugal — What to do near Lisbon",
+          "url": "https://www.visitportugal.com/en/destinos/lisboa-regiao/318533"
+        }
+      ]
+    },
+    {
+      "path": "/itineraries/japan-by-rail/",
+      "type": "itinerary",
+      "title": "Japan by rail: city to countryside",
+      "description": "A flexible rail-led itinerary connecting a major city arrival with Kyoto and a slower regional day.",
+      "intro": "Japan's rail network makes it possible to connect major cities with regional destinations, but the best route depends on where you arrive and how much time you have. This outline keeps Kyoto central and adds a slower excursion without prescribing unverified train times or fares.",
+      "parent": "/itineraries/",
+      "sections": [
+        {
+          "heading": "Days 1–2 · Arrive and orient",
+          "paragraphs": [
+            "Use the first two days in your arrival city to adjust to the time difference and learn the local transport system. Group visits by neighbourhood and leave room for an ordinary meal, a market or a walk beyond the busiest visitor streets.",
+            "Avoid booking a tight onward connection immediately after a long-haul arrival. Check station access and ticket conditions with the rail operator."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Days 3–5 · Kyoto by area",
+          "paragraphs": [
+            "Travel onward to Kyoto and explore the city in geographic groups. Gion and Higashiyama bring together historic streets, temples, shrines and gardens; Sagano and Arashiyama provide a western landscape of bamboo, river, bridge and temple settings.",
+            "The UNESCO Historic Monuments of Ancient Kyoto property covers seventeen components across Kyoto, Uji and Otsu. It is more realistic to choose a small group of sites than to try to see the entire property in a short stay."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Day 6 · A slower regional excursion",
+          "paragraphs": [
+            "Use a day for a regional setting such as Ohara, Uji or another destination that suits your interests and current transport connections. Check local services and the time needed to return before you commit to a late-day plan.",
+            "Keep the excursion focused. A countryside day should offer time for the landscape and local context rather than a rushed sequence of distant stops."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Day 7 · Flexible departure",
+          "paragraphs": [
+            "Return to your departure city or continue onward according to your ticket and accommodation plan. Confirm reserved-seat requirements, transfer times and luggage arrangements directly with the relevant railway company.",
+            "Japan has distinct seasonal and holiday travel peaks. Recheck service information for your actual travel dates."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Japan country guide",
+              "description": "Seasonality, regional geography and rail context",
+              "href": "/destinations/countries/japan/"
+            },
+            {
+              "title": "Kyoto city guide",
+              "description": "District-based planning and heritage context",
+              "href": "/destinations/countries/japan/cities/kyoto/"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Japan National Tourism Organization — Travel planning tips",
+          "url": "https://www.japan.travel/en/gc/tips/"
+        },
+        {
+          "title": "UNESCO — Historic Monuments of Ancient Kyoto",
+          "url": "https://whc.unesco.org/en/list/688"
+        }
+      ]
+    },
+    {
+      "path": "/articles/",
+      "type": "article-index",
+      "title": "Travel journal",
+      "description": "Read original TravelGuide stories on seasonality, thoughtful travel days and understanding the character of a place.",
+      "intro": "The travel journal explores the decisions and observations that shape a journey. These articles are editorial pieces, separate from geographic destination pages and structured itineraries.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "Read the latest stories",
+          "paragraphs": [
+            "Use these articles for perspective and planning ideas, then follow the destination guides for place-specific context. An article may discuss more than one place, but it keeps its own editorial purpose and canonical URL."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "How to choose the right season for your trip",
+              "description": "Compare weather, local calendars, visitor demand and the experience you want",
+              "href": "/articles/choosing-the-right-season/"
+            },
+            {
+              "title": "A more thoughtful approach to travel days",
+              "description": "Make transfers and long journeys calmer and more considered",
+              "href": "/articles/thoughtful-travel-days/"
+            },
+            {
+              "title": "What makes a destination feel local?",
+              "description": "Look beyond landmarks to everyday places and practices",
+              "href": "/articles/feeling-the-place/"
+            }
+          ]
+        },
+        {
+          "heading": "How the journal is organised",
+          "paragraphs": [
+            "Articles are written to answer a distinct question or explore a specific theme. They should not simply repeat the full country or city guide. Where an article mentions a place, it links to the relevant destination page so readers can move between narrative context and practical orientation."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/articles/choosing-the-right-season/",
+      "type": "article",
+      "title": "How to choose the right season for your trip",
+      "description": "A practical framework for choosing travel dates by climate, crowds, local calendars and the experience you want.",
+      "intro": "The best time to visit is not a single month that applies to everyone. It is the period that best matches the kind of trip you want, the conditions you can comfortably travel in and the places you intend to visit.",
+      "parent": "/articles/",
+      "sections": [
+        {
+          "heading": "Start with the experience, not a headline season",
+          "paragraphs": [
+            "Decide what matters most: comfortable walking weather, mountain access, beach conditions, seasonal food, festivals or fewer visitors. Different priorities can point to different months, even within one country.",
+            "For a long or multi-region journey, compare each region separately. A season that is comfortable in one city may coincide with heavy rain, snow, heat or restricted access elsewhere."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Compare four kinds of information",
+          "paragraphs": [
+            "First, look at climate patterns rather than a single forecast. Second, check local public holidays and major events that can affect transport and accommodation. Third, understand seasonal opening or access restrictions. Finally, consider daylight and how much time you want to spend outdoors.",
+            "For Japan, the national tourism organisation notes distinct seasonal experiences and busy domestic travel periods including Golden Week, Obon and New Year. Use current local guidance for your actual dates rather than relying on a generic calendar."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Use the destination as your example",
+          "paragraphs": [
+            "On the Amalfi Coast, the experience of walking coastal towns, using local transport and finding quieter streets can change with demand and seasonal service patterns. The right time depends on whether you prioritise atmosphere, comfortable outdoor time or a quieter visit.",
+            "Portugal's official tourism information describes a long Atlantic coast with different conditions between north and south. A country-level label such as 'summer' is not enough to plan every stop."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Portugal country guide",
+              "description": "Coastal and regional context",
+              "href": "/destinations/countries/portugal/"
+            },
+            {
+              "title": "Japan country guide",
+              "description": "Seasonality and busy periods",
+              "href": "/destinations/countries/japan/"
+            },
+            {
+              "title": "Portugal coastal route",
+              "description": "A flexible route whose stops can change with your dates",
+              "href": "/itineraries/portugal-coast-week/"
+            }
+          ]
+        },
+        {
+          "heading": "Before you commit",
+          "paragraphs": [
+            "Check current forecasts closer to departure, confirm transport timetables and look at official local event calendars. Keep alternatives for weather-sensitive activities and avoid non-refundable commitments until the main constraints are understood."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Japan National Tourism Organization — FAQ",
+          "url": "https://www.japan.travel/en/faq/"
+        },
+        {
+          "title": "Visit Portugal — About Portugal",
+          "url": "https://www.visitportugal.com/en/content/about-portugal"
+        }
+      ]
+    },
+    {
+      "path": "/articles/thoughtful-travel-days/",
+      "type": "article",
+      "title": "A more thoughtful approach to travel days",
+      "description": "Simple ways to make transfer days calmer, less wasteful and more connected to the places along the way.",
+      "intro": "A travel day is part of the journey, not just a gap between two destinations. A little preparation can reduce avoidable stress while leaving room for the unexpected.",
+      "parent": "/articles/",
+      "sections": [
+        {
+          "heading": "Plan the essentials, then leave margin",
+          "paragraphs": [
+            "Check the departure station or terminal, ticket conditions, platform or check-in information and the route from your accommodation. Save the operator's official service page so you can confirm updates on the day.",
+            "Avoid planning a major attraction immediately before or after a long transfer. Build in time for queues, navigation, meals and changes to service. A generous buffer is often more valuable than an overfilled schedule."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Pack for access, not just capacity",
+          "paragraphs": [
+            "Keep travel documents, medication you already use, essential chargers, water and a light layer easy to reach. Place items needed at security or ticket checks where they can be accessed without unpacking the whole bag.",
+            "For rail journeys, check luggage rules and station accessibility with the operator. Station layouts and step-free access vary, so do not assume a transfer is accessible because the train itself is."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Travel with the place in mind",
+          "paragraphs": [
+            "Use refillable items where local water guidance makes that appropriate, carry reusable bags and choose local services when they fit the route and your needs. Avoid treating a community as scenery during a short stop.",
+            "A transfer through a city can become a meaningful visit if you have enough time to leave the station area responsibly. Never risk a booked connection for a rushed excursion."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Japan National Tourism Organization — Travel planning tips",
+          "url": "https://www.japan.travel/en/gc/tips/"
+        },
+        {
+          "title": "Switzerland Tourism — Interlaken",
+          "url": "https://www.myswitzerland.com/en-us/destinations/interlaken"
+        }
+      ]
+    },
+    {
+      "path": "/articles/feeling-the-place/",
+      "type": "article",
+      "title": "What makes a destination feel local?",
+      "description": "Look beyond a checklist of landmarks and pay attention to the everyday places, crafts and rhythms that shape a neighbourhood.",
+      "intro": "A place begins to make sense when you notice more than its headline attractions. Streets, markets, public spaces, working crafts and daily routines show how people use a neighbourhood now as well as how it developed over time.",
+      "parent": "/articles/",
+      "sections": [
+        {
+          "heading": "Notice everyday settings",
+          "paragraphs": [
+            "Spend time in ordinary public spaces: a market street, riverside path, neighbourhood square or local café. Watch how the space works before deciding what to photograph or how long to stay.",
+            "A popular place is not automatically a staged experience. Treat residents, workers and other visitors with the same courtesy you would expect at home. Ask before photographing people and respect restrictions in religious or private spaces."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Follow craft and architecture with context",
+          "paragraphs": [
+            "In Kyoto, traditional townhouses, gardens and craft districts can reveal layers of building and design. The Japan National Tourism Organization highlights Gion and Higashiyama for preserved townscapes and locally made crafts, including ceramics around Kiyomizu.",
+            "In Marrakech, the medina's souks, traditional trades, houses and public spaces are part of a living historic urban fabric. UNESCO's description helps explain why the city's heritage is about more than an individual monument."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Be a considerate guest",
+          "paragraphs": [
+            "Learn a few local words where possible, follow rules about footwear or dress, and ask before entering courtyards or photographing a workshop. Buy directly from craftspeople when you can understand what is being made and how it is sold.",
+            "Do not demand an 'authentic' performance from people going about their daily lives. Curiosity works best when it is paired with humility and respect."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Japan National Tourism Organization — Gion and Higashiyama",
+          "url": "https://www.japan.travel/en/destinations/kansai/kyoto/gion-and-higashiyama/"
+        },
+        {
+          "title": "UNESCO — Medina of Marrakesh",
+          "url": "https://whc.unesco.org/en/list/331"
+        }
+      ]
+    },
+    {
+      "path": "/travel-styles/",
+      "type": "style-index",
+      "title": "Find your travel style",
+      "description": "Explore different ways to shape a trip, from slower journeys and outdoor time to culture and food.",
+      "intro": "Travel style describes how you want to experience a place. It is not a fixed traveller identity: one journey can combine several approaches, and the right balance depends on the destination and people travelling with you.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "Choose an approach",
+          "paragraphs": [
+            "Use these guides as planning lenses. They offer questions and practical considerations rather than rules about what a 'real' traveller should do."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Slow travel",
+              "description": "Stay longer, reduce unnecessary transfers and build local context",
+              "href": "/travel-styles/slow-travel/"
+            },
+            {
+              "title": "Outdoors and nature",
+              "description": "Prepare for landscapes, weather and responsible access",
+              "href": "/travel-styles/outdoors/"
+            },
+            {
+              "title": "Culture and heritage",
+              "description": "Approach living traditions and historic places with care",
+              "href": "/travel-styles/culture/"
+            },
+            {
+              "title": "Food journeys",
+              "description": "Understand regional food and the people behind it",
+              "href": "/travel-styles/food/"
+            }
+          ]
+        },
+        {
+          "heading": "Combine styles around a place",
+          "paragraphs": [
+            "A visit to Kyoto might combine heritage, food and slower neighbourhood walks. A trip around Interlaken may prioritise outdoor landscapes while still allowing time in lakeside towns. Match your approach to local conditions and the needs of your group."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/travel-styles/slow-travel/",
+      "type": "style",
+      "title": "Slow travel: take the longer view",
+      "description": "Build trips around longer stays, thoughtful transport choices and time to understand local places.",
+      "intro": "Slow travel is not simply moving slowly. It is a planning approach that gives a destination enough time to make sense, reduces unnecessary movement and encourages more deliberate choices about where money and attention go.",
+      "parent": "/travel-styles/",
+      "sections": [
+        {
+          "heading": "Stay long enough to notice",
+          "paragraphs": [
+            "Choose fewer bases and allow time for ordinary routines: a morning walk, a local market, a neighbourhood meal or a return visit to somewhere that interested you. Longer stays can make it easier to move beyond a checklist of sights.",
+            "Do not assume that slower automatically means cheaper or more sustainable. The right decision depends on distance, available transport, accommodation, local impact and your personal constraints."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Make the route part of the experience",
+          "paragraphs": [
+            "Where practical, compare rail, bus, ferry and walking routes with short-hop flights or repeated car transfers. Consider the full journey, including access to stations and the time needed to reach the next place.",
+            "A rail journey across Japan or a coastal stay in Portugal can offer a different perspective from rushing through several destinations. Use route guides as starting points and verify current services."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Japan by rail itinerary",
+              "description": "A route with time for Kyoto and a regional excursion",
+              "href": "/itineraries/japan-by-rail/"
+            },
+            {
+              "title": "Portugal coastal itinerary",
+              "description": "A flexible week with room for longer stays",
+              "href": "/itineraries/portugal-coast-week/"
+            },
+            {
+              "title": "Thoughtful travel days",
+              "description": "Make the transitions count",
+              "href": "/articles/thoughtful-travel-days/"
+            }
+          ]
+        },
+        {
+          "heading": "Respect local pace",
+          "paragraphs": [
+            "Support locally owned services where appropriate, follow community rules and avoid treating residential areas as open sets. Ask permission before photographing people or private spaces.",
+            "Leave gaps in the itinerary. An open afternoon is not wasted time; it can make a journey more adaptable and less extractive."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/travel-styles/outdoors/",
+      "type": "style",
+      "title": "Outdoor travel and nature",
+      "description": "Plan outdoor experiences with realistic preparation, respect for local access rules and attention to changing conditions.",
+      "intro": "Outdoor travel can connect a trip to landscapes in a memorable way, but the right plan starts with the actual route, season, ability level and local guidance. Scenic photographs are not a substitute for checking conditions.",
+      "parent": "/travel-styles/",
+      "sections": [
+        {
+          "heading": "Match the route to the people travelling",
+          "paragraphs": [
+            "Check distance, elevation, surface, exposure, technical difficulty and likely weather before choosing a hike or outdoor activity. Use official trail or park information rather than relying on a social media description.",
+            "For mountain destinations such as the Interlaken region, conditions can change quickly with elevation. Confirm lift and trail operation, weather warnings and any seasonal restrictions before setting out."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Travel responsibly outdoors",
+          "paragraphs": [
+            "Stay on marked routes where required, take rubbish away, respect wildlife distance and follow local fire, water and camping rules. Protected landscapes are not a place to improvise access or remove natural material.",
+            "For water or adventure sports, choose appropriately licensed and insured operators and understand the activity's requirements. Do not attempt activities beyond your training or current conditions."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Interlaken outdoor experiences",
+              "description": "Lakes, mountain excursions and hiking context",
+              "href": "/things-to-do/switzerland/interlaken/"
+            },
+            {
+              "title": "Choosing the right season",
+              "description": "Match weather and access to your plans",
+              "href": "/articles/choosing-the-right-season/"
+            }
+          ]
+        },
+        {
+          "heading": "Prepare beyond the essentials",
+          "paragraphs": [
+            "Carry suitable footwear, layers, sun and rain protection, water and a route plan appropriate to the activity. Tell someone your plan for remote outings and understand local emergency procedures.",
+            "A city-based visitor may be able to reach an outdoor excursion by public transport, but the final access and return schedule still need checking."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/travel-styles/culture/",
+      "type": "style",
+      "title": "Travel through culture and heritage",
+      "description": "Approach historic places, living traditions, architecture and craft with curiosity and respect.",
+      "intro": "Culture-led travel is strongest when it connects places and objects with the people, histories and practices that give them meaning. It should not turn living communities into a performance for visitors.",
+      "parent": "/travel-styles/",
+      "sections": [
+        {
+          "heading": "Read places in context",
+          "paragraphs": [
+            "Historic buildings and urban districts carry different meanings across time. Use museum, community and heritage interpretation to understand what you are seeing, and avoid assuming that one monument explains an entire society.",
+            "Kyoto's historic monuments include religious architecture and garden design across a group of seventeen sites. Marrakech's medina includes a living urban fabric of streets, houses, souks and traditional trades."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Support living culture",
+          "paragraphs": [
+            "Workshops, markets, food traditions and local arts can be meaningful encounters when participation is welcomed and fairly compensated. Ask how an experience is organised and whether photography or participation has restrictions.",
+            "At religious sites, follow local dress and behaviour guidance. Do not touch sacred objects or enter restricted areas, and keep conversations respectful."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Kyoto city guide",
+              "description": "Historic districts and cultural landscapes",
+              "href": "/destinations/countries/japan/cities/kyoto/"
+            },
+            {
+              "title": "Marrakech city guide",
+              "description": "Medina, architecture and everyday public life",
+              "href": "/destinations/countries/morocco/cities/marrakech/"
+            },
+            {
+              "title": "What makes a place feel local?",
+              "description": "A guide to observation and respectful curiosity",
+              "href": "/articles/feeling-the-place/"
+            }
+          ]
+        },
+        {
+          "heading": "Look beyond the famous landmark",
+          "paragraphs": [
+            "Pair a major heritage site with nearby streets, a local museum or a craft setting that adds context. Avoid packing too many sites into one day; thoughtful attention is more useful than a long list of photographs."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/travel-styles/food/",
+      "type": "style",
+      "title": "Food journeys and local flavour",
+      "description": "Explore a destination through regional food, markets, ingredients and the people who make and serve it.",
+      "intro": "Food can help explain geography, trade, migration, agriculture and family tradition. A thoughtful food journey looks beyond a famous dish to the regional context and people behind it.",
+      "parent": "/travel-styles/",
+      "sections": [
+        {
+          "heading": "Start with the region",
+          "paragraphs": [
+            "Ask what ingredients are grown, caught or produced nearby, and how dishes change between coast, mountains and city. A menu can be an introduction to a place, but one meal should not be treated as a complete picture of its cuisine.",
+            "Markets and neighbourhood cafés can be good places to observe everyday food culture. Follow local rules, ask before photographing vendors and do not block working spaces."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Be clear about your needs",
+          "paragraphs": [
+            "If you have dietary requirements or allergies, communicate them clearly and confirm ingredients directly with the person preparing the food. Translation cards may help, but they do not remove the need to check possible cross-contact.",
+            "Choose food experiences that are transparent about what is included and how producers or hosts are compensated. Avoid activities that exploit animals or communities."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Lisbon city guide",
+              "description": "Neighbourhood cafés, local streets and the riverside city",
+              "href": "/destinations/countries/portugal/cities/lisbon/"
+            },
+            {
+              "title": "Marrakech city guide",
+              "description": "Markets, public life and local food context",
+              "href": "/destinations/countries/morocco/cities/marrakech/"
+            },
+            {
+              "title": "Travel through culture",
+              "description": "Connect food with history and place",
+              "href": "/travel-styles/culture/"
+            }
+          ]
+        },
+        {
+          "heading": "Leave room for discovery",
+          "paragraphs": [
+            "A food itinerary does not need to be a sequence of reservations. Keep time for a market, bakery or neighbourhood place you find along the way, and check opening information directly before making a special trip."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/travel-tips/",
+      "type": "tips-index",
+      "title": "Travel planning tips",
+      "description": "Practical guidance for choosing dates, moving between places and packing for the trip you are taking.",
+      "intro": "A useful trip plan balances reliable information with enough flexibility to respond to local conditions. These focused guides cover three common planning decisions; they are not a substitute for official rules or current operator information.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "Plan the big decisions",
+          "paragraphs": [
+            "Start with dates and route shape, then choose transport and packing around the actual places you will visit."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "When to go",
+              "description": "Compare climate, seasonal demand and local calendars",
+              "href": "/travel-tips/when-to-go/"
+            },
+            {
+              "title": "Getting around",
+              "description": "Choose between rail, road, local transport and walking",
+              "href": "/travel-tips/getting-around/"
+            },
+            {
+              "title": "Travel lighter",
+              "description": "Pack for the route, weather and activities",
+              "href": "/travel-tips/travel-light/"
+            }
+          ]
+        },
+        {
+          "heading": "Check changing details",
+          "paragraphs": [
+            "Entry requirements, service schedules, attraction access and local advisories can change. Confirm these directly with official government, destination and operator sources close to departure."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/travel-tips/when-to-go/",
+      "type": "tip",
+      "title": "When should you travel?",
+      "description": "A repeatable way to compare weather, seasonal experiences, visitor demand and local calendars.",
+      "intro": "The right travel dates depend on what you want to do and the conditions you are comfortable with. Start with the destination's climate patterns, then check events, access and expected visitor demand for the exact places on your route.",
+      "parent": "/travel-tips/",
+      "sections": [
+        {
+          "heading": "Compare more than temperature",
+          "paragraphs": [
+            "Look at rainfall, humidity, daylight, altitude and seasonal closures as well as average temperature. Mountain trails, islands and coastal transport can be affected by conditions that a city forecast does not show.",
+            "Consider school holidays, public holidays and major festivals. These can affect availability and local movement even when the weather is attractive."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Use regional information",
+          "paragraphs": [
+            "Japan experiences distinct seasons, but conditions vary from snowy Hokkaido to milder Okinawa. Portugal's Atlantic coast also changes between northern and southern areas. Avoid using a country-wide month label as a precise forecast.",
+            "For multi-stop trips, create a simple table of each destination, intended activities, seasonal constraints and official source. Recheck near departure."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Japan country guide",
+              "description": "Seasonal variety and major domestic travel periods",
+              "href": "/destinations/countries/japan/"
+            },
+            {
+              "title": "Portugal country guide",
+              "description": "Atlantic geography and regional differences",
+              "href": "/destinations/countries/portugal/"
+            },
+            {
+              "title": "Choosing the right season",
+              "description": "A deeper decision framework",
+              "href": "/articles/choosing-the-right-season/"
+            }
+          ]
+        },
+        {
+          "heading": "Keep a flexible alternative",
+          "paragraphs": [
+            "Plan one indoor or lower-exposure alternative for weather-sensitive days. If a trail, ferry or mountain service is closed, follow local instructions rather than trying to find an unofficial workaround."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/travel-tips/getting-around/",
+      "type": "tip",
+      "title": "How to get around",
+      "description": "Compare transport options by route, total journey and local access rather than by headline speed alone.",
+      "intro": "Transport decisions shape the feel and feasibility of a trip. Compare the full journey from accommodation to arrival point, including transfers, luggage, accessibility and the time needed at each end.",
+      "parent": "/travel-tips/",
+      "sections": [
+        {
+          "heading": "Choose by geography",
+          "paragraphs": [
+            "Rail can work well between connected urban centres; buses may reach smaller towns; ferries can be essential for islands; walking is often the best way to understand a compact historic district. A car may be useful in some rural areas but a burden in dense city centres.",
+            "Do not compare only the time on the vehicle. Include station access, waiting, transfers, ticket rules, parking and the final walk to your destination."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Confirm with operators",
+          "paragraphs": [
+            "Use official railway, bus, ferry and local transit sources for current routes, fares, service changes and accessibility. Check whether a ticket must be reserved and whether luggage, bicycles or mobility equipment have special rules.",
+            "In Kyoto, rail lines serve the Arashiyama area from several directions. In Lisbon, trams are part of the historic city transport experience. Both require choosing the route that fits your exact starting point."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Japan by rail itinerary",
+              "description": "A sample route with intercity rail and local exploration",
+              "href": "/itineraries/japan-by-rail/"
+            },
+            {
+              "title": "Kyoto city guide",
+              "description": "District-based movement and transport context",
+              "href": "/destinations/countries/japan/cities/kyoto/"
+            },
+            {
+              "title": "Lisbon city guide",
+              "description": "Tram corridors, hills and neighbourhood movement",
+              "href": "/destinations/countries/portugal/cities/lisbon/"
+            }
+          ]
+        },
+        {
+          "heading": "Accessibility and contingency",
+          "paragraphs": [
+            "Check step-free access, station lifts, platform gaps and vehicle boarding arrangements before travel if these matter to your group. Have an alternative for disruptions and allow enough time to change modes safely."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/travel-tips/travel-light/",
+      "type": "tip",
+      "title": "How to pack lighter",
+      "description": "Pack around the route, season and activities instead of preparing for every possible scenario.",
+      "intro": "A lighter bag makes transfers and stairs easier, but the best packing list depends on the climate, accommodation, transport and activities planned. Start with the itinerary, then remove items that do not serve it.",
+      "parent": "/travel-tips/",
+      "sections": [
+        {
+          "heading": "Build a route-based list",
+          "paragraphs": [
+            "List the expected weather and activities for each stop. Choose clothes that work in layers and can be combined, and plan laundry if the trip is long enough to make that practical.",
+            "Footwear deserves special attention. Historic districts may involve uneven paving and hills, while mountain outings need footwear suited to the actual route. Do not use ordinary city shoes as a substitute for appropriate trail equipment."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Keep essentials accessible",
+          "paragraphs": [
+            "Keep travel documents, payment cards, medication you already use and essential chargers where you can reach them. Carry copies or secure digital backups where appropriate, but protect sensitive information.",
+            "Check airline, rail and ferry baggage rules before packing. Size and weight limits vary by operator and fare class."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Pack with local conditions in mind",
+          "paragraphs": [
+            "Sun protection, rain layers, modest clothing for sites with dress guidance and a reusable water bottle may be useful depending on destination and local conditions. Confirm whether tap water is suitable before relying on it.",
+            "Avoid carrying specialist gear for an activity unless you have checked whether it can be hired safely and appropriately at the destination."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/resources/",
+      "type": "resource-index",
+      "title": "Travel resources and official information",
+      "description": "A curated set of official sources for destination research, heritage context and practical planning.",
+      "intro": "These resources help verify facts that change or depend on your nationality, route and travel dates. TravelGuide's articles provide orientation; official authorities and operators remain the source for current requirements and services.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "Destination and national tourism sources",
+          "paragraphs": [
+            "Use national tourism organisations for destination context, then confirm practical arrangements directly with local operators and government services."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Japan National Tourism Organization",
+              "description": "Destination information, seasonal planning and travel tips",
+              "href": "https://www.japan.travel/en/"
+            },
+            {
+              "title": "Visit Portugal",
+              "description": "Official information about Portugal's regions and visitor experiences",
+              "href": "https://www.visitportugal.com/en"
+            },
+            {
+              "title": "Visit Morocco",
+              "description": "Destination context and medina information for Morocco",
+              "href": "https://www.visitmorocco.com/en"
+            },
+            {
+              "title": "Incredible India",
+              "description": "Official destination and state/territory browse information",
+              "href": "https://www.incredibleindia.gov.in/en"
+            },
+            {
+              "title": "Switzerland Tourism",
+              "description": "Regional and activity context for Switzerland",
+              "href": "https://www.myswitzerland.com/en-us/"
+            }
+          ]
+        },
+        {
+          "heading": "Heritage and conservation references",
+          "paragraphs": [
+            "World Heritage information explains why a place is recognised and what attributes contribute to its significance. Check local management and visitor rules as well; an international designation does not replace local regulations."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "UNESCO World Heritage Centre",
+              "description": "Official descriptions of listed cultural and natural properties",
+              "href": "https://whc.unesco.org/"
+            },
+            {
+              "title": "UNESCO — Historic Monuments of Ancient Kyoto",
+              "description": "Seventeen component parts across Kyoto, Uji and Otsu",
+              "href": "https://whc.unesco.org/en/list/688"
+            },
+            {
+              "title": "UNESCO — Medina of Marrakesh",
+              "description": "Historic urban fabric and cultural significance",
+              "href": "https://whc.unesco.org/en/list/331"
+            }
+          ]
+        },
+        {
+          "heading": "Planning checklist",
+          "paragraphs": [
+            "Before departure, verify entry and transit requirements with the government authorities relevant to your passport and route; check transport schedules with the operator; confirm attraction details with the venue; and review current local advisories.",
+            "For focused planning help, read the TravelGuide pages on dates, transport and packing."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/things-to-do/",
+      "type": "things-index",
+      "title": "Things to do and local experiences",
+      "description": "Explore a small set of curated activity guides that connect experiences to their geographic context.",
+      "intro": "A things-to-do page is a curated editorial collection, not a live booking catalogue. TravelGuide currently features two place-based collections; each focuses on the setting and experience rather than claiming real-time availability.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "Explore current collections",
+          "paragraphs": [
+            "Each collection links to a city or region and explains why its experiences belong together. Details such as access, opening times and operating conditions should always be confirmed with the venue or local operator."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Explore Marrakech's medina",
+              "description": "Architecture, public spaces, craft traditions and historic lanes",
+              "href": "/things-to-do/morocco/marrakech/"
+            },
+            {
+              "title": "Explore outdoors around Interlaken",
+              "description": "Lakes, mountain excursions and trail planning",
+              "href": "/things-to-do/switzerland/interlaken/"
+            }
+          ]
+        },
+        {
+          "heading": "Choose experiences responsibly",
+          "paragraphs": [
+            "Check the physical demands, safety requirements and local rules for an activity before taking part. Prefer operators who explain their qualifications, equipment and environmental practices."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/things-to-do/morocco/marrakech/",
+      "type": "things-collection",
+      "title": "Things to do in Marrakech's medina",
+      "description": "A considered introduction to Marrakech's historic medina, architecture, public spaces and craft traditions.",
+      "intro": "Marrakech's medina is a living historic district. Its narrow lanes, houses, souks, monumental landmarks and public squares make the experience as much about understanding an urban place as ticking off individual sights.",
+      "parent": "/things-to-do/",
+      "sections": [
+        {
+          "heading": "Read the city through its landmarks",
+          "paragraphs": [
+            "Jemaa el-Fna is a major public gathering place whose atmosphere changes across the day. The Koutoubia Mosque and minaret are prominent features of the cityscape, while the ramparts and gates help explain the historic shape of the medina.",
+            "The Bahia Palace, Badiâ Palace and Saadian Tombs offer different perspectives on the city's architecture and political history. Check official visitor information for access, opening arrangements and any current restrictions before making a special trip."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Notice craft and trade",
+          "paragraphs": [
+            "Souks and workshops form part of the medina's working economy. Look for the relationship between materials, skills and the spaces where goods are made and sold.",
+            "If you visit a workshop, ask whether visitors are welcome and whether photography is permitted. Buy with clear expectations and respect the time and work of craftspeople."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Marrakech city guide",
+              "description": "Neighbourhood context and historic landmarks",
+              "href": "/destinations/countries/morocco/cities/marrakech/"
+            },
+            {
+              "title": "Morocco country guide",
+              "description": "A wider view of regional geography and travel context",
+              "href": "/destinations/countries/morocco/"
+            }
+          ]
+        },
+        {
+          "heading": "Move respectfully",
+          "paragraphs": [
+            "The medina is not a theme park: residents, worshippers and traders use these streets every day. Keep doorways clear, dress and behave appropriately for religious settings and be especially considerate when the area becomes busy.",
+            "UNESCO's description highlights the district as a living historic town. That perspective helps frame a visit around continuity and respect, not only photography."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "UNESCO — Medina of Marrakesh",
+          "url": "https://whc.unesco.org/en/list/331"
+        },
+        {
+          "title": "Visit Morocco — Medina in Marrakech",
+          "url": "https://www.visitmorocco.com/en/travel/marrakech/medina"
+        }
+      ]
+    },
+    {
+      "path": "/things-to-do/switzerland/interlaken/",
+      "type": "things-collection",
+      "title": "Things to do around Interlaken",
+      "description": "Explore the lakes, mountain excursions and outdoor experiences around Interlaken with practical planning context.",
+      "intro": "Interlaken lies in the Bernese Oberland between Lake Thun and Lake Brienz. It is a gateway to mountain villages and excursions in the Jungfrau region, but the best activities depend on weather, season, fitness and current transport operations.",
+      "parent": "/things-to-do/",
+      "sections": [
+        {
+          "heading": "Start with the lakes",
+          "paragraphs": [
+            "Lake Thun and Lake Brienz offer a different pace from mountain excursions. Boat journeys, lakeside walks and villages around the water can be combined with time in Interlaken itself.",
+            "Switzerland Tourism highlights destinations and excursions around both lakes, including St. Beatus Caves, Giessbach Falls, Brienz and Thun. Confirm current boat services and operating dates with the transport operator."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Choose a mountain excursion",
+          "paragraphs": [
+            "Harder Kulm, Schynige Platte and higher mountain areas offer different viewpoints and hiking possibilities. Elevation, trail grade and weather change the demands of a day outdoors; check the official local trail and lift information before setting out.",
+            "Do not assume that a route or mountain railway operates year-round. Carry suitable layers and follow local safety guidance, especially where snow, ice or exposed terrain may be present."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Outdoor travel guide",
+              "description": "Preparation, trail conditions and responsible access",
+              "href": "/travel-styles/outdoors/"
+            },
+            {
+              "title": "When to go",
+              "description": "Compare seasonal access and weather before choosing a route",
+              "href": "/travel-tips/when-to-go/"
+            }
+          ]
+        },
+        {
+          "heading": "Adventure activities and safety",
+          "paragraphs": [
+            "The wider region offers activities such as paragliding, rafting and other mountain or water sports. These have real safety requirements: use qualified operators, understand the conditions and do not participate beyond your training or comfort.",
+            "For current activity providers, safety information, transport and visitor arrangements, rely on official local tourism sources and the operator responsible for the activity."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "Switzerland Tourism — Interlaken",
+          "url": "https://www.myswitzerland.com/en-us/destinations/interlaken"
+        },
+        {
+          "title": "Switzerland Tourism — Lake Brienz",
+          "url": "https://www.myswitzerland.com/en-us/destinations/lake-brienz/"
+        }
+      ]
+    },
+    {
+      "path": "/about/",
+      "type": "static",
+      "title": "About TravelGuide",
+      "description": "Learn what TravelGuide publishes, how its guides are structured and what visitors should expect from the site.",
+      "intro": "TravelGuide is an independent static travel-guide project built around destination context, thoughtful routes and practical editorial guidance. Its aim is to help visitors understand a place before deciding how to experience it.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "Our approach",
+          "paragraphs": [
+            "We organise destination information geographically and keep articles, itineraries and activity collections as distinct editorial page types. Each published route should have its own purpose, canonical URL, breadcrumb trail and useful links.",
+            "We favour clear context over inflated claims. TravelGuide does not claim first-hand testing where none is documented, and it does not present unverified opening hours, prices or live availability as facts."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "What the site does and does not do",
+          "paragraphs": [
+            "TravelGuide is a static information website. It does not currently provide hotel inventory, ticket sales, transport reservations, visitor accounts, user comments or payment processing.",
+            "Use the official sources linked from destination pages for requirements and information that can change. Our editorial pages are starting points, not a substitute for advice from authorities or service operators."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "How coverage grows",
+          "paragraphs": [
+            "New pages are added when there is enough distinct information to make a useful guide. A place is not given a page simply to fill a map or create a longer list; some places may be mentioned within a broader page until a dedicated guide is justified."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/editorial-policy/",
+      "type": "policy",
+      "title": "Editorial policy",
+      "description": "How TravelGuide structures destination content, uses sources and handles changing travel information.",
+      "intro": "This policy explains the standards that guide TravelGuide's editorial pages. The aim is to make the purpose and limits of each guide clear so readers can judge what needs further checking.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "Research and factual care",
+          "paragraphs": [
+            "Destination facts are checked against official tourism organisations, government sources, heritage bodies and relevant local operators where available. A source link is included when it materially supports a destination-specific statement or a changing practical detail.",
+            "The presence of a source does not mean every statement on a page is guaranteed current. Recheck schedules, access rules, prices, entry requirements and advisories with the responsible authority before acting."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Originality and page purpose",
+          "paragraphs": [
+            "Destination pages explain geographic context; articles answer a distinct editorial question; itineraries describe an ordered route; and things-to-do pages curate experiences for a place. These entities should not repeat one another's full content.",
+            "Pages are written to be useful, not to create a large number of near-identical search pages. If a place or topic cannot support meaningful original material, it should not receive a thin standalone page."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Commercial transparency",
+          "paragraphs": [
+            "If paid placements, sponsorships or affiliate links are introduced, they must be clearly identified near the relevant recommendation. Editorial recommendations should not be represented as independent if a commercial relationship materially affects their selection.",
+            "TravelGuide does not claim that a destination, attraction or operator has been independently tested unless the page describes a real documented test."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Corrections and updates",
+          "paragraphs": [
+            "Travel information changes. A correction should identify the affected page and the specific claim, with a reliable source where possible. Pages should be reviewed when important linked sources change or when a time-sensitive statement is no longer reliable.",
+            "The static site currently has no visitor-submission form. A public editorial contact channel will be shown on the Contact page if one is configured."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/privacy/",
+      "type": "policy",
+      "title": "Privacy information",
+      "description": "A plain-language explanation of the data practices visible in the current static TravelGuide website.",
+      "intro": "This notice describes the current website implementation. TravelGuide is a static information site and does not currently offer visitor accounts, booking forms, payment forms, comments or newsletter sign-up forms.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "Information entered into search",
+          "paragraphs": [
+            "The destination search is implemented in browser-side JavaScript using a search index included with the page. The current code filters that bundled data in the visitor's browser and does not submit the search phrase to a TravelGuide application server.",
+            "Do not enter sensitive personal information into a destination search field. It is intended for place and guide names only."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Hosting and external services",
+          "paragraphs": [
+            "The website is served through Cloudflare Pages. Like other web hosting services, the infrastructure may process technical request information to deliver, secure and operate the site. Refer to Cloudflare's current privacy documentation for details about its processing.",
+            "The page loads web fonts from Google Fonts. Requests to that service are subject to Google's own privacy information. External links open third-party sites that have their own privacy practices."
+          ],
+          "bullets": [],
+          "cards": [
+            {
+              "title": "Cloudflare Privacy Policy",
+              "description": "Provider information about Cloudflare services",
+              "href": "https://www.cloudflare.com/privacypolicy/"
+            },
+            {
+              "title": "Google Privacy Policy",
+              "description": "Provider information for Google services",
+              "href": "https://policies.google.com/privacy"
+            }
+          ]
+        },
+        {
+          "heading": "Changes to this notice",
+          "paragraphs": [
+            "This notice should be reviewed whenever the site adds forms, analytics, accounts, comments, payments, newsletter subscriptions or other services that change what information is collected or sent.",
+            "This page is a project privacy notice, not legal advice. A qualified review is appropriate before adding data collection or commercial services."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    },
+    {
+      "path": "/contact/",
+      "type": "static",
+      "title": "Contact TravelGuide",
+      "description": "Information about contacting the TravelGuide editorial project and the current limits of its static website.",
+      "intro": "TravelGuide currently publishes static editorial guides and does not provide booking support, reservation handling or visitor accounts. No direct visitor-submission form or public editorial inbox is configured in the current site build.",
+      "parent": "/",
+      "sections": [
+        {
+          "heading": "For information about a destination",
+          "paragraphs": [
+            "Start with the relevant destination guide and follow its official source links for current access, transport, entry and visitor information. TravelGuide cannot confirm live bookings, opening status or operator availability.",
+            "For urgent travel issues, contact the relevant local authority, transport operator, accommodation provider or government service directly."
+          ],
+          "bullets": [],
+          "cards": []
+        },
+        {
+          "heading": "Editorial corrections",
+          "paragraphs": [
+            "A useful correction identifies the page URL, the specific sentence or detail in question, and a reliable source that supports the correction. Where information is time-sensitive, include the date on which the source was checked.",
+            "The current static website has no active contact form or published email address. Do not send sensitive personal, passport, payment or booking information to an address found elsewhere and assumed to belong to TravelGuide."
+          ],
+          "bullets": [],
+          "cards": []
+        }
+      ],
+      "sources": []
+    }
+  ]
+}
