@@ -59,3 +59,38 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 4. Only then change homepage references/build handling, preserving hero fetch priority, lazy loading, intrinsic width/height and responsive behavior.
 5. Run build/check and browser visual QA after integration.
 6. Create review PR only after all release gates pass; explicit approval required before merge/deploy.
+
+
+## 7. Preview SEO isolation — verification log (2026-11-15)
+
+### Cloudflare deployment evidence
+- Cloudflare Pages project: `travelguide`; configured production branch: `main`; preview deployments enabled for all branches.
+- Preview deployment ID: `e09510f2-66a3-46cd-a04f-46a44f685fc3`.
+- Deployment status: `success`; branch: `development/homepage`; deployed commit: `421028ebb0cf6fad6e24981148a006d6fb97c463`; clean source state.
+- Branch alias recorded on that deployment: `https://development-homepage.travelguide-9op.pages.dev`.
+- Production deployment record remains on `main` commit `bab89d7eb14a356dbc194557492fc8de6e980c67`; no production deploy or configuration write was performed in this verification.
+
+### Source-level SEO configuration reviewed
+- Preview build logic in `scripts/build.mjs` derives environment from Cloudflare's `CF_PAGES_BRANCH`: `main` -> `index, follow`; non-main -> `noindex, nofollow`.
+- Preview build emits `dist/_headers` with `X-Robots-Tag: noindex, nofollow`; it does not emit this preview-only headers file for main.
+- Build emits `robots.txt` with `User-agent: *` and `Allow: /`. This is intentional so crawlers can fetch HTML and observe noindex; robots.txt alone does not block indexing.
+- Preview canonical remains `https://travelguide-9op.pages.dev/` (the configured production canonical host).
+- No root `sitemap.xml` exists in the inspected source branch, and `scripts/build.mjs` does not generate a sitemap. Sitemap accessibility is not verified and remains an issue.
+
+### Public HTTP verification limitations
+- Direct HTTPS requests from the current execution container could not resolve the `*.pages.dev` hostnames.
+- Web fetches of preview and production robots/sitemap/HTML endpoints returned inaccessible/cache-miss errors.
+- Cloudflare Browser Rendering content requests were rate-limited (HTTP 429); a separate production-host request returned a network-connection-closed/DNS error. These are tooling/network failures, not evidence of the site's HTTP status.
+- Therefore actual public HTTP status, response headers, rendered robots meta, canonical tag, robots.txt body and sitemap status have **not** been independently verified. Do not mark SEO isolation complete until these are checked from an ordinary public HTTP client/browser.
+
+### Production source safety review
+- `main` source remains unchanged by this phase.
+- Main shell currently hard-codes `<meta name="robots" content="noindex, nofollow">`; production is therefore protected from indexing at source level, but production search indexing is not enabled.
+- Main `site.json` canonical remains `https://travelguide-9op.pages.dev/`.
+- Main build script emits permissive `robots.txt` (`Allow: /`) and does not generate a sitemap.
+- No source changes, deployment, or Cloudflare configuration changes were made to `main` or `research/travel-guide-blueprint`.
+
+### Outcome
+- Preview build-time noindex rules and deployment/alias identity are source/API verified.
+- Public HTTP verification is blocked; SEO isolation is **not certified complete**.
+- Remaining: fetch the live preview and production responses externally; confirm the `X-Robots-Tag` header, robots meta, canonical and robots.txt body; establish or intentionally omit sitemap; then reconcile production's current noindex directive with the desired launch indexing policy.
