@@ -46,7 +46,7 @@ Chat 2 does not implement destination detail, country/continent or itinerary/art
 - [ ] Native dimensions and crops meet the image brief or have documented approved exception.
 - [ ] Build succeeds and automated asset/link/SEO checks pass.
 - [ ] Manual desktop/tablet/mobile and keyboard QA passes.
-- [ ] Production canonical/Cloudflare settings inspected.
+- [x] Production canonical/Cloudflare project settings inspected at source/API level (public HTTP response verification remains pending).
 - [ ] Review diff/PR accepted.
 - [ ] Explicit approval before merge to `main` or deployment.
 
