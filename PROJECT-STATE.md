@@ -444,3 +444,38 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Nine legacy AI-artwork placements remain subject to editorial/spec approval or replacement.
 
 **Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.** Phase 2.9, Phase 2.10 and Chat 3 remain pending. No image binary or homepage code was changed; no MEDIA-ASSETS mutation, branch merge or production deployment was performed.
+
+## 19. Phase 2.8 — Round 4 asset recovery and legacy artwork audit (2026-11-15)
+
+### Repository inventory
+- Round 4 started from `development/homepage` at `c040d7648f99237698730f1f425a2e8565e102fc`.
+- TravelGuide branches at audit: `development/homepage` `c040d7648f99237698730f1f425a2e8565e102fc`; `development/responsive-fixes` `9e4997bfb018a34da3892f63a2939e63633462d2`; `main` `bab89d7eb14a356dbc194557492fc8de6e980c67`; `research/travel-guide-blueprint` `4e047f49cfac870d17a0347d60c2d1025f62dfd8`.
+- MEDIA-ASSETS has only `main`, at `4531d94979224daa5a3f0a6b25244e02655708e0`; 111 tracked image files in the inspected tree are WebP.
+- TravelGuide and MEDIA-ASSETS image directory histories, alternate paths, manifests, asset-index records, build path and relevant project documents were inspected.
+
+### Twelve derivative files and original-master search
+- Exact Round 2 derivative filenames recovered from committed docs: `oceania.webp`, `alpine-hiking.webp`, `marrakech-courtyard.webp`, `slow-train.webp`, `ceramic-workshop.webp`, `portugal-coast.webp`, `japan-rail.webp`, `marrakech-medina.webp`, `market-morning.webp`, `calendar-planning.webp`, `train-platform.webp`, `travel-bag.webp`.
+- All 12 derivatives exist in TravelGuide `src/assets/images/`; none is an exact-name or identical Git blob in the inspected MEDIA-ASSETS tree.
+- No original JPEG master for those 12 images was recovered from either repository or the inspected file history. Original masters recovered: **0/12**.
+- The current TravelGuide tree records the existing derivative byte lengths; the earlier mapping and photo-credit tables record previous original JPEG and derivative dimensions/bytes/SHA-256. The raw source and output bodies were not independently fetched or hashed in Round 4, so those hashes/MIME/signatures/decoded dimensions/quality metadata remain prior-session documentation, not newly reproduced evidence.
+- No exact MEDIA-ASSETS CDN destinations are registered for those 12 derivatives. The build script copies local image files into TravelGuide's branch preview under `/assets/images/`, but the derived preview URL could not be freshly tested for HTTP/MIME/body bytes this session.
+
+### Nine legacy AI-artwork placements
+- Nine slots still use seven unique AI-generated artwork binaries: Hero coast, Asia, Europe, Africa, Americas, Kyoto feature, Lisbon, Seasonal coast and Neighbourhood café.
+- All nine were individually audited for filename/path, recorded subject, specification fit, prior visual/crop evidence, size/resolution and editorial decision in HOMEPAGE-ASSET-REVIEW.md.
+- The exact seven current MEDIA-ASSETS CDN paths were identified. Round 3 had historically verified the seven unique images as successful WebP responses; Round 4 could not refresh the live network response.
+- All nine fail the current genuine-photography production requirement or exact-scene brief. No editorial keep approval exists. Replacement is recommended for all nine, with distinct photographs required for Hero vs Seasonal coast and Asia vs Kyoto feature.
+
+### Replacement sourcing
+- Nine Pexels candidate source pages and contributor names are listed in HOMEPAGE-ASSET-MAPPING.md.
+- Current Pexels terms permit commercial use and modifying/adapting downloaded content without mandatory attribution; the terms still require a context-specific check for model, property, privacy, trademark and other third-party rights. Optional contributor credit should be preserved in the project credit register.
+- Candidate pages are not approved assets: no candidate binary was acquired, hashed, converted, crop-tested or integrated. No candidate was added to the asset credit register because none entered the project.
+
+### Updated 22-slot disposition
+- 22 slots populated; 21 unique file paths; 19 unique current binary identities.
+- 12 Round 2 photographic derivatives are retained provisionally, pending independent source/derivative binary re-verification. These cover 13 slots, with the user-authorized Matterhorn image reused for Alpine Hiking and Swiss Trail.
+- Nine legacy slots require photographic replacement; nine candidate leads found, zero approved.
+- The two additional duplicate AI artwork groups (Amalfi Hero/Seasonal and Kyoto Asia/Featured Kyoto) are not approved final reuse groups and should be replaced with distinct scenes.
+- MEDIA-ASSETS current 111-file inventory has no exact derivative basename and no identical derivative Git object.
+- The current Phase 2.8 gate remains **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.9, Phase 2.10 and Chat 3 remain pending.
+- No image bytes, homepage references, HTML/CSS/JS, data manifests, Cloudflare configuration, MEDIA-ASSETS content, `main`, or research branch changed. No merge or production deployment occurred.

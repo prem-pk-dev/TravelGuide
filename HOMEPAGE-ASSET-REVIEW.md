@@ -92,3 +92,42 @@ No homepage references have been changed because public CDN delivery has not bee
 - The 12 images remain integrated on `development/homepage`; no assets or homepage code were changed in this audit. Nine legacy AI-artwork placements still require editorial/spec approval or replacement.
 
 **Disposition: BLOCKED / PARTIALLY VERIFIED.** Round 3 has established the repository inventory and documented blockers; it has not independently verified original or derivative binary bytes or CDN delivery. Phase 2.8 is not complete.
+
+---
+
+## 15 November 2026 — Phase 2.8 Round 4: Asset recovery and legacy artwork review
+
+### Asset recovery
+- Inspected the current TravelGuide branches and image history, the full TravelGuide asset tree, the MEDIA-ASSETS `main` tree, the mapping/specification/credits documents and current homepage JSON.
+- Recovered the exact 12 Round 2 filenames from committed documentation. All 12 WebP derivatives are still present under TravelGuide `src/assets/images/`; none is present by basename or identical Git blob in MEDIA-ASSETS.
+- No source JPEG master for any of the 12 derivatives was found in either inspected repository. The previously recorded source and derivative dimensions, bytes and SHA-256 values remain documentary records; this audit could not download binary bodies to independently recompute or inspect them.
+- MEDIA-ASSETS holds 111 tracked WebP files. The seven unique legacy artwork binaries are the only TravelGuide homepage binaries found in that asset repository; current path/source crosswalk is in HOMEPAGE-ASSET-MAPPING.md.
+- The existing MEDIA-ASSETS CDN paths for the legacy images were browser-verified in Round 3. Round 4 did not obtain a fresh HTTP response for the CDN paths. No registered MEDIA-ASSETS destinations exist for the 12 Round 2 photo derivatives. TravelGuide's build script copies those local files into the branch preview at `/assets/images/<filename>`, but current HTTP/MIME verification of that preview path was not possible.
+
+### Nine legacy placements
+| Placement / file | Current CDN asset | Subject match | Visual/crop review | Disposition |
+|---|---|---|---|---|
+| Hero / `hero-coast.webp` | `amalfi-coast-village-v01.webp` | Mediterranean village/coast, but not a genuine photo or guaranteed left headline-safe landscape | Previous visual review: coherent AI artwork. 1672×941; mobile crop was right-biased. | Replace |
+| Asia / `asia.webp` | `kyoto-bamboo-garden-v01.webp` | Kyoto bamboo instead of Southeast Asian karsts/bay | Previous visual review: coherent AI artwork. 1672×941 wide image cropped to a portrait card. | Replace |
+| Europe / `europe.webp` | `santorini-caldera-sunset-v01.webp` | Santorini instead of historic riverside town | Previous visual review: coherent AI artwork. 1672×941; portrait crop removes wider location context. | Replace |
+| Africa / `africa.webp` | `serengeti-elephant-safari-sunrise-v01.webp` | Serengeti/savannah is broad subject match; sunrise differs from target warm evening | Previous visual review: coherent AI artwork. 1672×941; object position 80% center retains the herd for narrower crops. | Replace |
+| Americas / `americas.webp` | `06-machu-picchu-peru-v01.webp` | Machu Picchu instead of Patagonian alpine lake | Previous visual review: coherent AI artwork. 900×512 is landscape and undersized for the 900×1120 portrait brief; severe crop. | Replace |
+| Kyoto feature / `kyoto-street.webp` | `kyoto-bamboo-garden-v01.webp` | Bamboo gate/path instead of machiya lane | Same binary as Asia; 1672×941 wide source, portrait crop. Duplicate art across unrelated homepage placements. | Replace with distinct Kyoto photo |
+| Lisbon / `lisbon-tram.webp` | `23-lisbon-portugal-v01.webp` | Lisbon AI destination artwork; metadata does not confirm a documentary tram capture | 900×510; wide ratio differs from 960×1200 portrait brief. | Replace |
+| Seasonal coast / `seasonal-coast.webp` | `amalfi-coast-village-v01.webp` | Amalfi village instead of separate Atlantic/shoulder-season scene | Same binary as hero; 1672×941. Duplicate image on a separate editorial card. | Replace with distinct coast photo |
+| Neighbourhood café / `neighbourhood-cafe.webp` | `general-coffee-lifestyle.webp` | Coffee cup still life instead of a street-side neighbourhood café | 519×442 / 22,716 bytes, below the 920×680 target; image is not the stated scene. | Replace |
+
+The exact current CDN URLs, asset-index source descriptions and per-file byte sizes are recorded in HOMEPAGE-ASSET-MAPPING.md. All seven unique legacy assets are identified as AI-generated in MEDIA-ASSETS metadata. Their metadata's `rightsVerified` flag does not constitute editorial approval. No placement received a formal keep approval in Round 4.
+
+### Replacement sourcing and rights
+Nine Pexels photo pages are recorded as source candidates for the nine slots in HOMEPAGE-ASSET-MAPPING.md. Pexels pages identify each as free-to-use. Pexels' current license allows commercial use and modification/adaptation without mandatory attribution; the terms warn that separate privacy, property, trademark or other third-party permissions may still apply. Contributor credits remain recommended editorial practice.
+
+Candidates are leads only. The binary originals were not downloaded into the repository, and exact original bytes, crop, model/property releases, desktop/mobile framing, dimensions for the Africa candidate, and final editorial acceptance remain pending. No candidate should be integrated or described as approved until those checks have passed.
+
+### Final status
+- Nine legacy placements individually assessed: complete at repository/metadata and prior visual-review evidence level.
+- Candidate pages found: 9/9; approved replacements: 0/9.
+- Round 2 derivative file presence: 12/12; original master recovery: 0/12.
+- Fresh CDN fetch/MIME/hash check: blocked in this session.
+- No file or homepage reference changed.
+- Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE; Phase 2.9, 2.10 and Chat 3 remain pending.

@@ -297,3 +297,109 @@ The Round 2 table and photo-credit register document 12 original JPEG downloads,
 **Round 3 status: BLOCKED — DOCUMENTATION AND REPOSITORY INVENTORY AUDITED; ORIGINAL-MASTER RETRIEVAL, INDEPENDENT BINARY RE-VERIFICATION AND CDN DELIVERY NOT VERIFIED.**
 
 Keep Phase 2.8 **PARTIALLY VERIFIED — NOT COMPLETE**. Do not start Phase 2.9, Phase 2.10 or Chat 3 until the 22 slots are accepted and all required verification gates pass. No image binary, homepage reference, stylesheet, script or data file was changed in this audit.
+
+## 19. Phase 2.8 — Round 4 asset recovery, provenance audit and replacement plan (2026-11-15)
+
+### Repository and branch baseline
+- TravelGuide `development/homepage` before the Round 4 documentation commit: `c040d7648f99237698730f1f425a2e8565e102fc`.
+- TravelGuide branches inspected: `development/homepage` at `c040d7648f99237698730f1f425a2e8565e102fc`; `main` at `bab89d7eb14a356dbc194557492fc8de6e980c67`; `research/travel-guide-blueprint` at `4e047f49cfac870d17a0347d60c2d1025f62dfd8`; and `development/responsive-fixes` at `9e4997bfb018a34da3892f63a2939e63633462d2`.
+- Private MEDIA-ASSETS has only `main`, at `4531d94979224daa5a3f0a6b25244e02655708e0` (tree `e9b43b0d7bf7087c4d49b3a35cbef4b532c798a7`). Its recursive tree has 328 entries and 111 image files, all WebP.
+- The relevant TravelGuide image path history was inspected. The earlier image-directory commits are `8223a82f3d0a4b21c9edbb8c64a8a55ed7569d41`, `730f85e1592131a1097937f1d4397642f9528da7`, and `ab877b479ba62bd0e37e16147a8f6ef7932f0065`. The MEDIA-ASSETS destination path history has no Round 2 derivative additions. Neither inspected repository tree retains the 12 original JPEG master files.
+- Current manifests reviewed: `src/data/homepage.json`, `src/assets/images/README.md`, `HOMEPAGE-ASSET-SPECIFICATION.md`, `HOMEPAGE-ASSET-MAPPING.md`, `HOMEPAGE-ASSET-REVIEW.md`, `HOMEPAGE-ASSET-REPLACEMENT-PLAN.md`, `HOMEPAGE-PHOTO-CREDITS.md`, `PROJECT-STATE.md`, and `TASK-BOARD.md`.
+
+### Exact Round 2 derivative recovery result
+The exact 12 filenames below were recovered from the committed Round 2 mapping and photo-credit records. All 12 are present under TravelGuide `src/assets/images/`; none is present by filename or binary-identical Git blob in the inspected MEDIA-ASSETS `main` tree.
+
+| Exact derivative | TravelGuide tree bytes | Round 4 source-master recovery |
+|---|---:|---|
+| `oceania.webp` | 229,298 | Original JPEG not found |
+| `alpine-hiking.webp` | 136,900 | Original JPEG not found |
+| `marrakech-courtyard.webp` | 392,010 | Original JPEG not found |
+| `slow-train.webp` | 227,822 | Original JPEG not found |
+| `ceramic-workshop.webp` | 44,818 | Original JPEG not found |
+| `portugal-coast.webp` | 208,908 | Original JPEG not found |
+| `japan-rail.webp` | 151,250 | Original JPEG not found |
+| `marrakech-medina.webp` | 125,770 | Original JPEG not found |
+| `market-morning.webp` | 176,696 | Original JPEG not found |
+| `calendar-planning.webp` | 119,502 | Original JPEG not found |
+| `train-platform.webp` | 139,634 | Original JPEG not found |
+| `travel-bag.webp` | 164,300 | Original JPEG not found |
+
+- Derivative count present in TravelGuide: **12/12**.
+- Exact basename matches in MEDIA-ASSETS: **0/12**. Binary-identical Git blob matches under other MEDIA-ASSETS filenames: **0/12**.
+- Original JPEG masters physically recovered in either inspected repository: **0/12**.
+- The earlier Round 2 source table already records original JPEG dimensions, byte lengths and SHA-256, as well as derivative output dimensions, byte lengths and SHA-256. Those values remain **prior-session records**. Round 4 did not retrieve the actual JPEG/WebP binary bodies and did not recompute any of those SHA-256 values. GitHub tree byte sizes corroborate only the derivative byte lengths; Git blob IDs are not SHA-256 checksums.
+- No current Round 2 derivative destination paths are registered in MEDIA-ASSETS. The TravelGuide build script copies `src/assets/images/` into `dist/assets/images/`; therefore the branch-preview URL pattern is `https://development-homepage.travelguide-9op.pages.dev/assets/images/<exact-filename>`. This is a build-derived preview path, not a MEDIA-ASSETS CDN registration. Live HTTP status, MIME and downloaded bytes for that preview path could not be rechecked in this session.
+- No URL was guessed for a missing MEDIA-ASSETS registration. No asset was transferred or integrated in Round 4.
+
+### Legacy AI-artwork audit — nine homepage placements
+The seven unique binaries behind these nine slots are present in MEDIA-ASSETS. Their legacy public path mapping is exact and was previously browser-verified in Round 3 (HTTP 200, `image/webp`, RIFF/WEBP and decoded dimensions). Round 4 confirmed the path-to-asset-index correspondence and current source metadata. A fresh live HTTP fetch was not available in this session, so availability below is historical Round 3 evidence, not a new Round 4 response test.
+
+| Slot | Current local filename and exact public source URL | Actual recorded subject / fit to brief | Quality and crop observations | Editorial decision |
+|---|---|---|---|---|
+| Hero coast | `hero-coast.webp` — [Amalfi artwork](https://media-assets-4sb.pages.dev/images/travel/destinations/amalfi-coast-village-v01.webp) | AI-generated Amalfi cliffside village, road and turquoise sea. Coastal subject is broadly relevant, but it is not the specified genuine Mediterranean landscape photograph with a clear left-side text-safe area. | Previously reviewed as clear, coherent illustrative artwork, not a camera photograph. 1672×941 / 446,770 bytes. Hero/mobile cropping was previously measured; the mobile crop is right-biased. The final headline-safe crop has not been approved as a replacement photograph. | **Replace** with a distinct genuine wide coastal photograph; preserve headline-safe negative space. |
+| Asia continent | `asia.webp` — [Kyoto bamboo artwork](https://media-assets-4sb.pages.dev/images/travel/destinations/kyoto-bamboo-garden-v01.webp) | AI-generated Kyoto bamboo garden path and wooden gate. Broad Asia relevance, but not the required Southeast Asian limestone karsts and bay. | Previously reviewed as visually coherent artwork, not documentary photography. 1672×941 / 482,514 bytes. The wide source requires a strong portrait crop; the central path/gate remains the focal point, but not the required karst-and-water composition. | **Replace** with a genuine karst/lagoon photograph. |
+| Europe continent | `europe.webp` — [Santorini artwork](https://media-assets-4sb.pages.dev/images/travel/destinations/santorini-caldera-sunset-v01.webp) | AI-generated Santorini white buildings and blue domes. European subject at a broad level, but not the specified historic riverside town with reflection. | Previously reviewed as coherent illustrative artwork, not a photo. 1672×941 / 306,350 bytes. Portrait tile crop narrows the town context and river/reflection brief is absent. | **Replace** with a genuine European riverside town photograph. |
+| Africa continent | `africa.webp` — [Serengeti artwork](https://media-assets-4sb.pages.dev/images/travel/destinations/serengeti-elephant-safari-sunrise-v01.webp) | AI-generated elephant herd, acacia trees and Serengeti grassland. Broad Africa/Safari relevance; sunrise differs from the specified warm evening scene. | Previously reviewed as coherent illustrative artwork, not documentary wildlife photography. 1672×941 / 324,842 bytes. Current `object-position: 80% center` keeps the herd toward the crop; tighter portrait framing remains dependent on the right-biased focal position. | **Replace** with a genuine savannah/acacia photograph; wildlife is optional. |
+| Americas continent | `americas.webp` — [Machu Picchu artwork](https://media-assets-4sb.pages.dev/images/travel/destinations/06-machu-picchu-peru-v01.webp) | AI-generated Machu Picchu and Andean terraces. It depicts Peru, not the specified Patagonian alpine lake and jagged mountain reflection. | Previously reviewed as an illustration. 900×512 / 65,752 bytes. The current landscape ratio is incompatible with the intended portrait destination tile and would require a severe crop; native resolution is also materially below the 900×1120 target. | **Replace** with a native portrait/portrait-capable Patagonia lake photograph. |
+| Featured Kyoto | `kyoto-street.webp` — same [Kyoto bamboo artwork](https://media-assets-4sb.pages.dev/images/travel/destinations/kyoto-bamboo-garden-v01.webp) as Asia | AI-generated bamboo garden path and gate, not the specified machiya lane with wooden façades, noren and a distant roof. | Same source bytes as `asia.webp`; 1672×941 / 482,514 bytes. Reusing this artwork duplicates the scene in separate homepage contexts; its landscape ratio also requires a portrait crop for the featured destination treatment. | **Replace** with a distinct Kyoto street photograph; do not reuse the Asia replacement. |
+| Lisbon featured destination | `lisbon-tram.webp` — [Lisbon artwork](https://media-assets-4sb.pages.dev/images/travel/destinations/23-lisbon-portugal-v01.webp) | MEDIA-ASSETS metadata classifies it as AI-generated Lisbon destination artwork, not a documentary photograph. Earlier rendered visual review described a tram-led Lisbon street; the source metadata itself only guarantees generic Lisbon rooftops/historic streets, so the yellow-tram claim is not independently established by the current asset record. | Previously reviewed as an illustration. 900×510 / 70,556 bytes. Its landscape source ratio differs substantially from the 960×1200 portrait specification; crop suitability for a real tram image must be checked against the replacement master. | **Replace** with a genuine yellow-Lisbon-tram photograph. |
+| Seasonal coast article | `seasonal-coast.webp` — same [Amalfi artwork](https://media-assets-4sb.pages.dev/images/travel/destinations/amalfi-coast-village-v01.webp) as Hero | AI-generated Amalfi cliffside village and sea; not the distinct quieter Atlantic shoulder-season coastal scene described in the specification. | Same source bytes as `hero-coast.webp`; 1672×941 / 446,770 bytes. Reusing the hero image duplicates the exact artwork in a separate article card. | **Replace** with a different genuine Atlantic/shoulder-season coastal photograph. |
+| Neighbourhood café article | `neighbourhood-cafe.webp` — [Coffee lifestyle artwork](https://media-assets-4sb.pages.dev/images/general/general-coffee-lifestyle.webp) | AI-generated coffee cup/table/plant still life, not a neighbourhood café opening onto a street. | Previously reviewed as an illustration. 519×442 / 22,716 bytes, below the 920×680 production target; subject and resolution both fail the brief. | **Replace** with a genuine street-side café photograph. |
+
+- The current asset-index metadata labels the seven unique legacy binaries as AI-generated output, marks usage as website/marketing, and reports `rightsVerified: true`. That repository field is metadata, not independent legal advice or formal editorial approval. **No Round 4 editorial keep approval was found.**
+- Current registered legacy public URLs are the seven exact paths above. The hero/seasonal and Asia/Kyoto pairs point to shared files. No change to these existing URLs or homepage placements was made.
+
+### Photographic replacement sourcing — candidates only, not approvals
+The following page-level candidates match the relevant subjects more closely. Their Pexels pages identify them as free-to-use, and Pexels' current terms allow commercial and non-commercial use plus modification/adaptation, without mandatory attribution. However, Pexels also cautions that separate privacy, property, trademark, model or other third-party permissions may still be needed in context. No candidate master was downloaded into the project, converted, hashed, crop-tested or approved for integration in Round 4.
+
+| Target slot | Candidate source and photographer | Page-listed source dimensions / ratio | Crop/subject assessment and remaining gate |
+|---|---|---|---|
+| Hero coast | [Stunning Rocky Coastline in Benitachell, Spain](https://www.pexels.com/photo/stunning-rocky-coastline-in-benitachell-spain-30558175/) — Rafael Minguet Delgado | 5702×3801, 3:2 | Genuine Mediterranean cliffs and turquoise water; near-wide source but not as wide as the hero. Check left headline-safe space, horizon and desktop/mobile crops from downloaded original. |
+| Asia continent | [Misty Islands in Halong Bay, Vietnam](https://www.pexels.com/photo/misty-islands-in-halong-bay-vietnam-35858996/) — Anh Nguyen | 2400×3000, 4:5 | Page record describes limestone islands and calm water; source ratio closely matches 900×1120. Inspect karst visibility, water balance and focal point in downloaded original. |
+| Europe continent | [Historic European Riverside Buildings with Reflection](https://www.pexels.com/photo/historic-european-riverside-buildings-with-reflection-35534814/) — Alexandra H. Maria | 3084×4112, 3:4 | Page record matches riverside architecture/reflection; portrait source is close to target. Check tower/sky/water balance and exact location/subject accuracy. |
+| Africa continent | [Sunset in African Savannah Landscape](https://www.pexels.com/photo/sunset-in-african-savannah-landscape-30878973/) — Wussol | Not exposed by the retrieved page | Page describes acacia trees and warm sunset; source preview was visually inspected as a camera landscape with a road, grasses and acacia silhouettes. Obtain source dimensions and verify the intended 900×1120 crop before accepting. |
+| Americas continent | [Fitz Roy Glacier and Lake](https://www.pexels.com/photo/fitz-roy-glacier-and-lake-17600486/) — Nazarena Pozza | 3472×4640, 217:290 | Page record describes Fitz Roy, glacial lake and peaks in Patagonia; portrait ratio is close to the 900×1120 tile. Check native detail and retain both principal peak and lake. |
+| Featured Kyoto | [Traditional Japanese Street in Kyoto](https://www.pexels.com/photo/traditional-japanese-street-in-kyoto-36889407/) — Ignacio Estevo | 2054×2899, 158:223 | Page record and preview describe a quiet street with traditional wooden houses. Portrait crop is close, but after-rain surface, noren and distant temple roof are not confirmed; review these before accepting. |
+| Lisbon featured destination | [Charming Lisbon Street with Historic Tram](https://www.pexels.com/photo/charming-lisbon-street-with-historic-tram-40600060/) — Oleksandra Zelena | 3072×4080, 64:85 | Page record confirms Lisbon and yellow tram; near-portrait crop. Verify the tram remains fully identifiable and any incidental people/signage are suitable. |
+| Seasonal coast article | [Dramatic Cliffs over the Atlantic in Sagres, Portugal](https://www.pexels.com/photo/dramatic-cliffs-over-the-atlantic-in-sagres-portugal-36733193/) — Nils Rotura | 5029×2829, approximately 16:9 | Page describes rugged Atlantic cliffs and cloudy conditions; a different coastal scene from the hero. The 920×680 card crop is substantially narrower, so check shoreline/focal detail and whether the mood fits the article. |
+| Neighbourhood café article | [Cafe Tables on the Street](https://www.pexels.com/photo/cafe-tables-on-the-street-4210026/) — Anastasia Shuraeva | 5472×3648, 3:2 | Page and retrieved image preview show outdoor café tables on a cobbled street. Crop ratio is reasonably close to 920×680; preview visually matches the brief. Check shop signs/people and prepare the exact web crop from the original. |
+
+General Pexels terms reviewed: https://www.pexels.com/license/ and https://www.pexels.com/terms-of-service/. Pexels credits are not required under the current license, but retaining contributor attribution in the project credit register is recommended as editorial practice. If a Wikimedia source is selected later, record the exact file page, author, license version, attribution text and (for CC BY-SA derivatives) share-alike obligations separately.
+
+### Updated 22-slot status
+| # | Homepage slot | Current asset | Current classification | Round 4 status |
+|---:|---|---|---|---|
+| 1 | Hero coast | `hero-coast.webp` | Legacy AI artwork; duplicated by slot 17 | Replace; photographic lead found |
+| 2 | Asia continent | `asia.webp` | Legacy AI artwork; duplicated by slot 7 | Replace; photographic lead found |
+| 3 | Europe continent | `europe.webp` | Legacy AI artwork | Replace; photographic lead found |
+| 4 | Africa continent | `africa.webp` | Legacy AI artwork | Replace; photographic lead found |
+| 5 | Americas continent | `americas.webp` | Legacy AI artwork | Replace; photographic lead found |
+| 6 | Oceania continent | `oceania.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+| 7 | Kyoto featured destination | `kyoto-street.webp` | Legacy AI artwork; same bytes as slot 2 | Replace with a distinct Kyoto street photo |
+| 8 | Lisbon featured destination | `lisbon-tram.webp` | Legacy AI destination artwork | Replace; photographic lead found |
+| 9 | Marrakech featured destination | `marrakech-courtyard.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+| 10 | Slow train inspiration | `slow-train.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+| 11 | Alpine hiking inspiration | `alpine-hiking.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; approved reuse partner with slot 16 |
+| 12 | Ceramic workshop inspiration | `ceramic-workshop.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+| 13 | Portugal coast itinerary | `portugal-coast.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+| 14 | Japan rail itinerary | `japan-rail.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+| 15 | Marrakech medina activity | `marrakech-medina.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+| 16 | Swiss trail activity | `alpine-hiking.webp` | Round 2 licensed camera-photo derivative; shared with slot 11 | Existing related-slot reuse is user-authorized; re-verify binary/crop |
+| 17 | Seasonal coast article | `seasonal-coast.webp` | Legacy AI artwork; same bytes as slot 1 | Replace with a distinct Atlantic/seasonal photo |
+| 18 | Market morning article | `market-morning.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+| 19 | Neighbourhood café article | `neighbourhood-cafe.webp` | Legacy AI artwork | Replace; photographic lead found |
+| 20 | Calendar planning utility | `calendar-planning.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+| 21 | Train platform utility | `train-platform.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+| 22 | Travel bag utility | `travel-bag.webp` | Round 2 licensed camera-photo derivative | Retain provisionally; raw-binary/source re-verification pending |
+
+### Counts and release boundary
+- 22 slot assignments remain populated.
+- 21 unique current path names map to 19 unique binary identities.
+- 12 Round 2 camera-photo derivatives remain present in TravelGuide; **0 original source masters were recovered** in Round 4.
+- 9 legacy placements (7 unique AI artwork binaries) remain; none has formal editorial approval. All 9 are marked for replacement under the current genuine-photography specification.
+- 9 candidate photo pages were identified; **0 candidates approved or integrated**.
+- Existing documented Matterhorn-hikers reuse between Alpine Hiking and Swiss Trail remains the only reuse exception intended to survive the final 22-slot photo set. The duplicate Amalfi and Kyoto legacy-art pairs are not accepted as final reuse groups.
+- No image files, source masters, CDN objects, manifests, homepage HTML/CSS/JS, or image references were changed in Round 4. No Cloudflare configuration, deployment, merge, `main` branch or research branch was changed.
+
+**Round 4 disposition: REPOSITORY/PROVENANCE AUDIT COMPLETE; ORIGINAL-MASTER RECOVERY AND INDEPENDENT BINARY/CDN RE-VERIFICATION BLOCKED; 9 PHOTO REPLACEMENT LEADS DOCUMENTED BUT NOT APPROVED. Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.**

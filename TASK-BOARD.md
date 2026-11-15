@@ -351,3 +351,36 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - Original master binary acquisition, independent source/output byte verification, actual derivative crop review and MEDIA-ASSETS CDN delivery: BLOCKED / NOT VERIFIED.
 - **Phase 2.8: PARTIALLY VERIFIED — NOT COMPLETE.** Do not start Phase 2.9, Phase 2.10 or Chat 3.
 - No homepage binary/code edit, no MEDIA-ASSETS mutation, no main/research update, no merge and no production deployment.
+
+## 15. Phase 2.8 — Round 4 asset recovery, provenance audit and replacement planning (2026-11-15)
+
+### Repository and derivative recovery
+- [x] Inspected all TravelGuide branches and current commit refs; confirmed MEDIA-ASSETS has only `main`.
+- [x] Inspected TravelGuide and MEDIA-ASSETS recursive trees, relevant image directories, image-path commit history, image manifests, source mapping, credit register, production specification, build copy path and Pages project configuration.
+- [x] Recovered the exact 12 derivative filenames from committed Round 2 records; all 12 are present in TravelGuide `src/assets/images/`.
+- [x] Compared binary Git object identities across the two repositories: no Round 2 derivative has an identical object in MEDIA-ASSETS under another name.
+- [x] Searched the current repository trees and relevant asset history for the source JPEG masters; none of the 12 originals was found.
+- [ ] Recover and preserve all 12 original JPEG master binaries.
+- [ ] Independently recompute source and output SHA-256 and confirm source/derivative MIME, magic bytes, dimensions, byte lengths and WebP quality 85 from the actual bytes.
+- [ ] Freshly verify the 12 exact TravelGuide preview asset URLs at HTTP level and record response MIME/bytes. No MEDIA-ASSETS CDN destination paths are currently registered for these derivatives.
+
+### Legacy artwork audit and candidate sourcing
+- [x] Individually reviewed the nine legacy AI-artwork placements and seven unique current CDN source records. All nine are marked for replacement under the existing genuine-photography brief; no formal keep approval was found.
+- [x] Identified nine Pexels photographic source-page leads with contributor and page-level license/source details; recorded them as unapproved candidates.
+- [x] Reviewed current Pexels license/Terms for commercial use, modification/adaptation, no mandatory attribution and third-party rights cautions.
+- [ ] Download and inspect each candidate's actual original binary; confirm exact bytes, metadata, crop, focal subject and desktop/mobile suitability.
+- [ ] Complete context-specific people/property/trademark/release checks; confirm the candidate's precise terms at the time of download.
+- [ ] Record final source/master hashes, dimensions, creator, attribution, license and commercial/modification rights before any new candidate is accepted.
+- [ ] Obtain editorial approval and replace the nine legacy image slots with distinct photographs. Keep the approved Matterhorn reuse between Alpine Hiking and Swiss Trail only.
+
+### Current 22-slot counts
+- 22 assigned slots remain populated.
+- 12 Round 2 photographic derivatives are present in TravelGuide (13 placements, with the Matterhorn hikers image shared between two related slots).
+- 9 legacy AI-artwork slots (7 unique artwork binaries) remain in use and require replacement.
+- 9 candidate pages found; 0 candidate binaries acquired or approved.
+- Original Round 2 JPEG masters recovered: 0/12.
+- Phase 2.8: **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.9, Phase 2.10 and Chat 3 remain pending.
+
+### Safety boundary
+- Documentation only on `development/homepage`; no source images, CDN objects, image references, homepage design, branding, data, HTML/CSS/JS or manifests were changed.
+- No edits to `main`, `research/travel-guide-blueprint`, `development/responsive-fixes` or MEDIA-ASSETS; no merge, Cloudflare configuration change or production deployment.
