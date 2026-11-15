@@ -66,7 +66,7 @@ html,body{max-width:100%;overflow-x:clip}
  .continent-tile__content{min-width:0;overflow-wrap:anywhere}
  .continent-tile{height:auto;aspect-ratio:3/4;min-height:175px}
  .continent-tile:nth-child(4),.continent-tile:nth-child(5){height:auto}
- .continent-tile:nth-child(5){grid-column:1/-1;aspect-ratio:2.8/1}
+ .continent-tile:nth-child(5){grid-column:1/-1;aspect-ratio:2.4/1;min-height:0}
  .continent-tile strong{font-size:clamp(19px,5vw,23px)}
  .feature-grid,.card-grid--three,.journal-grid,.planning-grid{grid-template-columns:minmax(0,1fr)}
  .story-card__image{aspect-ratio:16/10}.story-card__body{padding:18px}.story-card__body h3{font-size:22px}
