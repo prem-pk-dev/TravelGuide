@@ -217,5 +217,11 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 ### Phase 2.7 disposition
 - Production-mode build simulation and automated SEO/source regression checks: **PASS in Cloudflare Preview build environment**.
 - Local workstation build: **NOT RUN** because the execution environment could not resolve GitHub DNS.
-- Latest-SHA live endpoint recheck and full browser JavaScript runtime/interaction error capture: **PENDING** due Cloudflare scrape rate limiting / unsupported script injection.
+- Latest Preview homepage and robots.txt were live-rechecked: both HTTP 200; homepage response has `X-Robots-Tag: noindex, nofollow`, robots meta is `noindex, nofollow`, canonical and og:url resolve to production origin, and a real browser-parsed `main` landmark was found. robots.txt returns `text/plain`, `User-agent: *`, `Allow: /`, no Sitemap directive and response `X-Robots-Tag: noindex, nofollow`.
+- Latest live `/sitemap.xml` recheck was rate-limited by Cloudflare (HTTP 429). Its generated XML was validated in the same successful Cloudflare build (valid empty urlset, zero URLs, expected MIME header rule); Phase 2.6 previously verified the live sitemap endpoint at HTTP 200. Recheck against the newest Preview endpoint remains pending.
+- Full browser JavaScript runtime/interaction error capture remains pending: the browser scraping endpoint ignored the injected validation script. Node syntax validation is passing, but this does not certify runtime behavior.
 - Phase 2.7 is therefore **PARTIALLY VERIFIED, NOT FULLY CLOSED**. Keep Production indexing disabled and do not start image integration or Chat 3 until the remaining checks are completed or explicitly accepted as limitations.
+### Live Preview endpoint follow-up (after Phase 2.7 code commit)
+- Preview alias homepage: live HTTP 200, `text/html; charset=utf-8`, `X-Robots-Tag: noindex, nofollow`; browser scrape found meta robots `noindex, nofollow`, canonical and `og:url` both `https://travelguide-9op.pages.dev/`, and the `<main id="main">` landmark.
+- Preview alias robots.txt: live HTTP 200, `text/plain; charset=utf-8`, response `X-Robots-Tag: noindex, nofollow`; body directives `User-agent: *` and `Allow: /`, with no `Sitemap:` directive.
+- A fresh `/sitemap.xml` fetch after the preceding live checks was rate-limited (HTTP 429). Sitemap generation and XML validation passed in the successful Preview build log; the prior Phase 2.6 live check recorded HTTP 200 and valid XML. Do not claim a fresh HTTP status for the latest endpoint request.

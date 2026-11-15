@@ -120,11 +120,13 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - [x] Add isolated Production-mode build simulation using `CF_PAGES_BRANCH=main` and a temporary output directory; clean temporary output after validation.
 - [x] Verify Production mode retains `productionIndexingEnabled: false`, HTML noindex, `Disallow: /`, no premature sitemap directive, X-Robots header and empty valid XML sitemap.
 - [x] Extend generated-output checks for JavaScript syntax, CSS structural balance, HTML image alt/dimensions, unique IDs and local CSS asset references.
-- [x] Cloudflare Preview build and deployment succeeded on commit `d40712463c4c9e35a39b2be3c0add36b27eee8da`; deployment `14e391ff-a24e-4900-810b-02b795ef33bc`.
+- [x] Cloudflare Preview build and deployment succeeded on code/check commit `d40712463c4c9e35a39b2be3c0add36b27eee8da`; deployment `14e391ff-a24e-4900-810b-02b795ef33bc`.
+- [x] Documentation commit `f9b6504d1afb8a1016522bcaa25699138cee8625` was also successfully deployed to the Preview alias; deployment `37ffb7c4-638b-4753-a285-cf043c2bea12`.
 - [x] Confirm latest Cloudflare build log reports Production-mode simulation and normal Preview checks passing.
 - [x] Inspect `main`, research branch and Production deployment read-only; no writes, merge or Production deployment.
 - [ ] Local workstation clone/build: blocked by DNS resolution failure for github.com in the execution environment.
-- [ ] Fresh live HTTP recheck (robots.txt, homepage headers/meta/canonical, sitemap) for latest commit; Cloudflare Browser Rendering scrape rate-limited repeated requests.
+- [x] Fresh live Preview homepage and robots.txt recheck: both HTTP 200; meta/response noindex; production canonical and og:url; robots Allow: / with no Sitemap line.
+- [ ] Fresh live `/sitemap.xml` HTTP recheck for latest commit; Cloudflare rate-limited that request with HTTP 429. Current build log's sitemap generation/XML checks passed; prior Phase 2.6 live verification recorded HTTP 200.
 - [ ] Capture browser JavaScript runtime/page errors and run actual menu/search/mobile interaction tests; Browser Rendering scrape ignored injected test script, so runtime behavior is not certified.
 - [ ] Run full standards-compliant HTML validation and full CSS grammar lint/parse; current tests are structural + Chromium DOM parsing, not W3C/CSS validator certification.
 - [ ] Phase 2.7 final closeout after remaining live/browser/local checks.
@@ -136,3 +138,7 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - Cloudflare Production deployment: `ed9365c0-1778-4e4e-aa5b-5510d56074cd` on main SHA above; not redeployed.
 - Cloudflare project settings unchanged: production branch `main`, root `/`, build `npm run build`, output `dist`, Preview branches `all`.
 - No homepage image reference changed. Phase 2.8 image integration and Chat 3 have not started.
+### Latest live Preview follow-up
+- [x] Homepage HTTP 200; response X-Robots noindex; meta robots noindex, production canonical and og:url; browser DOM contains main landmark.
+- [x] robots.txt HTTP 200 text/plain; `User-agent: *`, `Allow: /`, no Sitemap directive and X-Robots noindex.
+- [ ] Fresh latest-alias sitemap endpoint request; most recent attempt was throttled with HTTP 429. Build output XML membership and validity checks are passing.
