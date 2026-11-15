@@ -101,3 +101,11 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - [x] Live Preview \`sitemap.xml\`: HTTP 200, application/xml, valid empty urlset, response noindex header; XML source newline and namespace verified.
 - [x] Production source and deployment inspected and remain unchanged; main still has robots noindex and Disallow: /.
 - [ ] Do not turn on production indexing or deploy a Production sitemap without explicit launch approval.
+
+### Correction and final deployment record (2026-11-15)
+- [x] Restore sitemap code and build integration after detecting a stale-tree documentation commit; verified branch head `08df2f0cc0e3db7df6ec00f6f69bea165814bf5e` contains the sitemap implementation and launch gate.
+- [x] Confirm Cloudflare Preview deployment `be4fe7a5-dc3f-48cb-b2ce-2d0bbc479696` succeeded on `development/homepage` commit `08df2f0cc0e3db7df6ec00f6f69bea165814bf5e` and is attached to the `development-homepage` alias.
+- [x] Confirm the corrected sitemap at the live alias returns HTTP 200, `application/xml; charset=utf-8`, an empty valid `urlset`, actual XML newline characters, and `X-Robots-Tag: noindex, nofollow`.
+- [x] Confirm the final Preview build logs show all automated build and sitemap validation checks passing.
+- [x] Production deployment remains on main SHA `bab89d7eb14a356dbc194557492fc8de6e980c67`; no production deployment, merge, main write or research branch write was made.
+- [ ] Production-mode local simulation remains a useful additional test; indexing stays disabled regardless, and no production rollout is authorized.
