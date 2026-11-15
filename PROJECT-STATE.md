@@ -227,3 +227,67 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - A fresh `/sitemap.xml` fetch after the preceding live checks was rate-limited (HTTP 429). Sitemap generation and XML validation passed in the successful Preview build log; the prior Phase 2.6 live check recorded HTTP 200 and valid XML. Do not claim a fresh HTTP status for the latest endpoint request.
 ### Final Phase 2.7 sitemap endpoint result
 - Current Preview alias `/sitemap.xml`: HTTP 200; Content-Type `application/xml; charset=utf-8`; X-Robots-Tag `noindex, nofollow`; valid empty `urlset` in the sitemap namespace; zero URL entries. This verifies that Preview does not expose Production or Preview URLs in its sitemap.
+## 13. Phase 2.7 — Remaining DNS, browser, standards and accessibility verification (2026-11-15)
+
+### DNS diagnosis and offline dependency feasibility
+- Exact local Git fetch error: `fatal: unable to access 'https://github.com/prem-pk-dev/TravelGuide.git/': Could not resolve host: github.com`.
+- `getent ahosts github.com` returned no address records. This is a DNS name-resolution failure in the execution container, before Git can connect to GitHub; it is not an npm build or application compilation error.
+- Local environment: Node.js `v22.16.0`, npm `10.9.2`; no repository checkout was present at `/` or `/mnt/data`, no `node_modules/`, and no package lockfile was present in the working environment.
+- Current development branch `package.json` has only `build`, `check` and `test:production` scripts; it declares no `dependencies` or `devDependencies`. GitHub branch tree inspection found no `package-lock.json`, `npm-shrinkwrap.json` or alternate npm lockfile.
+- `npm cache verify` found 0 verified content bytes and 0 index entries. A disposable temp-directory test of `npm install --offline --ignore-scripts --no-audit --no-fund` with an empty package manifest succeeded (`up to date`), demonstrating the dependency install portion is offline-feasible because the project declares no external npm dependencies.
+- A complete local `npm run build` was NOT run: the actual repository source tree could not be cloned or mounted because of the DNS failure. Do not interpret the disposable npm install test as a complete site build.
+- Cloudflare Pages' actual build environment did run the project `npm run build` successfully on latest code commit `b9296bb389373323a22fcc1af6b3d31fbfe14be9`; it uses Node `22.23.4` / npm `10.9.9` and performed the isolated production-mode simulation plus the normal preview build/check.
+
+### Actual browser runtime and interactions
+- Browser Rendering opened the Preview homepage at 1440x960 (HTTP 200). During injected interaction tests, no `window.error`, `console.error` or `unhandledrejection` events were observed. This listener is attached after page scripts have initialized; first-load console capture before injection is not certified.
+- Desktop: mega-menu open/toggle-close, Escape dismissal, header-search open/Escape close, Kyoto search suggestions, skip-link focus and search-input focus all passed.
+- Mobile 390x844: mobile menu opened, focus moved to Close, Escape closed the menu and restored focus to the toggle, close button worked, header search opened/focused its input and Escape closed it, Kyoto hero-search suggestion appeared, and skip link received focus. Axe scan also ran at this viewport.
+- 390px after responsive fix: all 11 image elements decoded successfully after scrolling through the full document; each image had `complete=true` and positive natural dimensions; no failed image remained.
+- 768x1024 (tablet) latest preview: document/body width `768px`, no horizontal overflow; continent grid width/scrollWidth `720/720px`, three columns of approximately `231px`; mobile navigation, Escape close and focus restoration passed.
+- 360x800 and 390x844 after the responsive correction: document/body widths equal viewport, and continent grid scrollWidth equals clientWidth. At 360px grid width is 324px, tile widths `158,158,158,158,324`; at 390px grid width is 351px, tile widths `171,171,171,171,351`.
+- 1440px desktop: document width equals viewport width (1440), no horizontal overflow.
+- Resource/network diagnostics are not a complete HAR capture. A bulk concurrent internal-link check once caused Browser Rendering `422 Network connection closed`; sequential same-origin route probes later completed for 37 unique hrefs. Browser page errors during tested interactions were empty, but a full browser-network failure log and initial-load console capture remain limitations.
+
+### Internal route regression — FAILED
+- Browser-rendered homepage links were extracted and 37 unique root-relative paths were probed sequentially with same-origin HEAD requests.
+- Result: 0 of 37 returned success; all 37 returned HTTP 404 on the Preview alias. The `/destinations/` path was independently verified with a browser navigation as HTTP 404 and title `Page not found | TravelGuide`.
+- The failed set includes `/about/`, `/destinations/`, `/itineraries/`, `/articles/`, `/travel-styles/` plus their linked children, `/travel-tips/` and children, `/resources/`, `/things-to-do/` and children, `/editorial-policy/`, `/privacy/` and `/contact/`.
+- Source/build inspection confirms why: the current static build writes homepage `dist/index.html`, local assets, robots and headers plus `404.html`; it does not yet generate physical HTML files for destination, itinerary, article, about, travel tips, resources, things-to-do, privacy or contact route families.
+- Do not create contentless placeholder pages or invent route content as part of this verification task. Route-page implementation is a material blocker and needs real page-family development / content before these links can be called fixed.
+
+### Standards validation
+- W3C Nu HTML Checker against the latest Preview URL returned HTTP 200; checker version `26.11.14`; JSON response contained `messages: []` (no reported HTML errors or warnings).
+- W3C CSS Validator against latest Preview `assets/css/site.css`, CSS3 profile: HTTP 200, `x-w3c-validator-status: Valid`, `x-w3c-validator-errors: 0`; it reports “This document validates as CSS level 3”.
+- The initial CSS3 run reported three SVG presentation-property errors (`fill`, `stroke`, `stroke-width`) on `.icon-button svg`. The declarations were moved from CSS into the inline SVG elements in the build source; the stylesheet rule now only controls dimensions. Revalidation passed with zero errors.
+- CSS Validator still reports 20 warnings: dynamic CSS variables not statically checked, vendor extension `-webkit-font-smoothing`, `overflow-x: clip` marked deprecated by that validator, and `::-webkit-details-marker` vendor extension. Warnings are recorded; zero-error validation is not the same as warning-free.
+- The automated build check's CSS delimiter/string/comment balance check is supplemental; the W3C CSS3 validation is the standards parser result.
+
+### Accessibility audit — FAILED
+- axe-core `4.10.3` ran in Browser Rendering at 390x844 for WCAG 2 A/AA, WCAG 2.1 A/AA and best-practice tags.
+- Result: 38 rules passed, 1 incomplete, 1 violation. The violation is `color-contrast`, impact `serious`, with 36 affected nodes.
+- Examples include brand rust `#b66f50` on paper `#f5f3ed` at 3.51:1 (expected 4.5:1), muted `#68736e` on paper at 4.43:1 (expected 4.5:1), rust on intro background `#e9e8de` at 3.17:1 and muted text on that background at 3.99:1.
+- Keyboard focus and major menu/search Escape behavior were exercised and passed. This does not certify a complete sequential tab-order, screen-reader or manual WCAG audit.
+- No brand colour palette changes were made. Contrast corrections remain open because they affect established brand styling and require a considered design decision.
+
+### Final live Preview SEO regression
+- Latest Preview homepage: HTTP 200; response header `X-Robots-Tag: noindex, nofollow`; latest browser page includes robots meta `noindex, nofollow` and production canonical / og:url.
+- Latest Preview `/robots.txt`: HTTP 200, `text/plain; charset=utf-8`, response X-Robots noindex; body `User-agent: *` and `Allow: /`; no `Sitemap:` directive.
+- Latest Preview `/sitemap.xml`: HTTP 200, `application/xml; charset=utf-8`, response X-Robots noindex; valid sitemap-namespace empty `urlset`, zero `<url>` entries.
+- Production-indexing flag remains false; isolated `CF_PAGES_BRANCH=main` simulation confirmed `Disallow: /`, no Allow/Sitemap directives, noindex meta/header and valid empty sitemap. Production deployment remains unchanged.
+
+### Latest code and deployment identity at this verification point
+- Code head: `b9296bb389373323a22fcc1af6b3d31fbfe14be9` on `development/homepage`.
+- Latest successful Preview deployment: `6795fed9-3f5b-4708-87ac-f21721e126b0`, source SHA matches code head, alias `https://development-homepage.travelguide-9op.pages.dev/`.
+- `main` unchanged at `bab89d7eb14a356dbc194557492fc8de6e980c67`; research branch unchanged at `4e047f49cfac870d17a0347d60c2d1025f62dfd8`.
+- Cloudflare settings unchanged: production branch `main`, root `/`, command `npm run build`, output `dist/`, Preview branches `all`; no Production deployment, merge or indexing enablement.
+
+### Phase 2.7 final disposition
+- Production-mode simulation / Cloudflare build: **PASS**.
+- Latest Preview robots, X-Robots, canonical, sitemap live responses: **PASS**.
+- W3C Nu HTML and W3C CSS3 validation (zero errors): **PASS**.
+- Desktop and mobile interaction checks; image decode on mobile; 360/390/768/1440 responsive horizontal-overflow checks: **PASS**, with the CSS mobile tile correction included.
+- Internal homepage routes: **FAIL — 37/37 HTTP 404**.
+- Accessibility: **FAIL — 36 serious colour-contrast nodes**.
+- Local workstation full build: **NOT RUN** due local GitHub DNS failure and absent checkout. Offline dependency install is feasible, but not a full offline build.
+- Full HAR/network request report, initial-load console capture, full tab sequence/screen-reader audit and CSS warning cleanup remain incomplete.
+- Therefore Phase 2.7 is **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.8 image integration and Chat 3 are not started.

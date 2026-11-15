@@ -145,3 +145,36 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 ### Final sitemap endpoint check
 - [x] Current Preview alias `/sitemap.xml` returned HTTP 200 and `application/xml; charset=utf-8`, with `X-Robots-Tag: noindex, nofollow`.
 - [x] Browser XML viewer parsed the sitemap namespace `urlset`; it contained zero `<url>` elements, so no Preview URL or premature Production URL is published.
+## 9. Phase 2.7 — Final remaining-gate verification (2026-11-15)
+
+### Completed / verified
+- [x] DNS cause identified: local Git/GitHub access failed with `Could not resolve host: github.com`; `getent ahosts github.com` returned no addresses. This is a container DNS/network failure, not an npm build error.
+- [x] `package.json` inspected: no dependencies/devDependencies; repository has no package-lock/npm-shrinkwrap. Local node_modules absent; npm cache has 0 bytes/entries. Empty manifest `npm install --offline` test succeeded, but full local site build was not run due missing checkout/DNS.
+- [x] Isolated Production-mode simulation and normal Preview `npm run build` passed in Cloudflare Pages runtime (Node 22.23.4/npm 10.9.9); production index flag remained false, `Disallow: /`, no premature Sitemap directive, noindex HTML/headers, valid empty XML sitemap.
+- [x] W3C Nu HTML Checker on latest Preview: HTTP 200, version 26.11.14, `messages: []`.
+- [x] W3C CSS Validator CSS3 profile on latest Preview stylesheet: `Valid`, 0 errors. 20 warnings remain (variables, vendor extensions and `overflow-x: clip`). SVG paint declarations were moved from stylesheet into SVG markup to resolve the original three CSS3 validator errors.
+- [x] Browser interactions: desktop mega-menu, Escape, desktop/header search and Kyoto search suggestion; mobile nav open/close, Escape/focus restoration, header search and hero search; skip-link/search focus; no page/console/unhandled-rejection errors observed during instrumented interactions.
+- [x] Responsive browser checks: 360px, 390px, 768px and 1440px have no document/grid horizontal overflow after mobile tile fix. 390px full-page scroll decoded all 11 existing WebP references.
+- [x] Latest live Preview homepage, robots.txt and sitemap: HTTP 200; robots meta and response X-Robots noindex; robots Allow: / and no Sitemap line; production canonical/og:url; sitemap valid empty namespace urlset with application/xml MIME and noindex.
+- [x] Production safety and branch isolation rechecked; no Production deploy/merge/main/research write.
+
+### Failed checks / blockers
+- [ ] **Internal links: FAIL.** 37 unique homepage internal paths probed via browser HEAD; 0 successful, 37 HTTP 404. `/destinations/` also independently navigated to HTTP 404. Current build only emits homepage and 404 HTML; linked destination, article, itinerary, about, travel tips, resources, activities, privacy/contact page families are not generated yet.
+- [ ] **Accessibility: FAIL.** axe-core 4.10.3: 38 passes, 1 incomplete, 1 `color-contrast` violation, serious impact, 36 nodes. Rust and muted brand palette contrast examples under 4.5:1; needs design-approved correction.
+- [ ] Local workstation full `npm run build`: NOT RUN; DNS failure prevents repository clone and no checkout is mounted. Do not report full local build PASS. Cloudflare build environment does run full build successfully.
+- [ ] Full browser HAR/network failure report and pre-injection first-load console capture not certified; injected interaction error listeners did not observe errors.
+- [ ] Full keyboard sequential tab order, screen-reader audit and full manual WCAG review remain pending.
+- [ ] CSS3 W3C validation has zero errors but 20 warnings; warning remediation not complete.
+
+### Current Safety / SHA snapshot
+- Latest code commit before this documentation update: `b9296bb389373323a22fcc1af6b3d31fbfe14be9` on `development/homepage`; Preview deployment `6795fed9-3f5b-4708-87ac-f21721e126b0` successful on the same SHA.
+- `main`: `bab89d7eb14a356dbc194557492fc8de6e980c67` unchanged.
+- `research/travel-guide-blueprint`: `4e047f49cfac870d17a0347d60c2d1025f62dfd8` unchanged.
+- Production deployment `ed9365c0-1778-4e4e-aa5b-5510d56074cd` still on main SHA above; production settings unchanged.
+- `productionIndexingEnabled` remains false. No image reference/content changed. No Phase 2.8 integration or Chat 3 handoff started.
+
+### Next development task (before image integration)
+- First resolve or consciously sequence the 37 linked-page 404s by creating real page-family HTML/content (not placeholder/dummy pages).
+- Then address the 36 contrast failures without changing established brand identity without approval.
+- Complete local build when repository checkout/network is available, plus full HAR/console, tablet viewport retest if needed, and sequential keyboard/screen-reader review.
+- Phase 2.7 remains **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.8 image verification/integration must not start until its release gates are explicitly closed or accepted.
