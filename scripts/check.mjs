@@ -1,4 +1,5 @@
 import { readFile, stat } from "node:fs/promises";
+import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { createSitemapDocuments, discoverIndexableHtmlUrls, validateSitemapXml } from "./sitemap.mjs";
 
@@ -15,6 +16,32 @@ const canonical=(html.match(/<link\b[^>]*>/gi)||[]).find(tag=>/\brel=["']canonic
 const canonicalHref=canonical.match(/\bhref=["']([^"']+)["']/i)?.[1]||"";
 const robotsTxt=await readFile(path.join(dist,"robots.txt"),"utf8");
 const headers=await readFile(path.join(dist,"_headers"),"utf8");
+const css=await readFile(path.join(root,"src/assets/css/site.css"),"utf8");
+const jsPath=path.join(root,"src/assets/js/site.js");
+const jsResult=spawnSync(process.execPath,["--check",jsPath],{encoding:"utf8"});
+function cssStructureValid(source){
+ const pairs={"}":"{",")":"(","]":"["},stack=[];
+ let quote=null,comment=false,escaped=false;
+ for(let i=0;i<source.length;i++){
+  const ch=source[i],next=source[i+1];
+  if(comment){if(ch==="*"&&next==="/"){comment=false;i++;}continue;}
+  if(quote){if(escaped){escaped=false;continue;}if(ch==="\\"){escaped=true;continue;}if(ch===quote)quote=null;continue;}
+  if(ch==="/"&&next==="*"){comment=true;i++;continue;}
+  if(ch==="'"||ch==='"'){quote=ch;continue;}
+  if(ch==="{"||ch==="("||ch==="["){stack.push(ch);continue;}
+  if(ch==="}"||ch===")"||ch==="]"){if(stack.pop()!==pairs[ch])return false;}
+ }
+ return stack.length===0&&!quote&&!comment&&!escaped;
+}
+function attribute(tag,name){
+ const match=tag.match(new RegExp("\\b"+name+"=(?:\\"([^\\"]*)\\"|'([^']*)')","i"));
+ return match?.[1]??match?.[2]??null;
+}
+const imageTags=[...html.matchAll(/<img\\b[^>]*>/gi)].map(match=>match[0]);
+const imagesHaveAlt=imageTags.every(tag=>attribute(tag,"alt")!==null&&attribute(tag,"alt").trim().length>0);
+const imagesHaveDimensions=imageTags.every(tag=>Number(attribute(tag,"width"))>0&&Number(attribute(tag,"height"))>0);
+const ids=[...html.matchAll(/\\bid=["']([^"']+)["']/gi)].map(match=>match[1]);
+const uniqueIds=ids.length===new Set(ids).size;
 const checks=[
  ["HTML5 doctype",/^<!doctype html>/i.test(html)],
  ["One H1",(html.match(/<h1\b/gi)||[]).length===1],
@@ -32,12 +59,27 @@ const checks=[
  ["Search forms",(html.match(/data-search-form/g)||[]).length>=2],
  ["8+ sections",(html.match(/<section\b/g)||[]).length>=8],
  ["Skip link",/class="skip-link"/.test(html)],
- ["Mobile navigation",/id="mobile-navigation"/.test(html)]
+ ["Mobile navigation",/id="mobile-navigation"/.test(html)],
+ ["JavaScript syntax (node --check)",jsResult.status===0],
+ ["CSS syntax structure (balanced delimiters/strings/comments)",cssStructureValid(css)],
+ ["HTML image tags have nonempty alt text",imagesHaveAlt],
+ ["HTML image tags have explicit positive dimensions",imagesHaveDimensions],
+ ["HTML IDs are unique",uniqueIds]
 ];
 let failed=0;
 for(const [label,ok] of checks){console.log((ok?"PASS ":"FAIL ")+label);if(!ok)failed++}
 const refs=[...html.matchAll(/src="(\/assets\/images\/[^"]+\.webp)"/g)].map(m=>m[1]);
 for(const ref of [...new Set(refs)]){try{const f=await stat(path.join(dist,ref.slice(1)));console.log("PASS "+ref+" "+f.size+" bytes")}catch{console.log("FAIL missing "+ref);failed++}}
+const cssUrls=[...css.matchAll(/url\\(\\s*(?:(["'])(.*?)\\1|([^)]*?))\\s*\\)/gi)]
+ .map(match=>(match[2]??match[3]??"").trim())
+ .filter(value=>value&&!/^(?:data:|https?:|#)/i.test(value));
+for(const ref of cssUrls){
+ const target=ref.startsWith("/")?path.join(dist,ref.slice(1)):path.resolve(dist,"assets/css",ref);
+ try{await stat(target);console.log("PASS CSS asset "+ref)}catch{console.log("FAIL missing CSS asset "+ref);failed++}
+}
+if(cssUrls.length===0)console.log("PASS CSS has no local url() asset references to resolve");
+if(jsResult.status!==0)console.log("JavaScript syntax details:",jsResult.stderr||jsResult.stdout);
+
 try{
  const rootXml=await readFile(path.join(dist,"sitemap.xml"),"utf8");
  const rootDoc=validateSitemapXml(rootXml);
