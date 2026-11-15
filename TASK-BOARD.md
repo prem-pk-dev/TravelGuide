@@ -455,3 +455,37 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - No original/candidate binary, active derivative, homepage reference, manifest, HTML/CSS/JS, branding or feature changed.
 - No MEDIA-ASSETS modification, main/research mutation, merge or production deployment.
 - Phase 2.8 remains **PARTIALLY VERIFIED — NOT COMPLETE**. Do not begin Round 6 without explicit approval.
+
+## 21. Phase 2.8 — Round 5 alternative-source checks (2026-11-15)
+
+### Completed
+- [x] Rechecked TravelGuide and MEDIA-ASSETS current image trees and relevant image upload commit groups.
+- [x] Rechecked page-level source metadata for the 12 Round 2 original masters; no original JPEG binary was acquired.
+- [x] Rechecked all nine candidate Pexels pages, contributors, dimensions and Free/Pexels License status.
+- [x] Opened exact source image previews for the Africa and café candidates (2/9); these are visual previews only and are not counted as local binaries.
+- [x] Preserved previous Round 5 verification: 12/12 existing WebP derivatives pass actual-byte RIFF/WEBP, byte-size, parsed-dimension and SHA-256 checks.
+
+### Pending
+- [ ] Original JPEG masters: recover 0/12.
+- [ ] Candidate original photo binaries: acquire 0/9.
+- [ ] Recompute source hashes and decode native metadata from actual original files.
+- [ ] Verify candidate-specific model/property/privacy releases, signage, logos and trademarks.
+- [ ] Complete actual-file desktop/mobile crop checks and obtain editorial approvals: 0/9.
+- [ ] Certify exact HTTP status, image MIME and response bytes for all 12 Preview image paths: 0/12.
+- [ ] Replace legacy artwork only after explicit editorial approval; current 9 placements remain unchanged.
+
+### Six blocker status
+1. Original JPEG recovery — Pending (0/12).
+2. Candidate original binaries — Pending (0/9).
+3. Rights — Pexels/Wikimedia license classes verified; third-party releases and privacy/property/trademark clearance Pending.
+4. Visual approval — 2/9 source previews viewed; 0/9 candidate crop approvals.
+5. CDN — 0/12 exact paths certified.
+6. Legacy artwork — 9 unchanged; 0 approved replacements.
+
+### Safety boundary
+- Documentation only on development/homepage.
+- No image binary, master, candidate photo, homepage reference, HTML/CSS/JS, manifest, branding or functionality changed.
+- No MEDIA-ASSETS mutation; main, research/travel-guide-blueprint and development/responsive-fixes remain untouched.
+- No merge or production deployment. Round 6 is not started.
+
+**Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.**

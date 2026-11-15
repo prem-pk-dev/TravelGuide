@@ -231,3 +231,39 @@ Wikimedia Round 2 sources remain CC BY-SA 4.0 (attribution/change notice/share-a
 Nine AI-generated placements remain unchanged. Replacement remains recommended, but no candidate passed the binary, release, crop or editorial approval gates. No replacement was made.
 
 **Resumed disposition:** masters 0/12; candidate binaries 0/9; candidate approvals 0/9; CDN paths 0/12 certified. Phase 2.8 remains partially verified.
+
+---
+
+## 15 November 2026 — Round 5 continued: alternative retrieval and photo-source review
+
+### Source recovery
+- Rechecked TravelGuide and MEDIA-ASSETS image inventories/history. No original JPEG master was found in the inspected current image trees; relevant MEDIA-ASSETS upload commit groups checked contain WebP/SVG assets, not the 12 original JPEGs.
+- Wikimedia pages expose author, JPEG MIME, original dimensions, file size and license for the four Wikimedia masters. Pexels pages expose creators and dimensions for the eight Pexels masters. Direct original-file downloads failed in the available environment.
+- Original JPEGs acquired: 0/12. Original source SHA-256 values were not recomputed from actual JPEG bytes.
+
+### Nine replacement candidates
+| Slot | Candidate | Page-level fit | Crop/right status | Decision |
+|---|---|---|---|---|
+| Hero | Benitachell cliffs — Rafael Minguet Delgado | Mediterranean cliffs/water; 5702×3801 | Desktop-wide/mobile-tall crop and headline-safe space pending | Pending |
+| Asia | Ha Long Bay — Anh Nguyen | Limestone karsts/bay; 2400×3000 | 4:5 close to tile ratio; actual crop pending | Pending |
+| Europe | Historic riverside — Alexandra H. Maria | Riverside buildings/reflection; 3084×4112 | 3:4 close to tile ratio; actual crop pending | Pending |
+| Africa | Savannah sunset — Wussol | Exact preview shows acacias, orange sunset and dirt road | Wide-to-portrait crop loses side context; actual crop pending | Pending |
+| Americas | Fitz Roy lake — Nazarena Pozza | Patagonia peaks/glacial lake; 3472×4640 | Near 3:4; actual crop pending | Pending |
+| Kyoto | Traditional Kyoto street — Ignacio Estevo | Wooden houses/street; 2054×2899 | Exact machiya/noren/roof details not established; wide-card crop pending | Pending |
+| Lisbon | Yellow tram — Oleksandra Zelena | Tram/Lisbon; 3072×4080 | Portrait-to-card crop pending | Pending |
+| Seasonal coast | Sagres cliffs — Nils Rotura | Distinct Atlantic cliffs; 5029×2829 | Season is not established by page; card crop pending | Pending |
+| Café | Street-side café — Anastasia Shuraeva | Exact preview shows outdoor tables/cobbled street; 5472×3648 | People/signage visible; release/crop pending | Pending |
+
+Candidate source previews opened: 2/9. Candidate original binaries acquired: 0/9. Candidate SHA-256 and actual image metadata from local original bytes: 0/9. Candidate crop approvals: 0/9.
+
+### License determination
+Pexels current License/Terms permit website use and modification/adaptation, including commercial projects, without mandatory attribution. The Terms prohibit standalone redistribution, implying endorsement and trademark uses, and caution that separate privacy, personality, property and trademark permissions may be required. Pexels does not warrant that every release exists. Platform-level rights are confirmed; individual candidate model/property releases and visible-person/signage/trademark clearance remain Pending.
+
+Wikimedia Round 2 source classes remain CC BY-SA 4.0 for the courtyard, train and Azenhas do Mar, and CC0 1.0 for Marrakech Medina. BY-SA adaptations require attribution, license link, change notice and share-alike; CC0 does not remove unrelated rights.
+
+### CDN and existing derivatives
+- The 12 existing WebP derivatives remain independently byte/format/dimension/SHA-256 verified in the earlier Round 5 pass.
+- Browser attempts against all 12 exact TravelGuide Preview image paths failed as inaccessible. No actual HTTP 200 + image/webp + RIFF/WEBP body was verified. A generic 403 response from unrelated sites is not treated as an origin result.
+- Candidate desktop/mobile crops are not approved. All nine candidates remain Pending; nine legacy AI artworks remain unchanged.
+
+**Round 5 continued status:** source JPEGs 0/12; candidate originals 0/9; candidate crop approvals 0/9; CDN image paths 0/12 certified.

@@ -608,3 +608,71 @@ The nine legacy AI-artwork placements remain unchanged: Hero, Asia, Europe, Afri
 - Legacy artwork unchanged: **9/9**; replacement approvals: **0/9**.
 
 **Round 5 resumed disposition: ORIGINAL-MASTER RECOVERY BLOCKED; CANDIDATE PHOTOS REMAIN PAGE-LEVEL LEADS; RELEASES, CROPS AND CDN RESPONSES PENDING. Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.**
+
+---
+
+# Phase 2.8 — Round 5 alternative-source retrieval and crop review (15 November 2026)
+
+## Repository/history
+- Resumed from development/homepage commit 856d8a2da6c25dc1be616b300220f86e522d6688.
+- Rechecked TravelGuide branch refs and MEDIA-ASSETS main image inventory. The inspected current image trees contain zero JPEG/JPG source masters; MEDIA-ASSETS has 111 tracked image files, all WebP.
+- Inspected relevant MEDIA-ASSETS image-upload commit file lists. The upload groups checked contain WebP image assets and SVG assets, not the 12 Round 2 JPEG masters.
+- The TravelGuide Round 2 image commit added the 12 WebP derivatives, not the original JPEG source files. No source JPEG object or original-master path was found in the inspected current trees/history.
+- Original JPEG masters recovered: 0/12.
+
+## Original Round 2 source-page records
+These are page-level and prior-ledger records, not proof that the original byte stream was downloaded in this pass.
+
+| Derivative | Creator / source | Original JPEG dimensions and page file record | License | Master acquired |
+|---|---|---|---|---|
+| oceania.webp | François Balédent / Pexels | 4032×2268; prior byte/hash records remain in Round 2 ledger | Pexels Free | No — Pending |
+| alpine-hiking.webp | Jean-Paul Wettstein / Pexels | 6064×4040; prior byte/hash records remain in Round 2 ledger | Pexels Free | No — Pending |
+| marrakech-courtyard.webp | R Prazeres / Wikimedia | 4000×3000 JPEG; 3,052,596 bytes on source record | CC BY-SA 4.0 | No — Pending |
+| slow-train.webp | Kabelleger / David Gubler / Wikimedia | 5400×3600 JPEG; 7.8 MB on source record | CC BY-SA 4.0 | No — Pending |
+| ceramic-workshop.webp | Letícia Alvares / Pexels | 5760×3840; prior byte/hash records remain in Round 2 ledger | Pexels Free | No — Pending |
+| portugal-coast.webp | Jose Maria Lanca / Wikimedia | 4000×3000 JPEG; 2.48 MB on source record | CC BY-SA 4.0 | No — Pending |
+| japan-rail.webp | 貴彦 佐藤 / Pexels | 5760×3240; prior byte/hash records remain in Round 2 ledger | Pexels Free | No — Pending |
+| marrakech-medina.webp | Iainmccurdy / Wikimedia | 5278×3518 JPEG; 14.17 MB on source record | CC0 1.0 | No — Pending |
+| market-morning.webp | Mehmet Turgut Kirkgoz / Pexels | 4897×3264; prior byte/hash records remain in Round 2 ledger | Pexels Free | No — Pending |
+| calendar-planning.webp | Lara Jameson / Pexels | 5040×3360; prior byte/hash records remain in Round 2 ledger | Pexels Free | No — Pending |
+| train-platform.webp | Dan Wright / Pexels | 5952×3968; prior byte/hash records remain in Round 2 ledger | Pexels Free | No — Pending |
+| travel-bag.webp | SHVETS production / Pexels | 6000×4000; prior byte/hash records remain in Round 2 ledger | Pexels Free | No — Pending |
+
+Wikimedia file pages expose original JPEG MIME, dimensions, byte size, author and license. Pexels pages expose creator and dimensions; Pexels source byte sizes and SHA-256 remain the historic Round 2 values. Direct downloads did not produce local files, so no source SHA-256 was recomputed.
+
+## Nine candidate photos
+
+| Slot | Candidate / creator | Page dimensions | Direct preview | Crop and editorial status |
+|---|---|---:|---|---|
+| 1 Hero | Benitachell coast — Rafael Minguet Delgado | 5702×3801, 3:2 | Page metadata available; image endpoint cache miss | Mediterranean cliff/water subject matches. Wide desktop and portrait mobile crops plus headline-safe area pending. |
+| 2 Asia | Ha Long Bay — Anh Nguyen | 2400×3000, 4:5 | Page metadata available; image endpoint cache miss | Karsts/bay match. Ratio is close to 3:4 tile; actual crop pending. |
+| 3 Europe | Historic riverside — Alexandra H. Maria | 3084×4112, 3:4 | Page metadata available; image endpoint cache miss | Riverside buildings/reflection match. Actual framing/crop pending. |
+| 4 Africa | Savannah sunset — Wussol | Not exposed | Exact source image preview rendered | Preview shows sunset, acacias and dirt road. Portrait crop loses side context; approval pending. |
+| 5 Americas | Fitz Roy lake — Nazarena Pozza | 3472×4640, 217:290 | Page metadata available; image endpoint cache miss | Patagonia peak/lake match. Ratio is close to 3:4; actual crop pending. |
+| 7 Kyoto | Traditional Kyoto street — Ignacio Estevo | 2054×2899, 158:223 | Page metadata available; image endpoint cache miss | Wooden houses/street described; full machiya/noren/distant-roof brief not established. Wide-card crop pending. |
+| 8 Lisbon | Yellow tram — Oleksandra Zelena | 3072×4080, 64:85 | Page metadata available; image endpoint cache miss | Lisbon tram matches; portrait-to-card crop must retain tram and street. Pending. |
+| 17 Seasonal coast | Sagres cliffs — Nils Rotura | 5029×2829, approx. 16:9 | Page metadata available; image endpoint cache miss | Atlantic cliffs match; page does not establish shoulder-season context. Card crop pending. |
+| 19 Café | Street-side café — Anastasia Shuraeva | 5472×3648, 3:2 | Exact source image preview rendered | Outdoor tables/cobbled street match; preview shows identifiable people and signs. Release/signage review and crop pending. |
+
+- Direct source-image previews rendered for 2/9 candidates: Africa and café. The other seven direct endpoints were not fetchable through the current browser cache.
+- Candidate original files acquired locally: 0/9. Actual source MIME/signature, byte length, SHA-256 and decoded dimensions from local binary files: 0/9.
+- Candidate desktop/mobile crops approved: 0/9. Source-page dimensions are planning metadata, not crop approval.
+
+## License and third-party rights
+- Pexels current License/Terms allow website/app use and modification. The Terms grant commercial and non-commercial download/use/copy/modify/adapt rights, without mandatory attribution, subject to prohibited-use conditions.
+- Prohibited uses include standalone file distribution/sale, implying endorsement, use as a trademark/trade name/service mark, and certain commercial uses of images containing trademarks/logos/brands.
+- Pexels warns that identifiable people, logos, brands, buildings/property and other content may carry separate privacy, personality, trademark, design or property rights. Contributors warrant that they have required releases when uploading, but Pexels expressly does not warrant every required consent/license exists.
+- Platform-level commercial-use and modification rights are verified for the nine Pexels pages. Candidate-specific model/property releases, identifiable-person permissions, signage/logos and trademark clearance remain Pending. The Terms do not provide release documents to this project.
+- Pexels attribution is not mandatory; photographer credit remains recommended in project records. Do not distribute Pexels files as a standalone stock archive.
+- Official references: https://www.pexels.com/license/ and https://www.pexels.com/terms-of-service/ (Terms last updated 20 October 2026).
+- Wikimedia Dar al Bacha, Gurtnellen train and Azenhas do Mar are CC BY-SA 4.0. Preserve author/source credit, license link, change notice and share-alike for adapted derivatives. Marrakech Medina is CC0 1.0; CC0 does not settle separate privacy/personality/property/trademark questions.
+
+## Round 5 status and boundary
+- Existing Round 2 WebP derivatives: 12/12 remain independently byte/format/dimension/SHA-256 verified in the earlier Round 5 pass.
+- Original JPEG masters: 0/12 acquired.
+- Candidate pages/creator/dimensions: 9/9 recorded; exact direct previews: 2/9; candidate originals acquired: 0/9; candidate hashes: 0/9; approvals: 0/9.
+- Exact CDN response checks: all 12 Preview image paths were attempted in the browser, but no HTTP 200 + image/webp + body-byte result was verified. Generic proxy 403 responses for unrelated public hosts are not treated as Cloudflare origin results.
+- Nine legacy AI-artwork placements remain unchanged. No replacement approved or integrated.
+- No image binary, source master, candidate image, homepage source reference, HTML/CSS/JS, manifest, branding, Cloudflare setting or production deployment was changed.
+
+**Round 5 remains PARTIALLY VERIFIED — NOT COMPLETE.**

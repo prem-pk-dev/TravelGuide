@@ -545,3 +545,26 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 6. **Legacy artwork — PENDING:** 9/9 remain unchanged; 0/9 replacements approved.
 
 **Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE. Phase 2.9, Phase 2.10 and Chat 3 remain pending. Do not start Round 6 without explicit approval.**
+
+## 25. Phase 2.8 — Round 5 further alternative-source checks (2026-11-15)
+
+- Rechecked current TravelGuide and MEDIA-ASSETS image trees and relevant image upload history. No original JPEG master was found in the inspected current trees; relevant MEDIA-ASSETS upload commit groups checked contain WebP/SVG assets, not the 12 Round 2 JPEG masters.
+- Rechecked public source pages for the 12 existing photo masters. Wikimedia original records expose JPEG MIME, dimensions, file size, author and license. Pexels pages expose creator and source dimensions; historic source byte/hash values remain prior Round 2 records. No original master binary was downloaded and source hashes were not recomputed.
+- Original JPEG masters acquired: 0/12.
+- Rechecked all nine Pexels replacement candidate pages and page-level dimensions/license status. Exact image previews opened for the Africa and café candidate files (2/9); seven direct image endpoints were not fetchable through the current browser cache. Candidate original files acquired: 0/9; candidate hashes/MIME/signatures from actual local bytes: 0/9.
+- Pexels License/Terms permit commercial website use and adaptation without mandatory attribution, subject to standalone-distribution, endorsement and trademark restrictions. They warn that separate privacy, personality, property, design and trademark permissions may be required and do not warrant that all releases exist. Platform-level rights are verified; candidate-specific releases and third-party clearances remain Pending.
+- Existing Wikimedia sources remain CC BY-SA 4.0 for courtyard/train/Portugal coast and CC0 1.0 for Marrakech Medina. BY-SA attribution/change notice/share-alike obligations remain; CC0 does not clear unrelated rights.
+- Candidate desktop/mobile crop approval: 0/9. Two exact source image previews were visually inspected; the other seven did not render via the browser image endpoint. Page dimensions and native preview do not constitute responsive crop approval.
+- The 12 current derivative binaries remain independently verified in the earlier Round 5 pass (RIFF/WEBP, byte length, parsed dimensions and SHA-256).
+- All 12 exact Preview image path browser attempts failed as inaccessible/not-fetchable. Live HTTP 200, image/webp MIME and actual body bytes remain unverified for 0/12 paths.
+- Nine legacy AI artwork placements remain unchanged; approved replacements 0/9. No image file, homepage reference, manifest, HTML/CSS/JS, branding, Cloudflare setting, MEDIA-ASSETS file or production deployment changed.
+
+### Six blocker status
+1. Original JPEG recovery — Pending (0/12).
+2. Nine candidate original binaries — Pending (0/9).
+3. License — Pexels/Wikimedia platform license classes verified; individual releases/privacy/property/trademark clearance Pending.
+4. Visual approval — 2/9 candidate previews rendered; 0/9 actual-file desktop/mobile crop approvals.
+5. CDN — 0/12 exact image paths certified by HTTP status, MIME and body bytes.
+6. Legacy artwork — 9 unchanged; 0 replacement approvals.
+
+**Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE. Do not start Round 6 without explicit approval.**
