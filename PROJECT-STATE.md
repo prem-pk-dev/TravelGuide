@@ -80,20 +80,30 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Preview canonical remains `https://travelguide-9op.pages.dev/` (the configured production canonical host).
 - No root `sitemap.xml` exists in the inspected source branch, and `scripts/build.mjs` does not generate a sitemap. Sitemap accessibility is not verified and remains an issue.
 
-### Public HTTP verification limitations
-- Direct HTTPS requests from the current execution container could not resolve the `*.pages.dev` hostnames.
-- Web fetches of preview and production robots/sitemap/HTML endpoints returned inaccessible/cache-miss errors.
-- Cloudflare Browser Rendering content requests were rate-limited (HTTP 429); a separate production-host request returned a network-connection-closed/DNS error. These are tooling/network failures, not evidence of the site's HTTP status.
-- Therefore actual public HTTP status, response headers, rendered robots meta, canonical tag, robots.txt body and sitemap status have **not** been independently verified. Do not mark SEO isolation complete until these are checked from an ordinary public HTTP client/browser.
+### Public HTTP verification — actual responses (2026-11-15)
 
-### Production source safety review
-- `main` source remains unchanged by this phase.
-- Main shell currently hard-codes `<meta name="robots" content="noindex, nofollow">`; production is therefore protected from indexing at source level, but production search indexing is not enabled.
-- Main `site.json` canonical remains `https://travelguide-9op.pages.dev/`.
-- Main build script emits permissive `robots.txt` (`Allow: /`) and does not generate a sitemap.
-- No source changes, deployment, or Cloudflare configuration changes were made to `main` or `research/travel-guide-blueprint`.
+**Preview branch alias: `https://development-homepage.travelguide-9op.pages.dev`**
+- `GET /robots.txt`: HTTP `200`, `text/plain`; body is `User-agent: *\nAllow: /\n`; response includes `X-Robots-Tag: noindex, nofollow`.
+- `GET /`: HTTP `200`, `text/html`; HTML contains `<meta name="robots" content="noindex, nofollow">`; response includes `X-Robots-Tag: noindex, nofollow`.
+- Preview canonical and `og:url` both point to `https://travelguide-9op.pages.dev/`.
+- `GET /sitemap.xml`: HTTP `404`; returned the project's custom Page not found document.
 
-### Outcome
-- Preview build-time noindex rules and deployment/alias identity are source/API verified.
-- Public HTTP verification is blocked; SEO isolation is **not certified complete**.
-- Remaining: fetch the live preview and production responses externally; confirm the `X-Robots-Tag` header, robots meta, canonical and robots.txt body; establish or intentionally omit sitemap; then reconcile production's current noindex directive with the desired launch indexing policy.
+**Production canonical host: `https://travelguide-9op.pages.dev`**
+- `GET /robots.txt`: HTTP `200`, `text/plain`; body is `User-agent: *\nDisallow: /\n`; no `X-Robots-Tag` header was present on the project canonical-host alias response.
+- `GET /`: HTTP `200`, `text/html`; HTML contains `<meta name="robots" content="noindex, nofollow">`; no `X-Robots-Tag` header was present on the project canonical-host alias response. Canonical and `og:url` point to `https://travelguide-9op.pages.dev/`.
+- `GET /sitemap.xml`: HTTP `404`; returned the project's custom Page not found document.
+- Cross-check at immutable production deployment URL `https://ed9365c0.travelguide-9op.pages.dev/robots.txt`: HTTP `200`, body also `Disallow: /`, with `X-Robots-Tag: noindex`.
+
+### Production source and safety review
+- Production branch and deployment remain on `main` commit `bab89d7eb14a356dbc194557492fc8de6e980c67`; this verification made no writes to `main`, research branch or Pages settings.
+- At the deployed production commit, `src/partials/shell.html` has hard-coded `noindex, nofollow`; `scripts/build.mjs` generates `robots.txt` with `Disallow: /`; `src/data/site.json` sets canonical to `https://travelguide-9op.pages.dev/`.
+- The live base-host responses agree with the production source for robots body and HTML meta. However, `Disallow: /` prevents crawlers from fetching the homepage to observe its noindex meta. On the canonical-host alias, no `X-Robots-Tag` header was present. Therefore do not treat the production setup as a reliable de-indexing policy for an already-known URL.
+- The immutable production deployment URL did emit `X-Robots-Tag: noindex` on its robots response; the base alias and immutable deployment response headers differ.
+- No sitemap source file or sitemap-generation step exists in the inspected production/development sources. Both public sitemap URLs returned HTTP `404`.
+
+### Outcome and remaining issues
+- Preview deployment identity and alias: verified.
+- Preview indexing restrictions: **PASS** — the live homepage returns both a noindex meta tag and an `X-Robots-Tag: noindex, nofollow` header, while robots.txt allows crawling so the directives can be read.
+- Preview/production sitemap accessibility: **FAIL** — both `/sitemap.xml` URLs return HTTP `404`.
+- Production indexing policy: **needs correction before launch** — robots.txt disallows all crawling, the homepage meta says noindex, and the canonical-host response does not carry an `X-Robots-Tag` header. This combination can prevent crawlers from seeing the meta directive.
+- Overall Preview SEO Isolation is **not marked complete** because the sitemap check fails and production canonical-host crawler behavior has an inconsistency to resolve.

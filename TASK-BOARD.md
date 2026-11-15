@@ -53,18 +53,20 @@ Chat 2 does not implement destination detail, country/continent or itinerary/art
 
 ## 6. Preview SEO isolation — live verification (2026-11-15)
 
-- [x] Confirm Cloudflare Pages project production branch is `main` and preview deployment policy includes all branches.
-- [x] Confirm successful preview deployment ID `e09510f2-66a3-46cd-a04f-46a44f685fc3`, branch `development/homepage`, commit `421028ebb0cf6fad6e24981148a006d6fb97c463`, and branch alias `https://development-homepage.travelguide-9op.pages.dev`.
-- [x] Review preview build-time robots meta branch logic and generated preview `X-Robots-Tag` header rule.
-- [x] Inspect production source on `main`: robots meta remains hard-coded `noindex, nofollow`; canonical remains `https://travelguide-9op.pages.dev/`; build emits `robots.txt` with `Allow: /`.
-- [ ] Independently verify actual public HTTP response for preview `robots.txt`, homepage HTML robots meta/canonical, and `X-Robots-Tag` header.
-- [ ] Independently verify preview sitemap endpoint. No sitemap source file or build generation was found; decide whether sitemap should be added or intentionally omitted.
-- [ ] Independently verify production public robots.txt, homepage robots meta/canonical and sitemap endpoint.
-- [ ] Decide production indexing policy before launch: current main source is `noindex, nofollow`, which is safe from indexing but not SEO-ready for a public searchable launch.
+- [x] Confirm Cloudflare Pages production branch is `main`, preview policy includes all branches, build command is `npm run build`, output is `dist/`.
+- [x] Confirm latest verification deployment identity and branch alias through Cloudflare Pages API.
+- [x] Verify preview `/robots.txt` live HTTP response: `200 text/plain`, body `User-agent: * / Allow: /`, response header `X-Robots-Tag: noindex, nofollow`.
+- [x] Verify preview homepage live response: HTTP `200`, robots meta `noindex, nofollow`, response header `X-Robots-Tag: noindex, nofollow`.
+- [x] Verify preview canonical and `og:url`: both `https://travelguide-9op.pages.dev/`.
+- [x] Verify preview `/sitemap.xml`: HTTP `404` (not available).
+- [x] Verify production canonical-host homepage: HTTP `200`, robots meta `noindex, nofollow`, canonical `https://travelguide-9op.pages.dev/`; no `X-Robots-Tag` on this alias response.
+- [x] Verify production canonical-host `/robots.txt`: HTTP `200`, body `User-agent: * / Disallow: /`.
+- [x] Verify production canonical-host `/sitemap.xml`: HTTP `404`.
+- [x] Cross-check immutable production deployment URL `ed9365c0.travelguide-9op.pages.dev`: robots.txt HTTP `200`, body `Disallow: /`, response header `X-Robots-Tag: noindex`.
+- [x] Inspect production source at deployed main commit `bab89d7eb14a356dbc194557492fc8de6e980c67`: shell meta is noindex; build script outputs Disallow; canonical remains production host.
+- [ ] Add/restore a valid sitemap (or explicitly approve omitting one) and ensure the sitemap URL returns HTTP 200.
+- [ ] Reconcile production `Disallow: /` with the noindex meta policy so crawlers can read de-indexing directives; add/check response-level header on the canonical alias if production is meant to remain noindex.
+- [ ] Do not change `main` or production deployment without separate explicit approval.
 
-### Verification blocker / evidence
-- Direct container HTTP requests failed hostname resolution for the Pages domains.
-- Web fetch returned inaccessible/cache-miss errors.
-- Cloudflare Browser Rendering was rate limited (HTTP 429); one production-host request returned network/DNS failure.
-- Those failures do not establish public HTTP response statuses. This phase remains **not complete** until ordinary public HTTP evidence is obtained.
-
+### Status
+Preview's live indexing restrictions **PASS**. The overall SEO isolation task remains **NOT COMPLETE** because both sitemap endpoints return 404 and production's canonical-host robots/crawler policy needs reconciliation. No source change was made to `main` or `research/travel-guide-blueprint`; no production deployment or merge was performed.
