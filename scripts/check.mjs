@@ -2,7 +2,7 @@ import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { createSitemapDocuments, discoverIndexableHtmlUrls, validateSitemapXml } from "./sitemap.mjs";
 
-const root=process.cwd(),dist=path.join(root,"dist");
+const root=process.cwd(),dist=path.resolve(root,process.env.TRAVELGUIDE_DIST_DIR??"dist");
 const isProductionBuild=(process.env.CF_PAGES_BRANCH??"")==="main";
 const site=JSON.parse(await readFile(path.join(root,"src/data/site.json"),"utf8"));
 const origin=new URL(site.canonicalOrigin).origin;

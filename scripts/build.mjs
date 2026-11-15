@@ -1,7 +1,7 @@
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { writeStaticSitemap } from "./sitemap.mjs";
-const root=process.cwd(),src=path.join(root,"src"),dist=path.join(root,"dist");
+const root=process.cwd(),src=path.join(root,"src"),dist=path.resolve(root,process.env.TRAVELGUIDE_DIST_DIR??"dist");
 const site=JSON.parse(await readFile(path.join(src,"data/site.json"),"utf8"));
 // Branch identity is not launch approval. Production remains protected until the explicit flag is enabled.
 const isProductionBuild = process.env.CF_PAGES_BRANCH === "main";
