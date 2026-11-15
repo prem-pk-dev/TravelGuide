@@ -77,3 +77,18 @@ No homepage references have been changed because public CDN delivery has not bee
 - Photo credits, creator names, licence and source links are in HOMEPAGE-PHOTO-CREDITS.md.
 - Rejected overwater-bungalow Bora photo, watermarked monochrome Portugal candidate, generic tropical beach and alpine meadow fallbacks, and HTML-only hiker thumbnail.
 - Nine earlier slots remain legacy AI-generated visuals and differ from parts of the original photography specification. Phase 2.8 is not complete until they are approved/replaced.
+
+
+---
+
+## 15 November 2026 — Phase 2.8 Round 3 independent audit
+
+- Confirmed current `development/homepage` tip `aec0cada4741b4941a928672db6bea3dba73e0d2` and current tree `d49868c89e78e0f78112961b9bba889bd55fd1ce`. The branch is 36 commits ahead / 1 behind `main`; no merge was performed.
+- Current TravelGuide inventory contains all 22 slot assignments, 21 image path names and 19 unique binary identities. The three documented reuse groups remain Amalfi, Kyoto bamboo and Matterhorn hikers.
+- All 12 Round 2 derivative files exist in the TravelGuide development tree. GitHub tree file sizes match the byte lengths recorded in HOMEPAGE-ASSET-MAPPING.md.
+- The source URLs, listed creators and licence references were reviewed against the public source pages. Pexels' licence terms and the Wikimedia Commons file records were inspected; CC BY-SA adaptations must retain attribution and share-alike notices, while the Marrakech Medina record identifies CC0 1.0.
+- This session did not retrieve any JPEG master or derivative bytes into the file runtime. The repository file reader rejects binary blobs, and the local execution environment cannot resolve external hosts. Therefore source/output SHA-256, JPEG/WebP signatures, decoded dimensions, MIME, encoder quality and derivative crop rendering were not independently reproduced.
+- The current MEDIA-ASSETS main tree has 111 WebP image files and none of the 12 Round 2 derivative basenames. No JPEG source masters were found in its image inventory. The Round 2 derivatives have no registered CDN paths in the current project documents, so CDN delivery remains unverified.
+- The 12 images remain integrated on `development/homepage`; no assets or homepage code were changed in this audit. Nine legacy AI-artwork placements still require editorial/spec approval or replacement.
+
+**Disposition: BLOCKED / PARTIALLY VERIFIED.** Round 3 has established the repository inventory and documented blockers; it has not independently verified original or derivative binary bytes or CDN delivery. Phase 2.8 is not complete.
