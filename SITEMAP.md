@@ -589,3 +589,17 @@ These are subsequent architecture/implementation decisions and must be handled i
 - [x] Production code and `main` branch left out of scope.
 
 **Next task:** Phase 2.2 — Static Website Architecture (define the directory/file structure, page-generation approach, JSON schemas and build/deployment constraints; do not begin website UI implementation until that architecture is reviewed).
+
+
+---
+
+## 15. Implemented sitemap generation and current published-page scope
+
+The sitemap is generated from physical HTML output, not from proposed routes in this architecture. At present, the generated site contains only its homepage content HTML; homepage cards reference future routes that do not yet have physical HTML and therefore must not appear in the sitemap.
+
+- \`scripts/sitemap.mjs\` includes only physical HTML with explicit \`index\` robots directive, a self-canonical HTTPS URL on the production origin, and a canonical path mapping to that physical HTML file. It excludes \`404.html\`, noindex documents, noncanonical duplicates and Preview hosts.
+- Duplicate canonical ownership fails the build. No unverified \`lastmod\` is emitted.
+- Preview: \`Allow: /\` permits crawlers to fetch pages, \`X-Robots-Tag: noindex, nofollow\` prevents indexing, robots.txt does not advertise a production sitemap, and the valid root sitemap is an empty urlset.
+- Production with \`productionIndexingEnabled: false\`: preserve \`Disallow: /\`, HTML noindex and the global noindex header; generate a valid empty sitemap, not an indexable URL list.
+- Production after separately approved launch: set the explicit flag to true; only then does robots.txt allow crawling and advertise the sitemap, page meta becomes index/follow and eligible physical canonical HTML enters the sitemap.
+- Scale: each sitemap child is limited to 45,000 URLs or 45 MiB uncompressed. A single sitemap is emitted as a urlset; multiple chunks are emitted as \`sitemap-N.xml\` files referenced by a root sitemap index. This remains below Google's 50,000 URL / 50 MB sitemap ceilings and supports thousands of static pages. <https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap>

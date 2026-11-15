@@ -1,4 +1,5 @@
 {
   "siteName": "TravelGuide",
-  "previewCanonical": "https://travelguide-9op.pages.dev/"
+  "canonicalOrigin": "https://travelguide-9op.pages.dev",
+  "productionIndexingEnabled": false
 }
