@@ -6,7 +6,7 @@
 - **Homepage development branch:** `development/homepage`
 - **Verified starting point:** `main` at `eb669b8e67f8f2df8f99c25858697dbe8aaa1b26`
 - **Phase status:** Research and architecture Phases 1, 1.5 and 2.1–2.6 complete.
-- **Implementation status:** Homepage foundation is committed on the isolated development branch; not merged or deployed.
+- **Implementation status:** Homepage foundation is committed on the isolated development branch and has a successful Cloudflare Preview deployment; not merged to `main` and not production-deployed.
 
 ## 1. Architecture contract
 
@@ -16,7 +16,7 @@
 - Physical HTML documents remain the canonical page model.
 - Original, photorealistic WebP assets are sourced from private MEDIA-ASSETS and delivered through Cloudflare Pages where public delivery is verified.
 - `main` and research branch remain untouched.
-- No Cloudflare Pages deployment/settings changed by this phase.
+- No Cloudflare Pages project settings were changed. Git pushes to `development/homepage` trigger Preview builds; no production deployment was initiated.
 
 ## 2. Homepage foundation
 
@@ -39,9 +39,13 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 
 ## 4. Preview and production configuration
 
-- Preview canonical: `https://travelguide-9op.pages.dev/` for isolated preview only.
-- Preview output has noindex/nofollow.
-- Production canonical hostname and live Cloudflare Pages build/root/output settings remain unverified. Do not deploy until inspected and explicitly approved.
+- Cloudflare Pages project: `travelguide`; production branch: `main`; Preview deployments enabled for all branches.
+- Build command: `npm run build`; output directory: `dist/`; root directory: `/`.
+- The `previewCanonical` value in `src/data/site.json` is `https://travelguide-9op.pages.dev/`, the production canonical hostname. Preview pages use this canonical target while also carrying preview-specific noindex rules.
+- Preview branch build logic sets `noindex, nofollow` and generates an `X-Robots-Tag: noindex, nofollow` header rule.
+- Main source currently contains `noindex, nofollow` in the shell; production is protected from indexing but not yet configured for search indexing.
+- No `sitemap.xml` source file or sitemap-generation step is present in the inspected build/source. Actual public sitemap response remains unverified.
+- Cloudflare production deployment record: branch `main`, commit `bab89d7eb14a356dbc194557492fc8de6e980c67`, successful deployment. No production deployment performed during the SEO verification task.
 
 ## 5. Current phase outcome
 
@@ -65,9 +69,8 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 
 ### Cloudflare deployment evidence
 - Cloudflare Pages project: `travelguide`; configured production branch: `main`; preview deployments enabled for all branches.
-- Preview deployment ID: `e09510f2-66a3-46cd-a04f-46a44f685fc3`.
-- Deployment status: `success`; branch: `development/homepage`; deployed commit: `421028ebb0cf6fad6e24981148a006d6fb97c463`; clean source state.
-- Branch alias recorded on that deployment: `https://development-homepage.travelguide-9op.pages.dev`.
+- The SEO code deployment ID `e09510f2-66a3-46cd-a04f-46a44f685fc3` succeeded for commit `421028ebb0cf6fad6e24981148a006d6fb97c463`; it was associated with `https://development-homepage.travelguide-9op.pages.dev`.
+- The subsequent documentation-only branch commit `b880d492b74f8962dc7cb7a58a4f11aaaf7e3897` also reached a successful Preview deployment (deployment ID `bae0af4f-5b64-4420-b9aa-6e960f7bd7e2`) and was associated with the same branch alias.
 - Production deployment record remains on `main` commit `bab89d7eb14a356dbc194557492fc8de6e980c67`; no production deploy or configuration write was performed in this verification.
 
 ### Source-level SEO configuration reviewed
