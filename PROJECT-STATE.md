@@ -411,3 +411,36 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Round 2 placement resolution: 13/13. New unique photographic WebP binaries: 12. The revised homepage uses 19 unique WebP binaries: 12 new camera-photo derivatives and seven older legacy AI-artwork binaries. Reuse groups: 3.
 - **Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.** Nine earlier placements still use seven AI-generated MEDIA-ASSETS images and several differ from the original image subject brief. They are not represented as documentary photographs. Phase 2.9 remains unstarted.
 - No main/research mutation, merge or Production deployment.
+
+
+## 18. Phase 2.8 — Round 3 independent repository and binary audit (2026-11-15)
+
+### Repository identity
+- Audited current `development/homepage` tip before this documentation update: `aec0cada4741b4941a928672db6bea3dba73e0d2`; tree `d49868c89e78e0f78112961b9bba889bd55fd1ce`.
+- `main` remains `bab89d7eb14a356dbc194557492fc8de6e980c67`; GitHub compare reports development 36 commits ahead and 1 behind main, with merge base `8223a82f3d0a4b21c9edbb8c64a8a55ed7569d41`.
+- `research/travel-guide-blueprint` remains `4e047f49cfac870d17a0347d60c2d1025f62dfd8`.
+- No merge, production deployment, or mutation to main/research was performed.
+
+### Current image inventory
+- The development tree contains the 22 slot assignments, represented by 21 image path names and 19 unique binary identities.
+- The three reuse groups remain Amalfi hero/seasonal coast, Kyoto bamboo Asia/Kyoto feature, and Matterhorn hikers Alpine Hiking/Swiss Trail.
+- Twelve Round 2 camera-photo WebP derivative files are present in TravelGuide. Their current GitHub tree byte sizes match the derivative byte lengths recorded in HOMEPAGE-ASSET-MAPPING.md.
+- The previously recorded 12 source URLs, creator names, licence references, source dimensions and source/output SHA-256 values remain documented in HOMEPAGE-ASSET-MAPPING.md and HOMEPAGE-PHOTO-CREDITS.md.
+
+### Binary and CDN limitations found in Round 3
+- No original JPEG master files were found in the current TravelGuide image tree or the inspected MEDIA-ASSETS image tree.
+- The MEDIA-ASSETS repository was inspected at main commit `4531d94979224daa5a3f0a6b25244e02655708e0`, tree `e9b43b0d7bf7087c4d49b3a35cbef4b532c798a7`. Its 111 tracked image files are WebP; none of the 12 Round 2 derivative basenames is present.
+- The Round 2 derivatives are present in TravelGuide, but the current project documents do not register exact MEDIA-ASSETS CDN destination paths for them. CDN delivery is therefore not verified.
+- The binary bodies could not be retrieved in the available execution environment. External DNS resolution failed in the local file runtime, and the connected GitHub text reader rejected binary blobs. The Round 2 source/output SHA-256 values, MIME, RIFF/WEBP signatures, decoded dimensions, WebP quality 85 and derivative desktop/mobile crops were not independently reproduced in this audit.
+- Recorded source pages and creator/licence metadata were reviewed; page-level rights evidence does not replace binary verification.
+
+### Round 3 disposition
+- Repository/branch/commit/tree audit: complete.
+- 22 slot assignments and reuse inventory: verified.
+- Twelve Round 2 WebP repository presences and byte lengths: verified.
+- Original master acquisition and independently reproduced source/output hashes: blocked.
+- Independently decoded binary format/MIME/dimensions and derivative crop review: blocked.
+- MEDIA-ASSETS registration and CDN delivery of the 12 Round 2 derivatives: unverified.
+- Nine legacy AI-artwork placements remain subject to editorial/spec approval or replacement.
+
+**Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.** Phase 2.9, Phase 2.10 and Chat 3 remain pending. No image binary or homepage code was changed; no MEDIA-ASSETS mutation, branch merge or production deployment was performed.
