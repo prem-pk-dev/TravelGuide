@@ -174,3 +174,48 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Latest branch head after the verification documentation commits: `4f2569a9400b42850b680d9bb354d719d0e48552` (documentation-only changes following implementation commit `08df2f0cc0e3db7df6ec00f6f69bea165814bf5e`).
 - Preview deployment for the latest branch head: `bc81f2e0-4d84-4e59-947c-e291bd8103ba`; status successful; source SHA `4f2569a9400b42850b680d9bb354d719d0e48552`; branch alias `https://development-homepage.travelguide-9op.pages.dev/`.
 - Final live homepage scrape on that alias returned HTTP 200 with `X-Robots-Tag: noindex, nofollow`; robots meta was `noindex, nofollow`; canonical and og:url were both the production origin. The live sitemap was already rechecked on the same implementation and returned HTTP 200 with valid empty XML and noindex header.
+## 12. Phase 2.7 — Production-mode build and SEO regression verification (2026-11-15)
+
+### Environment and scope
+- Working branch at the end of Phase 2.7 verification: `development/homepage`, commit `d40712463c4c9e35a39b2be3c0add36b27eee8da`.
+- A local workstation clone/build could not be started because the container could not resolve `github.com` (DNS/network error). No claim is made that a local workstation `npm run build` was executed.
+- As an equivalent code-path simulation, the Cloudflare Pages Preview build ran `scripts/test-production-build.mjs`. This spawns the actual `scripts/build.mjs` and `scripts/check.mjs` with `CF_PAGES_BRANCH=main` and a unique temporary output directory. The temporary output is removed in `finally`; the normal Preview build then runs into `dist/`.
+- Cloudflare Pages runtime used Node.js 22.23.4 and npm 10.9.9. Config inspected: root `/`, command `npm run build`, output `dist/`, production branch `main`, Preview branches `all`.
+
+### Production-mode simulation results
+- [PASS] `productionIndexingEnabled` remains `false`.
+- [PASS] `CF_PAGES_BRANCH=main` selects Production build branch behavior while the launch gate remains off.
+- [PASS] Production-mode HTML robots meta remains `noindex, nofollow`.
+- [PASS] Production-mode `robots.txt` contains `User-agent: *` and `Disallow: /`; it does not add `Allow:` or a premature `Sitemap:` directive.
+- [PASS] Production-mode `_headers` contains `X-Robots-Tag: noindex, nofollow` and XML/text MIME rules.
+- [PASS] Production-mode canonical points to configured production origin.
+- [PASS] Production-mode `sitemap.xml` parses as valid XML `urlset` with zero URLs while indexing is disabled.
+- [PASS] Production-mode generated-output checker completed successfully; temporary output is cleaned after the test.
+
+### Preview/build and source checks
+- Cloudflare Preview deployment for commit `d40712463c4c9e35a39b2be3c0add36b27eee8da`: deployment `14e391ff-a24e-4900-810b-02b795ef33bc`, status `success`, alias `https://development-homepage.travelguide-9op.pages.dev/`.
+- The Preview build ran the Production simulation first, then generated normal Preview output and executed `scripts/check.mjs`; the Cloudflare build log reports all test assertions passing.
+- [PASS] JavaScript syntax check via Node `--check` on `src/assets/js/site.js`.
+- [PASS] CSS structural integrity check (balanced braces, parentheses, brackets, strings and comments). This is a structural check, not a full standards-complete CSS parser/linter.
+- [PASS] HTML image tags have nonempty alt attributes and positive width/height dimensions; all 11 current local WebP image references exist in generated output.
+- [PASS] HTML document structure checks: doctype, one H1, main landmark, title/description, search forms, at least 8 sections, skip link, mobile navigation and unique IDs.
+- [PASS] No local CSS `url()` asset references currently require resolution; remote fonts are linked in the HTML head.
+- [PASS] Sitemap XML validation, canonical membership, empty sitemap under noindex policy, and sitemap-index chunking fixture.
+- [PASS] Cloudflare parsed three `_headers` rules and deployed the Preview successfully.
+
+### Browser and HTTP coverage / limitations
+- A Cloudflare Browser Rendering scrape of the Preview homepage returned HTTP 200 and a browser-parsed HTML document with the expected rendered content, robots meta `noindex, nofollow`, canonical `https://travelguide-9op.pages.dev/` and `og:url` on the production origin. The response header in the scrape was `X-Robots-Tag: noindex, nofollow`.
+- The browser scraping endpoint did not execute the attempted injected validation script (the inserted probe element was absent); therefore interactive menu/search/mobile navigation runtime behavior and browser console/page errors were not certified by this Phase 2.7 run.
+- A repeat live scrape of Preview homepage and sitemap after the latest checker-only changes was rate-limited by Cloudflare (HTTP 429). The latest build log still passed the Preview SEO output tests; the previous Phase 2.6 live endpoint checks had verified robots.txt/sitemap HTTP 200, MIME and noindex headers, but they are not described as a fresh endpoint request for this exact SHA.
+- No W3C HTML validator or full CSS standards parser/linter ran in this environment.
+
+### Production isolation
+- `main` branch remains `bab89d7eb14a356dbc194557492fc8de6e980c67`; production deployment remains `ed9365c0-1778-4e4e-aa5b-5510d56074cd` on that SHA.
+- Research branch remains `4e047f49cfac870d17a0347d60c2d1025f62dfd8`.
+- Cloudflare Production branch remains `main`; build configuration remains unchanged. No Production deployment, branch merge, image change or research-branch write occurred.
+
+### Phase 2.7 disposition
+- Production-mode build simulation and automated SEO/source regression checks: **PASS in Cloudflare Preview build environment**.
+- Local workstation build: **NOT RUN** because the execution environment could not resolve GitHub DNS.
+- Latest-SHA live endpoint recheck and full browser JavaScript runtime/interaction error capture: **PENDING** due Cloudflare scrape rate limiting / unsupported script injection.
+- Phase 2.7 is therefore **PARTIALLY VERIFIED, NOT FULLY CLOSED**. Keep Production indexing disabled and do not start image integration or Chat 3 until the remaining checks are completed or explicitly accepted as limitations.

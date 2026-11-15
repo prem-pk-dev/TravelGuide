@@ -114,3 +114,25 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - Latest development branch tip after documentation-only commits: `4f2569a9400b42850b680d9bb354d719d0e48552`.
 - Cloudflare Preview deployment ID `bc81f2e0-4d84-4e59-947c-e291bd8103ba` successfully deployed that latest SHA and is attached to the `development-homepage` alias.
 - Final live homepage scrape on the alias: HTTP 200, noindex meta, noindex response header, canonical and og:url on production origin.
+## 8. Phase 2.7 — Production-mode build and SEO regression verification
+
+- [x] Inspect package scripts, source build configuration and Cloudflare Pages root/build/output/branch settings.
+- [x] Add isolated Production-mode build simulation using `CF_PAGES_BRANCH=main` and a temporary output directory; clean temporary output after validation.
+- [x] Verify Production mode retains `productionIndexingEnabled: false`, HTML noindex, `Disallow: /`, no premature sitemap directive, X-Robots header and empty valid XML sitemap.
+- [x] Extend generated-output checks for JavaScript syntax, CSS structural balance, HTML image alt/dimensions, unique IDs and local CSS asset references.
+- [x] Cloudflare Preview build and deployment succeeded on commit `d40712463c4c9e35a39b2be3c0add36b27eee8da`; deployment `14e391ff-a24e-4900-810b-02b795ef33bc`.
+- [x] Confirm latest Cloudflare build log reports Production-mode simulation and normal Preview checks passing.
+- [x] Inspect `main`, research branch and Production deployment read-only; no writes, merge or Production deployment.
+- [ ] Local workstation clone/build: blocked by DNS resolution failure for github.com in the execution environment.
+- [ ] Fresh live HTTP recheck (robots.txt, homepage headers/meta/canonical, sitemap) for latest commit; Cloudflare Browser Rendering scrape rate-limited repeated requests.
+- [ ] Capture browser JavaScript runtime/page errors and run actual menu/search/mobile interaction tests; Browser Rendering scrape ignored injected test script, so runtime behavior is not certified.
+- [ ] Run full standards-compliant HTML validation and full CSS grammar lint/parse; current tests are structural + Chromium DOM parsing, not W3C/CSS validator certification.
+- [ ] Phase 2.7 final closeout after remaining live/browser/local checks.
+
+### Verified safety snapshot (2026-11-15)
+- `development/homepage`: `d40712463c4c9e35a39b2be3c0add36b27eee8da`.
+- `main`: `bab89d7eb14a356dbc194557492fc8de6e980c67` (unchanged).
+- `research/travel-guide-blueprint`: `4e047f49cfac870d17a0347d60c2d1025f62dfd8` (unchanged).
+- Cloudflare Production deployment: `ed9365c0-1778-4e4e-aa5b-5510d56074cd` on main SHA above; not redeployed.
+- Cloudflare project settings unchanged: production branch `main`, root `/`, build `npm run build`, output `dist`, Preview branches `all`.
+- No homepage image reference changed. Phase 2.8 image integration and Chat 3 have not started.
