@@ -191,3 +191,43 @@ Pexels permits commercial/non-commercial use and modifications without mandatory
 - Legacy AI artwork keep approvals: 0/9.
 - No asset replacement, page reference, manifest, CSS/JS/HTML, branding, or deployment change.
 - Phase 2.8 remains **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.9, Phase 2.10 and Chat 3 remain pending.
+
+---
+
+## 15 November 2026 — Round 5 resumed: acquisition and approval status
+
+### Original JPEG masters
+- Rechecked current TravelGuide image trees for development/homepage, main, research/travel-guide-blueprint and development/responsive-fixes, plus MEDIA-ASSETS main. No JPEG/JPG originals are present in these trees.
+- Relevant TravelGuide image commits and MEDIA-ASSETS image publication/history were checked. Round 2 added 12 WebP derivatives, not original JPEG masters.
+- Original JPEGs acquired: **0/12**. The prior source hashes/byte sizes/dimensions remain historic ledger values, not newly reproduced evidence.
+- Direct download attempts against a Pexels original and a Wikimedia original failed through the available download environment. No HTML preview is counted as an image binary.
+
+### Nine replacement candidates
+| Slot | Candidate | Page-level evidence | Acquisition/crop/decision |
+|---|---|---|---|
+| Hero | Benitachell coast — Rafael Minguet Delgado | 5702×3801; cliffs and turquoise sea | No source binary/crop; **Pending** |
+| Asia | Ha Long Bay — Anh Nguyen | 2400×3000; misty karsts | No source binary/crop; **Pending** |
+| Europe | Historic riverside — Alexandra H. Maria | 3084×4112; buildings/reflection | No source binary/crop; **Pending** |
+| Africa | Savannah sunset — Wussol | Dimensions not exposed; acacia/sunset preview | Preview only; no source binary/crop; **Pending** |
+| Americas | Fitz Roy lake — Nazarena Pozza | 3472×4640; Patagonia peak/lake | No source binary/crop; **Pending** |
+| Kyoto | Traditional Kyoto street — Ignacio Estevo | 2054×2899; wooden houses/power lines | Full machiya/noren brief not proven; no binary/crop; **Pending** |
+| Lisbon | Yellow tram street — Oleksandra Zelena | 3072×4080; Lisbon/tram | No source binary/crop; **Pending** |
+| Seasonal coast | Sagres cliffs — Nils Rotura | 5029×2829; Atlantic coast | Season not established; no binary/crop; **Pending** |
+| Café | Street café — Anastasia Shuraeva | 5472×3648; outdoor tables/cobbled lane | People/signage visible in preview; no binary/release/crop; **Pending** |
+
+Candidate original binaries acquired: **0/9**. None is approved.
+
+### Licensing and third-party rights
+Pexels current license/Terms grant commercial use and modification/adaptation without mandatory attribution, subject to prohibited-use conditions. The Terms restrict standalone redistribution, implied endorsement and certain commercial uses of images depicting trademarks/logos/brands. They also caution that privacy, personality, property and other third-party permissions may be required; Pexels does not warrant that all releases exist. Thus commercial/modification rights are page-level verified, while individual model/property releases and trademark/privacy clearance remain **Pending**.
+
+Wikimedia Round 2 sources remain CC BY-SA 4.0 (attribution/change notice/share-alike for adaptations) or CC0 1.0. CC0 does not resolve unrelated third-party rights.
+
+### Visual and CDN status
+- All 12 existing derivatives had actual native-file visual inspections and independent byte/hash/dimension verification in the previous Round 5 pass. Browser-confirmed desktop/mobile crops remain pending.
+- Candidate original binaries were not obtained; candidate crop approvals: 0/9.
+- Cloudflare Preview deployment succeeded at deployment-record level, but the 12 direct asset paths were inaccessible to the available browser tool. The execution network returned 403 text/plain even for unrelated hosts, so this is not a verified origin HTTP status. Certified CDN paths: 0/12.
+
+### Legacy artwork
+Nine AI-generated placements remain unchanged. Replacement remains recommended, but no candidate passed the binary, release, crop or editorial approval gates. No replacement was made.
+
+**Resumed disposition:** masters 0/12; candidate binaries 0/9; candidate approvals 0/9; CDN paths 0/12 certified. Phase 2.8 remains partially verified.

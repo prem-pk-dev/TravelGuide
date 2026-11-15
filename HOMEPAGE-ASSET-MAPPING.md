@@ -523,3 +523,88 @@ Pexels' published license permits commercial and non-commercial use and modifica
 - No image bytes, manifests, source references, HTML, CSS, JavaScript, branding, or homepage design were changed.
 
 **Round 5 status: 12/12 EXISTING DERIVATIVE BINARIES VERIFIED; ORIGINAL JPEG RECOVERY BLOCKED; 9 REPLACEMENT CANDIDATES REMAIN PAGE-LEVEL LEADS ONLY; CDN AND RENDERED CROP APPROVAL PENDING. Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE. Do not start Phase 2.9.**
+
+---
+
+# Phase 2.8 — Round 5 resumed: source-master recovery and candidate evidence (15 November 2026)
+
+## Original JPEG recovery
+Current recursive image-tree checks found **zero JPEG/JPG files** on these refs:
+
+| Repository branch | Commit | JPEG/JPG files |
+|---|---|---:|
+| TravelGuide \`development/homepage\` | \`b8a6a4ec89abf90ec2b3fab6cfaf10eaf3b302ea\` | 0 |
+| TravelGuide \`main\` | \`bab89d7eb14a356dbc194557492fc8de6e980c67\` | 0 |
+| TravelGuide \`research/travel-guide-blueprint\` | \`4e047f49cfac870d17a0347d60c2d1025f62dfd8\` | 0 |
+| TravelGuide \`development/responsive-fixes\` | \`9e4997bfb018a34da3892f63a2939e63633462d2\` | 0 |
+| MEDIA-ASSETS \`main\` | \`4531d94979224daa5a3f0a6b25244e02655708e0\` | 0 |
+
+MEDIA-ASSETS main contains 111 tracked image files, all WebP. The exact 12 Round 2 derivative names and identical Git blob identities are absent there. Relevant image-bearing TravelGuide commits (\`ab877b4\`, \`730f85e\`, \`8223a82\`) and the Round 2 commit \`aec0cada4741b4941a928672db6bea3dba73e0d2\` were reviewed; the Round 2 commit added WebP derivatives, not JPEG originals. No original master was recovered from the inspected tracked trees or relevant image history.
+
+| Original source / creator | Prior Round 2 source dimensions | Source master acquired |
+|---|---:|---|
+| François Balédent / Pexels — Bora Bora | 4032×2268 | **No — Pending** |
+| Jean-Paul Wettstein / Pexels — Matterhorn hikers | 6064×4040 | **No — Pending** |
+| R Prazeres / Wikimedia — Dar al Bacha | 4000×3000 | **No — Pending** |
+| Kabelleger / David Gubler / Wikimedia — Gurtnellen train | 5400×3600 | **No — Pending** |
+| Letícia Alvares / Pexels — pottery wheel | 5760×3840 | **No — Pending** |
+| Jose Maria Lanca / Wikimedia — Azenhas do Mar | 4000×3000 | **No — Pending** |
+| 貴彦 佐藤 / Pexels — Japanese train | 5760×3240 | **No — Pending** |
+| Iainmccurdy / Wikimedia — Marrakech Medina | 5278×3518 | **No — Pending** |
+| Mehmet Turgut Kirkgoz / Pexels — market stall | 4897×3264 | **No — Pending** |
+| Lara Jameson / Pexels — planning map | 5040×3360 | **No — Pending** |
+| Dan Wright / Pexels — LNER platform train | 5952×3968 | **No — Pending** |
+| SHVETS production / Pexels — suitcase | 6000×4000 | **No — Pending** |
+
+Original JPEG masters recovered: **0/12**. The source hashes, byte sizes and dimensions in the Round 2 provenance table remain historical records; original bytes were not available to recompute source hashes. Direct download attempts against a Pexels original and a Wikimedia original failed in the available download environment. A source-page preview is not counted as a recovered binary.
+
+## Nine candidate photographs
+All nine Pexels source pages were rechecked. They display free/Pexels License status; these remain page-level records rather than verified source binaries.
+
+| Slot | Candidate / creator | Page dimensions | Page-level subject fit | Original/crop/decision |
+|---|---|---:|---|---|
+| Hero coast | [Benitachell Mediterranean cliffs](https://www.pexels.com/photo/stunning-rocky-coastline-in-benitachell-spain-30558175/) — Rafael Minguet Delgado | 5702×3801 | Mediterranean cliffs/turquoise water | Original not acquired; desktop/mobile crops pending |
+| Asia | [Ha Long Bay limestone islands](https://www.pexels.com/photo/misty-islands-in-halong-bay-vietnam-35858996/) — Anh Nguyen | 2400×3000 | Strong karst/bay match | Original not acquired; tile crop pending |
+| Europe | [Historic riverside buildings/reflection](https://www.pexels.com/photo/historic-european-riverside-buildings-with-reflection-35534814/) — Alexandra H. Maria | 3084×4112 | Page description matches riverside architecture | Original not acquired; crop pending |
+| Africa | [African savannah sunset](https://www.pexels.com/photo/sunset-in-african-savannah-landscape-30878973/) — Wussol | Not exposed | Acacia trees, road and warm sunset in page preview/description | Preview only; dimensions/master/crop pending |
+| Americas | [Fitz Roy Glacier and Lake](https://www.pexels.com/photo/fitz-roy-glacier-and-lake-17600486/) — Nazarena Pozza | 3472×4640 | Patagonia peak and glacial lake | Original not acquired; crop pending |
+| Kyoto feature | [Traditional Kyoto street](https://www.pexels.com/photo/traditional-japanese-street-in-kyoto-36889407/) — Ignacio Estevo | 2054×2899 | Traditional wooden houses; does not confirm all requested machiya/noren/roof details | Original not acquired; crop pending |
+| Lisbon | [Lisbon yellow tram street](https://www.pexels.com/photo/charming-lisbon-street-with-historic-tram-40600060/) — Oleksandra Zelena | 3072×4080 | Page identifies Lisbon tram/street | Original not acquired; crop pending |
+| Seasonal coast | [Sagres Atlantic cliffs](https://www.pexels.com/photo/dramatic-cliffs-over-the-atlantic-in-sagres-portugal-36733193/) — Nils Rotura | 5029×2829 | Distinct Atlantic cliffs; season not proven by page alone | Original not acquired; crop pending |
+| Neighbourhood café | [Street-side café tables](https://www.pexels.com/photo/cafe-tables-on-the-street-4210026/) — Anastasia Shuraeva | 5472×3648 | Outdoor tables/cobbled street; preview includes people/signage | Original not acquired; release/crop pending |
+
+Candidate original binaries acquired: **0/9**. Candidate source SHA-256, binary MIME/signatures and decoded dimensions: **0/9**. None is approved or integrated.
+
+## Rights and release determination
+- Pexels current Terms (updated 20 October 2026) grant download, use, copy, modification and adaptation rights for commercial/non-commercial purposes, without mandatory attribution, subject to prohibited uses.
+- Pexels prohibits standalone redistribution/sale, misleading endorsement, use as a trademark/service mark and certain commercial uses of imagery containing trademarks/logos/brands.
+- Pexels Terms caution that privacy, personality, property, trademark and other third-party permissions may be required and do not warrant that every relevant release exists. Candidate-specific model/property releases, visible-person permissions and logo/trademark clearances remain **Pending**.
+- Therefore Pexels commercial-use and modification rights are **verified at license level**, not as complete file-specific legal clearance.
+- Round 2 Wikimedia sources remain CC BY-SA 4.0 (attribution, link to license, change notice and same/compatible share-alike for adaptations) or CC0 1.0. CC0 does not automatically clear separate privacy/property/trademark rights.
+- Official terms: https://www.pexels.com/terms-of-service/ and https://www.pexels.com/license/.
+
+## Visual approval and crop gate
+The active CSS uses 4:3 story-card image frames on desktop and 16:10 on narrow screens. Continent tiles use \`object-fit: cover\`, becoming 3:4 on narrow screens except Oceania's 2.4:1 mobile row.
+
+- The 12 existing WebP derivatives were inspected at native dimensions and independently hash/byte/dimension verified earlier in Round 5. Native-image review is not a browser screenshot of actual desktop/mobile CSS crops.
+- Oceania's 900×1120 portrait source in a 2.4:1 mobile row has substantial vertical crop risk. The 960×1200 Marrakech courtyard in 4:3/16:10 cards and 860×720 medina in 16:10 also need actual rendered crop approval.
+- Candidate master files were not acquired, so no candidate desktop/mobile crops could be generated or approved. Candidate approvals: **0/9**.
+
+## CDN delivery gate
+- Successful Round 5 Preview deployment is recorded at \`https://5dbabd80.travelguide-9op.pages.dev\`.
+- The build script copies local images to \`/assets/images/<filename>\`. These are build-derived Preview paths, not registered MEDIA-ASSETS objects.
+- Browser open attempts against all 12 exact Preview image paths were refused as inaccessible by the available browser tool. The execution HTTP route also returned 403 text/plain for unrelated public hosts, so that proxy response cannot establish Cloudflare origin status.
+- Live HTTP 200, \`image/webp\` response MIME and actual body bytes were not certified for any of the 12 derivative paths in this resumed pass. No CDN path was invented or registered.
+
+## Legacy artwork and 22-slot gate
+The nine legacy AI-artwork placements remain unchanged: Hero, Asia, Europe, Africa, Americas, Kyoto feature, Lisbon, Seasonal coast and Neighbourhood café. Round 4's per-image audit/replacement recommendations remain current. None of the nine candidates has passed binary, release, responsive crop and editorial gates.
+
+- Existing Round 2 derivatives: **12/12 binary integrity verified** in the earlier Round 5 check.
+- Original JPEG masters: **0/12 recovered**.
+- Candidate pages rechecked: **9/9**; candidate binaries **0/9 acquired**; approvals **0/9**.
+- Candidate license terms: commercial/adaptation rights page-level verified; individual release/third-party clearance **Pending**.
+- Candidate desktop/mobile crops approved: **0/9**.
+- CDN delivery certificates: **0/12**.
+- Legacy artwork unchanged: **9/9**; replacement approvals: **0/9**.
+
+**Round 5 resumed disposition: ORIGINAL-MASTER RECOVERY BLOCKED; CANDIDATE PHOTOS REMAIN PAGE-LEVEL LEADS; RELEASES, CROPS AND CDN RESPONSES PENDING. Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.**

@@ -421,3 +421,37 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - Documentation-only changes on development/homepage.
 - No image binaries, source references, manifests, HTML/CSS/JS, homepage design or branding changed.
 - No MEDIA-ASSETS modification, main/research branch change, merge or production deployment.
+
+## 18. Phase 2.8 — Round 5 resumed source acquisition and approval status (2026-11-15)
+
+### Completed checks
+- [x] Rechecked current TravelGuide branch refs and image trees, including development/homepage, main, research/travel-guide-blueprint and development/responsive-fixes.
+- [x] Rechecked MEDIA-ASSETS main inventory and relevant image history.
+- [x] Confirmed no original JPEG masters in the inspected current branch trees; MEDIA-ASSETS has 111 WebP images.
+- [x] Rechecked 12 Round 2 source records and original-file links; no source master was acquired.
+- [x] Rechecked all nine Pexels candidate pages, contributors, page dimensions/subjects and current Pexels license/Terms.
+- [x] Preserved previous Round 5 verification: 12/12 derivative binary signatures, byte lengths, decoded dimensions and SHA-256 values match the Round 2 ledger.
+
+### Pending work
+- [ ] Recover/store the 12 original JPEG masters (current count: 0/12).
+- [ ] Recompute original JPEG SHA-256; verify actual source MIME/signature/dimensions/bytes.
+- [ ] Download nine candidate original files (current count: 0/9).
+- [ ] Compute candidate source hashes and decode actual formats/dimensions.
+- [ ] Verify candidate-specific privacy/model/property releases and trademark/logo permissions.
+- [ ] Capture/approve actual desktop/mobile browser crops (candidate approvals: 0/9).
+- [ ] Certify exact HTTP status, image MIME and body bytes for the 12 Preview/CDN image paths (current count: 0/12).
+- [ ] Obtain editorial approval before replacing any of the nine legacy AI-artwork slots.
+
+### Six blocker status
+1. Original JPEG recovery — **Pending (0/12)**.
+2. Nine candidate photo binaries — **Pending (0/9)**.
+3. Commercial/modification license terms — **Page-level verified**; individual release/privacy/property/trademark clearance — **Pending**.
+4. Desktop/mobile visual approval — **Pending**.
+5. CDN HTTP/MIME/body verification — **Pending (0/12)**.
+6. Legacy AI artwork — **9 unchanged; 0 approved replacements**.
+
+### Safety boundary
+- Documentation only on \`development/homepage\`.
+- No original/candidate binary, active derivative, homepage reference, manifest, HTML/CSS/JS, branding or feature changed.
+- No MEDIA-ASSETS modification, main/research mutation, merge or production deployment.
+- Phase 2.8 remains **PARTIALLY VERIFIED — NOT COMPLETE**. Do not begin Round 6 without explicit approval.

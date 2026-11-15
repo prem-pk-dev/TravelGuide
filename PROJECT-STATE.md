@@ -520,3 +520,28 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - CDN response verification: **BLOCKED BY EXECUTION NETWORK LIMITATION**.
 - The 22-slot homepage inventory remains populated, with 12 Round2 photographic derivatives, 9 legacy AI-artwork placements and the related Matterhorn reuse between Alpine Hiking/Swiss Trail.
 - **Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.** Phase 2.9, Phase 2.10 and Chat 3 remain pending. No images, home page references, code, branding, design or manifests were changed in this round. No merge or production deployment occurred.
+
+## 22. Phase 2.8 — Round 5 resumed source recovery and final blockers (2026-11-15)
+
+- Resumed from development/homepage commit \`b8a6a4ec89abf90ec2b3fab6cfaf10eaf3b302ea\`.
+- Current recursive image trees checked: TravelGuide development/homepage, main, research/travel-guide-blueprint, development/responsive-fixes and MEDIA-ASSETS main. No JPEG/JPG originals were found in those current image trees. MEDIA-ASSETS has 111 WebP images.
+- Relevant TravelGuide image commits and MEDIA-ASSETS image publication history were reviewed; the Round 2 homepage commit added 12 WebP derivatives, not the original JPEG masters.
+- Original JPEG masters acquired: **0/12**. Existing Round 2 source dimensions, bytes and SHA-256 remain prior records; original master bytes were unavailable to recompute them.
+- Nine candidate Pexels pages, contributors, subject descriptions and page dimensions were rechecked. Candidate original binaries acquired: **0/9**. No candidate SHA-256 or decoded file metadata exists for the original files.
+- Pexels Terms grant commercial use/modification/adaptation without mandatory attribution, subject to prohibited uses. Separate privacy, personality, property, trademark and other rights may require consent; Pexels does not warrant that all releases exist. Candidate-specific third-party rights are pending.
+- Wikimedia Round 2 sources remain CC BY-SA 4.0 (attribution/change notice/share-alike for adaptations) or CC0 1.0; CC0 does not clear unrelated rights.
+- The 12 current WebP derivatives remain independently verified in the earlier Round 5 pass (actual bytes, RIFF/WEBP, lengths, dimensions and SHA-256). That does not establish original JPEG availability or independently reproduce the quality-85 conversion log.
+- Candidate desktop/mobile crops: **0/9 approved**. Current derivative browser crop screenshots/sign-off remain pending.
+- Cloudflare Preview deployment record is successful; exact image HTTP status/MIME/body checks remain pending because the browser tool could not access the image paths and the execution network returned a generic 403 proxy response.
+- Nine legacy AI artwork placements remain unchanged; replacement approvals: **0/9**.
+- No source master, candidate photo, image reference, manifest, HTML/CSS/JS, brand asset, Cloudflare configuration or MEDIA-ASSETS content was changed. No merge or production deployment occurred.
+
+### Six blocker status
+1. **Original JPEG recovery — PENDING:** 0/12 masters recovered.
+2. **Nine candidate original photographs — PENDING:** 0/9 candidate binaries acquired.
+3. **License verification — PARTIAL:** Pexels/Wikimedia license terms reviewed; individual release/privacy/property/trademark checks pending.
+4. **Visual approval — PENDING:** native derivative inspection completed earlier; browser desktop/mobile crop approval and nine candidate decisions pending.
+5. **CDN verification — PENDING:** 0/12 exact asset paths certified with live HTTP status, image MIME and body bytes.
+6. **Legacy artwork — PENDING:** 9/9 remain unchanged; 0/9 replacements approved.
+
+**Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE. Phase 2.9, Phase 2.10 and Chat 3 remain pending. Do not start Round 6 without explicit approval.**
