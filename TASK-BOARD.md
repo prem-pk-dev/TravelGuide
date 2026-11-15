@@ -109,3 +109,8 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - [x] Confirm the final Preview build logs show all automated build and sitemap validation checks passing.
 - [x] Production deployment remains on main SHA `bab89d7eb14a356dbc194557492fc8de6e980c67`; no production deployment, merge, main write or research branch write was made.
 - [ ] Production-mode local simulation remains a useful additional test; indexing stays disabled regardless, and no production rollout is authorized.
+### Latest branch tip and Preview identity (2026-11-15)
+- Sitemap/build implementation commit: `08df2f0cc0e3db7df6ec00f6f69bea165814bf5e`.
+- Latest development branch tip after documentation-only commits: `4f2569a9400b42850b680d9bb354d719d0e48552`.
+- Cloudflare Preview deployment ID `bc81f2e0-4d84-4e59-947c-e291bd8103ba` successfully deployed that latest SHA and is attached to the `development-homepage` alias.
+- Final live homepage scrape on the alias: HTTP 200, noindex meta, noindex response header, canonical and og:url on production origin.
