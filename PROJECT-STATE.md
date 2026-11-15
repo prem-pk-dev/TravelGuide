@@ -107,3 +107,27 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Preview/production sitemap accessibility: **FAIL** — both `/sitemap.xml` URLs return HTTP `404`.
 - Production indexing policy: **needs correction before launch** — robots.txt disallows all crawling, the homepage meta says noindex, and the canonical-host response does not carry an `X-Robots-Tag` header. This combination can prevent crawlers from seeing the meta directive.
 - Overall Preview SEO Isolation is **not marked complete** because the sitemap check fails and production canonical-host crawler behavior has an inconsistency to resolve.
+
+
+## 8. Phase 2.6 — Sitemap strategy and crawler policy (2026-11-15)
+
+### Actual published-page inventory
+- The current static build emits one real content document: dist/index.html. It also emits dist/404.html, which is non-indexable.
+- Homepage cards and the architecture sitemap document reference many future routes, but no physical HTML documents for those route families exist in this branch yet. Those routes are not placed in the XML sitemap.
+
+### Implemented sitemap design on development/homepage
+- scripts/sitemap.mjs discovers URLs from generated HTML, not navigation links or proposed URL architecture.
+- A URL is included only when its physical HTML file has an explicit index robots token, has a self-canonical URL on the configured HTTPS production origin, and the canonical route maps to that same physical output file. 404.html, noindex pages, noncanonical duplicates and preview URLs are excluded.
+- Current productionIndexingEnabled is false. Preview and protected Production therefore emit a well-formed empty urlset; there are presently no eligible indexable pages to list.
+- The sitemap generator splits large sites at 45,000 URLs or 45 MiB per child file and switches root sitemap.xml to a sitemap index when required. No fabricated lastmod is included.
+- Build and npm run check validate sitemap XML, membership and a multi-file splitting fixture. The Pages build command will run the check automatically after generation.
+
+### Preview and Production crawler policy
+- Preview: robots.txt allows crawling but does not advertise a sitemap; all static responses carry X-Robots-Tag: noindex, nofollow; homepage meta is noindex; canonical points to the production origin.
+- Production is deliberately held behind productionIndexingEnabled: false: Disallow: / remains, HTML meta remains noindex, and response-level noindex stays in place. No change to main or to the deployed Production service was made.
+- Only a separately approved launch change may turn this switch on. That future action will set index/follow, allow crawling, publish the sitemap directive and list verified physical canonical pages.
+
+### Cloudflare Pages behavior
+- The configured Pages project remains root /, npm run build, output dist/, production branch main, Preview branches enabled.
+- Branch selection uses Cloudflare's CF_PAGES_BRANCH; _headers is generated to dist/. No _redirects file is needed because no redirect is currently required.
+- No Cloudflare project settings, main branch, research branch, production deployment or merge was changed.

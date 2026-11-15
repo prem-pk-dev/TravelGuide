@@ -70,3 +70,23 @@ Chat 2 does not implement destination detail, country/continent or itinerary/art
 
 ### Status
 Preview's live indexing restrictions **PASS**. The overall SEO isolation task remains **NOT COMPLETE** because both sitemap endpoints return 404 and production's canonical-host robots/crawler policy needs reconciliation. No source change was made to `main` or `research/travel-guide-blueprint`; no production deployment or merge was performed.
+
+
+## 7. Phase 2.6 — sitemap strategy and production crawler policy
+
+- [x] Inspect current HTML output and URL architecture; distinguish existing physical HTML pages from planned homepage-card links.
+- [x] Add branch-aware sitemap policy with no Preview URL leakage.
+- [x] Generate a valid empty Preview sitemap while all Preview documents remain noindex.
+- [x] Preserve production noindex and Disallow: / while productionIndexingEnabled remains false.
+- [x] Implement production sitemap generation for a future explicitly approved launch; no production indexing is enabled by this task.
+- [x] Add automatic physical-HTML canonical/indexability discovery and duplicate canonical protection.
+- [x] Add sitemap chunking and sitemap-index generation for large sites.
+- [x] Add XML, membership, branch-policy and chunking checks to npm run check; invoke checks from npm run build.
+- [ ] Complete the new Cloudflare Preview deployment and confirm the latest commit is attached to development-homepage alias.
+- [ ] Verify Preview robots.txt HTTP response, X-Robots-Tag, HTML robots meta, canonical and empty sitemap HTTP 200 / XML content type.
+- [ ] Inspect generated Production-mode build output with indexing still disabled (local simulated build only); do not deploy it.
+- [ ] Production indexing policy remains off until separate explicit launch approval.
+- [ ] Production sitemap deployment remains pending a future approved production release; no production configuration or deployment was changed here.
+
+### Implementation rule
+The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlist. Only generated physical HTML documents with a canonical self-reference and an explicit index directive can enter the sitemap.
