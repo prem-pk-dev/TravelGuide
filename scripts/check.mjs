@@ -34,13 +34,13 @@ function cssStructureValid(source){
  return stack.length===0&&!quote&&!comment&&!escaped;
 }
 function attribute(tag,name){
- const match=tag.match(new RegExp("\\b"+name+"=(?:\\"([^\\"]*)\\"|'([^']*)')","i"));
+ const match=tag.match(new RegExp("\\b"+name+"=[\"']([^\"']*)[\"']","i"));
  return match?.[1]??match?.[2]??null;
 }
-const imageTags=[...html.matchAll(/<img\\b[^>]*>/gi)].map(match=>match[0]);
+const imageTags=[...html.matchAll(/<img\b[^>]*>/gi)].map(match=>match[0]);
 const imagesHaveAlt=imageTags.every(tag=>attribute(tag,"alt")!==null&&attribute(tag,"alt").trim().length>0);
 const imagesHaveDimensions=imageTags.every(tag=>Number(attribute(tag,"width"))>0&&Number(attribute(tag,"height"))>0);
-const ids=[...html.matchAll(/\\bid=["']([^"']+)["']/gi)].map(match=>match[1]);
+const ids=[...html.matchAll(/\bid=["']([^"']+)["']/gi)].map(match=>match[1]);
 const uniqueIds=ids.length===new Set(ids).size;
 const checks=[
  ["HTML5 doctype",/^<!doctype html>/i.test(html)],
@@ -70,7 +70,7 @@ let failed=0;
 for(const [label,ok] of checks){console.log((ok?"PASS ":"FAIL ")+label);if(!ok)failed++}
 const refs=[...html.matchAll(/src="(\/assets\/images\/[^"]+\.webp)"/g)].map(m=>m[1]);
 for(const ref of [...new Set(refs)]){try{const f=await stat(path.join(dist,ref.slice(1)));console.log("PASS "+ref+" "+f.size+" bytes")}catch{console.log("FAIL missing "+ref);failed++}}
-const cssUrls=[...css.matchAll(/url\\(\\s*(?:(["'])(.*?)\\1|([^)]*?))\\s*\\)/gi)]
+const cssUrls=[...css.matchAll(/url\(\s*(?:(["'])(.*?)\1|([^){}]*?))\s*\)/gi)]
  .map(match=>(match[2]??match[3]??"").trim())
  .filter(value=>value&&!/^(?:data:|https?:|#)/i.test(value));
 for(const ref of cssUrls){
