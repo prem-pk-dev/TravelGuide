@@ -37,10 +37,13 @@ async function walkHtml(directory, root = directory) {
   const files = [];
   for (const entry of await readdir(directory, { withFileTypes: true })) {
     const absolutePath = path.join(directory, entry.name);
-    if (entry.isDirectory()) files.push(...await walkHtml(absolutePath, root));
-    else if (entry.isFile() && entry.name.toLowerCase().endsWith(".html")) files.push(absolutePath);
+    if (entry.isDirectory()) {
+      files.push(...await walkHtml(absolutePath, root));
+    } else if (entry.isFile() && entry.name.toLowerCase().endsWith(".html")) {
+      files.push({ absolutePath, relativePath: path.relative(root, absolutePath) });
+    }
   }
-  return files.map(file => ({ absolutePath: file, relativePath: path.relative(root, file) }));
+  return files;
 }
 
 /** Include only generated physical HTML with explicit indexability and a production self-canonical. */

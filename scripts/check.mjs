@@ -1,4 +1,4 @@
-import { readFile, stat } from "node:fs/promises";
+import { readFile, readdir, stat } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { createSitemapDocuments, discoverIndexableHtmlUrls, validateSitemapXml } from "./sitemap.mjs";
@@ -17,6 +17,8 @@ const canonicalHref=canonical.match(/\bhref=["']([^"']+)["']/i)?.[1]||"";
 const robotsTxt=await readFile(path.join(dist,"robots.txt"),"utf8");
 const headers=await readFile(path.join(dist,"_headers"),"utf8");
 const css=await readFile(path.join(root,"src/assets/css/site.css"),"utf8");
+const pageCss=await readFile(path.join(root,"src/assets/css/page.css"),"utf8");
+const pageData=JSON.parse(await readFile(path.join(root,"src/data/pages.json"),"utf8"));
 const jsPath=path.join(root,"src/assets/js/site.js");
 const jsResult=spawnSync(process.execPath,["--check",jsPath],{encoding:"utf8"});
 function cssStructureValid(source){
@@ -62,6 +64,7 @@ const checks=[
  ["Mobile navigation",/id="mobile-navigation"/.test(html)],
  ["JavaScript syntax (node --check)",jsResult.status===0],
  ["CSS syntax structure (balanced delimiters/strings/comments)",cssStructureValid(css)],
+ ["Page-family CSS syntax structure",cssStructureValid(pageCss)],
  ["HTML image tags have nonempty alt text",imagesHaveAlt],
  ["HTML image tags have explicit positive dimensions",imagesHaveDimensions],
  ["HTML IDs are unique",uniqueIds]
@@ -106,4 +109,57 @@ try{
 }catch(e){console.log("FAIL sitemap chunk test: "+e.message);failed++}
 console.log("Build mode:",isProductionBuild?"production":"preview","| indexing:",productionIndexingEnabled?"enabled":"protected/off");
 console.log("Sections:",(html.match(/<section\b/g)||[]).length,"| unique WebP:",new Set(refs).size);
+
+async function listHtmlFiles(directory){
+ const results=[];
+ for(const entry of await readdir(directory,{withFileTypes:true})){
+  const absolute=path.join(directory,entry.name);
+  if(entry.isDirectory())results.push(...await listHtmlFiles(absolute));
+  else if(entry.isFile()&&entry.name.toLowerCase().endsWith(".html"))results.push(absolute);
+ }
+ return results;
+}
+function htmlAttribute(tag,name){const m=tag.match(new RegExp("\\b"+name+"=[\\\"']([^\\\"']*)[\\\"']","i"));return m?.[1]??null;}
+const routeRecords=pageData.pages??[];
+const routePaths=routeRecords.map(page=>page.path);
+const expectedUnique=routePaths.length===new Set(routePaths).size;
+console.log((routeRecords.length===37&&expectedUnique?"PASS ":"FAIL ")+"37 unique page route records");
+if(routeRecords.length!==37||!expectedUnique)failed++;
+const htmlFiles=await listHtmlFiles(dist);
+const linkFailures=[];
+const pageFailures=[];
+const canonicalValues=[];
+for(const page of routeRecords){
+ const target=path.join(dist,page.path.slice(1),"index.html");
+ try{
+  const output=await readFile(target,"utf8");
+  const title=(output.match(/<title>([^<]+)<\/title>/i)||[])[1]??"";
+  const description=(output.match(/<meta\b[^>]*name="description"[^>]*>/i)||[])[0]??"";
+  const canon=(output.match(/<link\b[^>]*rel="canonical"[^>]*>/i)||[])[0]??"";
+  const canonHref=htmlAttribute(canon,"href");
+  const robots=(output.match(/<meta\b[^>]*name="robots"[^>]*>/i)||[])[0]??"";
+  const robotsValue=htmlAttribute(robots,"content")??"";
+  const valid=title.toLowerCase().includes("travelguide")&&description&&canonHref===origin+page.path&&(/noindex, nofollow/i.test(robotsValue)===noindex)&&((output.match(/<h1\b/gi)||[]).length===1)&&/aria-label="Breadcrumb"/.test(output);
+  if(!valid)pageFailures.push({path:page.path,title,canonical:canonHref,robots:robotsValue});
+  if(canonHref)canonicalValues.push(canonHref);
+ }catch{pageFailures.push({path:page.path,missing:true});}
+}
+console.log((pageFailures.length===0?"PASS ":"FAIL ")+routeRecords.length+" generated HTML page files, unique self-canonicals, robots, H1 and breadcrumbs");
+if(pageFailures.length){console.log("Page failures:",JSON.stringify(pageFailures));failed++;}
+if(canonicalValues.length!==new Set(canonicalValues).size){console.log("FAIL duplicate page canonical URLs");failed++;}
+for(const file of htmlFiles){
+ const output=await readFile(file,"utf8");
+ for(const match of output.matchAll(/\bhref="([^"]+)"/gi)){
+  const href=match[1].replace(/&amp;/g,"&");
+  if(!href.startsWith("/")||href.startsWith("//"))continue;
+  const pathname=href.split(/[?#]/)[0];
+  const relative=pathname==="/"?"index.html":pathname.endsWith("/")?pathname.slice(1)+"index.html":pathname.slice(1);
+  try{await stat(path.join(dist,relative));}
+  catch{linkFailures.push({file:path.relative(dist,file),href});}
+ }
+}
+console.log((linkFailures.length===0?"PASS ":"FAIL ")+"all root-relative internal HTML links resolve to physical files");
+if(linkFailures.length){console.log("Broken internal links:",JSON.stringify(linkFailures));failed++;}
+console.log("Static HTML documents:",htmlFiles.length,"| page family records:",routeRecords.length);
+
 if(failed)process.exitCode=1;
