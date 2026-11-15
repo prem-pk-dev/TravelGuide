@@ -178,3 +178,7 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - Then address the 36 contrast failures without changing established brand identity without approval.
 - Complete local build when repository checkout/network is available, plus full HAR/console, tablet viewport retest if needed, and sequential keyboard/screen-reader review.
 - Phase 2.7 remains **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.8 image verification/integration must not start until its release gates are explicitly closed or accepted.
+### Documentation tree correction (2026-11-15)
+- The documentation commit `ea6e20aa20250bb6f2ef8934bce9498fa1c12e15` was accidentally created without the existing base tree. Cloudflare Preview build consequently failed with `npm error code ENOENT` at `/opt/buildhome/repo/package.json`.
+- This was a Git tree construction error, not an application/package build regression. The corrective commit reapplies these verification documents on top of the complete source tree from code commit `b9296bb389373323a22fcc1af6b3d31fbfe14be9`; all existing source, package and asset files are retained.
+- Preview build for the corrective commit must be verified before it is considered the latest deployed revision. Production and research branches remain untouched.

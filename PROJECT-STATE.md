@@ -291,3 +291,7 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Local workstation full build: **NOT RUN** due local GitHub DNS failure and absent checkout. Offline dependency install is feasible, but not a full offline build.
 - Full HAR/network request report, initial-load console capture, full tab sequence/screen-reader audit and CSS warning cleanup remain incomplete.
 - Therefore Phase 2.7 is **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.8 image integration and Chat 3 are not started.
+### Documentation tree correction (2026-11-15)
+- The documentation commit `ea6e20aa20250bb6f2ef8934bce9498fa1c12e15` was accidentally created without the existing base tree. Cloudflare Preview build consequently failed with `npm error code ENOENT` at `/opt/buildhome/repo/package.json`.
+- This was a Git tree construction error, not an application/package build regression. The corrective commit reapplies these verification documents on top of the complete source tree from code commit `b9296bb389373323a22fcc1af6b3d31fbfe14be9`; all existing source, package and asset files are retained.
+- Preview build for the corrective commit must be verified before it is considered the latest deployed revision. Production and research branches remain untouched.
