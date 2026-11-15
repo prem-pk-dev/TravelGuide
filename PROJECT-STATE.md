@@ -385,3 +385,17 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Phase 2.8: IN PROGRESS — PARTIALLY VERIFIED. Do not declare the full image phase complete.
 - No new binaries added; existing originals retained unchanged. Phase 2.9, Phase 2.10 and Chat 3 have not started.
 - No main/research change, merge or Production deployment.
+
+## 16. Phase 2.8 — current Preview crop verification and final slot counts (2026-11-15)
+
+- Latest manifest/mapping commit before this documentation entry: 63e394dcdc3aea749fca550b502111eddbd9ee96.
+- Cloudflare Preview deployment: e788e02e-f77e-4da9-9a87-c5e547cc92e4; status success; branch development/homepage; deployed source SHA matches 63e394dcdc3aea749fca550b502111eddbd9ee96.
+- Actual live browser crop probe checked 12 DOM image uses at each of 360, 390, 768, 1024 and 1440 CSS pixels (60 use/viewport observations). All 60 uses decoded with positive natural dimensions; no image element overflow or document/body horizontal overflow was observed.
+- Hero remains 1672×941 intrinsic, object-fit cover; mobile 360/390 render 360×690 / 390×690, object-position 62% 50%; tablet/desktop position 50% 52%. Africa tile now object-position 80% 50% to retain herd in portrait crop.
+- 11 distinct local image path names are referenced by the homepage build. They represent 9 unique source binaries; Amalfi and Kyoto bamboo are the two approved reuse groups. Browser DOM currently contains 12 image uses because the Kyoto mega menu repeats the Kyoto featured image.
+- CDN: all 9 unique current source URLs were verified HTTP 200 / image/webp / RIFF-WEBP / positive decoded dimensions. Current source files are already in TravelGuide and their Git blob identities match MEDIA-ASSETS originals; no binaries were added/modified.
+- Slot disposition: 9 visually relevant/integrated placements; 2 fallback-only visuals (Oceania generic tropical beach and alpine meadow without a trail/hiker); 11 exact subjects not sourced yet. Reuse groups: 2. Unique CDN WebP source binaries verified: 9 (7 used for relevant placements; 2 fallback only). Current local image path refs: 11.
+- The 22-slot mapping and subject/HTTP/MIME/dimension/crop notes are recorded in HOMEPAGE-ASSET-MAPPING.md and HOMEPAGE-ASSET-REVIEW.md. Do not count fallback or missing assets as accepted images.
+- Phase 2.8 remains **PARTIALLY VERIFIED — NOT COMPLETE**. Image-source discovery/integration remains open for Oceania, Marrakech courtyard, slow train, alpine hiking, ceramic workshop, Portugal coast, Japan rail, Marrakech medina, Swiss trail, market morning, calendar planning, train platform and travel bag.
+- Phase 2.9, Phase 2.10 and Chat 3 have not started. No image-generation operation, binary replacement, main/research change, merge or Production deployment occurred.
+- Branch protection snapshot: main remains bab89d7eb14a356dbc194557492fc8de6e980c67; research/travel-guide-blueprint remains 4e047f49cfac870d17a0347d60c2d1025f62dfd8.

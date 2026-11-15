@@ -279,3 +279,23 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - Overall image integration: PARTIALLY COMPLETE — NOT COMPLETE.
 - Full desktop/mobile crop acceptance for all 22 cannot be declared while 13 slots remain unresolved or conditional.
 - Phase 2.9 must not start until the user authorises it after Phase 2.8 completion.
+
+## 12. Phase 2.8 — live crop recheck and handoff state (2026-11-15)
+
+### Current live Preview
+- [x] Cloudflare Preview deployment e788e02e-f77e-4da9-9a87-c5e547cc92e4 succeeded on manifest/mapping commit 63e394dcdc3aea749fca550b502111eddbd9ee96.
+- [x] Browser crop probe: 12 current image DOM uses × five widths = 60 observations at 360/390/768/1024/1440; all image uses decoded with positive natural dimensions, no rendered image overflow and no document/body horizontal overflow.
+- [x] Africa tile uses object-position 80% center; hero mobile crop uses 62% center, desktop uses 50% 52%.
+- [x] Nine unique current CDN WebP binaries verified HTTP 200, image/webp, RIFF/WEBP and decoded natural dimensions; 11 local image file-path references are active, with 9 unique binary identities due to two repeated source groups.
+- [x] Hero high-priority eager loading and all other homepage images lazy loading are checked by scripts/check.mjs and pass Cloudflare build.
+
+### 22-slot disposition
+- [x] 9 slots currently use subject-relevant existing WebP assets: hero coast (conditional Amalfi cliff village composition), Asia (Kyoto bamboo regional illustration), Europe (Santorini), Africa (Serengeti sunrise), Americas (Machu Picchu), Kyoto feature (bamboo), Lisbon tram, seasonal coast (Amalfi repeated) and neighbourhood café (coffee detail).
+- [ ] 2 fallback-only slots must be replaced/accepted after subject review: Oceania generic beach; alpine hiking meadow without visible trail/hiker.
+- [ ] 11 missing exact image subjects remain: Marrakech courtyard, slow train, ceramic workshop, Portugal coast, Japan rail, Marrakech medina, Swiss trail, market morning, calendar planning, train platform, travel bag.
+- [x] 2 source reuse groups documented and permitted: Amalfi hero + seasonal coast; Kyoto bamboo Asia + Kyoto feature/mega menu.
+- Actual current CDN WebP count: 9 unique source binaries verified; 7 support relevant current uses, 2 are fallbacks only. Current homepage image path refs: 11; browser DOM use count: 12; duplicate source groups: 2; exact sources still missing: 11.
+
+### Phase 2.8 gate
+- **PARTIALLY VERIFIED — NOT COMPLETE.** Do not start Phase 2.9 until all 22 subjects are correctly sourced, integrated and accepted.
+- Phase 2.9 final QA, Phase 2.10 final homepage review and Chat 3 handoff remain not started. No production deployment/merge or updates to main/research branches.
