@@ -82,11 +82,22 @@ Preview's live indexing restrictions **PASS**. The overall SEO isolation task re
 - [x] Add automatic physical-HTML canonical/indexability discovery and duplicate canonical protection.
 - [x] Add sitemap chunking and sitemap-index generation for large sites.
 - [x] Add XML, membership, branch-policy and chunking checks to npm run check; invoke checks from npm run build.
-- [ ] Complete the new Cloudflare Preview deployment and confirm the latest commit is attached to development-homepage alias.
-- [ ] Verify Preview robots.txt HTTP response, X-Robots-Tag, HTML robots meta, canonical and empty sitemap HTTP 200 / XML content type.
+- [x] Complete Cloudflare Preview deployment and confirm latest commit is attached to development-homepage alias (deployment ID 87ecea01-aea8-4a79-ba7c-014d09cc7819, commit 5db2ec3d98746ce9cd84429af30d3e263158c897).
+- [x] Verify live Preview robots.txt HTTP 200, Allow: /, no Sitemap directive, and X-Robots-Tag noindex, nofollow.
+- [x] Verify live Preview homepage HTTP 200, robots meta noindex, nofollow, X-Robots-Tag noindex, nofollow, and production canonical / og:url.
+- [x] Verify live Preview sitemap HTTP 200, application/xml, valid empty urlset, no Preview URLs and X-Robots-Tag noindex, nofollow.
 - [ ] Inspect generated Production-mode build output with indexing still disabled (local simulated build only); do not deploy it.
-- [ ] Production indexing policy remains off until separate explicit launch approval.
-- [ ] Production sitemap deployment remains pending a future approved production release; no production configuration or deployment was changed here.
+- [x] Keep productionIndexingEnabled false on development branch; production launch indexing remains off until explicit launch approval.
+- [ ] Production sitemap rollout remains pending a future approved production release; no production configuration or deployment was changed here.
 
 ### Implementation rule
 The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlist. Only generated physical HTML documents with a canonical self-reference and an explicit index directive can enter the sitemap.
+
+
+### Phase 2.6 live verification result (2026-11-15)
+- [x] Preview deployment succeeded on commit \`5db2ec3d98746ce9cd84429af30d3e263158c897\`; deployment \`87ecea01-aea8-4a79-ba7c-014d09cc7819\`; branch alias confirmed.
+- [x] Live Preview \`robots.txt\`: HTTP 200, text/plain, \`Allow: /\`, no production Sitemap directive, response noindex header.
+- [x] Live Preview homepage: HTTP 200, noindex meta + response X-Robots-Tag, canonical and og:url point to production origin.
+- [x] Live Preview \`sitemap.xml\`: HTTP 200, application/xml, valid empty urlset, response noindex header; XML source newline and namespace verified.
+- [x] Production source and deployment inspected and remain unchanged; main still has robots noindex and Disallow: /.
+- [ ] Do not turn on production indexing or deploy a Production sitemap without explicit launch approval.

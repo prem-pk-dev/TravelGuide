@@ -131,3 +131,31 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - The configured Pages project remains root /, npm run build, output dist/, production branch main, Preview branches enabled.
 - Branch selection uses Cloudflare's CF_PAGES_BRANCH; _headers is generated to dist/. No _redirects file is needed because no redirect is currently required.
 - No Cloudflare project settings, main branch, research branch, production deployment or merge was changed.
+
+
+## 9. Phase 2.6 — Preview sitemap and crawler verification addendum (2026-11-15)
+
+### Final deployment
+- Preview deployment ID: \`87ecea01-aea8-4a79-ba7c-014d09cc7819\`.
+- Deployment status: \`success\`; branch: \`development/homepage\`; deployed commit: \`5db2ec3d98746ce9cd84429af30d3e263158c897\`.
+- Branch alias: \`https://development-homepage.travelguide-9op.pages.dev/\`.
+- Cloudflare build log shows \`npm run build\` and \`npm run check\` completed successfully. Generated sitemap was an empty \`urlset\` (0 URLs), and all build checks passed. Cloudflare parsed three valid static header rules and completed deployment.
+
+### Live Preview HTTP evidence
+- \`GET /robots.txt\`: HTTP \`200\`; \`Content-Type: text/plain; charset=utf-8\`; body directives: \`User-agent: *\` and \`Allow: /\`; response \`X-Robots-Tag: noindex, nofollow\`; no \`Sitemap:\` line, so no production sitemap is advertised from Preview.
+- \`GET /\`: HTTP \`200\`; \`Content-Type: text/html; charset=utf-8\`; response \`X-Robots-Tag: noindex, nofollow\`; rendered HTML robots meta is \`noindex, nofollow\`; canonical and \`og:url\` both resolve to \`https://travelguide-9op.pages.dev/\`.
+- \`GET /sitemap.xml\`: HTTP \`200\`; \`Content-Type: application/xml; charset=utf-8\`; response \`X-Robots-Tag: noindex, nofollow\`. The XML parser recognizes the sitemap namespace and \`urlset\` root. Scraped XML source has actual newline characters and no literal backslash-n sequences. URL count is zero, as no physical content HTML page currently explicitly declares indexability with a self-canonical production URL.
+- No Preview URL or Preview host is present in sitemap entries (the sitemap is empty).
+
+### Production policy and safety
+- Development \`src/data/site.json\` keeps \`productionIndexingEnabled: false\`. Even a \`main\` branch build remains noindex + \`Disallow: /\` until this flag is deliberately changed in a separate approved launch task.
+- Production source on \`main\` was read-only inspected and remains unchanged: \`scripts/build.mjs\` blob \`8d3d4b2a195e99f6721c0a3f69024304a0c45b82\`; \`src/partials/shell.html\` blob \`9462b46dbabb061d6664d8783f3afbb5fa8d38cf\`; \`src/data/site.json\` blob \`59633c70cffaca51b4d70556e6f5440a3e149883\`.
+- Cloudflare Production remains on \`main\` commit \`bab89d7eb14a356dbc194557492fc8de6e980c67\`, deployment ID \`ed9365c0-1778-4e4e-aa5b-5510d56074cd\`, status successful. No Production deployment or configuration modification was made.
+- Pages settings remain root \`/\`, build command \`npm run build\`, output directory \`dist/\`, production branch \`main\`, Preview deployments enabled for all branches.
+- \`dist/_headers\` is generated branch-specifically and Cloudflare accepted its three rules. No \`_redirects\` file is required or generated.
+
+### Current status
+- Preview sitemap endpoint and robots/indexing isolation: **LIVE VERIFIED**.
+- Production indexing: **still disabled/protected**; implementation is prepared on development branch, not activated in Production.
+- Sitemap currently empty by design because no content page is yet eligible. Future page families enter only after physical HTML generation with explicit \`index, follow\` and an exact self-canonical URL on the production origin.
+- Production sitemap rollout and indexing switch remain release-gated; no merge, Production deployment, image integration or Chat 3 work was performed.
