@@ -225,3 +225,5 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Preview alias homepage: live HTTP 200, `text/html; charset=utf-8`, `X-Robots-Tag: noindex, nofollow`; browser scrape found meta robots `noindex, nofollow`, canonical and `og:url` both `https://travelguide-9op.pages.dev/`, and the `<main id="main">` landmark.
 - Preview alias robots.txt: live HTTP 200, `text/plain; charset=utf-8`, response `X-Robots-Tag: noindex, nofollow`; body directives `User-agent: *` and `Allow: /`, with no `Sitemap:` directive.
 - A fresh `/sitemap.xml` fetch after the preceding live checks was rate-limited (HTTP 429). Sitemap generation and XML validation passed in the successful Preview build log; the prior Phase 2.6 live check recorded HTTP 200 and valid XML. Do not claim a fresh HTTP status for the latest endpoint request.
+### Final Phase 2.7 sitemap endpoint result
+- Current Preview alias `/sitemap.xml`: HTTP 200; Content-Type `application/xml; charset=utf-8`; X-Robots-Tag `noindex, nofollow`; valid empty `urlset` in the sitemap namespace; zero URL entries. This verifies that Preview does not expose Production or Preview URLs in its sitemap.

@@ -141,4 +141,7 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 ### Latest live Preview follow-up
 - [x] Homepage HTTP 200; response X-Robots noindex; meta robots noindex, production canonical and og:url; browser DOM contains main landmark.
 - [x] robots.txt HTTP 200 text/plain; `User-agent: *`, `Allow: /`, no Sitemap directive and X-Robots noindex.
-- [ ] Fresh latest-alias sitemap endpoint request; most recent attempt was throttled with HTTP 429. Build output XML membership and validity checks are passing.
+- [x] Fresh latest-alias `/sitemap.xml` request: HTTP 200, application/xml; X-Robots noindex; valid empty `urlset`, correct namespace and zero URL entries.
+### Final sitemap endpoint check
+- [x] Current Preview alias `/sitemap.xml` returned HTTP 200 and `application/xml; charset=utf-8`, with `X-Robots-Tag: noindex, nofollow`.
+- [x] Browser XML viewer parsed the sitemap namespace `urlset`; it contained zero `<url>` elements, so no Preview URL or premature Production URL is published.
