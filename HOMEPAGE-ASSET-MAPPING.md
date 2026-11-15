@@ -105,3 +105,54 @@ To accept a URL, verify from a normal public browser/network or user-supplied ne
 - The remaining mapping slots are not declared complete: a CDN URL list alone is not proof that those image URLs load.
 
 **Decision:** Reuse authorized and visually appropriate images where possible, but do not commit unverified CDN URLs into production-facing homepage references. Complete the external CDN verification gate before image integration.
+
+---
+
+# Live CDN and visual re-audit — 15 November 2026
+
+This addendum supersedes provisional CDN/subject statements above where they conflict. Nine unique current homepage source URLs were fetched in a browser. All returned HTTP 200, Content-Type image/webp, RIFF/WEBP bytes and positive decoded dimensions. Source binaries match the private MEDIA-ASSETS Git blob identities. Metadata identifies these files as AI-generated illustrative artwork, not documentary photography.
+
+## Complete 22-slot register
+
+| # | Required slot | Target pixels | Current local file / CDN source | HTTP / MIME | Actual decoded pixels | Visual assessment and crop |
+|---:|---|---:|---|---|---:|---|
+| 1 | hero-coast.webp | 1920×1200 | src/assets/images/hero-coast.webp → [Amalfi source](https://media-assets-4sb.pages.dev/images/travel/destinations/amalfi-coast-village-v01.webp) | 200 / image/webp | 1672×941 | Amalfi cliff village, road, cliffs and turquoise sea. Not an empty natural coast; left third has village detail, so headline-safe composition is conditional under the dark scrim. Mobile crop uses 62% horizontal position. |
+| 2 | asia.webp | 900×1120 | src/assets/images/asia.webp → [Kyoto bamboo source](https://media-assets-4sb.pages.dev/images/travel/destinations/kyoto-bamboo-garden-v01.webp) | 200 / image/webp | 1672×941 | Bamboo path and wooden gate in a Kyoto/Japan-inspired scene. Asia region is truthful, but the specification's limestone-karst/Ha Long Bay subject is not met. Portrait crop keeps the central path/gate; exact visual requirement remains conditional. |
+| 3 | europe.webp | 900×1120 | src/assets/images/europe.webp → [Santorini source](https://media-assets-4sb.pages.dev/images/travel/destinations/santorini-caldera-sunset-v01.webp) | 200 / image/webp | 1672×941 | Santorini buildings, blue domes, caldera and sunset; European region is truthful. The brief asked for a riverside town, so visual concept differs. Portrait crop retains central domes/buildings. |
+| 4 | africa.webp | 900×1120 | src/assets/images/africa.webp → [Serengeti source](https://media-assets-4sb.pages.dev/images/travel/destinations/serengeti-elephant-safari-sunrise-v01.webp) | 200 / image/webp | 1672×941 | Elephant herd, acacias and savannah. Source is sunrise, not evening. Tile now uses object-position 80% center to retain the herd in a tighter portrait crop. |
+| 5 | americas.webp | 900×1120 | src/assets/images/americas.webp → [Machu Picchu source](https://media-assets-4sb.pages.dev/images/travel/destinations/06-machu-picchu-peru-v01.webp) | 200 / image/webp | 900×512 | Actual subject is Machu Picchu/Andes, not an alpine glacial lake. This is relevant to the Americas, but wide-to-portrait crop is severe and may cut terraces/context; a new crop/source or revised art direction is needed. |
+| 6 | oceania.webp | 900×1120 | src/assets/images/oceania.webp → [Tropical beach fallback](https://media-assets-4sb.pages.dev/images/nature/tropical_white_sand_beach.webp) | 200 / image/webp | 1200×800 | Generic palm-lined tropical beach and turquoise water. No lush volcanic ridge; no evidence ties it to a specific South Pacific island. Technically valid WebP, not approved as the required Oceania subject. |
+| 7 | kyoto-street.webp | 960×1200 | src/assets/images/kyoto-street.webp → [Kyoto bamboo source](https://media-assets-4sb.pages.dev/images/travel/destinations/kyoto-bamboo-garden-v01.webp) | 200 / image/webp | 1672×941 | Kyoto-inspired bamboo garden path and wooden gate, not a machiya street. Current “beyond the famous gates” feature is contextually relevant if title/alt stay truthful. Reused in Asia tile and mega menu; one source binary. |
+| 8 | lisbon-tram.webp | 960×1200 | src/assets/images/lisbon-tram.webp → [Lisbon tram source](https://media-assets-4sb.pages.dev/images/travel/destinations/23-lisbon-portugal-v01.webp) | 200 / image/webp | 900×510 | Yellow Lisbon tram in a tiled street; strong subject match. Source is landscape and slightly narrower than target; card crop keeps central tram. No caption/border. |
+| 9 | marrakech-courtyard.webp | 960×1200 | No exact source identified | Not applicable | — | Missing. Need authentic Moroccan riad courtyard, zellige fountain, carved cedar and orange tree. |
+| 10 | slow-train.webp | 900×680 | No exact source identified | Not applicable | — | Missing. Need passenger train moving through a green mountain valley, with train and landscape together. |
+| 11 | alpine-hiking.webp | 900×680 | Current inspiration image src/assets/images/alpine-meadow.webp → [Alpine meadow fallback](https://media-assets-4sb.pages.dev/images/nature/alpine_wildflower_meadow.webp) | 200 / image/webp | 1200×800 | Meadow and snowy peaks are visible, but no trail or hiker. Keep only as a generic meadow/outdoors fallback; it does not fulfil the hiking brief. |
+| 12 | ceramic-workshop.webp | 900×680 | No exact source identified | Not applicable | — | Missing. Need artisan hands shaping a clay vessel in a pottery workshop; no fabricated signage. |
+| 13 | portugal-coast.webp | 1000×740 | No exact source identified | Not applicable | — | Missing. Amalfi is Italy and must not be reused as Portugal. Need a visibly Portuguese Atlantic coastal town/cliffline. |
+| 14 | japan-rail.webp | 1000×740 | No exact source identified | Not applicable | — | Missing. Need a Japanese passenger train in a recognisable rail setting, without invented logos. |
+| 15 | marrakech-medina.webp | 860×720 | No exact source identified | Not applicable | — | Missing. Need Marrakech medina lanes, traditional shops/architecture and public-space context. |
+| 16 | swiss-trail.webp | 860×720 | No exact source identified | Not applicable | — | Missing. Need an unmistakable hiking footpath in a Swiss alpine valley. A lake or meadow alone is insufficient. |
+| 17 | seasonal-coast.webp | 920×680 | src/assets/images/seasonal-coast.webp → [Amalfi source](https://media-assets-4sb.pages.dev/images/travel/destinations/amalfi-coast-village-v01.webp) | 200 / image/webp | 1672×941 | Same Amalfi source as hero, explicitly permitted reuse. Accurate as an Amalfi Coast example, but not a separate seasonal scene. Duplicate is documented. |
+| 18 | market-morning.webp | 920×680 | No exact source identified | Not applicable | — | Missing. Need an early morning produce market with stalls and goods; no invented legible signage. |
+| 19 | neighbourhood-cafe.webp | 920×680 | src/assets/images/neighbourhood-cafe.webp → [Coffee source](https://media-assets-4sb.pages.dev/images/general/general-coffee-lifestyle.webp) | 200 / image/webp | 519×442 | Latte on a wooden table beside a leafy plant; not a full neighbourhood or identifiable café. Kept as a limited coffee/café detail with literal alt text. Native resolution is below target; check card sharpness. |
+| 20 | calendar-planning.webp | 800×620 | No exact source identified | Not applicable | — | Missing. Need notebook, calendar/planning material and map on a table; no legible generated dates/text. |
+| 21 | train-platform.webp | 800×620 | No exact source identified | Not applicable | — | Missing. Need passenger train at a station platform, without fabricated operator branding. |
+| 22 | travel-bag.webp | 800×620 | No exact source identified | Not applicable | — | Missing. Need open travel bag and practical travel essentials, without brand cues. |
+
+## Verified counts and duplicate use
+
+- 11 current local image filenames are present in the homepage image directory and referenced in the rendered homepage; the mega menu also repeats the Kyoto source.
+- 9 unique binary source files are used by current references. All 9 unique CDN paths tested returned HTTP 200, image/webp, RIFF/WEBP and positive decoded dimensions.
+- 2 authorised reuse groups: Amalfi (hero + seasonal coast) and Kyoto bamboo (Asia + Kyoto feature/mega menu).
+- 7 unique source binaries support 9 relevant placements; two current files are fallback-only (Oceania tropical beach and alpine meadow).
+- 11 exact-source slots have no suitable existing file identified: 9, 10, 12, 13, 14, 15, 16, 18, 20, 21 and 22.
+- Known broken thumbnail route thumbnails/travel-mountain-hiker.webp returns HTTP 200 but text/html, not WebP.
+
+## Responsive and loading verification
+
+- Browser Rendering checked 12 image DOM uses at each of 360, 390, 768, 1024 and 1440 CSS pixels: 60 image-use observations; all decoded with positive natural dimensions.
+- Object-fit crop geometry and object-position were measured at all five widths. Fallback/missing subjects remain unresolved; the geometry probe does not constitute full visual approval for all 22 source concepts.
+- Hero uses fetchpriority=high, loading=eager and async decoding. All other homepage image uses use loading=lazy and async decoding.
+- Manifest width/height values and emitted image attributes now match actual decoded source dimensions; no source binary was resized or altered.
+
+**Phase 2.8 status: PARTIALLY VERIFIED — NOT COMPLETE.** Continue resolving unsupported subjects. Do not start Phase 2.9 until all 22 slots are genuinely approved and integrated.

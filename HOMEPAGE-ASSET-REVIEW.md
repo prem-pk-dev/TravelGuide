@@ -53,3 +53,18 @@ The current Cloudflare connector fetch method returned HTTP 403 and `text/plain;
 ## Integration gate
 
 No homepage references have been changed because public CDN delivery has not been verified and several slots still lack exact subject matches. The homepage build script currently points at local `/assets/images/*` paths; switching to CDN URLs requires coordinated manifest/shell/build changes and preserving the existing hero fetch priority, lazy loading, intrinsic dimensions and responsive behavior. Those edits are not made in this review.
+
+---
+
+## 15 November 2026 — Live CDN and current-slot re-audit
+
+- MEDIA-ASSETS Pages deployment was confirmed successful on its private repo main branch; public asset URL delivery works in the available browser environment.
+- Nine unique current homepage source files were fetched and decoded. Each returned HTTP 200, Content-Type image/webp, a RIFF/WEBP signature and the dimensions recorded in HOMEPAGE-ASSET-MAPPING.md.
+- Source Git blob identities of all nine unique current binaries match the corresponding TravelGuide local WebP blobs. No file has been recompressed or resized.
+- MEDIA-ASSETS metadata identifies the selected files as AI-generated illustrative artwork, not documentary photography.
+- The previous provisional claim that americas.webp depicts an alpine glacial lake was wrong: it depicts Machu Picchu/Andean terraces. The homepage alt text and mapping now describe the actual visual.
+- alpine_wildflower_meadow.webp has no visible trail or hiker. The known thumbnails/travel-mountain-hiker.webp route returns HTML (text/html) and remains rejected.
+- oceania.webp is a generic tropical beach, not a verified South Pacific island.
+- Amalfi image is a cliffside village with road and sea, not an empty natural coastline. Kyoto image is a bamboo garden path/gate, not a machiya lane. Alt text has been corrected to describe what is visible.
+- All current browser-rendered image uses loaded at 360/390/768/1024/1440 widths. Crop geometry and focal positions were measured; exact-subject gaps and native-resolution shortfalls remain.
+- Phase 2.8 remains PARTIALLY VERIFIED. No new image generation or binary addition occurred. The missing/unsupported slots remain open as detailed in HOMEPAGE-ASSET-MAPPING.md.
