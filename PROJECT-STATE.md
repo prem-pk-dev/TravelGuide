@@ -595,3 +595,20 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - No MEDIA-ASSETS main, production main, research branch or Cloudflare setting changed.
 - No merge or Production deployment occurred.
 - Round 5 remains OPEN. Round 6 remains NOT STARTED.
+
+
+## 27. Round 5 — final blocker and homepage readiness re-audit (16 November 2026)
+
+Source branch was verified at `development/homepage` HEAD `97ef3f01f307362259b26a32677c8ffe6cd1df2e` before this documentation-only update.
+
+- **Swiss Alps original ZIP:** connected private MEDIA-ASSETS `main` tree fully inspected (328 entries, not truncated); no ZIP, exact JPEG name, Pexels ID, Swiss/Alps path, matching code-search result, matching commit-search result or release archive found. The requested ZIP cannot be retrieved from the connected repository. Local original-master verification remains **11/12; Swiss Alps BLOCKED**. No re-download or recreation.
+- **Remote original verification:** 12/12 PASS remains the earlier remote check; it does not replace the blocked local original ZIP verification.
+- **Nine Pexels candidates:** platform licence verified 9/9; no candidate-specific signed release package surfaced; no photographer contacted; no written confirmation received. Crop dispositions 6/9 accepted/conditional, Europe visual-only, Kyoto rejected as-is, Lisbon not approved as-is. Candidate rights clearance **0/9**, final editorial/publisher approvals **0/9**, final production approvals **0/9**. Café custom crop remains visually accepted only; property permission and final approvals pending.
+- **Existing Preview image CDN:** all 21 unique image URLs on `development-homepage.travelguide-9op.pages.dev/assets/images/` returned **HTTP 200 + Content-Type image/webp** in live response metadata; 21/21 accessible and PASS. This is Preview-only; it does not certify production or the separate MEDIA-ASSETS Pages host. Raw response-body signatures were not exposed by this metadata check.
+- **22-slot mapping:** 22 logical placements, 21 unique path URLs, 19 unique binary identities; all referenced files exist. Duplicate pairs remain hero/seasonal coast and Asia/Kyoto; authorised Alpine Hiking/Swiss Trail reuse remains `alpine-hiking.webp`. AI artwork, Pexels and Wikimedia provenance/attribution obligations remain recorded. Mapping remains DRAFT; no unapproved candidate integrated.
+- **Homepage source audit:** all 21 JSON image references plus the hero resolve to tracked assets; all alt text is non-empty; homepage data and hard-coded navigation paths match the 37-route registry (no unmatched route paths). Hero is eager/high-priority; other generated images are lazy. No custom image-load fallback handler was found.
+- **Live visual audit:** 21/21 images rendered in the browser; desktop page inspected; branding appears consistent; Inspiration and Back-to-top worked. Potential mobile hero-heading overflow was flagged, but the browser could not establish a true 390×844 viewport. Plan-your-trip dropdown, header search, keyboard focus, console errors and every link destination were not fully verified.
+- **Homepage integration:** NOT STARTED. No candidate replacement integration authorized.
+- **Round 5:** OPEN — not ready to close. **Round 6:** NOT STARTED.
+
+The detailed 9-candidate rights matrix, 21-URL HTTP/MIME table and 22-slot mapping are in `HOMEPAGE-ASSET-MAPPING.md`. This update is documentation-only; no code, assets, page records, image references, deployment settings, production branch, MEDIA-ASSETS branch or research branch changed.
