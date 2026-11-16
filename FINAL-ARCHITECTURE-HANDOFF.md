@@ -330,3 +330,19 @@ This is a status clarification only; it does not change the Chat 3–7 ownership
 - The existing Project-State Phase 2.7 record documents the successful Preview build and live verification of all 37 routes (37/37 HTTP 200) on the recorded implementation commit. The older one-document/37-route-404 notes describe the pre-generation state and are superseded.
 - These 37 records are existing branch work. Chat 3 has NOT started as a separate phase. Do not create additional country/continent/region/city/attraction page-family work under this continuation unless the user explicitly starts that phase.
 - No page source or build code was changed as part of this Round 5 documentation reconciliation.
+
+
+---
+
+## 14. Round 5 final blocker and homepage readiness status — 16 November 2026
+
+The latest read-only review began from `development/homepage` commit `97ef3f01f307362259b26a32677c8ffe6cd1df2e`.
+
+- The private MEDIA-ASSETS `main` repository was searched completely for the Swiss Alps original ZIP. Its 328-entry tree has no ZIP or matching JPEG/Pexels identifier; code/commit searches and releases yielded no archive. The local original master remains 11/12 and Swiss Alps is BLOCKED.
+- All 21 unique image URLs on the development Preview host returned HTTP 200 and `Content-Type: image/webp` in live response metadata. This is a Preview-only certificate; production and the separate MEDIA-ASSETS host were not certified by it.
+- The current homepage has 22 logical image placements, 21 unique path URLs and 19 unique binary identities. The two exact duplicate artwork pairs remain recorded; Alpine Hiking and Swiss Trail intentionally share `alpine-hiking.webp`. All referenced image files and alt text are present.
+- The 9-candidate Pexels rights register remains at 0/9 full clearance and 0/9 final production approvals. The café crop is visually accepted only; property rights and final approvals remain pending. Wikimedia CC BY-SA attribution/share-alike obligations and CC0 provenance remain in the asset mapping.
+- The live Preview displayed all 21 images and consistent branding. The mobile hero heading has a potential overflow issue, but the browser could not confirm a true 390×844 viewport. Several interaction, keyboard, console and accessibility checks remain incomplete.
+- Existing homepage image delivery/source integrity is improved to a verified Preview pass; however this does not authorize replacement integration. No unapproved candidate may be integrated.
+
+**Current release state:** Round 5 OPEN; Swiss Alps local original 11/12; candidate rights 0/9; candidate final approvals 0/9; existing Preview CDN 21/21; mapping DRAFT; homepage replacement integration NOT STARTED; Chat 3 NOT STARTED; Round 6 NOT STARTED. Do not close Round 5 or proceed to Round 6 until mandatory blockers and approvals are resolved.
