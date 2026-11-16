@@ -676,3 +676,93 @@ Wikimedia file pages expose original JPEG MIME, dimensions, byte size, author an
 - No image binary, source master, candidate image, homepage source reference, HTML/CSS/JS, manifest, branding, Cloudflare setting or production deployment was changed.
 
 **Round 5 remains PARTIALLY VERIFIED — NOT COMPLETE.**
+
+## Round 5 current candidate rights, café status and 22-slot reconciliation — 16 November 2026
+
+This addendum reconciles the current branch mapping with the latest Round 5 v9 continuation report and the existing Nine-Candidate Rights/Crop Register v6. The nine candidate JPEGs were already verified from the previously supplied ZIP (9/9); they were not downloaded again in this task. Source filenames, byte counts, dimensions and SHA-256 values remain in the v6 register.
+
+### 1. Café discrepancy — authoritative status
+
+The old full-source decision “REJECT AS-IS” applies to the uncropped Street Café source. It must not be used to describe the later custom left-biased crop.
+
+| Gate | Current Street Café result |
+|---|---|
+| Full-source visual screen | Not accepted as-is: identifiable patrons and chalkboard/menu signage are visible in the full frame |
+| Custom visual crop | **ACCEPTED** — desktop 920×680 crop (source x=0–3900, y=450–3330) and mobile 920×575 crop (source x=0–4000, y=700–3200) remove the patrons and menu/chalkboard while retaining street-side tables, café frontage and cobbled alley |
+| Editorial approval | Candidate-level crop/subject acceptance only. Describe outdoor street-side café seating; do not name a venue, city or restaurant. No final publisher replacement approval |
+| Legal/property rights | **PENDING** — the exterior building/façade remains visible; no property/architecture release or permission evidence was supplied |
+| CDN certification | **NOT VERIFIED** — custom WebP preview is local-only; no public URL or hosted response exists |
+| Final production approval | **NOT APPROVED** |
+
+The remaining generic red no-entry traffic sign is not a business wordmark. The crop register records that no legible business wordmark remains. This visual observation does not clear the visible building/property rights.
+
+### 2. Nine candidate source and rights register
+
+All nine are Pexels source pages and carry the Pexels License at the page/platform level. The source JPEGs are recorded as previously acquired and binary-verified 9/9 in the existing ZIP and v6 register. No candidate-specific signed release document was surfaced. No photographer has been contacted in this task and no written confirmation has been received.
+
+| Candidate slot | Creator and verified source | Visual/third-party screen and crop disposition | Exact outstanding evidence / decision |
+|---|---|---|---|
+| Hero — Benitachell | Rafael Minguet Delgado; [source page](https://www.pexels.com/photo/stunning-rocky-coastline-in-benitachell-spain-30558175/); 5702×3801 JPEG | Tiny distant beachgoer in full source; intended desktop/mobile crop does not make the person identifiable. Cliff-top masonry/fort-like feature remains. Crop accepted. Local WebP preview 485,180 bytes exceeds the 450 KB hard-review target. | No model/property release package surfaced. Obtain photographer confirmation about the structure and any required property/architecture permission; retain source/licence evidence; resolve file-size review and CDN. Otherwise exclude or replace. |
+| Asia — Ha Long Bay | Anh Nguyen; [source page](https://www.pexels.com/photo/misty-islands-in-halong-bay-vietnam-35858996/); 2400×3000 JPEG | Natural karsts and water; no identifiable person, mark, brand, signage or built property observed in reviewed crop. Crop accepted with muted/misty mood variance. | No candidate-specific release certificate surfaced. No additional third-party trigger observed in the crop, but obtain photographer confirmation if possible and publisher sign-off that the Pexels licence is sufficient; preserve accurate misty-karst description and certify CDN. |
+| Europe — historic riverside | Alexandra H. Maria; [source page](https://www.pexels.com/photo/historic-european-riverside-buildings-with-reflection-35534814/); 3084×4112 JPEG | Prominent identifiable building façades; no people observed. Visual crop only; overhead wires remain. | Building/location identity and property/architecture rights position are undocumented. Obtain photographer confirmation and any relevant property permission/release; editorially accept or reject overhead wires. Do not approve until both issues are resolved. |
+| Africa — savannah | Wussol; [source page](https://www.pexels.com/photo/sunset-in-african-savannah-landscape-30878973/); 5184×3456 JPEG | Natural savannah, acacia silhouettes, road and sky; no identifiable people, brands, buildings or signage observed. Crop accepted. No wildlife is visible. | No release package surfaced. Request written confirmation that no third-party permissions are applicable to the selected crop and obtain publisher sign-off on the platform licence. Do not describe animals or wildlife. |
+| Americas — Fitz Roy | Nazarena Pozza; [source page](https://www.pexels.com/photo/fitz-roy-glacier-and-lake-17600486/); 3472×4640 JPEG | Natural peaks, glacier and lake; no identifiable people, brands, buildings or signage observed. Crop accepted with foreground-rock variance. Local WebP preview 259,326 bytes exceeds the 250 KB hard-review threshold. | No release package surfaced. Obtain photographer confirmation if available; resolve the image-size review and CDN. Alt text must not claim a mirror-like mountain reflection. |
+| Kyoto — traditional street | Ignacio Estevo; [source page](https://www.pexels.com/photo/traditional-japanese-street-in-kyoto-36889407/); 2054×2899 JPEG | Storefront/road signs, overhead wires and a vehicle registration plate remain in desktop/mobile crops. Crop rejected as-is; removing them would damage the street context. | No permission/release evidence for the visible signage, marks or vehicle/registration context. Use another image, or obtain relevant permissions and separately approved retouching. Do not integrate as-is. |
+| Lisbon — historic tram | Oleksandra Zelena; [source page](https://www.pexels.com/photo/charming-lisbon-street-with-historic-tram-40600060/); 3072×4080 JPEG | Tram operator markings and passenger silhouettes remain in all four tested crops; a wider crop also retains a pedestrian. No safe crop preserving a meaningful tram scene was found. | No operator/brand permission or passenger/pedestrian release evidence surfaced. Obtain image-specific permissions/releases or replace the photograph. Do not imply operator endorsement. |
+| Seasonal coast — Sagres | Nils Rotura; [source page](https://www.pexels.com/photo/dramatic-cliffs-over-the-atlantic-in-sagres-portugal-36733193/); 5029×2829 JPEG | Small visitor group is visible at the far right of the full source but excluded from the reviewed central crop. No marks or built property observed in the selected crop. Crop accepted with copy/alt variance. Preview 194,648 bytes exceeds the 190 KB soft target. | No source-specific release package surfaced; retain the crop that excludes the group and request photographer confirmation if possible. Do not call the image seasonal or imply a season. Review size budget and CDN. |
+| Neighbourhood café — Street Café | Anastasia Shuraeva; [source page](https://www.pexels.com/photo/cafe-tables-on-the-street-4210026/); 5472×3648 JPEG | Custom left-biased desktop/mobile crop accepted; patrons and menu/chalkboard removed. Generic red no-entry sign remains; no legible business wordmark. Café frontage/building remains. | No property/architecture release or permission surfaced for the visible façade. Obtain photographer confirmation and relevant permission/rights assessment; then certify CDN. Do not name a specific café, venue or city. |
+
+### 3. Licence and release evidence boundary
+
+Pexels Terms of Service (updated 20 October 2026) grant a worldwide, perpetual, non-exclusive, royalty-free right to download, use, copy, modify and adapt Pexels content for commercial or non-commercial purposes, subject to prohibited uses. They separately warn that privacy, personality, property, architecture, trademark and other third-party rights may apply; the user must determine whether consent or a licence is required, and Pexels does not warrant that all such consents exist. Pexels contributor terms require contributors to warrant and retain necessary releases, but that contributor warranty is not the same as a release document delivered to this project.
+
+Official references:
+- https://www.pexels.com/terms-of-service/
+- https://www.pexels.com/license/
+- https://help.pexels.com/hc/en-us/articles/360042295214-Can-I-use-the-photos-and-videos-for-a-commercial-project
+- https://help.pexels.com/hc/en-us/articles/17635007931673-Do-I-need-certain-permissions-when-sharing-my-work
+
+No direct request for releases or written confirmation was sent to any photographer during this task. No photographer response is on record. Do not infer that a photographer can or will provide a release. The exact request, if pursued later, is for the applicable model/property release or written confirmation of the photographer’s permissions and any restrictions for the specific source and intended use.
+
+**Current rights/crop counts:** candidate source JPEGs 9/9 previously verified; crop dispositions accepted or conditionally accepted 6/9; Europe remains visual-only; Kyoto rejected as-is; Lisbon not approved as-is; full rights clearance 0/9; formal replacement approval 0/9; candidate WebP CDN certification 0/9. Crop acceptance is not editorial sign-off, legal clearance or production approval.
+
+### 4. Current 22-slot mapping audit
+
+The 22 logical placements resolve to 21 unique image path URLs. The homepage build has one hero image in the generated homepage markup plus 21 image elements from homepage content data. The 21 paths represent 19 unique binary identities: hero-coast/seasonal-coast are exact duplicate artwork; asia/kyoto-street are exact duplicate artwork; alpine-hiking is one physical file reused in slots 11 and 16. The last reuse is user-authorised. These counts distinguish logical placements, unique paths and unique binary content.
+
+| # | Logical placement | Current physical asset | Current alt text / factual subject | Crop, editorial and rights restriction |
+|---:|---|---|---|---|
+| 1 | Hero coast | assets/images/hero-coast.webp | Pastel Amalfi Coast village above turquoise Mediterranean water and a rugged shoreline. | Legacy AI artwork; duplicated by slot 17. Village-led, not an empty natural coastline. Hero scrim/text composition remains a design review item. |
+| 2 | Asia | assets/images/asia.webp | A sunlit stone path leads through a bamboo garden toward a traditional wooden gate in Kyoto, Japan. | Legacy AI artwork; exact binary duplicate of slot 7. Describes Kyoto, not Ha Long Bay or generic Asia. |
+| 3 | Europe | assets/images/europe.webp | Whitewashed Santorini buildings and blue-domed churches overlook the caldera at sunset in Greece. | Legacy AI artwork; accurate Santorini subject, not a riverside town. |
+| 4 | Africa | assets/images/africa.webp | Elephants cross golden Serengeti grassland beneath broad acacia trees at sunrise. | Legacy AI artwork; sunrise, not sunset. |
+| 5 | Americas | assets/images/americas.webp | Machu Picchu's Inca terraces sit among steep green Andean peaks in Peru. | Legacy AI artwork; actual subject is Peru/Machu Picchu, not a Patagonian lake. |
+| 6 | Oceania | assets/images/oceania.webp | Aerial view of Bora Bora's lush volcanic ridge rising above a deep blue and turquoise lagoon. | Pexels photograph by François Balédent. Retain Pexels credit record; separate release/third-party rights and responsive mobile crop review remain open. |
+| 7 | Kyoto feature | assets/images/kyoto-street.webp | A sunlit path runs through tall bamboo toward a traditional wooden garden gate in Kyoto. | Exact binary duplicate of slot 2; it is a garden path, not a machiya street. |
+| 8 | Lisbon feature | assets/images/lisbon-tram.webp | A classic yellow Lisbon tram travels through a narrow street lined with Portuguese tiled buildings. | Legacy AI artwork; retain AI-artwork provenance and do not represent it as documentary photography. |
+| 9 | Marrakech courtyard | assets/images/marrakech-courtyard.webp | Dar al-Basha courtyard in Marrakech, framed by carved arches and trees around a central fountain. | Wikimedia CC BY-SA 4.0; retain author/source attribution, licence link, change notice and ShareAlike for the adapted derivative. Review architecture/property context separately. |
+| 10 | Slow train | assets/images/slow-train.webp | A regional passenger train travels through the green alpine valley near Gurtnellen, Switzerland. | Wikimedia CC BY-SA 4.0; retain attribution, licence link, change notice and ShareAlike. Actual browser crop review remains separate. |
+| 11 | Alpine Hiking | assets/images/alpine-hiking.webp | Hikers follow a mountain path beneath the Matterhorn above Zermatt in the Swiss Alps. | Pexels photograph by Jean-Paul Wettstein; same physical file as slot 16. Distant hikers/release context and rendered crop review remain on the existing rights checklist. |
+| 12 | Ceramic workshop | assets/images/ceramic-workshop.webp | An artisan shapes a clay vessel on a pottery wheel in a ceramics studio. | Pexels photograph by Letícia Alvares; hands/partial person visible. Retain source credit; release/context review remains open. |
+| 13 | Portugal coast | assets/images/portugal-coast.webp | White coastal houses at Azenhas do Mar sit above the Atlantic shoreline in Portugal. | Wikimedia CC BY-SA 4.0; retain attribution, licence link, change notice and ShareAlike. |
+| 14 | Japan rail | assets/images/japan-rail.webp | A blue regional passenger train arrives at a small rural station in Japan. | Pexels photograph by 貴彦 佐藤; visible operator/vehicle marks require trademark/editorial review. |
+| 15 | Marrakech medina | assets/images/marrakech-medina.webp | A donkey and pedestrians pass through a narrow historic lane in Marrakech's medina. | Wikimedia CC0 1.0; retain provenance credit as project practice. CC0 does not clear separate privacy/personality rights for visible people. |
+| 16 | Swiss Trail | assets/images/alpine-hiking.webp | A clear footpath crosses high alpine terrain toward the Matterhorn above Zermatt, Switzerland. | Same physical file as slot 11; user-authorised related-slot reuse. Do not create or imply a separate swiss-trail.webp. |
+| 17 | Seasonal coast | assets/images/seasonal-coast.webp | Pastel buildings cascade down an Amalfi Coast cliff above turquoise Mediterranean water. | Exact binary duplicate of slot 1; legacy AI artwork. The scene does not establish seasonality. |
+| 18 | Market morning | assets/images/market-morning.webp | Local vendors sell fresh fruit and vegetables from outdoor market stalls. | Pexels photograph by Mehmet Turgut Kirkgoz; identifiable vendors/people visible. Do not assert that the photograph was taken in the morning; release/context review remains open. |
+| 19 | Neighbourhood café | assets/images/neighbourhood-cafe.webp | A latte rests on a café table beside a leafy plant. | Legacy AI still-life artwork, not a street-side neighbourhood café; 519×442 is below the 920×680 target. Replacement candidate custom crop accepted visually, but property rights/CDN/final approval remain pending. |
+| 20 | Calendar planning | assets/images/calendar-planning.webp | A traveller writes in a notebook over a world map marked with route pins and travel letters. | Pexels photograph by Lara Jameson; hands and printed map visible. Keep alt literal; source credit retained. |
+| 21 | Train platform | assets/images/train-platform.webp | A red-and-white intercity passenger train stands beside a modern railway platform. | Pexels photograph by Dan Wright; LNER/AZUMA branding is visible and requires trademark/editorial review. Do not imply operator endorsement. |
+| 22 | Travel bag | assets/images/travel-bag.webp | An open suitcase contains neatly folded clothes and travel essentials ready for a trip. | Pexels photograph by SHVETS production; hands/partial person visible. Retain source credit; release/context review remains open. |
+
+### 5. Mapping and delivery conclusions
+
+- 22/22 logical slots are present in the current mapping.
+- 21/21 unique path URLs are present across those placements; alpine-hiking.webp is reused for slots 11 and 16.
+- 19 unique binary identities remain after exact duplicate checks: hero/seasonal and Asia/Kyoto are duplicate pairs; the Alpine reuse is one path reused in two slots.
+- The current homepage JSON contains 21 image elements and 20 distinct src paths; the separately rendered hero image adds the 22nd placement and 21st distinct path.
+- Current local image references and alt text were inspected in the branch source. No missing alt attribute was found in the 21 JSON image records; the hero also has non-empty alt text in scripts/build.mjs.
+- The 12 existing Round 2 WebP derivatives remain 12/12 binary/hash/dimension verified from the prior actual-byte pass. That result does not certify public CDN response headers.
+- No homepage image references, assets, binaries or alt text were changed in this documentation update.
+
+**Round 5 release boundary:** local original masters 11/12; remote original verification 12/12; existing WebP reconciliation 12/12; candidate JPEG sources 9/9; candidate crop dispositions 6/9; candidate rights clearance 0/9; candidate final approvals 0/9; existing CDN HTTP/MIME certification pending; candidate CDN certification 0/9; 22-slot mapping remains DRAFT; homepage image integration NOT STARTED.

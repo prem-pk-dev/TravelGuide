@@ -489,3 +489,59 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - No merge or production deployment. Round 6 is not started.
 
 **Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE.**
+
+## 22. Round 5 current evidence reconciliation — 16 November 2026
+
+### Candidate rights and crop register
+- [x] Reconcile candidate source evidence from the existing Nine-Candidate Rights/Crop Register v6 and Round 5 v9 report; candidate JPEG binaries were already verified 9/9. No repeat downloads.
+- [x] Correct café state: unmodified full source remains rejected as-is; custom left-biased desktop/mobile crop is visually accepted; editorial replacement sign-off, building/property rights, CDN and final production approval remain pending.
+- [x] Record nine candidate crop dispositions: 6/9 accepted or conditionally accepted; Europe visual crop only; Kyoto rejected as-is; Lisbon not approved as-is.
+- [x] Recheck Pexels Terms and official commercial-use/permission guidance.
+- [ ] Obtain candidate-specific model/property/operator releases or written photographer confirmation where needed. No signed release package or photographer confirmation is currently on record.
+- [ ] Publisher/legal sign-off on Pexels licence sufficiency and each applicable third-party rights case.
+- [ ] Final candidate replacement approvals remain 0/9.
+
+### Current 22-slot mapping
+- [x] Audit 22 logical placements against homepage.json, the generated hero markup and current local asset paths.
+- [x] Confirm 21 unique image path URLs across 22 placements; alpine-hiking.webp is reused for Alpine Hiking and Swiss Trail.
+- [x] Confirm 19 unique binary identities: hero-coast/seasonal-coast and asia/kyoto-street are exact duplicate artwork pairs; Alpine reuse is one physical file referenced twice.
+- [x] Check non-empty alt text for all 21 JSON image elements and the separate hero image; no missing alt attribute found.
+- [x] Record factual subject/provenance and remaining editorial/licence restrictions for all 22 slots.
+- [ ] Keep mapping DRAFT until candidate rights, editorial, CDN and final approval gates pass.
+
+### CDN verification
+- [x] Try alternate browser path against the current development Preview asset URL. hero-coast.webp visually rendered in a direct browser view.
+- [ ] HTTP status and Content-Type remain uncertified: browser rendering did not expose response headers; web fetch returned inaccessible and the content-extraction fetch returned empty_content. Do not mark HTTP 200 or image/webp from visual rendering alone.
+- [ ] Certify each of the 21 unique existing image URLs with HTTP status, Content-Type, response-body RIFF/WEBP signature and decoded dimensions.
+- [ ] Candidate CDN remains 0/9; no candidate image has been hosted.
+
+### Static page implementation / architecture reconciliation
+- [x] Verify current src/data/pages.json: 37 records, 37 unique route paths.
+- [x] Verify scripts/build.mjs: asserts 37 unique records and writes a separate route index.html for each record; homepage and 404 are emitted separately.
+- [x] Reconcile the older “homepage only” / 37-route 404 historical notes against the later Phase 2.7 successful build and 37/37 live route record. The earlier failure is historical and superseded.
+- [x] Inspect FINAL-ARCHITECTURE-HANDOFF.md and add a current-implementation note without changing the Chat 3 boundary.
+- [ ] Chat 3 development remains NOT STARTED; no additional destination-family implementation is authorized in this task.
+
+### Current Round 5 progress
+| Gate | Current status |
+|---|---|
+| Local original masters | 11/12 |
+| Remote original verification | 12/12 PASS |
+| Existing WebP reconciliation | 12/12 PASS |
+| Documentary candidate JPEGs | 9/9 previously verified |
+| Candidate crop dispositions | 6/9 |
+| Candidate rights clearance | 0/9 |
+| Formal candidate replacement approvals | 0/9 |
+| Existing CDN HTTP/MIME certification | PENDING; 1 direct browser render only, headers unavailable |
+| Candidate CDN certification | 0/9 |
+| 22-slot mapping | 22/22 rows; 21 unique path URLs; DRAFT |
+| Homepage integration | NOT STARTED |
+| Static page registry | 37/37 unique records; separate HTML generator verified in source |
+| Round 5 | OPEN |
+| Round 6 | NOT STARTED |
+
+### Protection
+- Documentation-only updates on development/homepage.
+- No image/source binaries, homepage references, HTML/CSS/JS, page records, brand assets or Cloudflare settings changed.
+- MEDIA-ASSETS main and TravelGuide main/production branch remain untouched.
+- No merge or Production deployment.

@@ -320,3 +320,13 @@ Chat 2 can start only after the user explicitly requests Homepage Development an
 - the first implementation remains isolated from `main`.
 
 **This handoff authorizes no code or deployment by itself.**
+
+
+## 13. Current development-branch implementation note — 16 November 2026
+
+This is a status clarification only; it does not change the Chat 3–7 ownership boundaries or authorize new implementation.
+
+- The current development/homepage branch already contains src/data/pages.json with 37 unique route records and scripts/build.mjs generates a separate physical index.html for each record. The homepage and 404 page are emitted separately.
+- The existing Project-State Phase 2.7 record documents the successful Preview build and live verification of all 37 routes (37/37 HTTP 200) on the recorded implementation commit. The older one-document/37-route-404 notes describe the pre-generation state and are superseded.
+- These 37 records are existing branch work. Chat 3 has NOT started as a separate phase. Do not create additional country/continent/region/city/attraction page-family work under this continuation unless the user explicitly starts that phase.
+- No page source or build code was changed as part of this Round 5 documentation reconciliation.

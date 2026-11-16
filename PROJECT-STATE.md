@@ -112,8 +112,8 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 ## 8. Phase 2.6 — Sitemap strategy and crawler policy (2026-11-15)
 
 ### Actual published-page inventory
-- The current static build emits one real content document: dist/index.html. It also emits dist/404.html, which is non-indexable.
-- Homepage cards and the architecture sitemap document reference many future routes, but no physical HTML documents for those route families exist in this branch yet. Those routes are not placed in the XML sitemap.
+- Historical Phase 2.6 inventory (before the Phase 2.7 route implementation): one real content document, dist/index.html, plus non-indexable dist/404.html. **Superseded by Phase 2.7, Section 14 below:** the current development/homepage source now contains 37 unique page records and the build generator emits 37 separate route documents in addition to the homepage and 404 page.
+- The architecture sitemap remains a future URL plan; only generated physical HTML with an eligible canonical/index directive enters the sitemap.
 
 ### Implemented sitemap design on development/homepage
 - scripts/sitemap.mjs discovers URLs from generated HTML, not navigation links or proposed URL architecture.
@@ -286,7 +286,7 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - Latest Preview robots, X-Robots, canonical, sitemap live responses: **PASS**.
 - W3C Nu HTML and W3C CSS3 validation (zero errors): **PASS**.
 - Desktop and mobile interaction checks; image decode on mobile; 360/390/768/1440 responsive horizontal-overflow checks: **PASS**, with the CSS mobile tile correction included.
-- Internal homepage routes: **FAIL — 37/37 HTTP 404**.
+- Internal homepage routes: **historical pre-generation failure — 37/37 HTTP 404; superseded by Phase 2.7 Section 14, where the generated routes were live-checked at 37/37 HTTP 200**.
 - Accessibility: **FAIL — 36 serious colour-contrast nodes**.
 - Local workstation full build: **NOT RUN** due local GitHub DNS failure and absent checkout. Offline dependency install is feasible, but not a full offline build.
 - Full HAR/network request report, initial-load console capture, full tab sequence/screen-reader audit and CSS warning cleanup remain incomplete.
@@ -568,3 +568,30 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 6. Legacy artwork — 9 unchanged; 0 replacement approvals.
 
 **Phase 2.8 remains PARTIALLY VERIFIED — NOT COMPLETE. Do not start Round 6 without explicit approval.**
+
+## 26. Round 5 current-state reconciliation — 16 November 2026
+
+### Source-of-truth checks on the current development branch
+- Branch inspected before this documentation commit: development/homepage at bafc8dc7ec07adcfaa5648b18c0e3561d27550d6.
+- src/data/pages.json contains 37 page records and 37 unique canonical route paths.
+- scripts/build.mjs loads that registry, asserts exactly 37 unique routes, loops through each page record, creates its route directory and writes a separate index.html. It logs “Generated 37 separate page documents.” The homepage is written separately to dist/index.html; 404.html is separate and non-indexable.
+- This is a verified source-code implementation, not an assertion that this task ran a fresh local build. The prior Project-State Phase 2.7 record documents a successful Cloudflare Preview build and live 37/37 HTTP 200 route verification on the recorded implementation commit bb7a74687069141e58ad8baf193805915aff6e76.
+- The earlier Phase 2.6 one-document statement and pre-generation 37/37 HTTP 404 result are historical and superseded by the Phase 2.7 route-generation/live-verification record. They must not be presented as current state.
+- The 37 records are already existing development/homepage branch work. This task did not start Chat 3 or add/modify any route/page source. Chat 3 remains NOT STARTED as a separate page-family workstream.
+
+### Current Round 5 image status
+- Local original masters: 11/12; Swiss Alps local verification BLOCKED until the actual ZIP is attached.
+- Remote original verification: 12/12 PASS; existing Round 2 WebP binary/hash/dimension reconciliation: 12/12 PASS.
+- Nine candidate source JPEGs: 9/9 previously verified; no repeat download.
+- Candidate crop dispositions: 6/9 accepted or conditionally accepted; formal candidate replacement approvals: 0/9.
+- Candidate-specific release/third-party rights evidence: 0/9 fully cleared.
+- Existing 22 logical slots: 22/22 mapped; 21 unique path URLs; 19 unique binary identities. Alpine Hiking and Swiss Trail share alpine-hiking.webp. No homepage references changed.
+- Existing CDN: direct browser visual rendering was confirmed for hero-coast.webp at the development Preview path. That browser display did not expose HTTP status or Content-Type; no existing image URL is newly HTTP/MIME certified in this task. CDN certification remains pending.
+- Candidate CDN: 0/9; candidate previews remain local-only/not hosted.
+
+### Scope and protection
+- No original/candidate JPEG or existing WebP was downloaded again.
+- No homepage code, image reference, alt text, branding, or asset binary changed.
+- No MEDIA-ASSETS main, production main, research branch or Cloudflare setting changed.
+- No merge or Production deployment occurred.
+- Round 5 remains OPEN. Round 6 remains NOT STARTED.
