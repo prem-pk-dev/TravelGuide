@@ -766,3 +766,110 @@ The 22 logical placements resolve to 21 unique image path URLs. The homepage bui
 - No homepage image references, assets, binaries or alt text were changed in this documentation update.
 
 **Round 5 release boundary:** local original masters 11/12; remote original verification 12/12; existing WebP reconciliation 12/12; candidate JPEG sources 9/9; candidate crop dispositions 6/9; candidate rights clearance 0/9; candidate final approvals 0/9; existing CDN HTTP/MIME certification pending; candidate CDN certification 0/9; 22-slot mapping remains DRAFT; homepage image integration NOT STARTED.
+
+
+---
+
+# Round 5 — final blocker and homepage readiness re-audit (16 November 2026)
+
+**Starting source commit:** `97ef3f01f307362259b26a32677c8ffe6cd1df2e` on `development/homepage`. This addendum records read-only evidence gathered after that commit. It does not authorize homepage integration or replace any image.
+
+## 1. Swiss Alps original ZIP recovery — repository search exhausted
+
+The connected private repository `prem-pk-dev/MEDIA-ASSETS` was inspected on its only returned branch, `main`. Its complete recursive Git tree was read at tree SHA `4531d94979224daa5a3f0a6b25244e02655708e0` (`truncated: false`, 328 entries).
+
+- No tracked path ends in `.zip`.
+- No path or indexed file matches `pexels-jean-paul-wettstein-677916508-19244950.jpg`, `677916508`, `Swiss Alps` or `Alps`.
+- GitHub code searches for the exact filename, Pexels ID and “original JPEG ZIP” returned no results.
+- Commit searches for “Swiss Alps” and “JPEG ZIP” returned no results.
+- The repository releases endpoint returned an empty list.
+- The repository's `ASSET-INDEX.json` and `README.md` contain no Swiss Alps, Wettstein, JPEG or ZIP reference.
+
+**Result:** there is no existing original JPEG ZIP retrievable from the connected MEDIA-ASSETS repository's current branch, tree, indexed search or releases. No binary was downloaded, extracted, recreated or uploaded. The local original-master count remains **11/12 — Swiss Alps BLOCKED**. This is a verified repository-availability blocker, not a failed extraction or an image-integrity failure.
+
+## 2. Nine-candidate rights register — evidence kept separate
+
+All nine candidate source pages show the Pexels platform licence at page level. That establishes platform permission to use/adapt subject to the licence; it does **not** establish candidate-specific model, property, operator or trademark clearance. No signed candidate-specific release package surfaced. No photographer was contacted and no written confirmation was received for any candidate.
+
+| Candidate | Platform licence | Model/person release evidence | Property/building release evidence | Operator/trademark permission | Photographer written confirmation | Editorial approval | Final production approval |
+|---|---|---|---|---|---|---|---|
+| Benitachell hero — Rafael Minguet Delgado | Pexels licence verified | Distant beachgoer in full source; not identifiable in selected crop. No release document surfaced; full-source person context remains unconfirmed | Cliff-top masonry/fort-like structure remains; property/architecture permission not evidenced | No mark/operator issue observed in selected crop | Not contacted; no response | Intended desktop/mobile crop visually accepted at candidate level only; publisher sign-off and file-size/CDN review pending | **No** |
+| Ha Long Bay — Anh Nguyen | Pexels licence verified | No identifiable person observed in reviewed crop; no release document surfaced | No built property observed in reviewed crop | No mark/operator issue observed | Not contacted; no response | Crop visually accepted at candidate level, with misty/muted mood variance; publisher sign-off pending | **No** |
+| Historic riverside Europe — Alexandra H. Maria | Pexels licence verified | No people observed; no model release document surfaced | Prominent building façades; identity and property/architecture permission undocumented | No operator/trademark issue identified; overhead wires remain | Not contacted; no response | Visual crop only; overhead wires and building/property position unresolved | **No** |
+| African savannah — Wussol | Pexels licence verified | No identifiable people observed; no release document surfaced | No buildings/property observed in reviewed crop | No marks/operator issue observed | Not contacted; no response | Crop visually accepted at candidate level; publisher sign-off pending. No wildlife is visible | **No** |
+| Fitz Roy — Nazarena Pozza | Pexels licence verified | No people observed; no release document surfaced | No buildings/property observed in reviewed crop | No marks/operator issue observed | Not contacted; no response | Crop visually accepted with foreground-rock variance; file-size review and publisher sign-off pending | **No** |
+| Kyoto traditional street — Ignacio Estevo | Pexels licence verified | No model/person release evidence surfaced for reviewed crop | Storefront/building context remains; property position not documented | Road/store signs, overhead wires and vehicle registration plate remain; permissions unresolved | Not contacted; no response | Rejected as-is; do not integrate | **No** |
+| Lisbon historic tram — Oleksandra Zelena | Pexels licence verified | Passenger silhouettes remain in all reviewed crops; no passenger/person release evidence surfaced | Street/building context not separately cleared; no property release surfaced | Tram operator markings remain; operator/brand permission not evidenced | Not contacted; no response | Not approved as-is; no safe crop preserving a meaningful tram scene was found | **No** |
+| Sagres seasonal coast — Nils Rotura | Pexels licence verified | Visitor group appears in full source but is excluded from accepted central crop; no release package surfaced | No built property observed in selected crop | No marks/operator issue observed in selected crop | Not contacted; no response | Central crop visually accepted at candidate level with copy/alt variance; publisher sign-off pending. Do not call it seasonal | **No** |
+| Street-side café — Anastasia Shuraeva | Pexels licence verified | Patrons in full source are removed by the custom crop; no release document surfaced for full-source people | Café frontage/building remains; property/architecture permission not evidenced | Generic red no-entry sign remains; no legible business wordmark observed | Not contacted; no response | Custom left-biased desktop/mobile crop remains **visually accepted only**; editorial replacement sign-off pending | **No** |
+
+Current disposition remains: crop accepted or conditionally accepted **6/9**; Europe visual-only; Kyoto rejected as-is; Lisbon not approved as-is; candidate rights fully cleared **0/9**; final production approvals **0/9**. The café custom crop remains visually accepted, but property rights, publisher approval, CDN and final production approval remain pending.
+
+## 3. Existing homepage image CDN — HTTP/MIME certification
+
+The current development Preview host was checked directly using live fetch response metadata (`maxAge: 0`). The recorded fields are the returned `statusCode` and `contentType`, not visual inference. All 21 unique URLs returned HTTP 200 and `image/webp`; each was accessible.
+
+| # | URL | HTTP status | Content-Type | File accessibility | Result |
+|---:|---|---:|---|---|---|
+| 1 | https://development-homepage.travelguide-9op.pages.dev/assets/images/africa.webp | 200 | image/webp | Accessible | PASS |
+| 2 | https://development-homepage.travelguide-9op.pages.dev/assets/images/alpine-hiking.webp | 200 | image/webp | Accessible | PASS |
+| 3 | https://development-homepage.travelguide-9op.pages.dev/assets/images/americas.webp | 200 | image/webp | Accessible | PASS |
+| 4 | https://development-homepage.travelguide-9op.pages.dev/assets/images/asia.webp | 200 | image/webp | Accessible | PASS |
+| 5 | https://development-homepage.travelguide-9op.pages.dev/assets/images/calendar-planning.webp | 200 | image/webp | Accessible | PASS |
+| 6 | https://development-homepage.travelguide-9op.pages.dev/assets/images/ceramic-workshop.webp | 200 | image/webp | Accessible | PASS |
+| 7 | https://development-homepage.travelguide-9op.pages.dev/assets/images/europe.webp | 200 | image/webp | Accessible | PASS |
+| 8 | https://development-homepage.travelguide-9op.pages.dev/assets/images/hero-coast.webp | 200 | image/webp | Accessible | PASS |
+| 9 | https://development-homepage.travelguide-9op.pages.dev/assets/images/japan-rail.webp | 200 | image/webp | Accessible | PASS |
+| 10 | https://development-homepage.travelguide-9op.pages.dev/assets/images/kyoto-street.webp | 200 | image/webp | Accessible | PASS |
+| 11 | https://development-homepage.travelguide-9op.pages.dev/assets/images/lisbon-tram.webp | 200 | image/webp | Accessible | PASS |
+| 12 | https://development-homepage.travelguide-9op.pages.dev/assets/images/market-morning.webp | 200 | image/webp | Accessible | PASS |
+| 13 | https://development-homepage.travelguide-9op.pages.dev/assets/images/marrakech-courtyard.webp | 200 | image/webp | Accessible | PASS |
+| 14 | https://development-homepage.travelguide-9op.pages.dev/assets/images/marrakech-medina.webp | 200 | image/webp | Accessible | PASS |
+| 15 | https://development-homepage.travelguide-9op.pages.dev/assets/images/neighbourhood-cafe.webp | 200 | image/webp | Accessible | PASS |
+| 16 | https://development-homepage.travelguide-9op.pages.dev/assets/images/oceania.webp | 200 | image/webp | Accessible | PASS |
+| 17 | https://development-homepage.travelguide-9op.pages.dev/assets/images/portugal-coast.webp | 200 | image/webp | Accessible | PASS |
+| 18 | https://development-homepage.travelguide-9op.pages.dev/assets/images/seasonal-coast.webp | 200 | image/webp | Accessible | PASS |
+| 19 | https://development-homepage.travelguide-9op.pages.dev/assets/images/slow-train.webp | 200 | image/webp | Accessible | PASS |
+| 20 | https://development-homepage.travelguide-9op.pages.dev/assets/images/train-platform.webp | 200 | image/webp | Accessible | PASS |
+| 21 | https://development-homepage.travelguide-9op.pages.dev/assets/images/travel-bag.webp | 200 | image/webp | Accessible | PASS |
+
+**Existing Preview CDN result: 21/21 HTTP 200 + image/webp.** This certifies the listed development Preview URLs at the time of this check. It does not certify the separate MEDIA-ASSETS Pages host, production hostname or the nine unhosted replacement candidates. The fetch metadata did not provide raw response-body bytes, so no new RIFF/WEBP signature claim is made here. The earlier 12/12 local derivative byte/hash/dimension verification remains a separate result.
+
+## 4. Final 22-slot mapping reconciliation
+
+The current `src/data/homepage.json` has 21 image elements; `scripts/build.mjs` emits the separate hero image. Together these make 22 logical placements. The JSON contributes 20 distinct `src` paths; the hero adds the 21st unique path. All 21 referenced WebP files exist in `src/assets/images/`.
+
+- 22 logical placements; 21 unique image path URLs; 19 unique binary identities.
+- Exact duplicate binary pairs: `hero-coast.webp` / `seasonal-coast.webp`; `asia.webp` / `kyoto-street.webp`.
+- The single `alpine-hiking.webp` path is reused for Alpine Hiking (slot 11) and Swiss Trail (slot 16), as authorised. No separate `swiss-trail.webp` is required or implied.
+- Nine AI-generated artwork placements remain labelled as illustrative artwork: hero, Asia, Europe, Africa, Americas, Kyoto feature, Lisbon feature, seasonal coast and neighbourhood café.
+- Wikimedia obligations remain visible: Marrakech courtyard, slow train and Portugal coast are CC BY-SA 4.0 and require attribution, a licence link, change notice and ShareAlike for adapted derivatives. Marrakech medina is CC0 1.0; retain provenance as project practice and do not treat CC0 as a waiver of separate privacy/personality rights.
+- Pexels provenance/credit and unresolved third-party rights remain recorded for Oceania, Alpine Hiking/Swiss Trail, ceramic workshop, Japan rail, market morning, calendar planning, train platform and travel bag.
+- All 21 JSON image elements and the separate hero have non-empty alt text. The alt text remains literal to the current artwork/photo; no alt text or source reference was changed.
+- The current local image path references are not replaced with candidate photos. No unapproved candidate was integrated.
+
+## 5. Homepage readiness audit — read-only
+
+### Verified from current branch source
+- Current branch head before this documentation update was exactly `97ef3f01f307362259b26a32677c8ffe6cd1df2e`.
+- 21 homepage JSON image elements plus one separately emitted hero; all 21 unique image paths resolve to tracked WebP files.
+- Every JSON image record has a non-empty alt attribute; the generated hero markup has a non-empty alt attribute.
+- Hero markup uses `fetchpriority="high"`, `loading="eager"` and `decoding="async"`; non-hero image generation uses lazy loading and async decoding.
+- CSS contains desktop/tablet/mobile breakpoints (including 1050px, 780px and 540px) and reduced-motion rules. Image frames use `object-fit: cover`; mobile styles change card and tile ratios/crops.
+- The generated hero includes a `#discover` link and a matching target exists.
+- Both desktop mega-menu triggers and header search markup have corresponding JavaScript event handlers. The JavaScript contains no image-load fallback handler; failed future image requests would not receive a custom fallback from this script.
+- Homepage data and hard-coded build navigation links were compared with the 37 unique route records in `src/data/pages.json`. No unmatched internal route path was found (root `/` is the homepage). This is a static route-map check, not a click-through of every destination.
+- Existing TravelGuide branding is consistent in the shared header/footer markup and was visually observed as consistent in the live preview.
+
+### Browser observations and limitations
+- The live development Preview browser audit observed all 21 image elements rendering and no visible broken-image placeholders.
+- Desktop layout was inspected at approximately 1440×900. Fourteen major content areas were identified from utility/header through footer.
+- Inspiration dropdown and Back-to-top were observed working. The Plan-your-trip dropdown and header search click were attempted but not conclusively verified. The scroll-to-discover click was inconclusive; source markup and target exist.
+- The browser runner could not set a confirmed 390×844 mobile viewport. Its screenshot analysis flagged a **potential** right-edge overflow of the hero heading on mobile. This remains an unverified responsive issue and needs a true-device/viewport check before any CSS correction.
+- Keyboard tab/focus order, console output, actual click-through resolution of every route, lazy-load timing, accessibility/contrast and performance metrics were not inspected.
+- The live browser audit did not modify the site.
+
+### Readiness conclusion
+The existing Preview image delivery and source-reference integrity pass. The homepage is **not cleared for replacement integration or Round 5 closure**: candidate rights and final approvals remain 0/9, the Swiss Alps local original remains blocked, the mapping remains DRAFT, and the possible mobile hero-heading overflow plus incomplete interaction/accessibility checks remain open. Do not start image replacement integration.
+
+**No homepage code, CSS, JavaScript, image references, alt text, binaries, page records, branding, CDN configuration or protected branches were changed.**
