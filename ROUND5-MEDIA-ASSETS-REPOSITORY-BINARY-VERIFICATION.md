@@ -133,3 +133,21 @@ That hosted TravelGuide asset set is not the same as the 90-image MEDIA-ASSETS W
 - This report is documentation-only on `development/homepage`. No merge, production deployment or Round 6 work was performed.
 
 **Round 5 remains OPEN — MEDIA-ASSETS WebP binaries inspected; original documentary sources, candidate approvals and CDN response certification remain separate pending gates.**
+
+## 8. Deployed MEDIA-ASSETS index reconciliation
+
+A later read of the user's connected Chrome tab exposed the public deployed \`https://media-assets-4sb.pages.dev/ASSET-INDEX.json\`. Its count differs from the tracked GitHub \`ASSET-INDEX.json\`:
+
+| View | generatedAt | Records | Formats | Category/status notes |
+|---|---|---:|---|---|
+| GitHub \`main/ASSET-INDEX.json\` | 2026-11-13T09:45:00Z | 5 | 5 WebP | Five approved destination artwork entries |
+| Public Cloudflare \`/ASSET-INDEX.json\` in connected Chrome | 2026-11-13T16:16:59.632Z | 232 | 111 WebP, 121 SVG | 90 \`images/\`, 1 \`everyday/\`, 89 \`icons/\`, 32 \`logos/\`, 20 \`thumbnails/\`; 91 approved and 141 needs-review |
+
+The public index was readable in the connected Chrome tab. This proves the deployed index document was served to that browser session. It does not prove every individual image URL returned HTTP 200 or the expected image MIME/body.
+
+The GitHub-tracked \`metadata/assets.json\` contains 91 WebP records (90 under \`images/\` and one Everyday path) and all 91 records declare \`OpenAI ChatGPT image generation\` as source. The public 232-item index is a broader mixed-asset catalogue that also includes SVG icons/logos and thumbnails. The 5-item tracked \`ASSET-INDEX.json\` and 232-item deployed index are therefore different catalogue views. The build/deployment process that produces this difference was not verified in this audit; do not silently assume either catalogue is a byte-for-byte mirror of the other.
+
+The 90 category-wise image URLs supplied by the user correspond to the 90 \`images/\` WebP paths in the tracked GitHub tree; the Everyday file is the additional 91st WebP record outside \`images/\`.
+
+**CDN status remains separate:** the connected Chrome session can read the public root and public index; per-image HTTP status, \`Content-Type: image/webp\`, and response body bytes remain unverified by the available direct-fetch route (generic HTTP 403) or web cache (cache miss). GitHub source bytes for the 14 selected images are verified above.
+
