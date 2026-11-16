@@ -159,8 +159,8 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - [x] Production safety and branch isolation rechecked; no Production deploy/merge/main/research write.
 
 ### Failed checks / blockers
-- [ ] **Internal links: FAIL.** 37 unique homepage internal paths probed via browser HEAD; 0 successful, 37 HTTP 404. `/destinations/` also independently navigated to HTTP 404. Current build only emits homepage and 404 HTML; linked destination, article, itinerary, about, travel tips, resources, activities, privacy/contact page families are not generated yet.
-- [ ] **Accessibility: FAIL.** axe-core 4.10.3: 38 passes, 1 incomplete, 1 `color-contrast` violation, serious impact, 36 nodes. Rust and muted brand palette contrast examples under 4.5:1; needs design-approved correction.
+- [x] Historical pre-generation internal-link failure: 37 unique homepage paths returned HTTP 404 before page records/templates were implemented. **Superseded by Phase 2.7 Section 10:** 37 separate route documents were generated and live-checked at 37/37 HTTP 200. The older “homepage and 404 only” statement is not the current build state.
+- [x] Historical pre-remediation accessibility failure: axe-core reported 36 serious contrast nodes. **Superseded by Phase 2.7 Section 10:** later axe-core run reported 39 rules passed, 0 violations and 1 incomplete. Full manual keyboard/screen-reader review remains pending.
 - [ ] Local workstation full `npm run build`: NOT RUN; DNS failure prevents repository clone and no checkout is mounted. Do not report full local build PASS. Cloudflare build environment does run full build successfully.
 - [ ] Full browser HAR/network failure report and pre-injection first-load console capture not certified; injected interaction error listeners did not observe errors.
 - [ ] Full keyboard sequential tab order, screen-reader audit and full manual WCAG review remain pending.
@@ -174,8 +174,8 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - `productionIndexingEnabled` remains false. No image reference/content changed. No Phase 2.8 integration or Chat 3 handoff started.
 
 ### Next development task (before image integration)
-- First resolve or consciously sequence the 37 linked-page 404s by creating real page-family HTML/content (not placeholder/dummy pages).
-- Then address the 36 contrast failures without changing established brand identity without approval.
+- The pre-generation 37-route 404 issue was resolved by the later 37-record static HTML generation and 37/37 live route verification; re-open only if a new regression appears.
+- The recorded 36 contrast failures were resolved in the later Phase 2.7 contrast remediation; retain the existing brand identity and complete the remaining manual accessibility review.
 - Complete local build when repository checkout/network is available, plus full HAR/console, tablet viewport retest if needed, and sequential keyboard/screen-reader review.
 - Phase 2.7 remains **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.8 image verification/integration must not start until its release gates are explicitly closed or accepted.
 ### Documentation tree correction (2026-11-15)

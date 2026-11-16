@@ -287,7 +287,7 @@ User explicitly authorized reuse of existing MEDIA-ASSETS WebP assets, including
 - W3C Nu HTML and W3C CSS3 validation (zero errors): **PASS**.
 - Desktop and mobile interaction checks; image decode on mobile; 360/390/768/1440 responsive horizontal-overflow checks: **PASS**, with the CSS mobile tile correction included.
 - Internal homepage routes: **historical pre-generation failure — 37/37 HTTP 404; superseded by Phase 2.7 Section 14, where the generated routes were live-checked at 37/37 HTTP 200**.
-- Accessibility: **FAIL — 36 serious colour-contrast nodes**.
+- Accessibility: **historical pre-remediation failure — 36 serious colour-contrast nodes; superseded by Phase 2.7 Section 14, where axe-core reported 0 violations and 1 incomplete item. Full manual assistive-technology review remains pending.**
 - Local workstation full build: **NOT RUN** due local GitHub DNS failure and absent checkout. Offline dependency install is feasible, but not a full offline build.
 - Full HAR/network request report, initial-load console capture, full tab sequence/screen-reader audit and CSS warning cleanup remain incomplete.
 - Therefore Phase 2.7 is **PARTIALLY VERIFIED — NOT COMPLETE**. Phase 2.8 image integration and Chat 3 are not started.
