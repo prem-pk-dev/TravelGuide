@@ -545,3 +545,52 @@ The architecture tree in SITEMAP.md is a future URL plan, not a sitemap allowlis
 - No image/source binaries, homepage references, HTML/CSS/JS, page records, brand assets or Cloudflare settings changed.
 - MEDIA-ASSETS main and TravelGuide main/production branch remain untouched.
 - No merge or Production deployment.
+
+
+## Round 5 final blocker and homepage readiness re-audit — 16 November 2026
+
+### Verified results
+- [x] Verified the current branch head before this documentation pass: `development/homepage` at `97ef3f01f307362259b26a32677c8ffe6cd1df2e`.
+- [x] Searched the connected private `prem-pk-dev/MEDIA-ASSETS` `main` branch: complete 328-entry recursive tree, exact filename/Pexels ID/Swiss-Alps path search, GitHub code search, commit search, and releases. No original JPEG ZIP is present or retrievable. Swiss Alps local master remains BLOCKED at 11/12.
+- [x] Reconciled all nine candidate rights categories individually. Pexels platform licence is page-level verified 9/9; no candidate-specific signed releases surfaced; no photographers contacted; no written confirmation received; rights clearance 0/9 and final production approval 0/9.
+- [x] Preserved café custom crop as visually accepted only; façade/property rights, editorial replacement sign-off and production approval remain pending.
+- [x] Certified all 21 unique existing development Preview image URLs using live response metadata: HTTP 200, Content-Type `image/webp`, accessible, 21/21 PASS. This does not certify production host or MEDIA-ASSETS Pages host.
+- [x] Rechecked 22 placements: 21 unique path URLs, 19 unique binary identities; all referenced files exist; hero/seasonal and Asia/Kyoto duplicate pairs recorded; Alpine Hiking/Swiss Trail share the authorised `alpine-hiking.webp`.
+- [x] Preserved AI artwork provenance, Pexels source records and Wikimedia CC BY-SA/CC0 obligations.
+- [x] Audited homepage source and live Preview: 21 JSON images plus hero; all alt text non-empty; all internal paths match the 37-route registry; 21/21 images rendered; branding consistent; desktop page reviewed.
+- [x] Recorded possible mobile hero-heading overflow as unverified because a true 390×844 viewport could not be established. Keyboard focus, console, full link click-through and some navigation/search interactions remain unverified.
+- [x] Confirmed no custom image-load fallback handler exists in current homepage JS.
+
+### Remaining blockers
+- [ ] Swiss Alps local original ZIP: unavailable in connected MEDIA-ASSETS repository; local original masters remain 11/12.
+- [ ] Candidate-specific model/person, property/building, operator/trademark and other third-party permissions; publisher/legal licence-sufficiency sign-off.
+- [ ] Photographer written confirmations, if obtainable; none has been requested or received.
+- [ ] Final candidate editorial approvals and production approvals: 0/9.
+- [ ] True 390×844 mobile hero crop/heading verification and remaining interaction/accessibility QA.
+- [ ] Do not integrate candidate replacements until the required rights and approvals are documented.
+
+### Current Round 5 progress
+| Gate | Current status |
+|---|---|
+| Local original masters | 11/12; Swiss Alps ZIP unavailable in connected MEDIA-ASSETS repository |
+| Remote original verification | 12/12 PASS (prior separate verification) |
+| Existing WebP binary/hash/dimension reconciliation | 12/12 PASS (prior separate verification) |
+| Candidate source JPEGs | 9/9 previously verified; no repeat download |
+| Candidate crop dispositions | 6/9 accepted/conditional; Europe visual-only; Kyoto rejected; Lisbon not approved |
+| Candidate rights clearance | 0/9 |
+| Candidate final production approval | 0/9 |
+| Existing development Preview CDN | 21/21 HTTP 200 + image/webp; accessible |
+| Candidate CDN | 0/9; candidates not hosted |
+| 22-slot mapping | 22/22 placements; 21 unique path URLs; 19 binary identities; DRAFT |
+| Homepage source references | 21/21 image files present; 37-route link-path map has no unmatched paths |
+| Homepage readiness | Existing Preview renders; possible mobile hero-heading overflow and incomplete interaction/accessibility QA remain |
+| Homepage replacement integration | NOT STARTED |
+| Round 5 | OPEN — not ready to close |
+| Round 6 | NOT STARTED |
+
+### Protection
+- Documentation-only changes on `development/homepage`.
+- No source JPEG, WebP, candidate photo, manifest, homepage image reference, alt text, HTML, CSS, JavaScript, page record, logo or branding changed.
+- No MEDIA-ASSETS `main`, TravelGuide production `main`, research branch or responsive-fixes branch changed.
+- No Cloudflare configuration, merge or production deployment changed.
+- Chat 3 remains NOT STARTED.
